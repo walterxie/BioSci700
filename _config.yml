@@ -13,7 +13,7 @@ mathjax: true
 # Build settings
 theme: minima
 header_pages:
-  - Lab1-R.md
+  - index.md
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
