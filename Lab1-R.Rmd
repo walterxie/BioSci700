@@ -1,7 +1,7 @@
 ---
 title: "Phylogenetic reconstruction"
 author: Walter Xie and Alexei Drummond
-output: html_notebook
+output: md_document
 ---
 
 In this lab, we will learn how to use R to construct phylogenetic trees using some basic algorithms,
