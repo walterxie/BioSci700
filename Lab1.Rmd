@@ -4,8 +4,6 @@ author: Walter Xie and Alexei Drummond
 output: md_document
 ---
 
-# Phylogenetic reconstruction
-
 In this lab, we will learn how to use R to construct phylogenetic trees using some basic algorithms,
 such as UPGMA and Neighbour-joining, etc. 
 
@@ -14,11 +12,10 @@ You can preview the alignment by using any text editor to open the file.
 
 We also need two R libraries: "ape" and "phangorn". 
 If your R has not got them, please use `install.packages` to install them.
-Let's load these two libraries into R:
+Let's load "ape" first into R:
 
 ```{r}
-library("ape")
-library("phangorn")
+library(ape)
 ```
 
 Make sure the the alignment file is in your working directory, then load the alignment:
@@ -39,4 +36,22 @@ we can multiple it with the number of sites (20) to obtain the matrix of pairwis
 # 20 sites
 d = dist.dna(alg, model = "raw") * 20
 d
+```
+
+
+```{r}
+library(phangorn)
+
+```
+
+
+
+```{r}
+treeUPGMA <- upgma(d)
+plot(treeUPGMA, main="UPGMA")
+```
+
+```{r}
+treeNJ <- NJ(d)
+plot(treeNJ, "unrooted", main="NJ")
 ```

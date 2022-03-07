@@ -1,5 +1,3 @@
-# Phylogenetic reconstruction
-
 In this lab, we will learn how to use R to construct phylogenetic trees
 using some basic algorithms, such as UPGMA and Neighbour-joining, etc.
 
@@ -9,10 +7,9 @@ editor to open the file.
 
 We also need two R libraries: “ape” and “phangorn”. If your R has not
 got them, please use `install.packages` to install them. Let’s load
-these two libraries into R:
+“ape” first into R:
 
-    library("ape")
-    library("phangorn")
+    library(ape)
 
 Make sure the the alignment file is in your working directory, then load
 the alignment:
@@ -36,3 +33,15 @@ pairwise distances.
     ## B  8      
     ## C  7  9   
     ## D 12 14 13
+
+    library(phangorn)
+
+    treeUPGMA <- upgma(d)
+    plot(treeUPGMA, main="UPGMA")
+
+![](Lab1_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+
+    treeNJ <- NJ(d)
+    plot(treeNJ, "unrooted", main="NJ")
+
+![](Lab1_files/figure-markdown_strict/unnamed-chunk-6-1.png)
