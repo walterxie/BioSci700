@@ -77,50 +77,77 @@ __Question 2 :__ what is pros and cons of the neighbour-joining algorithm?
 
 ### 2.3 Parsimony
 
-To understand the parsimony method, we need a more complex alignment "primates".
-Please use the following commands to load it from the package "phangorn":
-
-```{r}
-fdir <- system.file("extdata/trees", package = "phangorn")
-primates <- read.phyDat(file.path(fdir, "primates.dna"), format = "interleaved")
-primates
-```
-
-This alignment has 14 sequences with 232 character and sequences have 217 different site patterns.
-You can try `str(primates)` to show the details. 
-Then respectively create the UPGMA and NJ tree:
-
-```{r}
-dm  <- dist.ml(primates)
-treeUPGMA  <- upgma(dm)
-treeNJ  <- NJ(dm)
-```
-
-### 2.3 Parsimony
-
 To understand the parsimony method, we need a more complex example.
 Please follow the "phangorn" [tutorial](https://cran.r-project.org/web/packages/phangorn/vignettes/Trees.html) 
 to load the alignment "primates", and respectively create the UPGMA and NJ tree.
 
 ```{r}
-parsimony(treeUPGMA, primates)
+fdir <- system.file("extdata/trees", package = "phangorn")
+primates <- read.phyDat(file.path(fdir, "primates.dna"), format = "interleaved")
+
+dm  <- dist.ml(primates)
+treeUPGMA  <- upgma(dm)
+treeNJ  <- NJ(dm)
 ```
 
+Then compare the parsimony score between two trees.
 
 ```{r}
-parsimony(treeNJ, primates)
+parsimony(c(treeUPGMA, treeNJ), primates)
 ```
 
-```{r, echo=FALSE, results='hide'}
+__Question 3 :__ which tree should we choose in term of the score? Why?
+
+We use the UPGMA tree as a start, and perform nearest-neighbor interchanges (NNI)
+to the optimal tree. In addition, we run the bootstrap to provide the support values.
+
+```{r, results='hide'}
 treePars <- optim.parsimony(treeUPGMA, primates, rearrangements = "NNI")
 
 fun <- function(x) optim.parsimony(upgma(dist.ml(x)), x)
-bs.pars <- bootstrap.phyDat(primates,  fun)
+bsNNI <- bootstrap.phyDat(primates, fun)
 ```
+
+Use `acctran` to assign branch lengths which are proportional to the number of substitutions,
+according to the document.
 
 ```{r}
-plotBS(treePars, bs.pars, main="Parsimony NNI", "phylogram")
-#plot(treePars)
+treePars  <- acctran(treePars, primates)
+```
+
+Finally, we can plot the phylogenetic tree with the support values, 
+where the vaule will not appear if it is less than 50 as default.
+Try to add `p=1` if you want to see the supports in all internal nodes.
+
+```{r}
+plotBS(midpoint(treePars), bsNNI, main="Parsimony NNI", type="phylogram")
+```
+
+__Question 4 :__ comparing this result with the UPGMA and NJ trees,
+please explain which makes more sense in term of the evolutionary biology? 
+
+A branch and bound example at 6 taxa.
+
+```{r}
+subTrees <- bab(subset(primates, 1:6))
+plot(subTrees[[1]])
 ```
 
 
+### 2.4 Maximum likelihood
+
+
+```{r}
+dm <- dist.ml(primates, "F81")
+# NJ starting tree
+tree <- NJ(dm)
+```
+
+```{r, results='hide'}
+# HKY + Γ(4)
+fitStart <- pml(tree, primates, k=4)
+fitHKY <- optim.pml(fitStart, model="HKY", optGamma=TRUE, rearrangement="stochastic")
+bs <- bootstrap.pml(fitHKY, bs=100, optNni=TRUE, multicore=TRUE)
+
+plotBS(midpoint(fitHKY$tree), bs, type="phylogram")
+```
