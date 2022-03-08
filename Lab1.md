@@ -1,3 +1,5 @@
+# Phylogenetic reconstruction using R
+
 In this lab, we will learn how to use R to construct phylogenetic trees
 using some basic algorithms, such as UPGMA and Neighbour-joining, etc.
 
