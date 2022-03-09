@@ -128,6 +128,11 @@ __Question 3 :__ assuming there are two trees giving different parsimony scores,
 
 ### 2.4 Maximum likelihood
 
+The scripts below are using the maximum likelihood approach to 
+estimate the parameters from "primates" data,
+and eventually create a maximum likelihood phylogenetic tree from the inference.
+
+First we create a NJ tree using F81 model as the starting tree.
 
 ```{r}
 dm <- dist.ml(primates, "F81")
@@ -135,13 +140,38 @@ dm <- dist.ml(primates, "F81")
 tree <- NJ(dm)
 ```
 
+Then we define the model to HKY + Γ(4) and optimise the parameters.
+
 ```{r, results='hide'}
 # HKY + Γ(4)
 fitStart <- pml(tree, primates, k=4)
 fitHKY <- optim.pml(fitStart, model="HKY", optGamma=TRUE, rearrangement="stochastic")
-bs <- bootstrap.pml(fitHKY, bs=100, optNni=TRUE, multicore=TRUE)
-
-# is.rooted(fitHKY$tree) # FALSE
-rt <- root(fitHKY$tree, outgroup = "Mouse", resolve.root = TRUE)
-plotBS(rt, bs, type="phylogram")
 ```
+
+The result is:
+
+```{r}
+fitHKY
+```
+
+Tips: you can use the command `str(fitHKY)` to list all available items inside "fitHKY". 
+
+As you can see, the tree from this result is unrooted. 
+So we will use the function `root` to assign the root to the tree given the outgroup taxon "Mouse". 
+
+```{r}
+is.rooted(fitHKY$tree) 
+rt <- root(fitHKY$tree, outgroup = "Mouse", resolve.root = TRUE)
+```
+
+Finally, the maximum likelihood tree looks like:
+
+```{r}
+plot(rt, use.edge.length=T, no.margin=TRUE)
+```
+
+Add the command `edgelabels(round(rt$edge.length, 2))` to show all branch lengths.
+
+
+### 2.5 Model selection
+

@@ -131,17 +131,64 @@ scores, which tree should be the maximum parsimony tree? Why?
 
 ### 2.4 Maximum likelihood
 
+The scripts below are using the maximum likelihood approach to estimate
+the parameters from “primates” data, and eventually create a maximum
+likelihood phylogenetic tree from the inference.
+
+First we create a NJ tree using F81 model as the starting tree.
+
     dm <- dist.ml(primates, "F81")
     # NJ starting tree
     tree <- NJ(dm)
 
+Then we define the model to HKY + Γ(4) and optimise the parameters.
+
     # HKY + Γ(4)
     fitStart <- pml(tree, primates, k=4)
     fitHKY <- optim.pml(fitStart, model="HKY", optGamma=TRUE, rearrangement="stochastic")
-    bs <- bootstrap.pml(fitHKY, bs=100, optNni=TRUE, multicore=TRUE)
 
-    # is.rooted(fitHKY$tree) # FALSE
+The result is:
+
+    fitHKY
+
+    ## 
+    ##  loglikelihood: -2394.26 
+    ## 
+    ## unconstrained loglikelihood: -1230.335 
+    ## Discrete gamma model
+    ## Number of rate categories: 4 
+    ## Shape parameter: 5.984562 
+    ## 
+    ## Rate matrix:
+    ##          a        c        g        t
+    ## a  0.00000  1.00000 27.00946  1.00000
+    ## c  1.00000  0.00000  1.00000 27.00946
+    ## g 27.00946  1.00000  0.00000  1.00000
+    ## t  1.00000 27.00946  1.00000  0.00000
+    ## 
+    ## Base frequencies:  
+    ## 0.4013361 0.3738212 0.04585888 0.1789839
+
+Tips: you can use the command `str(fitHKY)` to list all available items
+inside “fitHKY”.
+
+As you can see, the tree from this result is unrooted. So we will use
+the function `root` to assign the root to the tree given the outgroup
+taxon “Mouse”.
+
+    is.rooted(fitHKY$tree) 
+
+    ## [1] FALSE
+
     rt <- root(fitHKY$tree, outgroup = "Mouse", resolve.root = TRUE)
-    plotBS(rt, bs, type="phylogram")
 
-![](Lab1_files/figure-markdown_strict/unnamed-chunk-13-1.png)
+Finally, the maximum likelihood tree looks like:
+
+    plot(rt, use.edge.length=T, no.margin=TRUE)
+
+![](Lab1_files/figure-markdown_strict/unnamed-chunk-16-1.png)
+
+Add the command `edgelabels(round(rt$edge.length, 2))` to show all
+branch lengths.
+
+### 2.5 Model selection
