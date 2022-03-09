@@ -140,6 +140,8 @@ scores, which tree should be the maximum parsimony tree? Why?
     fitHKY <- optim.pml(fitStart, model="HKY", optGamma=TRUE, rearrangement="stochastic")
     bs <- bootstrap.pml(fitHKY, bs=100, optNni=TRUE, multicore=TRUE)
 
-    plotBS(midpoint(fitHKY$tree), bs, type="phylogram")
+    # is.rooted(fitHKY$tree) # FALSE
+    rt <- root(fitHKY$tree, outgroup = "Mouse", resolve.root = TRUE)
+    plotBS(rt, bs, type="phylogram")
 
 ![](Lab1_files/figure-markdown_strict/unnamed-chunk-13-1.png)
