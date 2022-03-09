@@ -109,23 +109,25 @@ We can now create the UPGMA and NJ tree respectively.
     treeUPGMA  <- upgma(dm)
     treeNJ  <- NJ(dm)
 
-Then compare the parsimony score between two trees.
+Compare the parsimony score between two trees.
 
     parsimony(c(treeUPGMA, treeNJ), primates)
 
     ## [1] 676 676
 
-**Question 3 :** which tree should we choose in term of the score? Why?
-
-We use the UPGMA tree as a start, and perform nearest-neighbor
-interchanges (NNI) to find the optimal tree.
+We then can give a starting tree, and perform nearest-neighbor
+interchanges (NNI) to find the maximum parsimony tree.
 
     treePars <- optim.parsimony(treeUPGMA, primates, rearrangements = "NNI")
 
-    plot(treePars, type="unrooted", use.edge.length=T, no.margin=TRUE)
-    edgelabels(treePars$edge.length, 2)
+In the end, plot the tree.
+
+    plot(treePars, type="unrooted", no.margin=TRUE)
 
 ![](Lab1_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+
+**Question 3 :** assuming there are two trees giving different parsimony
+scores, which tree should be the maximum parsimony tree? Why?
 
 ### 2.4 Maximum likelihood
 
