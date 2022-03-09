@@ -7,8 +7,8 @@ Please download the nucleotide [alignment](ABCD.fasta), and save it into
 your working directory. You can preview the alignment by using any text
 editor to open the file.
 
-We also need two R libraries: “ape” and “phangorn”. If your R has not
-got them, please use `install.packages` to install them.
+We also need three R libraries: “ape”, “phangorn”, and “phytools”. If
+your R has not got them, please use `install.packages` to install them.
 
 ## 1. Pairwise distances
 
@@ -43,17 +43,23 @@ the matrix of pairwise distances.
 
 ## 2. Algorithms
 
-Secondly, we will use the library “phangorn” to create trees.
+Secondly, we will use the library “phangorn” to create trees, and use
+“phytools”.
 
     library(phangorn)
+    library(phytools)
+
+    ## Loading required package: maps
 
 ### 2.1 UPGMA
 
 Now, please reuse the distance matrix `d` and compute the UPGMA tree.
-Use `plot` function to draw the tree.
+Use `plot` function to draw the tree, and use `edgelabels` to show
+branch lengths.
 
     treeUPGMA <- upgma(d)
-    plot(treeUPGMA, main="UPGMA")
+    plot(treeUPGMA, use.edge.length=T, no.margin=TRUE)
+    edgelabels(treeUPGMA$edge.length)
 
 ![](Lab1_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
@@ -63,7 +69,8 @@ Then compute the neighbour-joining tree. As it produces unrooted trees,
 you need to add the “unrooted” argurment to the `plot` function.
 
     treeNJ <- NJ(d)
-    plot(treeNJ, "unrooted", main="NJ")
+    plot(treeNJ, type="unrooted", use.edge.length=T, no.margin=TRUE)
+    edgelabels(treeNJ$edge.length)
 
 ![](Lab1_files/figure-markdown_strict/unnamed-chunk-6-1.png)
 
@@ -73,13 +80,30 @@ algorithm?
 ### 2.3 Parsimony
 
 To understand the parsimony method, we need a more complex example.
-Please follow the “phangorn”
-[tutorial](https://cran.r-project.org/web/packages/phangorn/vignettes/Trees.html)
-to load the alignment “primates”, and respectively create the UPGMA and
-NJ tree.
+Please follow the instructions below, which are modified from the
+“phangorn”
+[tutorial](https://cran.r-project.org/web/packages/phangorn/vignettes/Trees.html).
+
+First load the alignment “primates”, and remove the outgroup sequence
+“Bovine” to make the analysis simple.
 
     fdir <- system.file("extdata/trees", package = "phangorn")
     primates <- read.phyDat(file.path(fdir, "primates.dna"), format = "interleaved")
+    names(primates)
+
+    ##  [1] "Mouse"      "Bovine"     "Lemur"      "Tarsier"    "Squir Monk"
+    ##  [6] "Jpn Macaq"  "Rhesus Mac" "Crab-E.Mac" "BarbMacaq"  "Gibbon"    
+    ## [11] "Orang"      "Gorilla"    "Chimp"      "Human"
+
+    # rm "Bovine"
+    primates <- primates[-2]
+    names(primates)
+
+    ##  [1] "Mouse"      "Lemur"      "Tarsier"    "Squir Monk" "Jpn Macaq" 
+    ##  [6] "Rhesus Mac" "Crab-E.Mac" "BarbMacaq"  "Gibbon"     "Orang"     
+    ## [11] "Gorilla"    "Chimp"      "Human"
+
+We can now create the UPGMA and NJ tree respectively.
 
     dm  <- dist.ml(primates)
     treeUPGMA  <- upgma(dm)
@@ -89,46 +113,19 @@ Then compare the parsimony score between two trees.
 
     parsimony(c(treeUPGMA, treeNJ), primates)
 
-    ## [1] 751 746
+    ## [1] 676 676
 
 **Question 3 :** which tree should we choose in term of the score? Why?
 
 We use the UPGMA tree as a start, and perform nearest-neighbor
-interchanges (NNI) to the optimal tree. In addition, we run the
-bootstrap to provide the support values.
+interchanges (NNI) to find the optimal tree.
 
     treePars <- optim.parsimony(treeUPGMA, primates, rearrangements = "NNI")
 
-    fun <- function(x) optim.parsimony(upgma(dist.ml(x)), x)
-    bsNNI <- bootstrap.phyDat(primates, fun)
-
-Use `acctran` to assign branch lengths which are proportional to the
-number of substitutions, according to the document.
-
-    treePars  <- acctran(treePars, primates)
-
-Finally, we can plot the phylogenetic tree with the support values,
-where the vaule will not appear if it is less than 50 as default. Try to
-add `p=1` if you want to see the supports in all internal nodes.
-
-    plotBS(midpoint(treePars), bsNNI, main="Parsimony NNI", type="phylogram")
+    plot(treePars, type="unrooted", use.edge.length=T, no.margin=TRUE)
+    edgelabels(treePars$edge.length, 2)
 
 ![](Lab1_files/figure-markdown_strict/unnamed-chunk-11-1.png)
-
-**Question 4 :** comparing this result with the UPGMA and NJ trees,
-please explain which makes more sense in term of the evolutionary
-biology?
-
-A branch and bound example at 6 taxa.
-
-    subTrees <- bab(subset(primates, 1:6))
-
-    ## [1] "lower bound: 368"
-    ## [1] "upper bound: 432"
-
-    plot(subTrees[[1]])
-
-![](Lab1_files/figure-markdown_strict/unnamed-chunk-12-1.png)
 
 ### 2.4 Maximum likelihood
 
@@ -143,4 +140,4 @@ A branch and bound example at 6 taxa.
 
     plotBS(midpoint(fitHKY$tree), bs, type="phylogram")
 
-![](Lab1_files/figure-markdown_strict/unnamed-chunk-14-1.png)
+![](Lab1_files/figure-markdown_strict/unnamed-chunk-13-1.png)

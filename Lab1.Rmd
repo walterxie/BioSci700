@@ -12,7 +12,7 @@ such as UPGMA and Neighbour-joining, etc.
 Please download the nucleotide [alignment](ABCD.fasta), and save it into your working directory.
 You can preview the alignment by using any text editor to open the file. 
 
-We also need two R libraries: "ape" and "phangorn". 
+We also need three R libraries: "ape", "phangorn", and "phytools". 
 If your R has not got them, please use `install.packages` to install them.
 
 ## 1. Pairwise distances
@@ -47,20 +47,22 @@ __Question 1 :__ what does this matrix tell us?
 
 ## 2. Algorithms
 
-Secondly, we will use the library "phangorn" to create trees. 
+Secondly, we will use the library "phangorn" to create trees, and use "phytools". 
 
 ```{r}
 library(phangorn)
+library(phytools)
 ```
 
 ### 2.1 UPGMA
 
 Now, please reuse the distance matrix `d` and compute the UPGMA tree. 
-Use `plot` function to draw the tree.
+Use `plot` function to draw the tree, and use `edgelabels` to show branch lengths.
 
 ```{r}
 treeUPGMA <- upgma(d)
-plot(treeUPGMA, main="UPGMA")
+plot(treeUPGMA, use.edge.length=T, no.margin=TRUE)
+edgelabels(treeUPGMA$edge.length)
 ```
 
 
@@ -71,7 +73,8 @@ you need to add the "unrooted" argurment to the `plot` function.
 
 ```{r}
 treeNJ <- NJ(d)
-plot(treeNJ, "unrooted", main="NJ")
+plot(treeNJ, type="unrooted", use.edge.length=T, no.margin=TRUE)
+edgelabels(treeNJ$edge.length)
 ```
 
 __Question 2 :__ what is pros and cons of the neighbour-joining algorithm?
@@ -80,13 +83,22 @@ __Question 2 :__ what is pros and cons of the neighbour-joining algorithm?
 ### 2.3 Parsimony
 
 To understand the parsimony method, we need a more complex example.
-Please follow the "phangorn" [tutorial](https://cran.r-project.org/web/packages/phangorn/vignettes/Trees.html) 
-to load the alignment "primates", and respectively create the UPGMA and NJ tree.
+Please follow the instructions below, which are modified from the "phangorn" [tutorial](https://cran.r-project.org/web/packages/phangorn/vignettes/Trees.html).
+
+First load the alignment "primates", and remove the outgroup sequence "Bovine" to make the analysis simple. 
 
 ```{r}
 fdir <- system.file("extdata/trees", package = "phangorn")
 primates <- read.phyDat(file.path(fdir, "primates.dna"), format = "interleaved")
+names(primates)
+# rm "Bovine"
+primates <- primates[-2]
+names(primates)
+```
 
+We can now create the UPGMA and NJ tree respectively.
+
+```{r}
 dm  <- dist.ml(primates)
 treeUPGMA  <- upgma(dm)
 treeNJ  <- NJ(dm)
@@ -101,38 +113,16 @@ parsimony(c(treeUPGMA, treeNJ), primates)
 __Question 3 :__ which tree should we choose in term of the score? Why?
 
 We use the UPGMA tree as a start, and perform nearest-neighbor interchanges (NNI)
-to the optimal tree. In addition, we run the bootstrap to provide the support values.
+to find the optimal tree. 
 
 ```{r, results='hide'}
 treePars <- optim.parsimony(treeUPGMA, primates, rearrangements = "NNI")
-
-fun <- function(x) optim.parsimony(upgma(dist.ml(x)), x)
-bsNNI <- bootstrap.phyDat(primates, fun)
 ```
 
-Use `acctran` to assign branch lengths which are proportional to the number of substitutions,
-according to the document.
 
 ```{r}
-treePars  <- acctran(treePars, primates)
-```
-
-Finally, we can plot the phylogenetic tree with the support values, 
-where the vaule will not appear if it is less than 50 as default.
-Try to add `p=1` if you want to see the supports in all internal nodes.
-
-```{r}
-plotBS(midpoint(treePars), bsNNI, main="Parsimony NNI", type="phylogram")
-```
-
-__Question 4 :__ comparing this result with the UPGMA and NJ trees,
-please explain which makes more sense in term of the evolutionary biology? 
-
-A branch and bound example at 6 taxa.
-
-```{r}
-subTrees <- bab(subset(primates, 1:6))
-plot(subTrees[[1]])
+plot(treePars, type="unrooted", use.edge.length=T, no.margin=TRUE)
+edgelabels(treePars$edge.length, 2)
 ```
 
 
