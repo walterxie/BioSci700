@@ -109,6 +109,18 @@ We can now create the UPGMA and NJ tree respectively.
     treeUPGMA  <- upgma(dm)
     treeNJ  <- NJ(dm)
 
+The UPGMA tree looks like:
+
+    plot(treeUPGMA, no.margin=TRUE)
+
+![](Lab1_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+
+The NJ tree looks like:
+
+    plot(treeNJ, type="unrooted", no.margin=TRUE)
+
+![](Lab1_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+
 Compare the parsimony score between two trees.
 
     parsimony(c(treeUPGMA, treeNJ), primates)
@@ -120,11 +132,11 @@ interchanges (NNI) to find the maximum parsimony tree.
 
     treePars <- optim.parsimony(treeUPGMA, primates, rearrangements = "NNI")
 
-In the end, plot the tree.
+In the end, plot the maximum parsimony tree.
 
     plot(treePars, type="unrooted", no.margin=TRUE)
 
-![](Lab1_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+![](Lab1_files/figure-markdown_strict/unnamed-chunk-13-1.png)
 
 **Question 3 :** assuming there are two trees giving different parsimony
 scores, which tree should be the maximum parsimony tree? Why?
@@ -157,17 +169,17 @@ The result is:
     ## unconstrained loglikelihood: -1230.335 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 5.984562 
+    ## Shape parameter: 5.985822 
     ## 
     ## Rate matrix:
     ##          a        c        g        t
-    ## a  0.00000  1.00000 27.00946  1.00000
-    ## c  1.00000  0.00000  1.00000 27.00946
-    ## g 27.00946  1.00000  0.00000  1.00000
-    ## t  1.00000 27.00946  1.00000  0.00000
+    ## a  0.00000  1.00000 27.00965  1.00000
+    ## c  1.00000  0.00000  1.00000 27.00965
+    ## g 27.00965  1.00000  0.00000  1.00000
+    ## t  1.00000 27.00965  1.00000  0.00000
     ## 
     ## Base frequencies:  
-    ## 0.4013361 0.3738212 0.04585888 0.1789839
+    ## 0.4013194 0.3738494 0.04584645 0.1789847
 
 Tips: you can use the command `str(fitHKY)` to list all available items
 inside “fitHKY”.
@@ -186,7 +198,7 @@ Finally, the maximum likelihood tree looks like:
 
     plot(rt, use.edge.length=T, no.margin=TRUE)
 
-![](Lab1_files/figure-markdown_strict/unnamed-chunk-16-1.png)
+![](Lab1_files/figure-markdown_strict/unnamed-chunk-18-1.png)
 
 Add the command `edgelabels(round(rt$edge.length, 2))` to show all
 branch lengths.

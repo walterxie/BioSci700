@@ -104,6 +104,18 @@ treeUPGMA  <- upgma(dm)
 treeNJ  <- NJ(dm)
 ```
 
+The UPGMA tree looks like:
+
+```{r}
+plot(treeUPGMA, no.margin=TRUE)
+```
+
+The NJ tree looks like:
+
+```{r}
+plot(treeNJ, type="unrooted", no.margin=TRUE)
+```
+
 Compare the parsimony score between two trees.
 
 ```{r}
@@ -117,7 +129,7 @@ to find the maximum parsimony tree.
 treePars <- optim.parsimony(treeUPGMA, primates, rearrangements = "NNI")
 ```
 
-In the end, plot the tree.
+In the end, plot the maximum parsimony tree.
 
 ```{r}
 plot(treePars, type="unrooted", no.margin=TRUE)
