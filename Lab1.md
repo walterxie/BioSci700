@@ -169,14 +169,14 @@ The result is:
     ## unconstrained loglikelihood: -1230.335 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 5.985147 
+    ## Shape parameter: 5.983895 
     ## 
     ## Rate matrix:
     ##          a        c        g        t
-    ## a  0.00000  1.00000 27.00651  1.00000
-    ## c  1.00000  0.00000  1.00000 27.00651
-    ## g 27.00651  1.00000  0.00000  1.00000
-    ## t  1.00000 27.00651  1.00000  0.00000
+    ## a  0.00000  1.00000 27.00728  1.00000
+    ## c  1.00000  0.00000  1.00000 27.00728
+    ## g 27.00728  1.00000  0.00000  1.00000
+    ## t  1.00000 27.00728  1.00000  0.00000
     ## 
     ## Base frequencies:  
     ## 0.4013194 0.3738494 0.04584645 0.1789847
@@ -254,18 +254,18 @@ Please download the [New Zealand COVID data](covidnz217.fasta).
 
     b). choose the “best” model for this data.
 
-Please attach your R code in the report.
+    Please attach your R code in the report.
 
-Tips: the alignment read from `read.FASTA` cannot be regonised by
-`modelTest`. You need to use the function `phyDat`.
+    Tips: the alignment read from `read.FASTA` cannot be regonised by
+    `modelTest`. You need to use the function `phyDat`.
 
-{:start=“2”} 2. Use the latest version of
-[RAxML](https://github.com/stamatak/standard-RAxML/releases/tag/v8.2.12)
-to create the maximum likelihood tree by using the model that you choose
-in the 1st step. Please record your command to run the analysis in the
-report.
+2.  Use the latest version of
+    [RAxML](https://github.com/stamatak/standard-RAxML/releases/tag/v8.2.12)
+    to create the maximum likelihood tree by using the model that you
+    choose in the 1st step. Please record your command to run the
+    analysis in the report.
 
-{:start=“3”} 3. Write a reprot to discribe your analysis and explain the
-result, for example, how you configure the model and parameters in this
-analysis, why you choose that model, and what the tree tells us in term
-of evolutionary biology, and so on.
+3.  Write a reprot to discribe your analysis and explain the result, for
+    example, how you configure the model and parameters in this
+    analysis, why you choose that model, and what the tree tells us in
+    term of evolutionary biology, and so on.
