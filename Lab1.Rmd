@@ -208,16 +208,21 @@ Therefore, we should choose "GTR+G+I" not "HKY+G" to run the phylogenetic analys
 Please download the [New Zealand COVID data](covidnz217.fasta). 
 
 1. Use the R code that you have learnt to 
-1) plot the maximum parsimony tree using SPR search
-and 2) choose the "best" model for this data. 
+
+    a). plot the maximum parsimony tree using SPR search
+    
+    b). choose the "best" model for this data.
+
 Please attach your R code in the report.
 
 Tips: the alignment read from `read.FASTA` cannot be regonised by `modelTest`. 
 You need to use the function `phyDat`.
 
+{:start="2"}
 2. Use the latest version of [RAxML](https://github.com/stamatak/standard-RAxML/releases/tag/v8.2.12) to create the maximum likelihood tree by using the model that you choose in the 1st step. 
 Please record your command to run the analysis in the report.
 
+{:start="3"}
 3. Write a reprot to discribe your analysis and explain the result, 
 for example, how you configure the model and parameters in this analysis,
 why you choose that model, and what the tree tells us in term of evolutionary biology,
