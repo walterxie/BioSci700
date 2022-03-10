@@ -169,14 +169,14 @@ The result is:
     ## unconstrained loglikelihood: -1230.335 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 5.983831 
+    ## Shape parameter: 5.98472 
     ## 
     ## Rate matrix:
-    ##          a        c        g        t
-    ## a  0.00000  1.00000 27.01027  1.00000
-    ## c  1.00000  0.00000  1.00000 27.01027
-    ## g 27.01027  1.00000  0.00000  1.00000
-    ## t  1.00000 27.01027  1.00000  0.00000
+    ##         a       c       g       t
+    ## a  0.0000  1.0000 27.0094  1.0000
+    ## c  1.0000  0.0000  1.0000 27.0094
+    ## g 27.0094  1.0000  0.0000  1.0000
+    ## t  1.0000 27.0094  1.0000  0.0000
     ## 
     ## Base frequencies:  
     ## 0.4013194 0.3738494 0.04584645 0.1789847
@@ -246,16 +246,22 @@ phylogenetic analysis on this data.
 
 ## Assigment (25 marks)
 
-Please download the [New Zealand COVID data](covidnz217.nex).
+Please download the [New Zealand COVID data](covidnz217.fasta).
 
-1.  Use the R code that you have learnt to choose the “best” model for
-    this data.
+1.  Use the R code that you have learnt to 1) plot the UPGMA and NJ tree
+    and 2) choose the “best” model for this data. Please attach your R
+    code in the report.
 
-2.  Use the software [PhyML](https://github.com/stephaneguindon/phyml)
+Tips: the alignment read from `read.FASTA` cannot be regonised by
+`modelTest`. You need to use the function `phyDat`.
+
+1.  Use the latest version of
+    [RAxML](https://github.com/stamatak/standard-RAxML/releases/tag/v8.2.12)
     to create the maximum likelihood tree by using the model that you
-    choose in the 1st step.
+    choose in the 1st step. Please record your command to run the
+    analysis in the report.
 
-3.  Write a reprot to discribe your analysis and explain the result, for
+2.  Write a reprot to discribe your analysis and explain the result, for
     example, how you configure the model and parameters in this
     analysis, why you choose that model, and what the tree tells us in
     term of evolutionary biology, and so on.
