@@ -169,14 +169,14 @@ The result is:
     ## unconstrained loglikelihood: -1230.335 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 5.98472 
+    ## Shape parameter: 5.985675 
     ## 
     ## Rate matrix:
-    ##         a       c       g       t
-    ## a  0.0000  1.0000 27.0094  1.0000
-    ## c  1.0000  0.0000  1.0000 27.0094
-    ## g 27.0094  1.0000  0.0000  1.0000
-    ## t  1.0000 27.0094  1.0000  0.0000
+    ##          a        c        g        t
+    ## a  0.00000  1.00000 27.00948  1.00000
+    ## c  1.00000  0.00000  1.00000 27.00948
+    ## g 27.00948  1.00000  0.00000  1.00000
+    ## t  1.00000 27.00948  1.00000  0.00000
     ## 
     ## Base frequencies:  
     ## 0.4013194 0.3738494 0.04584645 0.1789847
@@ -248,9 +248,12 @@ phylogenetic analysis on this data.
 
 Please download the [New Zealand COVID data](covidnz217.fasta).
 
-1.  Use the R code that you have learnt to 1) plot the UPGMA and NJ tree
-    and 2) choose the “best” model for this data. Please attach your R
-    code in the report.
+1.  Use the R code that you have learnt to
+
+<!-- -->
+
+1.  plot the maximum parsimony tree using SPR search and 2) choose the
+    “best” model for this data. Please attach your R code in the report.
 
 Tips: the alignment read from `read.FASTA` cannot be regonised by
 `modelTest`. You need to use the function `phyDat`.
