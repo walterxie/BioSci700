@@ -221,6 +221,8 @@ Please download the [New Zealand COVID data](covidnz217.fasta).
 2. Use the latest version of [RAxML](https://github.com/stamatak/standard-RAxML/releases/tag/v8.2.12) to create the maximum likelihood tree by using the model that you choose in the 1st step. 
 Please record your command to run the analysis in the report.
 
+   Tips: Use `-m` to define your model, and use `-#` or `-N` to specify the number of alternative runs on distinct starting trees.
+
 
 3. Write a reprot to discribe your analysis and explain the result, 
 for example, how you configure the model and parameters in this analysis,
