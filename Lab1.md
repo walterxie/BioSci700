@@ -164,19 +164,19 @@ The result is:
     fitHKY
 
     ## 
-    ##  loglikelihood: -2394.26 
+    ##  loglikelihood: -2394.259 
     ## 
     ## unconstrained loglikelihood: -1230.335 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 5.985915 
+    ## Shape parameter: 5.985369 
     ## 
     ## Rate matrix:
     ##          a        c        g        t
-    ## a  0.00000  1.00000 27.00883  1.00000
-    ## c  1.00000  0.00000  1.00000 27.00883
-    ## g 27.00883  1.00000  0.00000  1.00000
-    ## t  1.00000 27.00883  1.00000  0.00000
+    ## a  0.00000  1.00000 27.01138  1.00000
+    ## c  1.00000  0.00000  1.00000 27.01138
+    ## g 27.01138  1.00000  0.00000  1.00000
+    ## t  1.00000 27.01138  1.00000  0.00000
     ## 
     ## Base frequencies:  
     ## 0.4013194 0.3738494 0.04584645 0.1789847
@@ -263,8 +263,8 @@ Please download the [New Zealand COVID data](covidnz217.fasta).
     [RAxML](https://github.com/stamatak/standard-RAxML/releases/tag/v8.2.12)
     to create the maximum likelihood tree by using the model that you
     choose in the 1st step. Please record your command to run the
-    analysis in the report. If you prefer to use a software with GUI to
-    visualize tree, we recommend
+    analysis and visualize the tree in the report. If you prefer to use
+    a software with GUI to visualize tree, we recommend
     [FigTree](http://tree.bio.ed.ac.uk/software/figtree/).
 
     Tips: Use `-m` to define your model, and use `-#` or `-N` to specify
@@ -273,5 +273,5 @@ Please download the [New Zealand COVID data](covidnz217.fasta).
 
 3.  Write a reprot to discribe your analysis and explain the result, for
     example, how you configure the model and parameters in this
-    analysis, why you choose that model, and what the tree tells us in
-    term of evolutionary biology, and so on.
+    analysis, why you choose that model, and what the tree tells us, and
+    so on.
