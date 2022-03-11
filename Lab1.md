@@ -164,19 +164,19 @@ The result is:
     fitHKY
 
     ## 
-    ##  loglikelihood: -2394.259 
+    ##  loglikelihood: -2394.26 
     ## 
     ## unconstrained loglikelihood: -1230.335 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 5.985369 
+    ## Shape parameter: 5.985734 
     ## 
     ## Rate matrix:
     ##          a        c        g        t
-    ## a  0.00000  1.00000 27.01138  1.00000
-    ## c  1.00000  0.00000  1.00000 27.01138
-    ## g 27.01138  1.00000  0.00000  1.00000
-    ## t  1.00000 27.01138  1.00000  0.00000
+    ## a  0.00000  1.00000 27.00936  1.00000
+    ## c  1.00000  0.00000  1.00000 27.00936
+    ## g 27.00936  1.00000  0.00000  1.00000
+    ## t  1.00000 27.00936  1.00000  0.00000
     ## 
     ## Base frequencies:  
     ## 0.4013194 0.3738494 0.04584645 0.1789847
@@ -246,25 +246,26 @@ phylogenetic analysis on this data.
 
 ## Assigment (25 marks)
 
-Please download the [New Zealand COVID data](covidnz217.fasta).
+Please download the [New Zealand COVID data](covidnz217.fasta), and then
+make your analysis by the following steps.
 
 1.  Use the R code that you have learnt to
 
-    a). plot the maximum parsimony tree using SPR search
+    a). plot the maximum parsimony tree found by SPR search.
 
     b). choose the “best” model for this data.
 
-    Please attach your R code in the report.
+    Please attach your R code with the report.
 
     Tips: the alignment read from `read.FASTA` cannot be regonised by
     `modelTest`. You need to use the function `phyDat`.
 
-2.  Use the latest version of
-    [RAxML](https://github.com/stamatak/standard-RAxML/releases/tag/v8.2.12)
-    to create the maximum likelihood tree by using the model that you
-    choose in the 1st step. Please record your command to run the
-    analysis and visualize the tree in the report. If you prefer to use
-    a software with GUI to visualize tree, we recommend
+2.  Install the latest version of
+    [RAxML](https://github.com/stamatak/standard-RAxML/tags), and create
+    the maximum likelihood tree by using the model that you choose in
+    the 1st step. Please record your command to run the analysis and
+    visualize the tree in the report. If you prefer to use a software
+    with GUI to visualize tree, we recommend
     [FigTree](http://tree.bio.ed.ac.uk/software/figtree/).
 
     Tips: Use `-m` to define your model, and use `-#` or `-N` to specify
