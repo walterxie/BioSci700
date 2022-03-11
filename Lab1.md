@@ -164,19 +164,19 @@ The result is:
     fitHKY
 
     ## 
-    ##  loglikelihood: -2394.261 
+    ##  loglikelihood: -2394.26 
     ## 
     ## unconstrained loglikelihood: -1230.335 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 5.984167 
+    ## Shape parameter: 5.985915 
     ## 
     ## Rate matrix:
     ##          a        c        g        t
-    ## a  0.00000  1.00000 27.00658  1.00000
-    ## c  1.00000  0.00000  1.00000 27.00658
-    ## g 27.00658  1.00000  0.00000  1.00000
-    ## t  1.00000 27.00658  1.00000  0.00000
+    ## a  0.00000  1.00000 27.00883  1.00000
+    ## c  1.00000  0.00000  1.00000 27.00883
+    ## g 27.00883  1.00000  0.00000  1.00000
+    ## t  1.00000 27.00883  1.00000  0.00000
     ## 
     ## Base frequencies:  
     ## 0.4013194 0.3738494 0.04584645 0.1789847
@@ -263,7 +263,9 @@ Please download the [New Zealand COVID data](covidnz217.fasta).
     [RAxML](https://github.com/stamatak/standard-RAxML/releases/tag/v8.2.12)
     to create the maximum likelihood tree by using the model that you
     choose in the 1st step. Please record your command to run the
-    analysis in the report.
+    analysis in the report. If you prefer to use a software with GUI to
+    visualize tree, we recommend
+    [FigTree](http://tree.bio.ed.ac.uk/software/figtree/).
 
     Tips: Use `-m` to define your model, and use `-#` or `-N` to specify
     multiple runs on distinct starting trees. It may take about 1 hour

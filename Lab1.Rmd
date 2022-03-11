@@ -219,14 +219,15 @@ Please download the [New Zealand COVID data](covidnz217.fasta).
 
 
 2. Use the latest version of [RAxML](https://github.com/stamatak/standard-RAxML/releases/tag/v8.2.12) to create the maximum likelihood tree by using the model that you choose in the 1st step. 
-Please record your command to run the analysis in the report.
+Please record your command to run the analysis and visualize the tree in the report. 
+If you prefer to use a software with GUI to visualize tree, we recommend  [FigTree](http://tree.bio.ed.ac.uk/software/figtree/).
 
    Tips: Use `-m` to define your model, and use `-#` or `-N` to specify multiple runs on distinct starting trees. It may take about 1 hour for 5 runs on this data set using the single-threaded SSE3 version. 
 
 
 3. Write a reprot to discribe your analysis and explain the result, 
 for example, how you configure the model and parameters in this analysis,
-why you choose that model, and what the tree tells us in term of evolutionary biology,
+why you choose that model, and what the tree tells us,
 and so on.
 
 
