@@ -85,7 +85,9 @@ Please follow the instructions below, which are modified from the
 [tutorial](https://cran.r-project.org/web/packages/phangorn/vignettes/Trees.html).
 
 First load the alignment “primates”, and remove the outgroup sequence
-“Bovine” to make the analysis simple.
+“Bovine” to make the analysis simple. The command
+`read.phyDat("???.fasta", format = "fasta", type = "DNA")` is used to
+load the file alternatively.
 
     fdir <- system.file("extdata/trees", package = "phangorn")
     primates <- read.phyDat(file.path(fdir, "primates.dna"), format = "interleaved")
@@ -169,17 +171,17 @@ The result is:
     ## unconstrained loglikelihood: -1230.335 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 5.985734 
+    ## Shape parameter: 5.981041 
     ## 
     ## Rate matrix:
     ##          a        c        g        t
-    ## a  0.00000  1.00000 27.00936  1.00000
-    ## c  1.00000  0.00000  1.00000 27.00936
-    ## g 27.00936  1.00000  0.00000  1.00000
-    ## t  1.00000 27.00936  1.00000  0.00000
+    ## a  0.00000  1.00000 27.00937  1.00000
+    ## c  1.00000  0.00000  1.00000 27.00937
+    ## g 27.00937  1.00000  0.00000  1.00000
+    ## t  1.00000 27.00937  1.00000  0.00000
     ## 
     ## Base frequencies:  
-    ## 0.4013194 0.3738494 0.04584645 0.1789847
+    ## 0.401322 0.3738029 0.04584205 0.179033
 
 Tips: you can use the command `str(fitHKY)` to list all available items
 inside “fitHKY”.
@@ -246,31 +248,33 @@ phylogenetic analysis on this data.
 
 ## Assigment (25 marks)
 
-Please download the [New Zealand COVID data](covidnz217.fasta), and then
-make your analysis by the following steps.
+Please download the [COVID data](covid100.fasta), and then make your
+analysis by the following steps.
 
 1.  Use the R code that you have learnt to
 
-    a). plot the maximum parsimony tree found by SPR search.
+    a). plot the maximum parsimony tree found by SPR search, and colour
+    the tips.
 
     b). choose the “best” model for this data.
 
-    Please attach your R code with the report.
+    Please attach your R code and the tree with the report.
 
-    Tips: the alignment read from `read.FASTA` cannot be regonised by
-    `modelTest`. You need to use the function `phyDat`.
+    Tips: You can plot the tree and colour the tips in R. But if you
+    prefer to use a software with GUI, we recommend
+    [FigTree](http://tree.bio.ed.ac.uk/software/figtree/). The mapping
+    file [locations.txt](locations.txt) can be used to colour the tips.
 
 2.  Install the latest version of
     [RAxML](https://github.com/stamatak/standard-RAxML/tags), and create
     the maximum likelihood tree by using the model that you choose in
     the 1st step. Please record your command to run the analysis and
-    visualize the tree in the report. If you prefer to use a software
-    with GUI to visualize tree, we recommend
-    [FigTree](http://tree.bio.ed.ac.uk/software/figtree/).
+    visualize the tree in the report.
 
     Tips: Use `-m` to define your model, and use `-#` or `-N` to specify
-    multiple runs on distinct starting trees. It may take about 1 hour
-    for 5 runs on this data set using the single-threaded SSE3 version.
+    multiple runs on distinct starting trees. It may take about 15
+    minutes for 10 runs on this data set using the single-threaded SSE3
+    version.
 
 3.  Write a reprot to discribe your analysis and explain the result, for
     example, how you configure the model and parameters in this
