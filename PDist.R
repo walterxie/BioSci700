@@ -10,7 +10,7 @@ d = dist.dna(alg, model = "raw") * 20
 
 treeUPGMA <- upgma(d)
 plot(treeUPGMA, use.edge.length=T, no.margin=TRUE)
-edgelabels(treeUPGMA$edge.length)
+edgelabels(round(treeUPGMA$edge.length,2))
 
 treeNJ <- NJ(d)
 plot(treeNJ, type="unrooted", use.edge.length=T, no.margin=TRUE)

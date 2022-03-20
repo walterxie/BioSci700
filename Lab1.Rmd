@@ -62,7 +62,7 @@ Use `plot` function to draw the tree, and use `edgelabels` to show branch length
 ```{r}
 treeUPGMA <- upgma(d)
 plot(treeUPGMA, use.edge.length=T, no.margin=TRUE)
-edgelabels(treeUPGMA$edge.length)
+edgelabels(round(treeUPGMA$edge.length,2))
 ```
 
 

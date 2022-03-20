@@ -59,7 +59,7 @@ branch lengths.
 
     treeUPGMA <- upgma(d)
     plot(treeUPGMA, use.edge.length=T, no.margin=TRUE)
-    edgelabels(treeUPGMA$edge.length)
+    edgelabels(round(treeUPGMA$edge.length,2))
 
 ![](Lab1_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
@@ -171,17 +171,17 @@ The result is:
     ## unconstrained loglikelihood: -1230.335 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 5.984577 
+    ## Shape parameter: 5.985163 
     ## 
     ## Rate matrix:
     ##          a        c        g        t
-    ## a  0.00000  1.00000 27.00947  1.00000
-    ## c  1.00000  0.00000  1.00000 27.00947
-    ## g 27.00947  1.00000  0.00000  1.00000
-    ## t  1.00000 27.00947  1.00000  0.00000
+    ## a  0.00000  1.00000 27.01055  1.00000
+    ## c  1.00000  0.00000  1.00000 27.01055
+    ## g 27.01055  1.00000  0.00000  1.00000
+    ## t  1.00000 27.01055  1.00000  0.00000
     ## 
     ## Base frequencies:  
-    ## 0.4013361 0.3738212 0.04585888 0.1789839
+    ## 0.4013194 0.3738494 0.04584645 0.1789847
 
 Tips: you can use the command `str(fitHKY)` to list all available items
 inside “fitHKY”.
