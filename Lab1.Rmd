@@ -206,10 +206,10 @@ Therefore, we should choose "GTR+G+I" not "HKY+G" to run the phylogenetic analys
 
 ## Assigment (15 marks)
 
-Please download the [H5N1 data](H5N1.fasta), which is a subset of original dataset [Wallace et al., 2007](https://doi.org/10.1371/journal.pcbi.1000520).
+Please download the [H5N1 data](H5N1.fasta), which is a subset of original dataset [Wallace et al., 2007](https://doi.org/10.1073/pnas.0700435104).
 It consists of 43 influenza A H5N1 hemagglutinin and neuraminidase gene sequences isolated from a variety of hosts 1996 - 2005 across sample locations.
 
-Then make the following analyses: 
+Read the publication and then make the following analyses: 
 
 1. Use the R code that you have learnt to choose the "best" model for this data, and explain why you choose it. Please attach your R code with the report.
 

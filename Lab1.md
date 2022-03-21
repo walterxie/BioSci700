@@ -167,22 +167,22 @@ The result is:
     fitHKY
 
     ## 
-    ##  loglikelihood: -2394.26 
+    ##  loglikelihood: -2394.261 
     ## 
     ## unconstrained loglikelihood: -1230.335 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 5.985979 
+    ## Shape parameter: 5.981735 
     ## 
     ## Rate matrix:
     ##          a        c        g        t
-    ## a  0.00000  1.00000 27.00952  1.00000
-    ## c  1.00000  0.00000  1.00000 27.00952
-    ## g 27.00952  1.00000  0.00000  1.00000
-    ## t  1.00000 27.00952  1.00000  0.00000
+    ## a  0.00000  1.00000 27.00702  1.00000
+    ## c  1.00000  0.00000  1.00000 27.00702
+    ## g 27.00702  1.00000  0.00000  1.00000
+    ## t  1.00000 27.00702  1.00000  0.00000
     ## 
     ## Base frequencies:  
-    ## 0.4013194 0.3738494 0.04584645 0.1789847
+    ## 0.401322 0.3738029 0.04584205 0.179033
 
 Tips: you can use the command `str(fitHKY)` to list all available items
 inside “fitHKY”.
@@ -251,11 +251,11 @@ phylogenetic analysis on this data.
 
 Please download the [H5N1 data](H5N1.fasta), which is a subset of
 original dataset [Wallace et al.,
-2007](https://doi.org/10.1371/journal.pcbi.1000520). It consists of 43
+2007](https://doi.org/10.1073/pnas.0700435104). It consists of 43
 influenza A H5N1 hemagglutinin and neuraminidase gene sequences isolated
 from a variety of hosts 1996 - 2005 across sample locations.
 
-Then make the following analyses:
+Read the publication and then make the following analyses:
 
 1.  Use the R code that you have learnt to choose the “best” model for
     this data, and explain why you choose it. Please attach your R code
