@@ -123,7 +123,7 @@ Print the parsimony scores.
 parsimony(c(treeUPGMA, treeNJ), primates)
 ```
 
-__Question 3 :__ Why are those two parsimony scores same? Assuming there are two trees giving different parsimony scores, which tree should be the maximum parsimony tree? 
+__Question 3 :__ Why are those two parsimony scores same? Assuming all possible trees give different parsimony scores, which tree should be the maximum parsimony tree?
 
 We then can give a starting tree, and perform nearest-neighbor interchanges (NNI)
 to find the maximum parsimony tree. 

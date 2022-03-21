@@ -129,9 +129,9 @@ Print the parsimony scores.
 
     ## [1] 676 676
 
-**Question 3 :** Why are those two parsimony scores same? Assuming there
-are two trees giving different parsimony scores, which tree should be
-the maximum parsimony tree?
+**Question 3 :** Why are those two parsimony scores same? Assuming all
+possible trees give different parsimony scores, which tree should be the
+maximum parsimony tree?
 
 We then can give a starting tree, and perform nearest-neighbor
 interchanges (NNI) to find the maximum parsimony tree.
@@ -167,19 +167,19 @@ The result is:
     fitHKY
 
     ## 
-    ##  loglikelihood: -2394.261 
+    ##  loglikelihood: -2394.26 
     ## 
     ## unconstrained loglikelihood: -1230.335 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 5.986015 
+    ## Shape parameter: 5.985979 
     ## 
     ## Rate matrix:
     ##          a        c        g        t
-    ## a  0.00000  1.00000 27.00704  1.00000
-    ## c  1.00000  0.00000  1.00000 27.00704
-    ## g 27.00704  1.00000  0.00000  1.00000
-    ## t  1.00000 27.00704  1.00000  0.00000
+    ## a  0.00000  1.00000 27.00952  1.00000
+    ## c  1.00000  0.00000  1.00000 27.00952
+    ## g 27.00952  1.00000  0.00000  1.00000
+    ## t  1.00000 27.00952  1.00000  0.00000
     ## 
     ## Base frequencies:  
     ## 0.4013194 0.3738494 0.04584645 0.1789847
