@@ -20,7 +20,7 @@ Make sure the the alignment file is in your working directory, then load
 the alignment from the fasta file:
 
     # setwd("~/WorkSpace/BioSci700")
-    alg = read.FASTA("ABCD.fasta")
+    aln = read.FASTA("ABCD.fasta")
 
 This alignment has 4 taxa and 20 sites. The nucleotides were composited
 to create the distance matrix in [Lecture
@@ -31,7 +31,7 @@ distances, we can multiple it with the number of sites (20) to obtain
 the matrix of pairwise distances.
 
     # 20 sites
-    d = dist.dna(alg, model = "raw") * 20
+    d = dist.dna(aln, model = "raw") * 20
     d
 
     ##    A  B  C
@@ -123,11 +123,15 @@ The NJ tree looks like:
 
 ![](Lab1_files/figure-markdown_strict/unnamed-chunk-10-1.png)
 
-Compare the parsimony score between two trees.
+Print the parsimony scores.
 
     parsimony(c(treeUPGMA, treeNJ), primates)
 
     ## [1] 676 676
+
+**Question 3 :** Why are those two parsimony scores same? Assuming there
+are two trees giving different parsimony scores, which tree should be
+the maximum parsimony tree?
 
 We then can give a starting tree, and perform nearest-neighbor
 interchanges (NNI) to find the maximum parsimony tree.
@@ -139,9 +143,6 @@ In the end, plot the maximum parsimony tree.
     plot(treePars, type="unrooted", no.margin=TRUE)
 
 ![](Lab1_files/figure-markdown_strict/unnamed-chunk-13-1.png)
-
-**Question 3 :** assuming there are two trees giving different parsimony
-scores, which tree should be the maximum parsimony tree? Why?
 
 ### 2.4 Maximum likelihood
 
@@ -166,19 +167,19 @@ The result is:
     fitHKY
 
     ## 
-    ##  loglikelihood: -2394.26 
+    ##  loglikelihood: -2394.261 
     ## 
     ## unconstrained loglikelihood: -1230.335 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 5.985163 
+    ## Shape parameter: 5.986015 
     ## 
     ## Rate matrix:
     ##          a        c        g        t
-    ## a  0.00000  1.00000 27.01055  1.00000
-    ## c  1.00000  0.00000  1.00000 27.01055
-    ## g 27.01055  1.00000  0.00000  1.00000
-    ## t  1.00000 27.01055  1.00000  0.00000
+    ## a  0.00000  1.00000 27.00704  1.00000
+    ## c  1.00000  0.00000  1.00000 27.00704
+    ## g 27.00704  1.00000  0.00000  1.00000
+    ## t  1.00000 27.00704  1.00000  0.00000
     ## 
     ## Base frequencies:  
     ## 0.4013194 0.3738494 0.04584645 0.1789847
@@ -246,37 +247,34 @@ As you can see, the “GTR+G+I” model has the best likelihood for
 “primates”. Therefore, we should choose “GTR+G+I” not “HKY+G” to run the
 phylogenetic analysis on this data.
 
-## Assigment (25 marks)
+## Assigment (15 marks)
 
-Please download the [COVID data](covid100.fasta), and then make your
-analysis by the following steps.
+Please download the [H5N1 data](H5N1.fasta), which is a subset of
+original dataset [Wallace et al.,
+2007](https://doi.org/10.1371/journal.pcbi.1000520). It consists of 43
+influenza A H5N1 hemagglutinin and neuraminidase gene sequences isolated
+from a variety of hosts 1996 - 2005 across sample locations.
 
-1.  Use the R code that you have learnt to
+Then make the following analyses:
 
-    a). plot the maximum parsimony tree found by SPR search, and colour
-    the tips.
-
-    b). choose the “best” model for this data.
-
-    Please attach your R code and the tree with the report.
-
-    Tips: You can plot the tree and colour the tips in R. But if you
-    prefer to use a software with GUI, we recommend
-    [FigTree](http://tree.bio.ed.ac.uk/software/figtree/). The mapping
-    file [locations.txt](locations.txt) can be used to colour the tips.
+1.  Use the R code that you have learnt to choose the “best” model for
+    this data, and explain why you choose it. Please attach your R code
+    with the report.
 
 2.  Install the latest version of
     [RAxML](https://github.com/stamatak/standard-RAxML/tags), and create
     the maximum likelihood tree by using the model that you choose in
-    the 1st step. Please record your command to run the analysis and
+    the 1st step. Please record your command to run the analysis, and
     visualize the tree in the report.
 
     Tips: Use `-m` to define your model, and use `-#` or `-N` to specify
-    multiple runs on distinct starting trees. It may take about 15
+    multiple runs on distinct starting trees. It may take about several
     minutes for 10 runs on this data set using the single-threaded SSE3
-    version.
+    version. You can plot the tree and colour the tips in R. But if you
+    prefer to use a software with GUI, we recommend
+    [FigTree](http://tree.bio.ed.ac.uk/software/figtree/). The mapping
+    file [locations.txt](locations.txt) can be used to colour the tips.
 
 3.  Write a reprot to discribe your analysis and explain the result, for
-    example, how you configure the model and parameters in this
-    analysis, why you choose that model, and what the tree tells us, and
-    so on.
+    example, what are the model and parameters, what the tree tells us,
+    and so on.
