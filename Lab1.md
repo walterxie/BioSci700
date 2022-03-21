@@ -129,10 +129,6 @@ Print the parsimony scores.
 
     ## [1] 676 676
 
-**Question 3 :** Why are those two parsimony scores same? Assuming all
-possible trees give different parsimony scores, which tree should be the
-maximum parsimony tree?
-
 We then can give a starting tree, and perform nearest-neighbor
 interchanges (NNI) to find the maximum parsimony tree.
 
@@ -172,28 +168,33 @@ The result is:
     ## unconstrained loglikelihood: -1230.335 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 5.981735 
+    ## Shape parameter: 5.98548 
     ## 
     ## Rate matrix:
     ##          a        c        g        t
-    ## a  0.00000  1.00000 27.00702  1.00000
-    ## c  1.00000  0.00000  1.00000 27.00702
-    ## g 27.00702  1.00000  0.00000  1.00000
-    ## t  1.00000 27.00702  1.00000  0.00000
+    ## a  0.00000  1.00000 27.00745  1.00000
+    ## c  1.00000  0.00000  1.00000 27.00745
+    ## g 27.00745  1.00000  0.00000  1.00000
+    ## t  1.00000 27.00745  1.00000  0.00000
     ## 
     ## Base frequencies:  
-    ## 0.401322 0.3738029 0.04584205 0.179033
+    ## 0.4013194 0.3738494 0.04584645 0.1789847
 
 Tips: you can use the command `str(fitHKY)` to list all available items
 inside “fitHKY”.
 
-As you can see, the tree from this result is unrooted. So we will use
-the function `root` to assign the root to the tree given the outgroup
-taxon “Mouse”.
+As you can see, the tree from this result is unrooted.
 
     is.rooted(fitHKY$tree) 
 
     ## [1] FALSE
+
+    plot(fitHKY$tree, type="unrooted")
+
+![](Lab1_files/figure-markdown_strict/unnamed-chunk-17-1.png)
+
+So we will use the function `root` to assign the root to the tree given
+the outgroup taxon “Mouse”.
 
     rt <- root(fitHKY$tree, outgroup = "Mouse", resolve.root = TRUE)
 
@@ -201,7 +202,7 @@ Finally, the maximum likelihood tree looks like:
 
     plot(rt, use.edge.length=T, no.margin=TRUE)
 
-![](Lab1_files/figure-markdown_strict/unnamed-chunk-18-1.png)
+![](Lab1_files/figure-markdown_strict/unnamed-chunk-19-1.png)
 
 Add the command `edgelabels(round(rt$edge.length, 2))` to show all
 branch lengths.

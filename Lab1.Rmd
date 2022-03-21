@@ -123,8 +123,6 @@ Print the parsimony scores.
 parsimony(c(treeUPGMA, treeNJ), primates)
 ```
 
-__Question 3 :__ Why are those two parsimony scores same? Assuming all possible trees give different parsimony scores, which tree should be the maximum parsimony tree?
-
 We then can give a starting tree, and perform nearest-neighbor interchanges (NNI)
 to find the maximum parsimony tree. 
 
@@ -170,10 +168,14 @@ fitHKY
 Tips: you can use the command `str(fitHKY)` to list all available items inside "fitHKY". 
 
 As you can see, the tree from this result is unrooted. 
+```{r, fig.width = 8, fig.height = 8}
+is.rooted(fitHKY$tree) 
+plot(fitHKY$tree, type="unrooted")
+```
+
 So we will use the function `root` to assign the root to the tree given the outgroup taxon "Mouse". 
 
 ```{r}
-is.rooted(fitHKY$tree) 
 rt <- root(fitHKY$tree, outgroup = "Mouse", resolve.root = TRUE)
 ```
 
