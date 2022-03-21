@@ -163,19 +163,19 @@ The result is:
     fitHKY
 
     ## 
-    ##  loglikelihood: -2394.261 
+    ##  loglikelihood: -2394.26 
     ## 
     ## unconstrained loglikelihood: -1230.335 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 5.985961 
+    ## Shape parameter: 5.984631 
     ## 
     ## Rate matrix:
     ##          a        c        g        t
-    ## a  0.00000  1.00000 27.00659  1.00000
-    ## c  1.00000  0.00000  1.00000 27.00659
-    ## g 27.00659  1.00000  0.00000  1.00000
-    ## t  1.00000 27.00659  1.00000  0.00000
+    ## a  0.00000  1.00000 27.00915  1.00000
+    ## c  1.00000  0.00000  1.00000 27.00915
+    ## g 27.00915  1.00000  0.00000  1.00000
+    ## t  1.00000 27.00915  1.00000  0.00000
     ## 
     ## Base frequencies:  
     ## 0.4013194 0.3738494 0.04584645 0.1789847
@@ -256,7 +256,7 @@ original dataset [Wallace et al.,
 influenza A H5N1 hemagglutinin and neuraminidase gene sequences isolated
 from a variety of hosts 1996 - 2005 across sample locations.
 
-Read the publication and then make the following analyses:
+Read the publication, and then make the following analyses:
 
 1.  Use the R code that you have learnt to choose the “best” model for
     this data, and explain why you choose it. Please attach your R code
@@ -265,17 +265,29 @@ Read the publication and then make the following analyses:
 2.  Install the latest version of
     [RAxML](https://github.com/stamatak/standard-RAxML/tags), and create
     the maximum likelihood tree by using the model that you choose in
-    the 1st step. Please record your command to run the analysis, and
-    visualize the tree in the report.
+    the 1st step. You need to use the information provided in the
+    publication to specify the outgroup taxon/taxa. Please record your
+    command to run the analysis, and visualize the tree in the report.
 
     Tips: Use `-m` to define your model, and use `-#` or `-N` to specify
     multiple runs on distinct starting trees. It may take about several
     minutes for 10 runs on this data set using the single-threaded SSE3
-    version. You can plot the tree and colour the tips in R. But if you
-    prefer to use a software with GUI, we recommend
+    version. Use `-o` to specify the outgroup. More details are
+    available in the manual. You can plot the tree and colour the tips
+    in R. But if you prefer to use a software with GUI, we recommend
     [FigTree](http://tree.bio.ed.ac.uk/software/figtree/). The mapping
     file [locations.txt](locations.txt) can be used to colour the tips.
 
-3.  Write a reprot to discribe your analysis and explain the result, for
-    example, what are the model and parameters, what the tree tells us,
-    and so on.
+3.  Install another software
+    [TempEst](http://tree.bio.ed.ac.uk/software/tempest/) to investigate
+    the temporal signal at your ML tree. Then find the “best-fitting
+    root” and attach the visualized tree in the report. Please record
+    statistical results for both trees, the ML tree in step 2 and the
+    best-fitting tree, and also explain the implication of these
+    statistical results.
+
+    Tips: Click “Parse Date” and use “prefix” `_` to load years from
+    taxon labels into the program.
+
+4.  Write a full report to describe your analysis and explain the
+    result, including the required answers from previous steps.
