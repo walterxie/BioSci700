@@ -168,14 +168,14 @@ The result is:
     ## unconstrained loglikelihood: -1230.335 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 5.98548 
+    ## Shape parameter: 5.985961 
     ## 
     ## Rate matrix:
     ##          a        c        g        t
-    ## a  0.00000  1.00000 27.00745  1.00000
-    ## c  1.00000  0.00000  1.00000 27.00745
-    ## g 27.00745  1.00000  0.00000  1.00000
-    ## t  1.00000 27.00745  1.00000  0.00000
+    ## a  0.00000  1.00000 27.00659  1.00000
+    ## c  1.00000  0.00000  1.00000 27.00659
+    ## g 27.00659  1.00000  0.00000  1.00000
+    ## t  1.00000 27.00659  1.00000  0.00000
     ## 
     ## Base frequencies:  
     ## 0.4013194 0.3738494 0.04584645 0.1789847
@@ -183,7 +183,7 @@ The result is:
 Tips: you can use the command `str(fitHKY)` to list all available items
 inside “fitHKY”.
 
-As you can see, the tree from this result is unrooted.
+As you can see, the result is an unrooted phylogenetic tree.
 
     is.rooted(fitHKY$tree) 
 
@@ -193,12 +193,12 @@ As you can see, the tree from this result is unrooted.
 
 ![](Lab1_files/figure-markdown_strict/unnamed-chunk-17-1.png)
 
-So we will use the function `root` to assign the root to the tree given
-the outgroup taxon “Mouse”.
+If you want to root the tree, one simple method is to use the function
+`root` and specify the outgroup taxon “Mouse”.
 
     rt <- root(fitHKY$tree, outgroup = "Mouse", resolve.root = TRUE)
 
-Finally, the maximum likelihood tree looks like:
+The rooted maximum likelihood tree looks like:
 
     plot(rt, use.edge.length=T, no.margin=TRUE)
 

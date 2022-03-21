@@ -167,19 +167,20 @@ fitHKY
 
 Tips: you can use the command `str(fitHKY)` to list all available items inside "fitHKY". 
 
-As you can see, the tree from this result is unrooted. 
+As you can see, the result is an unrooted phylogenetic tree. 
+
 ```{r, fig.width = 8, fig.height = 8}
 is.rooted(fitHKY$tree) 
 plot(fitHKY$tree, type="unrooted")
 ```
 
-So we will use the function `root` to assign the root to the tree given the outgroup taxon "Mouse". 
+If you want to root the tree, one simple method is to use the function `root` and specify the outgroup taxon "Mouse". 
 
 ```{r}
 rt <- root(fitHKY$tree, outgroup = "Mouse", resolve.root = TRUE)
 ```
 
-Finally, the maximum likelihood tree looks like:
+The rooted maximum likelihood tree looks like:
 
 ```{r}
 plot(rt, use.edge.length=T, no.margin=TRUE)
