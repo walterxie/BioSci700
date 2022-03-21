@@ -168,14 +168,14 @@ The result is:
     ## unconstrained loglikelihood: -1230.335 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 5.984631 
+    ## Shape parameter: 5.984007 
     ## 
     ## Rate matrix:
     ##          a        c        g        t
-    ## a  0.00000  1.00000 27.00915  1.00000
-    ## c  1.00000  0.00000  1.00000 27.00915
-    ## g 27.00915  1.00000  0.00000  1.00000
-    ## t  1.00000 27.00915  1.00000  0.00000
+    ## a  0.00000  1.00000 27.00971  1.00000
+    ## c  1.00000  0.00000  1.00000 27.00971
+    ## g 27.00971  1.00000  0.00000  1.00000
+    ## t  1.00000 27.00971  1.00000  0.00000
     ## 
     ## Base frequencies:  
     ## 0.4013194 0.3738494 0.04584645 0.1789847
@@ -281,13 +281,16 @@ Read the publication, and then make the following analyses:
 3.  Install another software
     [TempEst](http://tree.bio.ed.ac.uk/software/tempest/) to investigate
     the temporal signal at your ML tree. Then find the “best-fitting
-    root” and attach the visualized tree in the report. Please record
-    statistical results for both trees, the ML tree in step 2 and the
-    best-fitting tree, and also explain the implication of these
-    statistical results.
+    root” and attach the visualized tree (coloured by locations) in the
+    report. Please record statistical results for both trees, the ML
+    tree in step 2 and the best-fitting tree, and also explain the
+    implication of these statistical results.
 
     Tips: Click “Parse Date” and use “prefix” `_` to load years from
     taxon labels into the program.
 
-4.  Write a full report to describe your analysis and explain the
-    result, including the required answers from previous steps.
+4.  Look at the “best-fitting” rooted tree, try to explain several
+    important migration events according to the phylogeny.
+
+5.  Write a full report to describe your analysis and explain the
+    results, including the required answers from previous steps.

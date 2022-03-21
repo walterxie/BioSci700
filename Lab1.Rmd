@@ -225,12 +225,14 @@ Use `-o` to specify the outgroup. More details are available in the manual.
          You can plot the tree and colour the tips in R. But if you prefer to use a software with GUI, we recommend [FigTree](http://tree.bio.ed.ac.uk/software/figtree/). The mapping file [locations.txt](locations.txt) can be used to colour the tips. 
 
 3. Install another software [TempEst](http://tree.bio.ed.ac.uk/software/tempest/) to investigate the temporal signal at your ML tree.
-Then find the "best-fitting root" and attach the visualized tree in the report.
+Then find the "best-fitting root" and attach the visualized tree (coloured by locations) in the report.
 Please record statistical results for both trees, the ML tree in step 2 and the best-fitting tree, 
 and also explain the implication of these statistical results.
 
    Tips: Click "Parse Date" and use "prefix" `_` to load years from taxon labels into the program. 
 
-4. Write a full report to describe your analysis and explain the result, including the required answers from previous steps.
+4. Look at the "best-fitting" rooted tree, try to explain several important migration events according to the phylogeny. 
+
+5. Write a full report to describe your analysis and explain the results, including the required answers from previous steps.
 
 
