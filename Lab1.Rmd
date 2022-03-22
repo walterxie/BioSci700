@@ -85,11 +85,10 @@ __Question 2 :__ what is pros and cons of the neighbour-joining algorithm?
 To understand the parsimony method, we need a more complex example.
 Please follow the instructions below, which are modified from the "phangorn" [tutorial](https://cran.r-project.org/web/packages/phangorn/vignettes/Trees.html).
 
-First load the alignment "primates", and remove the outgroup sequence "Bovine" to make the analysis simple.
-The command `read.phyDat("???.fasta", format = "fasta", type = "DNA")` is used to load the file alternatively.
+First download the alignment [primates.fasta](primates.fasta), and then load it using `read.phyDat`.
 
 ```{r}
-primates <- read.phyDat("primates.fasta", format = "fasta")
+primates <- read.phyDat("primates.fasta", format = "fasta", type = "DNA")
 names(primates)
 ```
 

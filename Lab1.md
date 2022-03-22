@@ -84,12 +84,10 @@ Please follow the instructions below, which are modified from the
 “phangorn”
 [tutorial](https://cran.r-project.org/web/packages/phangorn/vignettes/Trees.html).
 
-First load the alignment “primates”, and remove the outgroup sequence
-“Bovine” to make the analysis simple. The command
-`read.phyDat("???.fasta", format = "fasta", type = "DNA")` is used to
-load the file alternatively.
+First download the alignment [primates.fasta](primates.fasta), and then
+load it using `read.phyDat`.
 
-    primates <- read.phyDat("primates.fasta", format = "fasta")
+    primates <- read.phyDat("primates.fasta", format = "fasta", type = "DNA")
     names(primates)
 
     ##  [1] "Tarsius_syrichta" "Lemur_catta"      "Homo_sapiens"     "Pan"             
@@ -200,14 +198,14 @@ The result is:
     ## unconstrained loglikelihood: -4184.818 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 0.3961103 
+    ## Shape parameter: 0.3961098 
     ## 
     ## Rate matrix:
     ##           a         c         g         t
-    ## a  0.000000  4.615653 45.006781  3.699344
-    ## c  4.615653  0.000000  2.622392 38.945966
-    ## g 45.006781  2.622392  0.000000  1.000000
-    ## t  3.699344 38.945966  1.000000  0.000000
+    ## a  0.000000  4.615624 45.006576  3.699246
+    ## c  4.615624  0.000000  2.622064 38.945521
+    ## g 45.006576  2.622064  0.000000  1.000000
+    ## t  3.699246 38.945521  1.000000  0.000000
     ## 
     ## Base frequencies:  
     ## 0.3494849 0.3193111 0.08526572 0.2459383
