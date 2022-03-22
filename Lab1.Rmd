@@ -89,11 +89,7 @@ First load the alignment "primates", and remove the outgroup sequence "Bovine" t
 The command `read.phyDat("???.fasta", format = "fasta", type = "DNA")` is used to load the file alternatively.
 
 ```{r}
-fdir <- system.file("extdata/trees", package = "phangorn")
-primates <- read.phyDat(file.path(fdir, "primates.dna"), format = "interleaved")
-names(primates)
-# rm "Bovine"
-primates <- primates[-2]
+primates <- read.phyDat("primates.fasta", format = "fasta")
 names(primates)
 ```
 
@@ -132,64 +128,11 @@ treePars <- optim.parsimony(treeUPGMA, primates, rearrangements = "NNI")
 
 In the end, plot the maximum parsimony tree.
 
-```{r}
+```{r, fig.width = 6, fig.height = 6}
 plot(treePars, type="unrooted", no.margin=TRUE)
 ```
 
-
-### 2.4 Maximum likelihood
-
-The scripts below are using the maximum likelihood approach to 
-estimate the parameters from "primates" data,
-and eventually create a maximum likelihood phylogenetic tree from the inference.
-
-First we create a NJ tree using F81 model as the starting tree.
-
-```{r}
-dm <- dist.ml(primates, "F81")
-# NJ starting tree
-tree <- NJ(dm)
-```
-
-Then we define the model to HKY + Γ(4) and optimise the parameters.
-
-```{r, results='hide'}
-# HKY + Γ(4)
-fitStart <- pml(tree, primates, k=4)
-fitHKY <- optim.pml(fitStart, model="HKY", optGamma=TRUE, rearrangement="stochastic")
-```
-
-The result is:
-
-```{r}
-fitHKY
-```
-
-Tips: you can use the command `str(fitHKY)` to list all available items inside "fitHKY". 
-
-As you can see, the result is an unrooted phylogenetic tree. 
-
-```{r, fig.width = 8, fig.height = 8}
-is.rooted(fitHKY$tree) 
-plot(fitHKY$tree, type="unrooted")
-```
-
-If you want to root the tree, one simple method is to use the function `root` and specify the outgroup taxon "Mouse". 
-
-```{r}
-rt <- root(fitHKY$tree, outgroup = "Mouse", resolve.root = TRUE)
-```
-
-The rooted maximum likelihood tree looks like:
-
-```{r}
-plot(rt, use.edge.length=T, no.margin=TRUE)
-```
-
-Add the command `edgelabels(round(rt$edge.length, 2))` to show all branch lengths.
-
-
-### 2.5 Model selection
+### 2.4 Model selection
 
 When you make a data analysis using the model-based approach, 
 you need to know which model fits the best for the given data.
@@ -204,8 +147,60 @@ mt = modelTest(primates)
 mt
 ```
 
-As you can see, the "GTR+G+I" model has the best likelihood for "primates".
-Therefore, we should choose "GTR+G+I" not "HKY+G" to run the phylogenetic analysis on this data.
+As you can see, the "GTR+G" model has the best likelihood for "primates".
+Therefore, we should choose it to run the phylogenetic analysis on this data.
+
+### 2.5 Maximum likelihood
+
+The scripts below are using the maximum likelihood approach to 
+estimate the parameters from "primates" data,
+and eventually create a maximum likelihood phylogenetic tree from the inference.
+
+First we create a NJ tree using F81 model as the starting tree.
+
+```{r}
+dm <- dist.ml(primates, "F81")
+# NJ starting tree
+tree <- NJ(dm)
+```
+
+Then we define the model to GTR + Γ(4) as the model selection suggested and optimise the parameters.
+
+```{r, results='hide'}
+fitStart <- pml(tree, primates, k=4)
+fitGTR <- optim.pml(fitStart, model="GTR", optGamma=TRUE, rearrangement="stochastic")
+```
+
+The result is:
+
+```{r}
+fitGTR
+```
+
+Tips: you can use the command `str(fitGTR)` to list all available items inside "fitGTR". 
+
+As you can see, the result is an unrooted phylogenetic tree. 
+
+```{r, fig.width = 6, fig.height = 6}
+is.rooted(fitGTR$tree) 
+plot(fitGTR$tree, type="unrooted")
+```
+
+If you want to root the tree, one simple method is to use the function `root` and specify the outgroup. 
+
+```{r}
+rt <- root(fitGTR$tree, outgroup = c("Tarsius_syrichta","Lemur_catta"), resolve.root = TRUE)
+```
+
+The rooted maximum likelihood tree looks like:
+
+```{r}
+plot(rt, use.edge.length=T, no.margin=TRUE)
+```
+
+Add the command `edgelabels(round(rt$edge.length, 2))` to show all branch lengths.
+
+
 
 ## Assigment (15 marks)
 

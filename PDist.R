@@ -20,12 +20,15 @@ algPD = phyDat(alg)
 parsimony(c(treeUPGMA, treeNJ), algPD)
 
 #######
-fdir <- system.file("extdata/trees", package = "phangorn")
-primates <- read.phyDat(file.path(fdir, "primates.dna"), format = "interleaved")
+#fdir <- system.file("extdata/trees", package = "phangorn")
+#primates <- read.phyDat(file.path(fdir, "primates.dna"), format = "interleaved")
+primates <- read.phyDat("primates.fasta", format = "fasta")
 names(primates)
 # rm "Bovine"
-primates <- primates[-2]
-names(primates)
+#primates <- primates[-2]
+#names(primates)
+
+#write.phyDat(primates, "primates.fasta", format = "fasta")
 
 dm  <- dist.ml(primates)
 treeUPGMA  <- upgma(dm)
@@ -33,4 +36,16 @@ treeNJ  <- NJ(dm)
 
 plot(treeNJ, type="unrooted", use.edge.length=T, no.margin=TRUE)
 edgelabels(round(treeNJ$edge.length, 2))
+
+dm <- dist.ml(primates, "F81")
+# NJ starting tree
+tree <- NJ(dm)
+# HKY + Γ(4) + I
+fitStart <- pml(tree, primates, k=4)
+fitHKY <- optim.pml(fitStart, model="HKY", optGamma=TRUE, rearrangement="stochastic")
+
+plot(fitHKY$tree, type="unrooted", use.edge.length=T)
+
+mt = modelTest(primates)
+mt
 
