@@ -44,7 +44,8 @@ the matrix of pairwise distances.
 ## 2. Algorithms
 
 Secondly, we will use the library “phangorn” to create trees, and use
-“phytools”.
+“phytools”. Please note if you are using functions below, you need to
+use `read.phyDat` to load the data not `read.FASTA`.
 
     library(phangorn)
     library(phytools)
@@ -198,14 +199,14 @@ The result is:
     ## unconstrained loglikelihood: -4184.818 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 0.3961098 
+    ## Shape parameter: 0.3961077 
     ## 
     ## Rate matrix:
-    ##           a         c         g         t
-    ## a  0.000000  4.615624 45.006576  3.699246
-    ## c  4.615624  0.000000  2.622064 38.945521
-    ## g 45.006576  2.622064  0.000000  1.000000
-    ## t  3.699246 38.945521  1.000000  0.000000
+    ##           a         c         g        t
+    ## a  0.000000  4.615744 45.008934  3.69949
+    ## c  4.615744  0.000000  2.622472 38.94774
+    ## g 45.008934  2.622472  0.000000  1.00000
+    ## t  3.699490 38.947745  1.000000  0.00000
     ## 
     ## Base frequencies:  
     ## 0.3494849 0.3193111 0.08526572 0.2459383
