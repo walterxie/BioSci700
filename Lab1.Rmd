@@ -47,8 +47,9 @@ __Question 1 :__ what does this matrix tell us?
 
 ## 2. Algorithms
 
-Secondly, we will use the library "phangorn" to create trees, and use "phytools".
-Please note if you are using functions below, you need to use `read.phyDat` to load the data not `read.FASTA`.
+Secondly, we will use the libraries "phangorn" and "phytools" to create and plot trees, and also select models.
+Please note you need to use `read.phyDat` to load the data in this section. 
+THe function `read.FASTA` may cause errors for the code below, especially `modelTest`.
 
 ```{r}
 library(phangorn)
