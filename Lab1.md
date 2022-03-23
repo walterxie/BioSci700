@@ -45,7 +45,7 @@ the matrix of pairwise distances.
 
 Secondly, we will use the libraries “phangorn” and “phytools” to create
 and plot trees, and also select models. Please note you need to use
-`read.phyDat` to load the data in this section. THe function
+`read.phyDat` to load the data in this section. The function
 `read.FASTA` may cause errors for the code below, especially
 `modelTest`.
 
@@ -201,14 +201,14 @@ The result is:
     ## unconstrained loglikelihood: -4184.818 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 0.3961116 
+    ## Shape parameter: 0.3961046 
     ## 
     ## Rate matrix:
     ##           a         c         g         t
-    ## a  0.000000  4.615633 45.005744  3.699251
-    ## c  4.615633  0.000000  2.622149 38.945073
-    ## g 45.005744  2.622149  0.000000  1.000000
-    ## t  3.699251 38.945073  1.000000  0.000000
+    ## a  0.000000  4.615654 45.008010  3.699347
+    ## c  4.615654  0.000000  2.622402 38.946903
+    ## g 45.008010  2.622402  0.000000  1.000000
+    ## t  3.699347 38.946903  1.000000  0.000000
     ## 
     ## Base frequencies:  
     ## 0.3494849 0.3193111 0.08526572 0.2459383
