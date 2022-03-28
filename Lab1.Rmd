@@ -218,7 +218,8 @@ Please record your command to run the analysis, and visualize the tree in the re
 
    Tips: Use `-m` to define your model, and use `-#` or `-N` to specify multiple runs on distinct starting trees. It may take about several minutes for 10 runs on this data set using the single-threaded SSE3 version.
 Use `-o` to specify the outgroup. More details are available in the manual.
-         You can plot the tree and colour the tips in R. But if you prefer to use a software with GUI, we recommend [FigTree](http://tree.bio.ed.ac.uk/software/figtree/). The mapping file [locations.txt](locations.txt) can be used to colour the tips. 
+         You can plot the tree and colour the tips in R. But if you prefer to use a software with GUI, we recommend [FigTree](http://tree.bio.ed.ac.uk/software/figtree/). 
+         The mapping file [locations.txt](locations.txt) can be used to colour the tips. You can right-click your mouse on the link, and the popup-menu will show the option “Download Linked File As …”. Then click it and save the file to your working directory.
 
 3. Install another software [TempEst](http://tree.bio.ed.ac.uk/software/tempest/) to investigate the temporal signal at your ML tree.
 Then find the "best-fitting root" and attach the visualized tree (coloured by locations) in the report.
@@ -232,3 +233,14 @@ and also explain the implication of these statistical results.
 5. Write a full report to describe your analysis and explain the results, including the required answers from previous steps.
 
 
+### FigTree simple guide
+
+1. Load the original file produced by RAxML without any changes. Click the menu `File` => `Open` and select the tree file (for example, "RAxML_bestTree.h5n1"). 
+
+2. Secondly load the `location.txt` by click the menu again `File` => `Import Annotations …`. 
+
+![ImportAnnotations](Lab1_files/figure-markdown_strict/ImportAnnotations.png)
+
+3. After it is loaded successfully, expand `Tip Labels` => `Coloured by:` and the attribute `loc` will appear on the bottom of the drop-list. Choose it then the tips will be coloured.
+
+![colouredbyloc](Lab1_files/figure-markdown_strict/colouredbyloc.png)

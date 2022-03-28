@@ -201,14 +201,14 @@ The result is:
     ## unconstrained loglikelihood: -4184.818 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 0.3961046 
+    ## Shape parameter: 0.3961065 
     ## 
     ## Rate matrix:
     ##           a         c         g         t
-    ## a  0.000000  4.615654 45.008010  3.699347
-    ## c  4.615654  0.000000  2.622402 38.946903
-    ## g 45.008010  2.622402  0.000000  1.000000
-    ## t  3.699347 38.946903  1.000000  0.000000
+    ## a  0.000000  4.615434 45.005267  3.699126
+    ## c  4.615434  0.000000  2.622039 38.944620
+    ## g 45.005267  2.622039  0.000000  1.000000
+    ## t  3.699126 38.944620  1.000000  0.000000
     ## 
     ## Base frequencies:  
     ## 0.3494849 0.3193111 0.08526572 0.2459383
@@ -269,6 +269,9 @@ Read the publication, and then make the following analyses:
     in R. But if you prefer to use a software with GUI, we recommend
     [FigTree](http://tree.bio.ed.ac.uk/software/figtree/). The mapping
     file [locations.txt](locations.txt) can be used to colour the tips.
+    You can right-click your mouse on the link, and the popup-menu will
+    show the option “Download Linked File As …”. Then click it and save
+    the file to your working directory.
 
 3.  Install another software
     [TempEst](http://tree.bio.ed.ac.uk/software/tempest/) to investigate
@@ -286,3 +289,20 @@ Read the publication, and then make the following analyses:
 
 5.  Write a full report to describe your analysis and explain the
     results, including the required answers from previous steps.
+
+### FigTree simple guide
+
+1.  Load the original file produced by RAxML without any changes. Click
+    the menu `File` => `Open` and select the tree file (for example,
+    “RAxML\_bestTree.h5n1”).
+
+2.  Secondly load the `location.txt` by click the menu again `File` =>
+    `Import Annotations …`.
+
+![ImportAnnotations](Lab1_files/figure-markdown_strict/ImportAnnotations.png)
+
+1.  After it is loaded successfully, expand `Tip Labels` =>
+    `Coloured by:` and the attribute `loc` will appear on the bottom of
+    the drop-list. Choose it then the tips will be coloured.
+
+![colouredbyloc](Lab1_files/figure-markdown_strict/colouredbyloc.png)
