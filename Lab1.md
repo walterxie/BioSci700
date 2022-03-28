@@ -201,14 +201,14 @@ The result is:
     ## unconstrained loglikelihood: -4184.818 
     ## Discrete gamma model
     ## Number of rate categories: 4 
-    ## Shape parameter: 0.3961065 
+    ## Shape parameter: 0.3961126 
     ## 
     ## Rate matrix:
     ##           a         c         g         t
-    ## a  0.000000  4.615434 45.005267  3.699126
-    ## c  4.615434  0.000000  2.622039 38.944620
-    ## g 45.005267  2.622039  0.000000  1.000000
-    ## t  3.699126 38.944620  1.000000  0.000000
+    ## a  0.000000  4.615788 45.007768  3.699351
+    ## c  4.615788  0.000000  2.622311 38.946471
+    ## g 45.007768  2.622311  0.000000  1.000000
+    ## t  3.699351 38.946471  1.000000  0.000000
     ## 
     ## Base frequencies:  
     ## 0.3494849 0.3193111 0.08526572 0.2459383
@@ -299,10 +299,10 @@ Read the publication, and then make the following analyses:
 2.  Secondly load the `location.txt` by click the menu again `File` =>
     `Import Annotations …`.
 
-![ImportAnnotations](Lab1_files/figure-markdown_strict/ImportAnnotations.png)
-
-1.  After it is loaded successfully, expand `Tip Labels` =>
+3.  After it is loaded successfully, expand `Tip Labels` =>
     `Coloured by:` and the attribute `loc` will appear on the bottom of
     the drop-list. Choose it then the tips will be coloured.
+
+![ImportAnnotations](Lab1_files/figure-markdown_strict/ImportAnnotations.png)
 
 ![colouredbyloc](Lab1_files/figure-markdown_strict/colouredbyloc.png)
