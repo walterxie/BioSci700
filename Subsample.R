@@ -25,7 +25,7 @@ names(aln)
 loc <- gsub("^.+\\_(.*)", "\\1", names(aln), perl = TRUE)
 unique(loc)
 
-amc <- c("Trinidad","Brazil","Peru","Venezuela","Panama","Ecuador","Colombia")
+amc <- c("Trinidad","Brazil","Peru","Venezuela","Panama","Ecuador","Colombia","Bolivia")
 isAmc <- loc %in% amc 
 
 l <- data.frame(tips = names(aln), loc = loc, isAmc = isAmc)
