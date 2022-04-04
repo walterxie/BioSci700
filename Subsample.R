@@ -18,5 +18,15 @@ unique(year)
 l <- data.frame(tips = names(aln), loc = loc, species = species, year = year)
 write.table(l, file = "locations.txt", sep = "\t", quote = F , row.names = F)
 
+# assignment 2
+aln = read.phyDat("YFV-codon.nex", format = "nexus", type = "DNA")
+names(aln)
 
+loc <- gsub("^.+\\_(.*)", "\\1", names(aln), perl = TRUE)
+unique(loc)
 
+amc <- c("Trinidad","Brazil","Peru","Venezuela","Panama","Ecuador","Colombia")
+isAmc <- loc %in% amc 
+
+l <- data.frame(tips = names(aln), loc = loc, isAmc = isAmc)
+write.table(l, file = "locations2.txt", sep = "\t", quote = F , row.names = F)

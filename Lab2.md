@@ -134,7 +134,9 @@ Also hand in a copy of your BEAST xml input file and and the resulting output fi
 5. Here we are simultaneously estimating tree heights and clock rates.  What about the data allows us to do this?   What other forms of data would allow us to simultaneously make these estimates?
 6. What happens if you don't fix the mean substitution rate to be 1 in the substitution model panel?  
 7. Summarise the sampled trees as a maximum clade credibility tree using TreeAnnotator (and visualised in FigTree or IcyTree) and using Densitree.  What are the strengths and weaknesses of the two summary methods for this analysis?
-8. Find a pair of estimated parameters that are positively correlated and a pair that are negatively correlated.  Just based on the model used, would you have guessed before running the analysis that these pairs would be correlated?
+8. Find a pair of estimated parameters that are positively correlated and a pair that are negatively correlated. Just based on the model used, would you have guessed before running the analysis that these pairs would be correlated?
+
+The mapping file [locations2.txt](locations2.txt) can be used to colour the tips.
 
 
 ## Further phylogenetic models (6 Marks)
