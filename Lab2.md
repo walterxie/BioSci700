@@ -109,6 +109,13 @@ We are interested in whether or not this clade is monophyletic so do not impose 
 
 Tips: use the filter to select taxa by keywords.
 
+<figure class="image">
+<a href="Lab2/MRCA.png">
+  <img src="Lab2/MRCA.png" alt="MRCA">
+  </a>
+  <figcaption>Figure {{ current_fig_num }}: The Priors panel in BEAUti.</figcaption>
+</figure>
+
 In the `MCMC` tab, choose a reasonable length to run your analysis for
 (you may want to run short chains to start with to make sure your set-up is correct).
 All parameters you log should have an ESS of at least 100.
