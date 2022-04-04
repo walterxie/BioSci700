@@ -54,8 +54,8 @@ and clock models, but leave the site models _unlinked_.
 {% assign current_fig_num = 1 %}
 
 <figure class="image">
-<a href="Partitions.png">
-  <img src="Partitions.png" alt="Partitions">
+<a href="Lab2/Partitions.png">
+  <img src="Lab2/Partitions.png" alt="Partitions">
   </a>
   <figcaption>Figure {{ current_fig_num }}: The Partitions panel in BEAUti.</figcaption>
 </figure>
@@ -68,8 +68,8 @@ so check the `Use tip dates` option and click the button `Auto-config` to
 {% assign current_fig_num = current_fig_num | plus: 1 %}
 
 <figure class="image">
-<a href="TipDates.png">
-  <img src="TipDates.png" alt="TipDates">
+<a href="Lab2/TipDates.png">
+  <img src="Lab2/TipDates.png" alt="TipDates">
   </a>
   <figcaption>Figure {{ current_fig_num }}: The TipDates panel in BEAUti.</figcaption>
 </figure>
@@ -82,8 +82,8 @@ Do this for each partition.
 {% assign current_fig_num = current_fig_num | plus: 1 %}
 
 <figure class="image">
-<a href="SiteModel.png">
-  <img src="SiteModel.png" alt="SiteModel">
+<a href="Lab2/SiteModel.png">
+  <img src="Lab2/SiteModel.png" alt="SiteModel">
   </a>
   <figcaption>Figure {{ current_fig_num }}: The SiteModel panel in BEAUti.</figcaption>
 </figure>
@@ -101,8 +101,8 @@ We are interested in whether or not this clade is monophyletic so do not impose 
 {% assign current_fig_num = current_fig_num | plus: 1 %}
 
 <figure class="image">
-<a href="TaxonSet.png">
-  <img src="TaxonSet.png" alt="TaxonSet">
+<a href="Lab2/TaxonSet.png">
+  <img src="Lab2/TaxonSet.png" alt="TaxonSet">
   </a>
   <figcaption>Figure {{ current_fig_num }}: The TaxonSet pop-up window in BEAUti.</figcaption>
 </figure>
