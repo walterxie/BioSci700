@@ -1,7 +1,6 @@
 ---
 layout: page
-title: BIOINF 702 Assignment 2
-author: Alexei Drummond
+author: Alexei Drummond and Walter Xie
 permalink: /Lab2
 ---
 
