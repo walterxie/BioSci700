@@ -17,8 +17,8 @@ To complete the first part of the assignment, you will need to install:
 1. BEAST 2 from [http://beast2.org/](http://beast2.org/). This package includes BEAST, BEAUti, Densitree and TreeAnnotator. 
 Use the latest version 2.6.6.
 2. FigTree v1.4.4 from [http://tree.bio.ed.ac.uk/software/figtree/](http://tree.bio.ed.ac.uk/software/figtree/) 
-or IcyTree [http://tgvaughan.github.io/icytree/icytree.html](http://tgvaughan.github.io/icytree/icytree.html).
-3. Tracer v1.7.2 from [http://tree.bio.ed.ac.uk/software/tracer/](http://tree.bio.ed.ac.uk/software/tracer/)
+or IcyTree [https://icytree.org/](https://icytree.org/).
+3. Tracer v1.7.2 from [https://github.com/beast-dev/tracer/releases](https://github.com/beast-dev/tracer/releases)
 
 The data set required for this assignment is [YFV-codon.nex](YFV-codon.nex).
 You can right-click your mouse on the link, and the popup-menu will show the option "Download Linked File As ...". 
@@ -140,7 +140,7 @@ The mapping file [locations2.txt](locations2.txt) can be used to colour the tips
 
 ## Further phylogenetic models (6 Marks)
 
-There are many other models implemented in BEAST (see [http://www.beast2.org/beast-features/](http://www.beast2.org/beast-features/)).
+There are many other models implemented in BEAST 2 (see [http://www.beast2.org/beast-features/](http://www.beast2.org/beast-features/)).
 Choose one of the papers below and, in 2-3 pages, summarise it, describing the basic model, 
 the type of data it requires, the assumptions it makes, 
 the parameters that can be estimated and whether or not it could sensibly be applied to the YFV data set we look at here.
@@ -151,3 +151,4 @@ the parameters that can be estimated and whether or not it could sensibly be app
 - Alexandra Gavryushkina , David Welch, Tanja Stadler, Alexei J. Drummond (2014) [Bayesian Inference of Sampled Ancestor Trees for Epidemiology and Fossil Calibration](https://doi.org/10.1371/journal.pcbi.1003919).
 - Remco Bouckaert and Alexei J Drummond (2017) [bModelTest: Bayesian phylogenetic site model averaging and model comparison](https://doi.org/10.1186/s12862-017-0890-6).
 - Muller NF, Rasmussen D, Stadler T (2018) [MASCOT: parameter and state inference under the marginal structured coalescent approximation](https://doi.org/10.1093/bioinformatics/bty406).
+
