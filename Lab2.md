@@ -4,7 +4,7 @@ author: Alexei Drummond and Walter Xie
 permalink: /Lab2
 ---
 
-# BIOINF 702 Assignment 2
+# BIOINF 700 Assignment 2
 
 There are two parts to this assignment. 
 In the first part, you will estimate phylogenies, rates and dates using tools in the BEAST software family. 
