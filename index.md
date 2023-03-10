@@ -8,6 +8,6 @@
 
 - [RStudio download](https://posit.co/download/rstudio-desktop/)
 
-- [bookdown.org](https://bookdown.org/yihui/rmarkdown/). 
+- [bookdown.org](https://bookdown.org/yihui/rmarkdown/) 
 
 - [R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
