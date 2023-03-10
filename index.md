@@ -1,7 +1,4 @@
 
-# Assignments
-
-## Download template 
 
 1. [Assignment 1 - template](Assignment1/Assignment1Template.Rmd)
 
