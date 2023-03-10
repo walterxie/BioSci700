@@ -33,7 +33,7 @@ Your code should be implemented between two comments "### your code here" and "#
 All code must be executable in R 4.2.x. 
 Tips: use `sessionInfo()` to print the R version.
 
-## Question 1
+## Question 1 (2 points)
 
 Implement the Needleman–Wunsch algorithm for global sequence alignment. 
 This implementation should be split into two parts:
@@ -182,7 +182,7 @@ cat("y: ", rs$AlignmentB, "\nx: ", rs$AlignmentA, "\n\n")
 ```
 
 
-## Question 2
+## Question 2 (2 points)
 
 Implement the Smith–Waterman algorithm for local sequence alignment.
 
@@ -307,7 +307,7 @@ cat("max score = ", rs$max_score, ", max score coordinate = (", rs$max_i, ", ", 
 ```
 
 
-## Question 3
+## Question 3 (6 points)
 
 In this section, we will learn how to use R to construct phylogenetic trees using some basic algorithms, such as UPGMA and Neighbour-joining, etc.
 
