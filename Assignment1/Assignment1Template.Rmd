@@ -276,8 +276,6 @@ local_alignment <- function(A, B, F, d=-2.0) {
     #cat("selected scores = (", paste(scores, collapse = ", "), ")\n") 
   }
   
-  ### END SOLUTION
-  
   # AlignmentA and AlignmentB are strings
   return(list(AlignmentA=AlignmentA, AlignmentB=AlignmentB, max_score=max_score, max_i=max_i, max_j=max_j))
 }  
