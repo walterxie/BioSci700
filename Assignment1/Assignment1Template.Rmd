@@ -414,7 +414,7 @@ treePars <- optim.parsimony(treeUPGMA, as.phyDat(m), rearrangements = "NNI")
 plot(treePars, type="unrooted", use.edge.length=T, no.margin=TRUE)
 ```
 
-2.5 Maximum likelihood
+2.4 Maximum likelihood
 
 We are going use [iqtree2](http://www.iqtree.org/#download) for this section,
 please install the latest version before you start.
