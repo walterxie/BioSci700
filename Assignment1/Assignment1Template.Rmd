@@ -1,0 +1,462 @@
+---
+title: "BioSci700 Assignment1"
+author: "Walter (walter007)"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Assignment 1 : Pairwise Sequence Alignment (10 points)
+
+Due date: Tue 28/3/2023 at 23:59
+
+## Instruction
+
+Please rename the file and add your name and UPI into the file name, 
+and then replace the author into your name in the header, 
+including UPI insider the bracket.
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook,
+which can be edited by [RStudio](https://posit.co/download/rstudio-desktop/). 
+One of online guides is available at [bookdown.org](https://bookdown.org/yihui/rmarkdown/). 
+
+**Note:** Some code has been given in order to define the input and output. 
+Your code should be implemented between two comments "### your code here" and "### your code finished above". Please make sure that you do not miss any blocks, except for the example below:
+
+```
+# your code here
+# ...
+# your code finished above
+```
+
+All code must be executable in R 4.2.x. 
+Tips: use `sessionInfo()` to print the R version.
+
+## Question 1
+
+Implement the Needleman–Wunsch algorithm for global sequence alignment. 
+This implementation should be split into two parts:
+
+- Computing F matrix
+- Tracing back
+- Test alignment
+
+To do:
+
+- Complete compute_F_matrix()
+- Complete trace_back()
+
+### 1. F matrix
+
+The function `compute_F_matrix()` below is used to fill in the predefined 2D `F` matrix. You need to complete the code to implement the scoring system for this purpose, 
+which is determined by three parameters: `match=1.0, mismatch=-1.0, gap=-1.0`, where *match/mismatch* is equivalent to the score matrix and gap is the linear gap penalty.   
+
+```{r, compute_F_matrix}
+# the predefined F matrix and gap penalty 
+compute_F_matrix <- function(F, gap, match, mismatch) {
+  # sequence X in row names, Y in column names
+  # start scoring
+  for (i in 2:nrow(F)) {
+    for (j in 2:ncol(F)) {
+      # similarity matrix is based on match and mismatch
+      s = ifelse(colnames(F)[j] == rownames(F)[i], match, mismatch) 
+      
+      ### your code here
+      # ...
+      ### your code finished above
+      
+    }
+  }
+  
+  # the starting position is bottom right element in F matrix
+  return(F)
+}
+```
+
+The code below initialize the `F` matrix, 
+and fill in the first row and column with gap penalty. 
+The sequence x will display in the row names, and y in column names.
+
+```{r}
+init_F_matrix <- function(A, B) {
+  # init dimension of the matrix
+  mat <- matrix(0, nrow = nchar(A)+1, ncol = nchar(B)+1)
+  # sequence x in row, y in col
+  rownames(mat) <- c("*", unlist(strsplit(A, split = "")) )
+  colnames(mat) <- c("*", unlist(strsplit(B, split = "")) )
+  
+  # fill in the first row with gap penalty
+  mat[,1] = gap * 0:(nrow(mat)-1)
+  # fill in the first column with gap penalty
+  mat[1,] = gap * 0:(ncol(mat)-1)
+  return(mat)
+}
+
+
+x = "GATTACA"
+y = "GCATGCU"
+match = 1
+mismatch = -1
+gap = -1
+
+mat <- init_F_matrix(x, y)
+# here is your implementation
+Fmat <- compute_F_matrix(mat, gap, match, mismatch)
+Fmat
+```
+
+
+### 2. Tracing back
+
+Complete the function `trace_back()` to form the alignment given a scoring matrix 
+`F` created by `compute_F_matrix()` above, and other required parameters.
+
+If two or more scores are the same, select the high road during traceback. For example, if there is the multiple choice to move either vertical or diagonal, then the high road approach will take the vertical move. If either diagonal or horizontal, then take diagonal.
+
+Note: the high road approach is different to the pseudo-code in Wikipedia.
+
+```{r, trace_back}
+# 
+trace_back <- function(F, A, B) {
+  # i indexing row, j indexing col in F
+  i = nchar(A) + 1
+  j = nchar(B) + 1
+  if (i == 1 || j == 1 || i > nrow(F) || j > ncol(F)) {
+    stop("Invalid position (", i, ", ", j, ") !")
+  }
+  
+  # aligned sequence A
+  AlignmentA = ""
+  # aligned sequence B
+  AlignmentB = ""
+  
+  # trace back in F matrix following the possible moves by recalculating the score,
+  # the starting position is bottom right element in F matrix.
+  
+  ### BEGIN SOLUTION
+  # selected scores in the path
+  scores = c()
+  while (i > 1 && j > 1) {
+    # append score
+    scores = c(scores, F[i, j])
+    
+    # similarity matrix is based on match and mismatch
+    s = ifelse(colnames(F)[j] == rownames(F)[i], match, mismatch) 
+    
+    ### your code here
+    # ...
+    ### your code finished above
+    
+    # A in row names starts at matrix index 2, B in col names starts at matrix index 2
+    x_char = substring(A, i-1, i-1)
+    y_char = substring(B, j-1, j-1)
+    
+    ### your code here
+    # ...
+    ### your code finished above
+    
+  }
+  
+  # AlignmentA and AlignmentB are strings
+  return(list(AlignmentA=AlignmentA, AlignmentB=AlignmentB))
+}
+```
+
+### 3. Test your alignment
+
+```{r, global_alignment}
+### 1st test
+rs <- trace_back(Fmat, x, y)
+cat("y: ", rs$AlignmentB, "\nx: ", rs$AlignmentA, "\n\n")
+
+### 2nd test
+x = "ATA"
+y = "AGTTA"
+# restart
+mat <- init_F_matrix(x, y)
+Fmat <- compute_F_matrix(mat, gap, match, mismatch)
+rs <- trace_back(Fmat, x, y)
+cat("y: ", rs$AlignmentB, "\nx: ", rs$AlignmentA, "\n\n")
+### End
+```
+
+
+## Question 2
+
+Implement the Smith–Waterman algorithm for local sequence alignment.
+
+To do:
+
+- Complete get_F_matrix()
+- Complete local_alignment()
+
+A score matrix `S` is defined below. Please do not change the code.
+
+```{r, S}
+nuc = c('A', 'G', 'C', 'T') # Purines, Pyramidines
+# 2 if a = b, 1 if a b is purine or a b is pyrimidine,
+# -2 if a is a purine and b is a pyrimidine or vice versa.
+S = matrix(c(2, 1, -2, -2, 1, 2, -2, -2, -2, -2, 2, 1, -2, -2, 1, 2), nrow = 4)
+rownames(S) <- nuc
+colnames(S) <- nuc
+print(S)
+```
+
+### 1. F matrix
+
+Complete the function to get `F` matrix for local alignment, where `A`, `B` are sequences, `S` is given above, and `d` is gap penalty.
+**Note:** make sure every score in `F` >= 0.
+
+```{r, get_F_matrix}
+# sequence A in row, B in col, S score matrix, d linear gap penalty 
+get_F_matrix <- function(A, B, S, d=-2.0) {
+  
+  # init dimension of the matrix
+  F <- matrix(0, nrow = nchar(A)+1, ncol = nchar(B)+1)
+  
+  for (i in 2:nrow(F)) {
+    for (j in 2:ncol(F)) {
+      # A in row names starts at matrix index 2, B in col names starts at matrix index 2
+      x_char = substring(A, i-1, i-1)
+      y_char = substring(B, j-1, j-1)
+      
+      ### your code here
+      # ...
+      ### your code finished above
+      
+    }
+  }
+  
+  return(F)
+}
+```
+
+### 2. Local alignment
+
+Complete the function `local_alignment()` to produce a local sequence alignment. 
+Remember to always take the high road during traceback. 
+If there are multiple maximum scores, then always take the maximum score in the lowest and then rightmost position in `F`.
+
+```{r, local_alignment}
+# sequence A in row, B in col, F matrix, d linear gap penalty 
+local_alignment <- function(A, B, F, d=-2.0) {
+  
+  max_score = max(F)
+  # max_i, max_j are the coordinate of the highest score max_score in F matrix. 
+  co = which(F==max_score, arr.ind=TRUE)
+  # takes the maximum score in the rightist and then lowest position,
+  # if more than 1
+  max_i = co[nrow(co),1]  
+  max_j = co[nrow(co),2]
+  
+  AlignmentA = ""
+  AlignmentB = ""
+  
+  # Returns a local alignment between sequences A and B, d is the penalty.
+  #  F is the F matrix, where A is in row, B is in column.
+  # max_i, max_j are the coordinate of the highest score max_score in F matrix.
+  # String AlignmentA and AlignmentB are the alignment. 
+  
+  # trace back 
+  i = max_i
+  j = max_j
+  scores = c()
+  while (F[i, j] > 0) { # stop at 0
+    # append score
+    scores = c(scores, F[i, j])
+    # A in row names starts at matrix index 1, B in col names starts at matrix index 1
+    x_char = substring(A, i-1, i-1)
+    y_char = substring(B, j-1, j-1)
+    
+    ### your code here
+    # ...
+    ### your code finished above
+    
+    #cat("selected scores = (", paste(scores, collapse = ", "), ")\n") 
+  }
+  
+  ### END SOLUTION
+  
+  # AlignmentA and AlignmentB are strings
+  return(list(AlignmentA=AlignmentA, AlignmentB=AlignmentB, max_score=max_score, max_i=max_i, max_j=max_j))
+}  
+```
+
+### 3. Test your alignment:
+
+```{r}
+### 1st test
+A = "GGTTGACTA"
+B = "TGTTACGG"
+mat <- get_F_matrix(A, B, S) 
+mat
+rs <- local_alignment(A, B, mat)
+cat("y: ", rs$AlignmentB, "\nx: ", rs$AlignmentA, "\n")
+cat("max score = ", rs$max_score, ", max score coordinate = (", rs$max_i, ", ", rs$max_j, ")\n")
+
+### 2nd test
+A = "ATA"
+B = "AGTTA"
+mat <- get_F_matrix(A, B, S)
+mat
+rs <- local_alignment(A, B, mat)
+cat("y: ", rs$AlignmentB, "\nx: ", rs$AlignmentA, "\n")
+cat("max score = ", rs$max_score, ", max score coordinate = (", rs$max_i, ", ", rs$max_j, ")\n")
+### End
+```
+
+
+## Question 3
+
+In this section, we will learn how to use R to construct phylogenetic trees using some basic algorithms, such as UPGMA and Neighbour-joining, etc.
+
+Please download the nucleotide alignment, and save it into your working directory. 
+You can preview the alignment by using any text editor to open the file.
+
+We also need three R libraries: "ape", "phangorn", "phytools", "tidyverse", and "Biostrings". 
+If your R has not got them, please use install.packages to install them.
+
+```{r, setup, include=FALSE}
+library(tidyverse)
+library(ape)
+library(Biostrings)
+library(phangorn)
+library(phytools)
+
+# please replace to your working dir
+knitr::opts_knit$set(root.dir = "~/WorkSpace/BioSci700/Assignment1")
+```
+
+
+### 1. Pairwise distances
+
+Make sure the the alignment file is in your working directory, then load the alignment from the fasta file:
+
+```{r}
+#getwd()
+aln = read.FASTA("ABCD.fasta")
+```
+
+This alignment has 4 taxa and 20 sites. The nucleotides were composited to create the distance matrix in Lecture 5.
+
+Using the function dist.dna to compute the distribution of pairwise distances, we can multiple it with the number of sites (20) to obtain the matrix of pairwise distances.
+
+```{r}
+# 20 sites
+d = dist.dna(aln, model = "raw") * 20
+d
+```
+
+**Question 3.1:** what does this matrix tell us?
+
+```
+Your answer
+```
+
+### 2. Algorithms
+
+Secondly, we will use the libraries “phangorn” and “phytools” to create and plot trees. 
+Please note you need to use [Dingue virus data](./Dengue4.env.nex) to make the following analysis.
+
+```{r}
+sq = read.nexus.data("Dengue4.env.nex")
+# convert the list of vectors into DNAbin object
+# so phangorn functions can take it as the input
+m <- sq %>% lapply(.,paste0,collapse="") %>% 
+  unlist %>% DNAStringSet %>% as.DNAbin 
+```
+
+2.1 UPGMA
+
+Now, we will compute the distance matrix d and produce the UPGMA tree. 
+Use plot function to draw the tree, and use edgelabels to show branch lengths.
+
+```{r}
+dm  <- dist.ml(m)
+
+treeUPGMA <- upgma(dm)
+plot(treeUPGMA, use.edge.length=T, no.margin=TRUE)
+edgelabels(round(treeUPGMA$edge.length,4)) 
+```
+
+2.2 Neighbour-joining
+
+Then compute the neighbour-joining tree. As it produces unrooted trees, 
+you need to add the “unrooted” argurment to the plot function.
+
+```{r}
+treeNJ <- NJ(dm)
+plot(treeNJ, type="unrooted", use.edge.length=T, no.margin=TRUE)
+#edgelabels(round(treeNJ$edge.length,4))
+```
+
+**Question 3.2:** what is pros and cons of the neighbour-joining algorithm?
+
+```
+Your answer
+```
+
+2.3 Parsimony
+
+Print the parsimony scores.
+
+```{r}
+parsimony(c(treeUPGMA, treeNJ), as.phyDat(m))
+```
+
+Which tree should be used as a starting tree?
+
+We then use the UPGMA tree as a starting tree, and perform nearest-neighbor interchanges (NNI) to find the maximum parsimony tree.
+
+```{r}
+treePars <- optim.parsimony(treeUPGMA, as.phyDat(m), rearrangements = "NNI")
+plot(treePars, type="unrooted", use.edge.length=T, no.margin=TRUE)
+```
+
+2.5 Maximum likelihood
+
+We are going use [iqtree2](http://www.iqtree.org/#download) for this section,
+please install the latest version before you start.
+
+Run iqtree2 using the following command in the terminal, but replace "$YOUR_PATH" 
+into the directory path of iqtree2, e.g. "/Applications/iqtree2.2.0/bin"
+
+```bash
+$YOUR_PATH/iqtree2 -s Dengue4.env.nex
+```
+Load the maximum-likelihood tree to R:
+
+Analysis results are written to: 
+```
+IQ-TREE report:                Dengue4.env.nex.iqtree
+Maximum-likelihood tree:       Dengue4.env.nex.treefile
+Likelihood distances:          Dengue4.env.nex.mldist
+Screen log file:               Dengue4.env.nex.log
+```
+
+```{r}
+treeML <- read.tree("Dengue4.env.nex.treefile")
+plot(treeML, use.edge.length=T, no.margin=TRUE)
+```
+
+When you make a data analysis using the model-based approach, you need to know which model fits the best for the given data.
+
+**Question 3.3:**
+Use any text file editor to open "Dengue4.env.nex.iqtree", and answer which nucleotide substitution model fit the best for Dengue data. Why?
+
+```
+Your answer
+```
+
+**Question 3.4:**
+
+- Compare the difference of those four trees generated by 
+four different algorithms in term of topology.
+
+- Use `treedist` function in `phangorn` to compare, 
+and explain what the distances tell you.
+
+```
+Your answer
+```
