@@ -9,7 +9,7 @@ output:
 
 # Assignment 1 : Pairwise Sequence Alignment (10 points)
 
-Due date: Tue 28/3/2023 at 23:59
+Due date: Mon 27/3/2023 at 23:59
 
 ## Instruction
 
