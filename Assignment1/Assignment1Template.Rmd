@@ -311,8 +311,8 @@ In this section, we will use R to construct phylogenetic trees using some basic 
 Please download the nucleotide alignment, and save it into your working directory.
 You can preview the alignment by using any text editor to open the file.
 
-We also need three R libraries: "ape", "phangorn", "phytools", "tidyverse", and "Biostrings". 
-If your R has not got them, please use install.packages to install them.
+We also need these R libraries: "ape", "phangorn", "phytools", "tidyverse", and "Biostrings". 
+If your R has not got them, please use `install.packages` to install them.
 
 ```{r, setup, include=FALSE}
 library(tidyverse)
