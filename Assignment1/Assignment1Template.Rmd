@@ -40,7 +40,6 @@ This implementation should be split into two parts:
 
 - Computing F matrix
 - Tracing back
-- Test alignment
 
 To do:
 
@@ -77,6 +76,7 @@ compute_F_matrix <- function(F, gap, match, mismatch) {
 The code below initialize the `F` matrix, 
 and fill in the first row and column with gap penalty. 
 The sequence x will display in the row names, and y in column names.
+This block is used to display `F`, and it has no uncompleted code.  
 
 ```{r}
 init_F_matrix <- function(A, B) {
@@ -131,10 +131,9 @@ trace_back <- function(F, A, B) {
   # aligned sequence B
   AlignmentB = ""
   
-  # trace back in F matrix following the possible moves by recalculating the score,
+  # trace back in F matrix following the possible moves 
+  # by recalculating the score,
   # the starting position is bottom right element in F matrix.
-  
-  ### BEGIN SOLUTION
   # selected scores in the path
   scores = c()
   while (i > 1 && j > 1) {
@@ -163,7 +162,7 @@ trace_back <- function(F, A, B) {
 }
 ```
 
-### 3. Test your alignment
+### 3. Print and test your alignment
 
 ```{r, global_alignment}
 ### 1st test
@@ -281,7 +280,7 @@ local_alignment <- function(A, B, F, d=-2.0) {
 }  
 ```
 
-### 3. Test your alignment:
+### 3. Print and test your alignment:
 
 ```{r}
 ### 1st test
@@ -307,9 +306,9 @@ cat("max score = ", rs$max_score, ", max score coordinate = (", rs$max_i, ", ", 
 
 ## Question 3 (6 points)
 
-In this section, we will learn how to use R to construct phylogenetic trees using some basic algorithms, such as UPGMA and Neighbour-joining, etc.
+In this section, we will use R to construct phylogenetic trees using some basic algorithms, such as UPGMA and Neighbour-joining, etc.
 
-Please download the nucleotide alignment, and save it into your working directory. 
+Please download the nucleotide alignment, and save it into your working directory.
 You can preview the alignment by using any text editor to open the file.
 
 We also need three R libraries: "ape", "phangorn", "phytools", "tidyverse", and "Biostrings". 
@@ -336,9 +335,9 @@ Make sure the the alignment file is in your working directory, then load the ali
 aln = read.FASTA("ABCD.fasta")
 ```
 
-This alignment has 4 taxa and 20 sites. The nucleotides were composited to create the distance matrix in Lecture 5.
+This alignment has 4 taxa and 20 sites. The nucleotides were composited to create the distance matrix.
 
-Using the function dist.dna to compute the distribution of pairwise distances, we can multiple it with the number of sites (20) to obtain the matrix of pairwise distances.
+Using the function `dist.dna` to compute the distribution of pairwise distances, we can multiple it with the number of sites (20) to obtain the matrix of pairwise distances.
 
 ```{r}
 # 20 sites
@@ -368,7 +367,7 @@ m <- sq %>% lapply(.,paste0,collapse="") %>%
 2.1 UPGMA
 
 Now, we will compute the distance matrix d and produce the UPGMA tree. 
-Use plot function to draw the tree, and use edgelabels to show branch lengths.
+Use `plot` function to draw the tree, and use `edgelabels` to show branch lengths.
 
 ```{r}
 dm  <- dist.ml(m)
@@ -381,7 +380,7 @@ edgelabels(round(treeUPGMA$edge.length,4))
 2.2 Neighbour-joining
 
 Then compute the neighbour-joining tree. As it produces unrooted trees, 
-you need to add the “unrooted” argurment to the plot function.
+you need to add the “unrooted” argument to the `plot` function.
 
 ```{r}
 treeNJ <- NJ(dm)
