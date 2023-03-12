@@ -306,7 +306,12 @@ cat("max score = ", rs$max_score, ", max score coordinate = (", rs$max_i, ", ", 
 
 ## Question 3 (6 points)
 
-In this section, we will use R to construct phylogenetic trees using some basic algorithms, such as UPGMA and Neighbour-joining, etc.
+In this section, we will use R to construct phylogenetic trees using some basic algorithms, such as UPGMA and Neighbour-joining, etc, and answer some questions.
+Please make sure that you do not miss any blocks shown below, and replace the "Your answer" to your actual answer of that quetion.
+
+```
+Your answer
+```
 
 Please download the nucleotide alignment, and save it into your working directory.
 You can preview the alignment by using any text editor to open the file.
