@@ -422,7 +422,7 @@ into the directory path of iqtree2, e.g. "/Applications/iqtree2.2.0/bin"
 ```bash
 $YOUR_PATH/iqtree2 -s Dengue4.env.nex
 ```
-Load the maximum-likelihood tree to R:
+Load the maximum-likelihood tree to R, e.g. "Dengue4.env.nex.treefile":
 
 Analysis results are written to: 
 ```
