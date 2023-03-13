@@ -1,11 +1,11 @@
 
-Please rename the file and add your name and UPI into the file name, 
-and then replace the author into your name in the header, 
+Please rename the R markdown file and add your name and UPI into the file name, 
+and then open the R markdown file, replace the author into your name in the header, 
 including UPI insider the bracket.
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook,
-which can be edited by [RStudio](https://posit.co/download/rstudio-desktop/). 
-One of online guides is available at [bookdown.org](https://bookdown.org/yihui/rmarkdown/). 
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook.
+It can be edited by [RStudio](https://posit.co/download/rstudio-desktop/). 
+User guide is available at [bookdown.org](https://bookdown.org/yihui/rmarkdown/). 
 
 **Note:** in question 1 and 2, some code has been given in order to define the input and output. 
 Your code should be implemented between two comments "### your code here" and "### your code finished above". Please make sure that you do not miss any blocks, except for the example below:
