@@ -79,7 +79,7 @@ The sequence x will display in the row names, and y in column names.
 This block is used to display `F`, and it has no uncompleted code.  
 
 ```{r}
-init_F_matrix <- function(A, B) {
+init_F_matrix <- function(A, B, gap) {
   # init dimension of the matrix
   mat <- matrix(0, nrow = nchar(A)+1, ncol = nchar(B)+1)
   # sequence x in row, y in col
@@ -100,7 +100,7 @@ match = 1
 mismatch = -1
 gap = -1
 
-mat <- init_F_matrix(x, y)
+mat <- init_F_matrix(x, y, gap)
 # here is your implementation
 Fmat <- compute_F_matrix(mat, gap, match, mismatch)
 Fmat
@@ -173,7 +173,7 @@ cat("y: ", rs$AlignmentB, "\nx: ", rs$AlignmentA, "\n\n")
 x = "ATA"
 y = "AGTTA"
 # restart
-mat <- init_F_matrix(x, y)
+mat <- init_F_matrix(x, y, gap)
 Fmat <- compute_F_matrix(mat, gap, match, mismatch)
 rs <- trace_back(Fmat, x, y)
 cat("y: ", rs$AlignmentB, "\nx: ", rs$AlignmentA, "\n\n")
