@@ -336,7 +336,7 @@ knitr::opts_knit$set(root.dir = "~/WorkSpace/BioSci700/Assignment1")
 
 ### 3.1 Pairwise distances
 
-Make sure the the alignment file is in your working directory, then load the alignment from the fasta file:
+Make sure the alignment file is in your working directory, then load the alignment from the fasta file:
 
 ```{r}
 #getwd()
