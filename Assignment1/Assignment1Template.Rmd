@@ -7,7 +7,7 @@ output:
     df_print: paged
 ---
 
-# Assignment 1 : Pairwise Sequence Alignment (10 points)
+# Assignment 1 : Pairwise Sequence Alignment (15 points)
 
 Due date: Mon 27/3/2023 at 23:59
 
@@ -33,7 +33,7 @@ Your code should be implemented between two comments "### your code here" and "#
 All code must be executable in R 4.2.x. 
 Tips: use `sessionInfo()` to print the R version.
 
-## Question 1 (2 points)
+## Question 1 (3 points)
 
 Implement the Needleman–Wunsch algorithm for global sequence alignment. 
 This implementation should be split into two parts:
@@ -181,7 +181,7 @@ cat("y: ", rs$AlignmentB, "\nx: ", rs$AlignmentA, "\n\n")
 ```
 
 
-## Question 2 (2 points)
+## Question 2 (3 points)
 
 Implement the Smith–Waterman algorithm for local sequence alignment.
 
@@ -307,7 +307,7 @@ cat("max score = ", rs$max_score, ", max score coordinate = (", rs$max_i, ", ", 
 ```
 
 
-## Question 3 (6 points)
+## Question 3 (9 points)
 
 In this section, we will use R to construct phylogenetic trees using some basic algorithms, such as UPGMA and Neighbour-joining, etc, and answer some questions.
 Please make sure that you do not miss any blocks shown below, and replace the "Your answer" to your actual answer of that quetion.

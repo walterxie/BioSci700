@@ -32,6 +32,7 @@ Requirements:
 - R 4.2.2
 - RStudio
 - R libraries: "ape", "phangorn", "phytools", "tidyverse", and "Biostrings".  
+- [iqtree2](http://www.iqtree.org/#download)
 
 
 ## Useful links
