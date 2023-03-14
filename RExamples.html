@@ -384,6 +384,17 @@ if (x == &quot;A&quot;) {
   stop(&quot;Err : x must be either A or B !&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;A&quot;</code></pre>
+<p>Inline ifelse</p>
+<pre class="r"><code>match = 1
+mismatch = -1
+# if TRUE then match
+s = ifelse(TRUE, match, mismatch)
+print(s)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r"><code># else mismatch
+s = ifelse(FALSE, match, mismatch)
+print(s)</code></pre>
+<pre><code>## [1] -1</code></pre>
 </div>
 <div id="get-matrix-value-by-rowcol-name" class="section level2">
 <h2>Get matrix value by row/col name</h2>

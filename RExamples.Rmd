@@ -35,6 +35,20 @@ if (x == "A") {
 }
 ```
 
+Inline ifelse
+
+```{r}
+match = 1
+mismatch = -1
+# if TRUE then match
+s = ifelse(TRUE, match, mismatch)
+print(s)
+# else mismatch
+s = ifelse(FALSE, match, mismatch)
+print(s)
+```
+
+
 ## Get matrix value by row/col name
 
 ```{r}
