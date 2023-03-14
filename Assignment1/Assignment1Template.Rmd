@@ -320,7 +320,8 @@ Please download the nucleotide alignment, and save it into your working director
 You can preview the alignment by using any text editor to open the file.
 
 We also need these R libraries: "ape", "phangorn", "phytools", "tidyverse", and "Biostrings". 
-These libraries can be installed using the `install.packages` function and loaded using the `library` function. For example use `install.packages("ape")` followed by `library(ape)`.
+These libraries except of "Biostrings" can be installed using the `install.packages` function and loaded using the `library` function. For example use `install.packages("ape")` followed by `library(ape)`. In addtion, you need to follow the [installation instruction](https://bioconductor.org/packages/release/bioc/html/Biostrings.html)
+to use "BiocManager" to install "Biostrings".
 
 ```{r, setup, include=FALSE}
 library(tidyverse)

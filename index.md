@@ -36,6 +36,9 @@ Requirements:
 - R libraries: "ape", "phangorn", "phytools", "tidyverse", and "Biostrings".  
 - [iqtree2](http://www.iqtree.org/#download)
 
+You need to follow the [installation instruction](https://bioconductor.org/packages/release/bioc/html/Biostrings.html)
+to use "BiocManager" to install "Biostrings".
+
 
 ## Useful links
 
