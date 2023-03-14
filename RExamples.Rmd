@@ -1,0 +1,51 @@
+---
+title: "Simple R examples"
+output: html_document
+date: "2023-03-14"
+---
+
+
+## Paste string
+
+```{r}
+# has a space between A and B
+paste("A", "B")
+# no spaces
+paste0("A", "B")
+
+str = "C"
+# append A to the beginning
+str = paste0("A", str)
+str
+# append B to the end
+str = paste0(str, "B")
+str
+```
+
+## If else
+
+```{r}
+x = "A"
+if (x == "A") {
+  print(x)
+} else if (x == "B") {
+  print(x)
+} else {
+  stop("Err : x must be either A or B !")
+}
+```
+
+## Get matrix value by row/col name
+
+```{r}
+S = matrix(c(2, 1, -2, 0), nrow = 2)
+rownames(S) <- c("A","B")
+colnames(S) <- c("C","D")
+print(S)
+```
+```{r}
+# by index
+print(S[1,2])
+# by name
+print(S["A","D"])
+```
