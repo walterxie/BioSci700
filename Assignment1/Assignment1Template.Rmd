@@ -95,7 +95,7 @@ init_F_matrix <- function(A, B, gap) {
 
 
 x = "GATTACA"
-y = "GCATGCU"
+y = "GCATGCT"
 match = 1
 mismatch = -1
 gap = -1
@@ -118,7 +118,7 @@ Note: the high road approach is different to the pseudo-code in Wikipedia.
 
 ```{r, trace_back}
 # 
-trace_back <- function(F, A, B) {
+trace_back <- function(F, A, B, gap, match, mismatch) {
   # i indexing row, j indexing col in F
   i = nchar(A) + 1
   j = nchar(B) + 1
@@ -166,7 +166,7 @@ trace_back <- function(F, A, B) {
 
 ```{r, global_alignment}
 ### 1st test
-rs <- trace_back(Fmat, x, y)
+rs <- trace_back(Fmat, x, y, gap, match, mismatch)
 cat("y: ", rs$AlignmentB, "\nx: ", rs$AlignmentA, "\n\n")
 
 ### 2nd test
@@ -175,7 +175,7 @@ y = "AGTTA"
 # restart
 mat <- init_F_matrix(x, y, gap)
 Fmat <- compute_F_matrix(mat, gap, match, mismatch)
-rs <- trace_back(Fmat, x, y)
+rs <- trace_back(Fmat, x, y, gap, match, mismatch)
 cat("y: ", rs$AlignmentB, "\nx: ", rs$AlignmentA, "\n\n")
 ### End
 ```
