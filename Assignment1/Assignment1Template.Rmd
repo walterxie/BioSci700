@@ -68,7 +68,6 @@ compute_F_matrix <- function(F, gap, match, mismatch) {
     }
   }
   
-  # the starting position is bottom right element in F matrix
   return(F)
 }
 ```
