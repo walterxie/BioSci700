@@ -63,3 +63,25 @@ print(S[1,2])
 # by name
 print(S["A","D"])
 ```
+## For loop
+
+```{r}
+for (i in 1:3) {
+  cat("i = ", i ,"\n")
+}
+```
+
+```{r}
+for (i in 1:3) {
+  for (j in 1:3) {
+    cat("i = ", i ,", j = ", i ,"\n")
+  }
+}
+```
+
+## Math
+
+```{r}
+max(1,2)
+max(1,2,3)
+```

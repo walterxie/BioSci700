@@ -412,6 +412,36 @@ print(S[1,2])</code></pre>
 print(S[&quot;A&quot;,&quot;D&quot;])</code></pre>
 <pre><code>## [1] -2</code></pre>
 </div>
+<div id="for-loop" class="section level2">
+<h2>For loop</h2>
+<pre class="r"><code>for (i in 1:3) {
+  cat(&quot;i = &quot;, i ,&quot;\n&quot;)
+}</code></pre>
+<pre><code>## i =  1 
+## i =  2 
+## i =  3</code></pre>
+<pre class="r"><code>for (i in 1:3) {
+  for (j in 1:3) {
+    cat(&quot;i = &quot;, i ,&quot;, j = &quot;, i ,&quot;\n&quot;)
+  }
+}</code></pre>
+<pre><code>## i =  1 , j =  1 
+## i =  1 , j =  1 
+## i =  1 , j =  1 
+## i =  2 , j =  2 
+## i =  2 , j =  2 
+## i =  2 , j =  2 
+## i =  3 , j =  3 
+## i =  3 , j =  3 
+## i =  3 , j =  3</code></pre>
+</div>
+<div id="math" class="section level2">
+<h2>Math</h2>
+<pre class="r"><code>max(1,2)</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code>max(1,2,3)</code></pre>
+<pre><code>## [1] 3</code></pre>
+</div>
 
 
 
