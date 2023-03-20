@@ -40,6 +40,35 @@ You need to follow the [installation instruction](https://bioconductor.org/packa
 to use "BiocManager" to install "Biostrings".
 
 
+2. Assignment 2
+
+Requirements:
+
+- [iqtree2](http://www.iqtree.org/#download)
+- [BEAST 2.7.3](http://www.beast2.org)
+- [TempEst 1.5.3](http://tree.bio.ed.ac.uk/software/tempest/)
+- [FigTree 1.4.4](http://tree.bio.ed.ac.uk/software/figtree/) or [ggtree](https://bioconductor.org/packages/release/bioc/html/ggtree.html) or [icytree](https://icytree.org)
+- [Tracer 1.7.2](https://github.com/beast-dev/tracer/releases)
+
+### Mac version issues
+
+The Mac version of TempEst and FigTree has an issue trying to install Java 1.6.
+Please download their Java executable versions (e.g., FigTree_v1.4.4.tgz).
+
+To start FigTree, run the following command in the terminal: 
+
+```bash
+cd /Applications/FigTree1.4.4
+bin/figtree 
+```
+
+If `figtree` is not executable in your machine, run the following command in the terminal: 
+
+```bash
+chmod u+x bin/figtree
+```
+
+
 ## Useful links
 
 - [RStudio download](https://posit.co/download/rstudio-desktop/)

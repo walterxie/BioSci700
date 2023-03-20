@@ -1,6 +1,8 @@
 
 # BioSci700 Assignment 2 (15 marks)
 
+Due date: 11th April 2023
+
 Your name (UPI)
 
 ## Software and Data
@@ -29,7 +31,7 @@ You may use [FigTree](http://tree.bio.ed.ac.uk/software/figtree/) or [icytree](h
 
 Attach the maximum likelihood tree file (e.g., “Dengue4.nex.treefile”) and iqtree log file (e.g., “Dengue4.nex.log”) with the report.
 
-## 2. Investigate temporal signal (5 points)
+## 2. Investigate temporal signal (4 points)
 
 Use [TempEst](http://tree.bio.ed.ac.uk/software/tempest/) to investigate the temporal signal in the maximum likelihood tree. Click “Parse Date”, change “Order” to `last`, and set “Prefix” to `DNF`. Select the checkbox “Add the following value to each:”, and click “OK” to parse years from taxon labels into dates. Switch to the “Tree” tab to check the visualized tree.
 
@@ -44,9 +46,9 @@ Select the checkbox “best-fitting root” in the top-left corner to root the t
 **2.3. Take screenshots of two root-to-tips plots from both trees. Describe which plot is more reasonable and why.**
 
 
-## 3. BEAST analysis (8 points)
+## 3. BEAST analysis (9 points)
 
-In this section, we will use the Coalescent Bayesian Skyline plot [Drummond, Rambaut, Shapiro, & Pybus, 2005](https://academic.oup.com/mbe/article/22/5/1185/1066885) to study the phylodynamics of DENV-4. Answer all questions numbered by Roman numerals.
+In this section, we will use the Coalescent Bayesian Skyline plot [Drummond, Rambaut, Shapiro, & Pybus, 2005](https://academic.oup.com/mbe/article/22/5/1185/1066885) to estimate population dynamics from a sample of DENV-4 sequences. Answer all questions numbered by Roman numerals.
 
 ### 3.1. Set up the model through BEAUti and run MCMC using BEAST.
 
