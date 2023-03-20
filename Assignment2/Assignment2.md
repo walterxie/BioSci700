@@ -3,9 +3,9 @@
 
 Your name (UPI)
 
-## Software
+## Software and Data
 
-We will use the the following software, please make sure they are ready in your computer.
+Please ensure that the following software packages are installed and ready to use on your computer:
 
 - [iqtree2](http://www.iqtree.org/#download)
 - [BEAST 2.7.3](http://www.beast2.org)
@@ -13,117 +13,123 @@ We will use the the following software, please make sure they are ready in your 
 - [FigTree 1.4.4](http://tree.bio.ed.ac.uk/software/figtree/) or [ggtree](https://bioconductor.org/packages/release/bioc/html/ggtree.html) or [icytree](https://icytree.org)
 - [Tracer 1.7.2](https://github.com/beast-dev/tracer/releases)
 
-## Data
 
-Please download the [Dingue virus data](./Dengue4.nex) data, which is published by [Bennett et al., 2010](https://doi.org/10.1093/molbev/msp285). It consists of 76 samples during the phylodynamics of DENV-4 between 1981 and 1998.
+To perform the analysis, download the alignment of [Dengue virus data](./Dengue4.nex), published by [Bennett et al. (2010)](https://doi.org/10.1093/molbev/msp285), which consists of 76 samples of DENV-4 sequences between 1981 and 1998. Read the publication and follow the instructions below. Submit the report and required figures, along with the related files and outputs.
 
-Read the publication, and then make the following analyses. 
-Please write one final report for 3 sections to answer all questions, 
-and insert the required figures into the report.   
-Please submit the related files and outputs with the report together.
 
 ## 1. Maximum likelihood tree (2 points)
 
-Use [iqtree2](http://www.iqtree.org/#download) to create the maximum likelihood tree of this dataset. 
+Create a maximum likelihood tree of the dataset using [iqtree2](http://www.iqtree.org/#download).
 
-### 1.1. What is the "best-fit" model chosen for this data according to the iqtree's report? And what criterion is used for choosing this "best-fit" model?
+**1.1. What is the “best-fit” model chosen for this data according to iqtree's report? What criterion is used for choosing this “best-fit” model?**
 
-### 1.2. Plot the maximum likelihood tree. What is the unit of branch lengths in your maximum likelihood tree? 
+**1.2. Plot the maximum likelihood tree. What is the unit of branch lengths in your maximum likelihood tree?**
 
-If you prefer to use a software with GUI, we recommend [FigTree](http://tree.bio.ed.ac.uk/software/figtree/) or [icytree](https://icytree.org). If you prefer R, you can use [ggtree](https://bioconductor.org/packages/release/bioc/html/ggtree.html). 
+You may use [FigTree](http://tree.bio.ed.ac.uk/software/figtree/) or [icytree](https://icytree.org) if you prefer a software with a GUI, or [ggtree](https://bioconductor.org/packages/release/bioc/html/ggtree.html) if you prefer R.
 
-The maximum likelihood tree file (e.g. "Dengure4.nex.treefile") and iqtree log file (e.g. Dengure4.nex.log) must be attached with the report.
+Attach the maximum likelihood tree file (e.g., “Dengue4.nex.treefile”) and iqtree log file (e.g., “Dengue4.nex.log”) with the report.
 
+## 2. Investigate temporal signal (5 points)
 
-## 2. Investigate the temporal signal (5 points)
+Use [TempEst](http://tree.bio.ed.ac.uk/software/tempest/) to investigate the temporal signal in the maximum likelihood tree. Click “Parse Date”, change “Order” to `last`, and set “Prefix” to `DNF`. Select the checkbox “Add the following value to each:”, and click “OK” to parse years from taxon labels into dates. Switch to the “Tree” tab to check the visualized tree.
 
-Use [TempEst](http://tree.bio.ed.ac.uk/software/tempest/) to investigate the temporal signal at your maximum likelihood tree. Click "Parse Date", change "Order" to `last` and set "Prefix" to `DNF`, 
-also select the check-box "Add the following value to each:". Then, click "OK".
-This will parse years from taxon labels into the dates.
+![](./figs/ParseDates.png){width=300px}
 
-Now you can click the other tabs, e.g. "Tree", to look at the visualization and result.
-Remember this tree is the original tree that you just load.
-Then, find the check-box "best-fitting root" on the top-left corner, select it.
-It will root the tree at the position that is likely to be the most compatible with the assumption of the molecular clock, using the `heuristic residual mean squared` function (as default).
-Click the other tabs, report the differences by the following requirements:
+Select the checkbox “best-fitting root” in the top-left corner to root the tree at the position that is most compatible with the assumption of the molecular clock, using the `heuristic residual mean squared` function (as default). Report the differences between the original maximum likelihood tree and the best-fitting root tree by following the requirements below:
 
-### 2.1. Record statistical results for both trees, the original maximum likelihood tree and the best-fitting root tree, and also explain the implication of these statistical results.
+**2.1. Record the statistical results for both trees, the original maximum likelihood tree, and the best-fitting root tree. Explain the implications of these statistical results.**
 
-### 2.2. Take the screenshot of the best-fitting root tree in "Tree" tab (you should already plot the original tree in the previous section). Please make sure tip labels are visible. Describe which tree looks more reasonable in term of the sampling dates. Why?
+**2.2. Take a screenshot of the best-fitting root tree in the “Tree” tab (you should have already plotted the original tree in the previous section). Ensure that the tip labels are visible. Describe which tree looks more reasonable in terms of the sampling dates and why.**
 
-### 2.3. Take screenshots of two root-to-tips plots from both trees. Describe which plot is more reasonable. Why?
+**2.3. Take screenshots of two root-to-tips plots from both trees. Describe which plot is more reasonable and why.**
 
 
 ## 3. BEAST analysis (8 points)
 
-In this analysis, we will use the Coalescent Bayesian Skyline plot [Drummond, Rambaut, Shapiro, & Pybus, 2005](https://academic.oup.com/mbe/article/22/5/1185/1066885) to infer the phylodynamics of DENV-4. Please make sure to answer all questions numbered by Roman numerals.  
+In this section, we will use the Coalescent Bayesian Skyline plot [Drummond, Rambaut, Shapiro, & Pybus, 2005](https://academic.oup.com/mbe/article/22/5/1185/1066885) to study the phylodynamics of DENV-4. Answer all questions numbered by Roman numerals.
 
-### 3.1. Set up the model through BEAUti and MCMC run using BEAST.
+### 3.1. Set up the model through BEAUti and run MCMC using BEAST.
 
-Open BEAUti, click "Import Alignment" from the "File" menu. Then choose the file "Dengue4.nex".
-You can see there is one partition available in the "Partitions" panel. It also tells you the number of taxa and sites in the alignment. The alignment can be visualized by a viewer after double-clicking the partition.
+To prepare the data for analysis, follow these steps in BEAUti:
 
-Now select the check-box "Use tip dates" in the "Tip Dates" tab. The data are virus and are sampled at different years (so-called "heterochronous"), so keep the default setting "Since some time in the past". Next, click the button "Auto-config", and choose the option to use everything "after first", but replace `_` as `F`, and click "OK". Then, the years will be automatically parsed from the taxa names into the table column "Date (raw value)".
+- Import the "Dengue4.nex" file into BEAUti, navigate to the "File" menu and select "Import Alignment." Once the file is selected, you will notice that there is a single partition available in the "Partitions" panel, which provides information on the number of taxa and sites in the alignment. To view the alignment, simply double-click on the partition to launch the viewer.
 
-In the "Site Model" tab, specify a HKY with 4 Gamma categories with empirical frequencies for the stationary distribution. Estimate the substitution rate, Gamma shape parameter and kappa.
+- Select the "Tip Dates" tab and check the "Use tip dates" box. Since the data consists of viruses sampled at different years, keep the default setting "Since some time in the past".
+Click the "Auto-config" button and choose "after first" as the option for parsing the year information from the taxa names. Replace underscores `_` with `F` and click "OK". This will parse the years from the taxa names and add them to the "Date (raw value)" column in the table.
 
-In the "Clock Model" tab, keep the default of "Strict Clock", but change the starting value of the molecular clock rate to "0.001".
+![](./figs/TipDates.png){width=600px}
 
-Under the "Priors" tab, choose the "Coalescent Bayesian Skyline" tree prior.
-Change the "clockRate" prior from `Uniform` into `Log Normal` and set `M` to `-7` and `S` to `2.5`. You can use the R code `qlnorm(p=c(0.025,0.5,0.975), meanlog=-7, sdlog=2.5)` to display the quantiles.
+- In the "Site Model" tab, choose the HKY model with 4 Gamma categories. Estimate the substitution rate, Gamma shape parameter, kappa, and frequencies for the stationary distribution.
+
+![](./figs/SiteModel.png){width=600px}
+
+- In the "Clock Model" tab, select the default "Strict Clock" and set the starting value of the molecular clock rate to `0.001`.
+
+- Under the "Priors" tab, select the "Coalescent Bayesian Skyline" tree prior. Change the "clockRate" prior from Uniform to Log Normal. Set `M` to `-7` and `S` to `2.5`. You can use the R code `qlnorm(p=c(0.025,0.5,0.975), meanlog=-7, sdlog=2.5)` to display the quantiles.
+
+![](./figs/Prior.png){width=600px}
+
 
 **i. Explain why Uniform is the "bad" prior to estimate the molecular clock rate? Why Normal prior is also an improper prior here?**
 
-Go to the "View" menu and select "Show initialization panel". Select the panel and click the black triangle icon to expend the setting of "bPopSizes". We change the starting "Value" into `70`.  
+- To show the initialization panel, go to the "View" menu and select "Show initialization panel". Then, expend the "bPopSizes" settings by clicking on the black triangle icon. Change the starting "Value" to `70`.
 
-In the MCMC tab, set "Chain Length" to `25000000` (25 million), and change the "tracelog" to "Log Every" `5000`, and change the "treelog" to "Log Every" `5000.` Note: we recommend to use the same logging frequencies between the trace log and tree log, since these files will be used to analysis the result. You can change the "screenlog" to "Log Every" `100000`, so BEAST will print less frequently to the screen.
+![](./figs/InitPanel.png){width=600px}
 
-Now save this setup as an XML file (e.g. D4.xml), and run this XML using BEAST 2 **twice** separately by different seeds.
+- Under the MCMC tab, set the "Chain Length" to `25000000` (25 million). For the "tracelog", change the "Log Every" to `5000`, and do the same for the "treelog". It is recommended to use the same logging frequency for both the trace log and tree log files, as they will be used for further analysis. For the "screenlog", you can set the "Log Every" to `100000` to reduce the frequency of output printed to the screen.
 
-Hint: create 2 sub-directories, and run the XML separately in each directory, to avoid overwrite the log and tree files.
+- Once you have made these changes, save the setup as an XML file (e.g. D4.xml) by clicking "Save" in the "File" menu. 
 
-**ii. Describe what are models that you have applied for this analysis.** 
+**ii. Describe what models you have applied for this analysis.** 
 
-You can use a proper natural language to reduce the content, such as "clock rate prior is LogNormal(m=-7,s=2.5)" (Note: priors are the part of the model)
+You can use a proper natural language to reduce the content, such as "set the clock rate prior to LogNormal(m=-7,s=2.5)" (Note: priors are the part of the model)
 
 
 ### 3.2. Analyse results
 
-In the report, summarise the results of your runs, and answers all of the questions below using graphs and figures where appropriate. Please attach a copy of your BEAST XML file, and the resulting output files. Check the convergence of your 2 runs using Tracer. If you are not convinced that the analysis has run for long enough, run it for longer.
+Open "BEAST", choose your XML, and click "Run". Then, it will start a new run. If you want to continue your previous BEAST 2 run, you need to change the drop-down list into "resume: appends log to the existing files (if any)".
 
-**iii. Report the results of important parameters. How can you tell your analysis has run for long enough? Why it'd better to randomly run MCMC multiple times instead of just once?** 
+![](./figs/BEAST.png){width=300px}
 
-Summarise the sampled trees as a maximum clade credibility tree using "TreeAnnotator" (and visualised in "FigTree" or "IcyTree"), and compare this approach with using "Densitree". 
+To analyze the results, run the BEAST 2 XML file **twice** with different seeds, and output files in separate sub-directories to avoid overwriting. Summarize the results in the report, including relevant graphs and figures. Check the convergence of your runs using "Tracer" and run the analysis for longer if needed.
+
+**iii. Please report the important parameters of your analysis and explain how you can determine if the MCMC chains have run for long enough. Additionally, discuss the advantages of running MCMC chains multiple times with different seeds compared to just one run.**
+
+To summarize the sampled trees, use "TreeAnnotator" to generate a maximum clade credibility tree and visualize it in "FigTree" or "IcyTree". Compare this approach with using "Densitree", and answer:
 
 **iv. What are the strengths and weaknesses of the two summary methods for this analysis?**
 
 Look at the maximum clade credibility tree:
 
-**v. What is the unit of branch lengths in this maximum clade credibility tree? What is the age of the most recent common ancestor for all samples (with HPD interval)? How to interpret this age regarding to this epidemic?**
+**v. What unit are the branch lengths measured in the maximum clade credibility tree? What is the estimated age of the most recent common ancestor for all samples, and what is the corresponding highest posterior density (HPD) interval? How can this age be interpreted in the context of the Dengue virus epidemic?**
 
-Use "Tracer" to reconstruct and plot the past population dynamics. Navigate to "Analysis" => "Bayesian Skyline Reconstruction". To get the correct dates in the analysis we should specify the "Age of the youngest tip" to the time when the most recent sample was collected.
-Click OK. 
+To reconstruct and plot the past population dynamics, open "Tracer" and navigate to "Analysis" => "Bayesian Skyline Reconstruction". To ensure that the analysis uses the correct dates, specify the "Age of the youngest tip" as the time when the most recent sample was collected. Once this is done, click "OK" to begin the analysis.
 
-**vi. What is the effective population size? Show the skyline plot, and tell if we can observe any population dynamics through the time?**
+**vi.What is the effective population size (Ne) estimated from the Bayesian Skyline Reconstruction analysis? Present the skyline plot and examine if any population dynamics can be observed over time.**
 
-### 3.3. Dimesion of effective population sizes
+### 3.3. Increasing the dimesion of effective population sizes
 
-One simple method to improve the above plot is to increase the dimension of effective population sizes.
+To improve the skyline plot, one simple method is to increase the dimension of effective population sizes.
 
-Launch the BEAUti, and go to "File" menu and click "Load" to load your XML (e.g. D4.xml). This supposes to load all previous settings, click around to make sure they are correct. Then, select the "Initialization" panel, and change the "Dimension" of both "bPopSizes" and "bGroupSizes" from `5` (default) into `10`.
-Save the XML to different file (e.g. D4pop10.xml). Create a new directory and run it using BEAST2. This time you can only run once. 
-After the run is completed, get the skyline plot from Tracer. 
+To do this, launch "BEAUti" and load your XML file (e.g., D4.xml) by selecting "File" from the menu bar and clicking "Load". Ensure that all previous settings are correct. Next, select the "Initialization" panel and change the "Dimension" of both "bPopSizes" and "bGroupSizes" from the default value of `5` to `10`.
 
-In addition, repeat this process to create another XML with `20` popSizes and groupSizes, run it again, and get the skyline plot. 
+Save the modified settings into a new XML file (e.g., D4pop10.xml), create a new directory, and run it using BEAST2. This time, you can run the analysis once.
 
-**vii. Compare these 3 skyline plots, and write your discussion.**
+Once the analysis is completed, use "Tracer" to obtain the skyline plot.
 
-For example, how to choose the dimension for the Bayesian skyline analysis? What does the number of groups do? How does this change affect the dynamics of effective population sizes?
+Repeat the process with a dimension of `20` for both "popSizes" and "groupSizes". After running this analysis, obtain the skyline plot using "Tracer".
 
-**viii. Pick up one plot that you think it is the best, and make your conclusion on the Bayesian skyline analysis at the phylodynamics of DENV-4.**
+**vii. Compare the three skyline plots, and answer the following questions.**
 
-For example, what can you infer from the changes of effective population sizes through the time?
+How can the dimension for the Bayesian skyline analysis be chosen effectively? What role does the number of groups play in the analysis? In what ways does altering the dimension impact the dynamics of effective population sizes?
+
+The three skyline plots must be provided in your report.
+
+**viii. Select the best plot and draw your conclusion on the Bayesian skyline analysis of DENV-4 data.**
+
 
 ### Bonus question: 
 
-**Plot 3 skyline in one graph using R ggplot2. Explain if there is any systematic difference.**
+**Plot 3 skyline plots in a single graph using R "ggplot2". Explain if there are any systematic differences between the plots.**
+
+
