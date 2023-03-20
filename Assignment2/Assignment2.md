@@ -95,7 +95,11 @@ To analyze the results, run the BEAST 2 XML file **twice** with different seeds,
 
 **iii. Please report the important parameters of your analysis and explain how you can determine if the MCMC chains have run for long enough. Additionally, discuss the advantages of running MCMC chains multiple times with different seeds compared to just one run.**
 
-To summarize the sampled trees, use "TreeAnnotator" to generate a maximum clade credibility tree and visualize it in "FigTree" or "IcyTree". Compare this approach with using "Densitree", and answer:
+To summarize the sampled trees, use "TreeAnnotator" to generate a maximum clade credibility (MCC) tree as shown in the screenshot below. 
+
+![](./figs/TreeAnnotator.png){width=300px}
+
+Visualize the MCC tree in "FigTree" or "IcyTree". Compare this approach with using "Densitree", and answer:
 
 **iv. What are the strengths and weaknesses of the two summary methods for this analysis?**
 
