@@ -236,8 +236,9 @@ get_F_matrix <- function(A, B, S, d=-2.0) {
 ### 2.2 Local alignment
 
 Complete the function `local_alignment()` to produce a local sequence alignment. 
-Remember to always take the high road during traceback. 
-If there are multiple maximum scores, then always take the maximum score in the lowest and then rightmost position in `F`.
+Remember to always take the high road during traceback (see 1.2). 
+
+Note you may need to break ties to decide where the traceback will start, if there are multiple maximum scores in the matrix. This will be done by another rule: we will always take the maximum score in the rightmost position (largest column) and then lowest (largest row) in `F` to start the traceback. This is separate from the "high-road" rule for traceback.
 
 ```{r, local_alignment}
 # sequence A in row, B in col, F matrix, d linear gap penalty 
@@ -246,8 +247,9 @@ local_alignment <- function(A, B, F, d=-2.0) {
   max_score = max(F)
   # max_i, max_j are the coordinate of the highest score max_score in F matrix. 
   co = which(F==max_score, arr.ind=TRUE)
-  # takes the maximum score in the rightist and then lowest position,
-  # if more than 1
+  # To start the traceback, we will always take the maximum score 
+  # in the rightmost position (largest column), and then lowest (largest row) in `F`, 
+  # if there are multiple maximum scores
   max_i = co[nrow(co),1]  
   max_j = co[nrow(co),2]
   
