@@ -88,7 +88,7 @@ max(1,2,3)
 
 
 ```{r}
-F = matrix(c(1, 1, 1, 1, 1, 2, 1, 2, 1), nrow = 3)
+F = matrix(c(1,1,2,1, 1,1,1,2, 1,2,1,1), nrow = 3)
 F
 max_score = max(F)
 # max_i, max_j are the coordinate of the highest score max_score in F matrix. 
@@ -99,4 +99,15 @@ max_j = co[nrow(co),2]
 #[2,3] is rightmost position 
 paste(max_i, max_j)
 ```
-
+```{r}
+F = matrix(c(1,1,2,1, 1,1,1,2, 1,2,1,2), nrow = 3)
+F
+max_score = max(F)
+# max_i, max_j are the coordinate of the highest score max_score in F matrix. 
+co = which(F==max_score, arr.ind=TRUE)
+co
+max_i = co[nrow(co),1]  
+max_j = co[nrow(co),2]
+#[2,3] is rightmost position 
+paste(max_i, max_j)
+```
