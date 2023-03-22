@@ -40,7 +40,10 @@ You need to follow the [installation instruction](https://bioconductor.org/packa
 to use "BiocManager" to install "Biostrings".
 
 
-2. Assignment 2
+2. [Assignment 2](https://walterxie.github.io/BioSci700/Assignment2/Assignment2.html)
+
+Submit the report as a PDF file, combining with required log files and tree files.  
+
 
 Requirements:
 
