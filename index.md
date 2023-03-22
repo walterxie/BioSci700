@@ -25,9 +25,9 @@ Your answer
 
 ## Download
 
-  1. [R examples](RExamples.html)
+  i. [R examples](RExamples.html)
 
-  2. [Assignment 1 - template](Assignment1/Assignment1Template.Rmd), [ABCD.fasta](Assignment1/ABCD.fasta), [Dengue4.env.nex](Assignment1/Dengue4.env.nex).
+  ii. [Assignment 1 - template](Assignment1/Assignment1Template.Rmd), [ABCD.fasta](Assignment1/ABCD.fasta), [Dengue4.env.nex](Assignment1/Dengue4.env.nex).
 
 Requirements:
 
@@ -40,7 +40,7 @@ You need to follow the [installation instruction](https://bioconductor.org/packa
 to use "BiocManager" to install "Biostrings".
 
 
-  3. [Assignment 2](https://walterxie.github.io/BioSci700/Assignment2/Assignment2.html)
+  iii. [Assignment 2](https://walterxie.github.io/BioSci700/Assignment2/Assignment2.html)
 
 Submit the report as a PDF file, combining with required log files and tree files.  
 
@@ -48,8 +48,8 @@ Submit the report as a PDF file, combining with required log files and tree file
 Requirements:
 
 - [iqtree2](http://www.iqtree.org/#download)
-- [BEAST 2.7.3](http://www.beast2.org)
 - [TempEst 1.5.3](http://tree.bio.ed.ac.uk/software/tempest/)
+- [BEAST 2.7.4](http://www.beast2.org)
 - [FigTree 1.4.4](http://tree.bio.ed.ac.uk/software/figtree/) or [ggtree](https://bioconductor.org/packages/release/bioc/html/ggtree.html) or [icytree](https://icytree.org)
 - [Tracer 1.7.2](https://github.com/beast-dev/tracer/releases)
 

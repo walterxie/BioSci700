@@ -10,8 +10,8 @@ Your name (UPI)
 Please ensure that the following software packages are installed and ready to use on your computer:
 
 - [iqtree2](http://www.iqtree.org/#download)
-- [BEAST 2.7.3](http://www.beast2.org)
 - [TempEst 1.5.3](http://tree.bio.ed.ac.uk/software/tempest/)
+- [BEAST 2.7.4](http://www.beast2.org)
 - [FigTree 1.4.4](http://tree.bio.ed.ac.uk/software/figtree/) or [ggtree](https://bioconductor.org/packages/release/bioc/html/ggtree.html) or [icytree](https://icytree.org)
 - [Tracer 1.7.2](https://github.com/beast-dev/tracer/releases)
 
@@ -57,7 +57,11 @@ To prepare the data for analysis, follow these steps in BEAUti:
 - Import the "Dengue4.nex" file into BEAUti, navigate to the "File" menu and select "Import Alignment." Once the file is selected, you will notice that there is a single partition available in the "Partitions" panel, which provides information on the number of taxa and sites in the alignment. To view the alignment, simply double-click on the partition to launch the viewer.
 
 - Select the "Tip Dates" tab and check the "Use tip dates" box. Since the data consists of viruses sampled at different years, keep the default setting "Since some time in the past".
-Click the "Auto-config" button and choose "after first" as the option for parsing the year information from the taxa names. Replace underscores `_` with `F` and click "OK". This will parse the years from the taxa names and add them to the "Date (raw value)" column in the table.
+Click the "Auto-config" button and choose "after first" as the option for parsing the year information from the taxa names. Replace underscores `_` with `F`, select "Add fixed value to 1900", and click "OK".
+
+![](./figs/TipDates2.png){width=500px}
+
+- This will parse the years from the taxa names and add them to the "Date (raw value)" column in the table.
 
 ![](./figs/TipDates.png){width=600px}
 
