@@ -42,8 +42,7 @@ to use "BiocManager" to install "Biostrings".
 
   iii. [Assignment 2](https://walterxie.github.io/BioSci700/Assignment2/Assignment2.html)
 
-Submit the report as a PDF file, combining with required log files and tree files.  
-
+Please submit the report in PDF format and include all necessary log files and tree files.
 
 Requirements:
 
@@ -55,8 +54,11 @@ Requirements:
 
 ### Mac version issues
 
-The Mac version of TempEst and FigTree has an issue trying to install Java 1.6.
-Please download their Java executable versions (e.g., FigTree_v1.4.4.tgz).
+Note that the Mac version of TempEst and FigTree may have an issue 
+where they incorrectly prompt for the installation of Java 1.6. 
+This is a known bug and does not affect the functionality of the programs. 
+To run FigTree or TempEst, you can simply extract and launch the executable version
+(e.g., FigTree_v1.4.4.tgz) without needing to install Java 1.6 separately.
 
 To start FigTree, run the following command in the terminal: 
 
@@ -65,7 +67,8 @@ cd /Applications/FigTree1.4.4
 bin/figtree 
 ```
 
-If `figtree` is not executable in your machine, run the following command in the terminal: 
+If `figtree` is not executable in your machine, 
+run the following command in the terminal before starting FigTree: 
 
 ```bash
 chmod u+x bin/figtree
