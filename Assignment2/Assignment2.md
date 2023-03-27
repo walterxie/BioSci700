@@ -16,7 +16,7 @@ Please ensure that the following software packages are installed and ready to us
 - [Tracer 1.7.2](https://github.com/beast-dev/tracer/releases)
 
 
-To perform the analysis, download the alignment of [Dengue virus data](./Dengue4.nex), published by [Bennett et al. (2010)](https://doi.org/10.1093/molbev/msp285), which consists of 76 samples of DENV-4 sequences between 1981 and 1998. Read the publication and follow the instructions below. Submit the report and required figures, along with the related files and outputs.
+To perform the analysis, download the alignment of [Dengue virus data](https://github.com/walterxie/BioSci700/raw/main/Assignment2/Dengure4.nex), published by [Bennett et al. (2010)](https://doi.org/10.1093/molbev/msp285), which consists of 76 samples of DENV-4 sequences between 1981 and 1998. Read the publication and follow the instructions below. Submit the report and required figures, along with the related files and outputs.
 
 
 ## 1. Maximum likelihood tree (2 points)
