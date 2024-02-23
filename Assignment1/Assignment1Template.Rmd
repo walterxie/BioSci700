@@ -5,11 +5,12 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   html_document:
     df_print: paged
+  pdf_document: default
 ---
 
 # Assignment 1 : Pairwise Sequence Alignment (15 points)
 
-Due date: Mon 27/3/2023 at 23:59
+Due date: Fri 22/Mar/2024 at 23:59
 
 ## Instruction
 
@@ -30,7 +31,7 @@ Your code should be implemented between two comments "### your code here" and "#
 # your code finished above
 ```
 
-All code must be executable in R 4.2.x. 
+All code must be executable in R 4.2.x or higher version. 
 Tips: use `sessionInfo()` to print the R version.
 
 ## Question 1 (3 points)
@@ -182,7 +183,7 @@ cat("y: ", rs$AlignmentB, "\nx: ", rs$AlignmentA, "\n\n")
 
 ## Question 2 (3 points)
 
-Implement the Smith–Waterman algorithm for local sequence alignment.
+Implement the algorithm for overlap (ends-free) sequence alignment.
 
 To do:
 
@@ -192,13 +193,7 @@ To do:
 A score matrix `S` is defined below. Please do not change the code.
 
 ```{r, S}
-nuc = c('A', 'G', 'C', 'T') # Purines, Pyramidines
-# 2 if a = b, 1 if a b is purine or a b is pyrimidine,
-# -2 if a is a purine and b is a pyrimidine or vice versa.
-S = matrix(c(2, 1, -2, -2, 1, 2, -2, -2, -2, -2, 2, 1, -2, -2, 1, 2), nrow = 4)
-rownames(S) <- nuc
-colnames(S) <- nuc
-print(S)
+
 ```
 
 ### 2.1 F matrix
@@ -466,3 +461,9 @@ and explain what the result tells you.
 ```
 Your answer
 ```
+
+3.2.5 Tree distance
+
+
+TODO
+

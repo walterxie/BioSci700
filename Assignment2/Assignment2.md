@@ -1,7 +1,7 @@
 
 # BioSci700 Assignment 2 (15 marks)
 
-Due date: 11th April 2023
+Due date: 5th April 2024
 
 Your name (UPI)
 
@@ -11,7 +11,7 @@ Please ensure that the following software packages are installed and ready to us
 
 - [iqtree2](http://www.iqtree.org/#download)
 - [TempEst 1.5.3](http://tree.bio.ed.ac.uk/software/tempest/)
-- [BEAST 2.7.4](http://www.beast2.org)
+- [BEAST 2.7.6](http://www.beast2.org)
 - [FigTree 1.4.4](http://tree.bio.ed.ac.uk/software/figtree/) or [ggtree](https://bioconductor.org/packages/release/bioc/html/ggtree.html) or [icytree](https://icytree.org)
 - [Tracer 1.7.2](https://github.com/beast-dev/tracer/releases)
 
@@ -76,7 +76,7 @@ Click the "Auto-config" button and choose "after first" as the option for parsin
 ![](./figs/Prior.png){width=600px}
 
 
-**i. Explain why Uniform is the "bad" prior to estimate the molecular clock rate? Why Normal prior is also an improper prior here?**
+**i. Explain why Uniform is the "bad" prior to estimate the molecular clock rate? Why is the Normal prior also an inappropriate prior here?**
 
 - To show the initialization panel, go to the "View" menu and select "Show initialization panel". Then, expend the "bPopSizes" settings by clicking on the black triangle icon. Change the starting "Value" to `70`.
 
