@@ -49,14 +49,35 @@ To do:
 
 ### 1.1 F matrix
 
-The function `compute_F_matrix()` below is used to fill in the predefined 2D `F` matrix. You need to complete the code to implement the scoring system for this purpose, 
-which is determined by three parameters: `match=1.0, mismatch=-1.0, gap=-1.0`, where *match/mismatch* is equivalent to the score matrix and gap is the linear gap penalty.   
+The function `compute_F_matrix(...)` below is proposed to fill in a 2D matrix, 
+also known as `F` matrix. 
+The row names of this matrix are the characters of the 1st sequence A,
+and the column names are the characters of the 2nd sequence B.
+You need to complete the code to implement the scoring system for this purpose, 
+which is determined by three parameters with their default values: 
+`match=1.0, mismatch=-1.0, gap=-1.0`, 
+where *match/mismatch* is equivalent to the score matrix and *gap* is the linear gap penalty.
+The function will return the `F` matrix.
 
 ```{r, compute_F_matrix}
-# the predefined F matrix and gap penalty 
-compute_F_matrix <- function(F, gap, match, mismatch) {
-  # sequence X in row names, Y in column names
-  # start scoring
+# given two sequence A and B,
+# compute F matrix from given match/mismatch and gap penalty 
+compute_F_matrix <- function(A, B, gap=-1.0, match=1.0, mismatch=-1.0) {
+
+  # init dimension of the matrix
+  F <- matrix(0, nrow = nchar(A)+1, ncol = nchar(B)+1)
+  # sequence A in row names, B in col names.
+  rownames(F) <- c("*", unlist(strsplit(A, split = "")) )
+  colnames(F) <- c("*", unlist(strsplit(B, split = "")) )
+  
+  # Array/matrix indexes start at 1.
+  # fill in the first row with gap penalty
+  F[,1] = gap * 0:(nrow(F)-1)
+  # fill in the first column with gap penalty
+  F[1,] = gap * 0:(ncol(F)-1)
+
+  # sequence X in row names of F, and Y in column names of F.
+  # start scoring. 
   for (i in 2:nrow(F)) {
     for (j in 2:ncol(F)) {
       # similarity matrix is based on match and mismatch
@@ -73,52 +94,34 @@ compute_F_matrix <- function(F, gap, match, mismatch) {
 }
 ```
 
-The code below initialize the `F` matrix, 
-and fill in the first row and column with gap penalty. 
-The sequence x will display in the row names, and y in column names.
-This block is used to display `F`, and it has no uncompleted code.  
+Given sequence x and y, test your implementation in the following code block.
+It will print `F`, if no uncompleted code.  
 
 ```{r}
-init_F_matrix <- function(A, B, gap) {
-  # init dimension of the matrix
-  mat <- matrix(0, nrow = nchar(A)+1, ncol = nchar(B)+1)
-  # sequence x in row, y in col
-  rownames(mat) <- c("*", unlist(strsplit(A, split = "")) )
-  colnames(mat) <- c("*", unlist(strsplit(B, split = "")) )
-  
-  # fill in the first row with gap penalty
-  mat[,1] = gap * 0:(nrow(mat)-1)
-  # fill in the first column with gap penalty
-  mat[1,] = gap * 0:(ncol(mat)-1)
-  return(mat)
-}
-
-
 x = "GATTACA"
 y = "GCATGCT"
-match = 1
-mismatch = -1
-gap = -1
 
-mat <- init_F_matrix(x, y, gap)
-# here is your implementation
-Fmat <- compute_F_matrix(mat, gap, match, mismatch)
+# test your implementation
+Fmat <- compute_F_matrix(x, y)
 Fmat
 ```
 
 
 ### 1.2 Tracing back
 
-Complete the function `trace_back()` to form the alignment given a scoring matrix 
-`F` created by `compute_F_matrix()` above, and other required parameters.
+Complete the function `trace_back(...)` to form the alignment given a scoring matrix 
+`F` created by `compute_F_matrix(...)` above, and other required parameters.
 
-If two or more scores are the same, select the high road during traceback. For example, if there is the multiple choice to move either vertical or diagonal, then the high road approach will take the vertical move. If either diagonal or horizontal, then take diagonal.
+If two or more scores are the same, select the high road during traceback. 
+For example, if there is the multiple choice to move either vertical or diagonal, 
+then the high road approach will take the vertical move. 
+If either diagonal or horizontal, then take diagonal.
 
 Note: the high road approach is different to the pseudo-code in Wikipedia.
 
 ```{r, trace_back}
-# 
-trace_back <- function(F, A, B, gap, match, mismatch) {
+# form the alignment given a scoring matrix
+trace_back <- function(F, A, B, gap=-1.0, match=1.0, mismatch=-1.0) {
   # i indexing row, j indexing col in F
   i = nchar(A) + 1
   j = nchar(B) + 1
@@ -134,7 +137,7 @@ trace_back <- function(F, A, B, gap, match, mismatch) {
   # trace back in F matrix following the possible moves 
   # by recalculating the score,
   # the starting position is bottom right element in F matrix.
-  # selected scores in the path
+  # selected scores in the path.
   scores = c()
   while (i > 1 || j > 1) {
     # append score
@@ -143,6 +146,8 @@ trace_back <- function(F, A, B, gap, match, mismatch) {
     # similarity matrix is based on match and mismatch
     s = ifelse(colnames(F)[j] == rownames(F)[i], match, mismatch) 
     
+    # hint: delete, match, insert
+    
     ### your code here
     # ...
     ### your code finished above
@@ -150,6 +155,8 @@ trace_back <- function(F, A, B, gap, match, mismatch) {
     # A in row names starts at matrix index 2, B in col names starts at matrix index 2
     x_char = substring(A, i-1, i-1)
     y_char = substring(B, j-1, j-1)
+    
+    # hint: create AlignmentA and AlignmentB
     
     ### your code here
     # ...
@@ -165,18 +172,17 @@ trace_back <- function(F, A, B, gap, match, mismatch) {
 ### 1.3 Test algorithm and print alignments
 
 ```{r, global_alignment}
-### 1st test
-rs <- trace_back(Fmat, x, y, gap, match, mismatch)
+### 1st test, reuse the F matrix above
+rs <- trace_back(Fmat, x, y)
 cat("y: ", rs$AlignmentB, "\nx: ", rs$AlignmentA, "\n\n")
 
 ### 2nd test
-x = "ATA"
-y = "AGTTA"
+x2 = "ATA"
+y2 = "AGTTA"
 # restart
-mat <- init_F_matrix(x, y, gap)
-Fmat <- compute_F_matrix(mat, gap, match, mismatch)
-rs <- trace_back(Fmat, x, y, gap, match, mismatch)
-cat("y: ", rs$AlignmentB, "\nx: ", rs$AlignmentA, "\n\n")
+Fmat2 <- compute_F_matrix(x2, y2)
+rs2 <- trace_back(Fmat2, x2, y2)
+cat("y: ", rs2$AlignmentB, "\nx: ", rs2$AlignmentA, "\n\n")
 ### End
 ```
 
