@@ -56,7 +56,7 @@ It's important to adjust the scoring accordingly in your implementation,
 ensuring that the gap penalty is subtracted during the calculation.
 Upon successful completion, the function will generate and return the `F` matrix.
 
-Please be aware that the rows of this matrix are designated with the characters from the first sequence, `A`, and the columns with characters from the second sequence, `B`. 
+Please be aware that the columns of this matrix are designated with the characters from the first sequence, `A`, and the rows with characters from the second sequence, `B`. 
 Furthermore, we use the variable `i` to index the rows and `j` to index the columns.
 
 Please note: the matrix and indexing is different to the pseudo-code in Wikipedia. 
@@ -67,18 +67,17 @@ Please note: the matrix and indexing is different to the pseudo-code in Wikipedi
 compute_F_matrix <- function(A, B, gap=1.0, match=1.0, mismatch=-1.0) {
 
   # init dimension of the matrix
-  F <- matrix(0, nrow = nchar(A)+1, ncol = nchar(B)+1)
-  # sequence A in row names, B in col names.
-  rownames(F) <- c("*", unlist(strsplit(A, split = "")) )
-  colnames(F) <- c("*", unlist(strsplit(B, split = "")) )
+  F <- matrix(0, ncol = nchar(A)+1, nrow = nchar(B)+1)
+  # sequence A in col names, B in row names.
+  colnames(F) <- c("*", unlist(strsplit(A, split = "")) )
+  rownames(F) <- c("*", unlist(strsplit(B, split = "")) )
   
   # Array/matrix indexes start at 1.
-  # fill in the first row with gap penalty (convert to negative scores)
+  # fill in the first row with gap penalty scores (negative)
   F[,1] = - gap * 0:(nrow(F)-1)
-  # fill in the first column with gap penalty (convert to negative scores)
+  # fill in the first column with gap penalty scores (negative)
   F[1,] = - gap * 0:(ncol(F)-1)
 
-  # sequence X in row names of F, and Y in column names of F.
   # start scoring. 
   for (i in 2:nrow(F)) {
     for (j in 2:ncol(F)) {
@@ -104,8 +103,8 @@ This will output the matrix `Fmat`,
 provided your code is fully implemented and contains no incomplete sections.
 
 ```{r}
-x = "GATTACA"
-y = "GCATGCG"
+x = "GCATGCG"
+y = "GATTACA"
 
 # test your implementation
 Fmat <- compute_F_matrix(x, y)
@@ -132,13 +131,13 @@ Please note: This high road approach deviates from the pseudo-code typically fou
 # form the alignment given a scoring matrix
 trace_back <- function(F, A, B, gap=1.0, match=1.0, mismatch=-1.0) {
   # i indexing row, j indexing col in F
-  i = nchar(A) + 1
-  j = nchar(B) + 1
+  i = nchar(B) + 1
+  j = nchar(A) + 1
   if (i == 1 || j == 1 || i > nrow(F) || j > ncol(F)) {
     stop("Invalid position (", i, ", ", j, ") !")
   }
   
-  # aligned sequence A
+  # aligned sequence A is on the top
   AlignmentA = ""
   # aligned sequence B
   AlignmentB = ""
@@ -162,9 +161,9 @@ trace_back <- function(F, A, B, gap=1.0, match=1.0, mismatch=-1.0) {
     ### your code finished above
     
     # the top-left cell is not used,
-    # so A in row names starts from the 2nd row, B in col names from the 2nd col
-    x_char = substring(A, i-1, i-1)
-    y_char = substring(B, j-1, j-1)
+    # so B in row names starts from the 2nd row, A in col names from the 2nd col
+    row_char = substring(B, i-1, i-1)
+    col_char = substring(A, j-1, j-1)
     
     # create AlignmentA and AlignmentB
     
@@ -184,15 +183,16 @@ trace_back <- function(F, A, B, gap=1.0, match=1.0, mismatch=-1.0) {
 ```{r, global_alignment}
 ### 1st test, reuse the F matrix above
 rs <- trace_back(Fmat, x, y)
-cat("y: ", rs$AlignmentB, "\nx: ", rs$AlignmentA, "\n\n")
+# aligned sequence A on the top
+cat("x: ", rs$AlignmentA, "\ny: ", rs$AlignmentB, "\n\n")
 
 ### 2nd test
-x2 = "GACTTAC"
-y2 = "CGTGAATTCAT"
+x2 = "CGTGAATTCAT"
+y2 = "GACTTAC"
 # restart
 Fmat2 <- compute_F_matrix(x2, y2)
 rs2 <- trace_back(Fmat2, x2, y2)
-cat("y: ", rs2$AlignmentB, "\nx: ", rs2$AlignmentA, "\n\n")
+cat("x: ", rs2$AlignmentA, "\ny: ", rs2$AlignmentB, "\n\n")
 ### End
 ```
 
