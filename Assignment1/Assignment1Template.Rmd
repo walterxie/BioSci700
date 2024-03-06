@@ -346,14 +346,27 @@ rs <- trace_back(Fmat, x, y)
 cat("x: ", rs$AlignmentA, "\ny: ", rs$AlignmentB, "\n\n")
 
 ### 2nd test
-x2 = "CGTGAATTCAT"
-y2 = "GACTTAC"
+x2 = "CTAAGGGATTCCGGTAATTAGACAG"
+y2 = "ATAGACCATATGTCAGTGACTGTGTAA"
 # restart
 Fmat2 <- compute_F_matrix(x2, y2)
 rs2 <- trace_back(Fmat2, x2, y2)
 cat("x: ", rs2$AlignmentA, "\ny: ", rs2$AlignmentB, "\n\n")
 ### End
 ```
+
+
+## Question 2 (3 points)
+
+
+![Q2](./figs/tree2t.png)
+
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+
 
 
 ## Question 3 (9 points)
