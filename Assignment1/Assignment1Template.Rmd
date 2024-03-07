@@ -530,7 +530,7 @@ Write R code to use the function `dist.dna` to compute two separated matrices of
 Print the sum of each distance matrix.
 
 
-```{r, import_alignment}
+```{r, distance_matrix}
 
   ### your code here
   # ...
