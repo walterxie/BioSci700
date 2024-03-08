@@ -257,7 +257,7 @@ Given the figure below, sequence D is the most recent common ancestor of sequenc
 The time from E to the common ancestor D is $t$ time units. 
 If you cannot see the figure, right-click your mouse and select the "reload".
 
-![Q2](./figs/tree2t.png)
+![Q2](./tree2t.png)
 
 You need to write R code to simulate pairs of sequences (E, F) diverging from a common ancestor $t$ time units in the past, utilizing the Jukes-Cantor model of evolution. 
 In this question, the implementation is segmented into three modular functions for clarity and reusability. 
