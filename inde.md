@@ -1,5 +1,5 @@
 
-## Assigments
+## Assignments
 
   1. [Assignment 1 - template](Assignment1/Assignment1Template.Rmd), [RSV2.nex](Assignment1/RSV2.nex), [tree2t.png](Assignment1/tree2t.png).
 
