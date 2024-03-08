@@ -3,8 +3,10 @@
 
   1. [Assignment 1 - template](Assignment1/Assignment1Template.Rmd), [RSV2.nex](Assignment1/RSV2.nex), [tree2t.png](Assignment1/tree2t.png).
 
-Please submit your .Rmd file with the generated HTML file, 
+Please submit your original .Rmd file with the generated HTML file, 
 including the downloaded alignment and figures, and also the generated tree files and figures.
+
+To generate HTML from .Rmd file, you can go to "Knit options", and click the menu item [Knit to HTML](./Knit2HTML.png).
 
 
   2. Assignment 2 ...
@@ -17,6 +19,14 @@ including the downloaded alignment and figures, and also the generated tree file
 - [Math in R markdown](https://rmd4sci.njtierney.com/math)
 
 - [More R markdown](https://bookdown.org/yihui/rmarkdown/)
+
+
+### Resize a image in a .Rmd file in RStudio
+
+`![Q2](./tree2t.png)` may result in a large size when creating HTML from the .Rmd file. 
+You may consider using the following code to replace it, which allows you to add a resized image: 
+
+`<img src="tree2t.png" alt="Q2" width="200"/>`
 
 
 ### Mac version issues
