@@ -1,11 +1,22 @@
 
 ## Assigments
 
-  i. [R examples](RExamples.html)
+  1. [Assignment 1 - template](Assignment1/Assignment1Template.Rmd), [RSV2.nex](Assignment1/RSV2.nex), [tree2t.png](Assignment1/tree2t.png).
 
-  ii. [Assignment 1 - template](Assignment1/Assignment1Template.Rmd), [RSV2.nex](Assignment1/RSV2.nex), [tree2t.png](Assignment1/tree2t.png).
+Please submit your .Rmd file with the generated HTML file, 
+including the downloaded alignment and figures, and also the generated tree files and figures.
 
-  iii. Assignment 2 ...
+
+  2. Assignment 2 ...
+
+
+## Useful links
+
+- [R examples](RExamples.html)
+
+- [Math in R markdown](https://rmd4sci.njtierney.com/math)
+
+- [More R markdown](https://bookdown.org/yihui/rmarkdown/)
 
 
 ### Mac version issues
