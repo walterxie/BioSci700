@@ -1,7 +1,9 @@
 
-## Assignments
+## Assignment 1
 
-  1. [Assignment 1 - template](Assignment1/Assignment1Template.Rmd), [RSV2.nex](Assignment1/RSV2.nex), [tree2t.png](Assignment1/tree2t.png).
+  1. [Assignment 1 - template](Assignment1/Assignment1Template.Rmd), 
+  2. [RSV2.nex](Assignment1/RSV2.nex), 
+  3. [tree2t.png](Assignment1/tree2t.png).
 
 Please submit your original .Rmd file with the generated HTML file, 
 including the downloaded alignment and figures, and also the generated tree files and figures.
@@ -9,7 +11,9 @@ including the downloaded alignment and figures, and also the generated tree file
 To generate HTML from .Rmd file, you can go to "Knit options", and click the menu item [Knit to HTML](./Knit2HTML.png).
 
 
-  2. Assignment 2 ...
+## Assignment 2
+
+  coming ...
 
 
 ## Useful links
@@ -24,6 +28,9 @@ To generate HTML from .Rmd file, you can go to "Knit options", and click the men
 
 - [FigTree](https://github.com/rambaut/figtree/releases)
 
+
+## 3rd party software issues
+
 ### Resize a image in a .Rmd file in RStudio
 
 `![Q2](./tree2t.png)` may result in a large size when creating HTML from the .Rmd file. 
@@ -34,7 +41,7 @@ You may consider using the following code to replace it, which allows you to add
 
 ### Mac version issues
 
-Note that the Mac version of TempEst and FigTree may have an issue 
+Note that the Mac version of **TempEst** and **FigTree** may have an issue 
 where they incorrectly prompt for the installation of Java 1.6. 
 This is a known bug and does not affect the functionality of the programs. 
 To run FigTree or TempEst, you can simply extract and launch the executable version
