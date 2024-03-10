@@ -1,14 +1,18 @@
 
+# BIOSCI 700: Phylogenetics
+
 ## Assignment 1
 
   1. [Assignment 1 - template](Assignment1/Assignment1Template.Rmd), 
   2. [RSV2.nex](Assignment1/RSV2.nex), 
   3. [tree2t.png](Assignment1/tree2t.png).
 
-Please submit your original .Rmd file with the generated HTML file, 
+Please follow the instruction to complete the assignment. 
+Submit your original .Rmd file with the generated HTML file, 
 including the downloaded alignment and figures, and also the generated tree files and figures.
 
-To generate HTML from .Rmd file, you can go to "Knit options", and click the menu item [Knit to HTML](./Knit2HTML.png).
+To generate HTML from .Rmd file, you can go to "Knit options", 
+and click the menu item [Knit to HTML](./Knit2HTML.png).
 
 
 ## Assignment 2
