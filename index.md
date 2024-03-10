@@ -22,6 +22,8 @@ To generate HTML from .Rmd file, you can go to "Knit options", and click the men
 
 - [IcyTree](https://icytree.org)
 
+- [FigTree](https://github.com/rambaut/figtree/releases)
+
 ### Resize a image in a .Rmd file in RStudio
 
 `![Q2](./tree2t.png)` may result in a large size when creating HTML from the .Rmd file. 
