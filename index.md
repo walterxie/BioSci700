@@ -1,3 +1,7 @@
+---
+title: "BIOSCI 700: Phylogenetics"
+---
+
 
 ## Assignment 1
 

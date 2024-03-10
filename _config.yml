@@ -22,7 +22,7 @@ plugins:
 # https://github.com/mmistakes/minimal-mistakes/issues/1618
 titles_from_headings:
   enabled:     true
-  strip_title: false
-  collections: false
+  strip_title: true
+  collections: true
 
 
