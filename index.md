@@ -20,6 +20,7 @@ To generate HTML from .Rmd file, you can go to "Knit options", and click the men
 
 - [More R markdown](https://bookdown.org/yihui/rmarkdown/)
 
+- [IcyTree](https://icytree.org)
 
 ### Resize a image in a .Rmd file in RStudio
 
