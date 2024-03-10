@@ -1,7 +1,5 @@
 
-## BIOSCI 700: Phylogenetics
-
-### Assignment 1
+## Assignment 1
 
   1. [Assignment 1 - template](Assignment1/Assignment1Template.Rmd), 
   2. [RSV2.nex](Assignment1/RSV2.nex), 
@@ -15,7 +13,7 @@ To generate HTML from .Rmd file, you can go to "Knit options",
 and click the menu item [Knit to HTML](./Knit2HTML.png).
 
 
-### Assignment 2
+## Assignment 2
 
   coming ...
 
