@@ -6,8 +6,11 @@ title: "BIOSCI 700: Phylogenetics"
 ## Assignment 1
 
   1. [Assignment 1 - template](Assignment1/Assignment1Template.Rmd), 
-  2. [RSV2.nex](Assignment1/RSV2.nex), 
-  3. [tree2t.png](Assignment1/tree2t.png).
+  2. [tree2t.png](Assignment1/tree2t.png) for Question 2,
+  3. [RSV2.nex](Assignment1/RSV2.nex) for Question 3.
+  
+
+Download the files and put them into the same directory.
 
 Please follow the instruction to complete the assignment. 
 Submit your original .Rmd file with the generated HTML file, 
