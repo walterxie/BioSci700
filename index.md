@@ -68,6 +68,7 @@ When prompted, click "Open" in the pop-up window to proceed.
 <img src="MacRunIqtree2Open.png" alt="MacRunIqtree2Open" width="300"/>
 
 
+{:start="2"}
 2. Incorrectly prompt for the installation of Java 1.6
 
 Note that the Mac version of **TempEst** and **FigTree** may have an issue 
