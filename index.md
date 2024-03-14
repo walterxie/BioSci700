@@ -50,6 +50,26 @@ You may consider using the following code to replace it, which allows you to add
 
 ### Mac version issues
 
+1. Cannot be opened
+
+The latest version of macOS has implemented stricter security protocols for opening downloaded software. 
+As a result, you may encounter the following error on a Mac:
+
+<img src="MacIqtree2NotOpened.png" alt="Cannotbeopened" width="300"/>
+
+To resolve the issue, navigate to "System Settings" => "Privacy & Security" => "Security" on your Mac, 
+and select "Allow Anyway" for the software in question.
+
+<img src="MacAllowIqtree2.png" alt="MacAllowIqtree2" width="500"/>
+
+Afterwards, relaunch the application (for instance, iqtree2). 
+When prompted, click "Open" in the pop-up window to proceed.
+
+<img src="MacRunIqtree2Open.png" alt="MacRunIqtree2Open" width="300"/>
+
+
+2. Incorrectly prompt for the installation of Java 1.6
+
 Note that the Mac version of **TempEst** and **FigTree** may have an issue 
 where they incorrectly prompt for the installation of Java 1.6. 
 This is a known bug and does not affect the functionality of the programs. 
@@ -69,3 +89,7 @@ run the following command in the terminal before starting FigTree:
 ```bash
 chmod u+x bin/figtree
 ```
+
+
+
+
