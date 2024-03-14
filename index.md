@@ -27,7 +27,7 @@ and click the menu item [Knit to HTML](./Knit2HTML.png).
 
 ## Useful links
 
-- [R examples](RExamples.html)
+- [R examples](RExamples.html) or [R tutorial](https://www.w3schools.com/r/), and [R tutorial for vectorisation](https://sahirbhatnagar.com/biosR/vectorization-apply-and-for-loops.html)
 
 - [Math in R markdown](https://rmd4sci.njtierney.com/math)
 
