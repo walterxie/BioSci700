@@ -254,12 +254,12 @@ In this section, your understanding of the Jukes-Cantor (JC) model will be asses
 ### 2.1 Simulate DNA sequences
 
 Given the figure below, sequence D is the most recent common ancestor of sequences E and F.
-The time from E to the common ancestor D is $t$ time units. 
+The time from E to the common ancestor D is $t'$ time units. 
 If you cannot see the figure, right-click your mouse and select the "reload".
 
 ![Q2](./tree2t.png)
 
-You need to write R code to simulate pairs of sequences (E, F) diverging from a common ancestor $t$ time units in the past, utilizing the Jukes-Cantor model of evolution. 
+You need to write R code to simulate pairs of sequences (E, F) diverging from a common ancestor $t'$ time units in the past, utilizing the Jukes-Cantor model of evolution. 
 In this question, the implementation is segmented into three modular functions for clarity and reusability. 
 
 Initially, considering the ease of simulation, 
@@ -289,15 +289,14 @@ numbers_to_nucletides(c(1, 2, 3, 4, 2, 4, 3, 1))
 As we learnt, we can observe the substitutions between E and F, but the actual number of mutation events that have occurred since diverging from their common ancestor D remains unknown. 
 The Jukes-Cantor model provides a straightforward framework for solving this problem during DNA sequence evolution.
 
-The model assumes that each site mutates independently at a uniform rate, $\mu$.
-Consequently, the rate at which any given nucleotide transitions to any of the three other nucleotides is $\frac{3}{4}\mu$.
-Over time, this mutation process aligns with a Poisson distribution, with the expected rate of mutations being $\frac{3}{4}\mu t$, where $t$ represents the evolutionary time from the common ancestor D to either descendant E or F.
+The model assumes that the expected number of mutations per site is $d = \mu t'$ (branch length in genetic distance), where $t'$ represents the evolutionary time from the common ancestor D to either descendant E or F.
+Over time, this mutation process aligns with a Poisson distribution.
 
 Moreover, upon a substitution event, the probability of a nucleotide to mutate to the three alternatives is equal to $\frac{1}{3}$. 
 
 Complete the `mutate_site` function provided below. 
 This function returns the final nucleotide (as integer) after a series of mutations from an initial nucleotide, `start_nuc` (as integer). 
-The rest input parameters include the mutation rate $\mu$, evolutionary time $t$, and a mutation probability matrix.
+The rest input parameters include the mutation rate $\mu$, evolutionary time $t'$, and a mutation probability matrix.
 
 This matrix `mutation_prob_matrix`, with rows and columns indicated by {A, C, G, T}, denotes the likelihood of a substitution event from a nucleotide (indicated by the row labels) to mutate to each of the three alternatives (indicated by the column labels).
 The diagonal elements of the matrix are set to 0. 
@@ -342,13 +341,13 @@ mutate_site(1, mu=0.01, t=10)
 ```
 
 Now we can simulate the sequences using the function `simulate_seqs`.
-Inputs for the function include the sequence length `L`, the mutation rate $\mu$, and evolutionary time `t`.
+Inputs for the function include the sequence length `L`, the mutation rate $\mu$, and evolutionary time $t'$.
 The output of the function comprises strings representing the ancestral sequence (D in the diagram) and the two descendant sequences (E and F in the diagram), each composed of the nucleotides {A, C, G, T}.
 
 You can start from simulating the ancestral sequence (D), assuming the distribution for the sequence is uniform over the four possible bases at each site.
 Then use the function `mutate_site` to simulate each site of E and F.
 
-In the end, call `simulate_seqs` to simulate a pair of sequences of length 50 with $\mu$ = 0.01 and $t$ = 10, and print the resulting sequences along with the ancestral sequence. 
+In the end, call `simulate_seqs` to simulate a pair of sequences of length 50 with $\mu$ = 0.01 and $t'$ = 10, and print the resulting sequences along with the ancestral sequence. 
 
 Tips: use R vectorization instead of loops can make your code faster, such as `sapply`.
 
@@ -419,7 +418,7 @@ cat("Number of differences between E and F is", count_diff(res$E, res$F), "\n")
 
 ### 2.3 Simulate pairs of DNA sequences
 
-Simulate 1000 pairs of sibling sequences (E and F) of length 1000 with with $\mu$ = 0.01 and $t$ = 25.
+Simulate 1000 pairs of sibling sequences (E and F) of length 1000 with with $\mu$ = 0.01 and $t'$ = 25.
 Utilize the previously developed code to compute the number of sites at which each pair differs. Calculate and print the mean and variance of the number of differing sites across all pairs.
 
 ```{r, simulate_1000}
@@ -437,7 +436,7 @@ cat("Variance of number of differences between E and F:",  var(number_diff), "\n
 
 ### 2.4 Compare the simulated probabilities with expected probabilities
 
-Simulate a pair of sibling sequences (E and F) of length 10000 with $t$ = 10 and $\mu$ = 0.03.
+Simulate a pair of sibling sequences (E and F) of length 10000 with $t'$ = 10 and $\mu$ = 0.03.
 Use them to calculate the probabilities $p_{GX}$, that a $G$ in the sequence E is aligned to base $X$ for $X ∈ \{A, C, G, T\}$ in the sequence F.
 
 Tips: use R function `gregexpr` to find the indices of a sequence in string having "G",
@@ -455,8 +454,8 @@ Also check R function `table` for computing the frequencies of A C G T.
 
 ### 2.5 The theoretical probabilities.
 
-Assume that $p_{ab} = p_{ba}$. Write down the equation to calculate the theoretical values of $p_{GX}$ given $t$ (defined in the figure) and $\mu$, where estimated $p_{GX}$ were summarized in the previous subsection.
-Please note the definition of $t$ and $\mu$ has been changed in this assignment.
+Assume that $p_{ab} = p_{ba}$. Write down the equation to calculate the theoretical values of $p_{GX}$ given $t'$ (defined in the figure) and $\mu$, where estimated $p_{GX}$ were summarized in the previous subsection.
+Please note the definition of $t'$ and $\mu$ has been changed in this assignment.
 You need to consider these changes when writing the equation. 
 
 Tips: use the `$$` block, if you are not familiar, you learn it from https://rmd4sci.njtierney.com/math.
