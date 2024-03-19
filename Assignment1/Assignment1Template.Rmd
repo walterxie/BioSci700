@@ -290,7 +290,7 @@ As we learnt, we can observe the substitutions between E and F, but the actual n
 The Jukes-Cantor model provides a straightforward framework for solving this problem during DNA sequence evolution.
 
 The model assumes that the expected number of mutations per site is $d = \mu t'$ (branch length in genetic distance), where $t'$ represents the evolutionary time from the common ancestor D to either descendant E or F.
-Over time, this mutation process aligns with a Poisson distribution.
+The distribution of the number of mutations conforms to a Poisson distribution with a mean equal to the expected number (by definition).
 
 Moreover, upon a substitution event, the probability of a nucleotide to mutate to the three alternatives is equal to $\frac{1}{3}$. 
 
