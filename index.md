@@ -22,9 +22,9 @@ and click the menu item [Knit to HTML](./Knit2HTML.png).
 
 ## Assignment 2
 
-View the [template](Assignment2/Assignment2-template.html) by browser.
+View the [template](Assignment2/Assignment2-template) by browser.
 
-  1. [Assignment 2 - template](Assignment2/Assignment2-template.md), 
+  1. <a href="./Assignment2/Assignment2-template.md">Assignment 2 - template</a>, 
   2. [RSV2.nex](Assignment2/RSV2.nex).
 
 Download the files and put them into the same directory.
