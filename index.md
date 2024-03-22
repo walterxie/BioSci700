@@ -22,7 +22,17 @@ and click the menu item [Knit to HTML](./Knit2HTML.png).
 
 ## Assignment 2
 
-  coming ...
+View the [template](Assignment2/Assignment2-template.html) by browser.
+
+  1. [Assignment 2 - template](Assignment2/Assignment2-template.md), 
+  2. [RSV2.nex](Assignment2/RSV2.nex).
+
+Download the files and put them into the same directory.
+
+Please follow the instruction in the template to complete the assignment. 
+
+Please install all required software packages in advance, and test if they can open properly. 
+This preparation will help optimise your time during the 2nd lab.
 
 
 ## Useful links
@@ -36,6 +46,8 @@ and click the menu item [Knit to HTML](./Knit2HTML.png).
 - [IcyTree](https://icytree.org)
 
 - [FigTree](https://github.com/rambaut/figtree/releases)
+
+- [BEAST 2](http://www.beast2.org)
 
 
 ## 3rd party software issues
