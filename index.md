@@ -24,10 +24,13 @@ and click the menu item [Knit to HTML](./Knit2HTML.png).
 
 View the [template](Assignment2/Assignment2-template) by browser.
 
-  1. <a href="https://github.com/walterxie/BioSci700/raw/main/Assignment2/Assignment2-template.md">Assignment 2 - template</a>, 
-  2. [RSV2.nex](Assignment2/RSV2.nex).
+  1. <a href="https://github.com/walterxie/BioSci700/raw/main/Assignment2/Assignment2-template.md" download>Assignment 2 - template</a>,
+  2. Required figures [figs.zip](Assignment2/figs.zip) for the template.
+  3. [RSV2.nex](Assignment2/RSV2.nex).
 
-Download the files and put them into the same directory.
+Download the files and put them into the same directory. 
+Unzip the `figs.zip` and make sure all images under the subfolder `figs`, 
+and the subfolder must be in the same directory with the `Assignment2-template.md` file.
 
 Please follow the instruction in the template to complete the assignment. 
 
