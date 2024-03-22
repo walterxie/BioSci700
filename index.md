@@ -24,7 +24,7 @@ and click the menu item [Knit to HTML](./Knit2HTML.png).
 
 View the [template](Assignment2/Assignment2-template) by browser.
 
-  1. <a href="./Assignment2/Assignment2-template.md">Assignment 2 - template</a>, 
+  1. <a href="https://github.com/walterxie/BioSci700/raw/main/Assignment2/Assignment2-template.md">Assignment 2 - template</a>, 
   2. [RSV2.nex](Assignment2/RSV2.nex).
 
 Download the files and put them into the same directory.
