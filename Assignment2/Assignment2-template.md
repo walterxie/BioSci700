@@ -259,7 +259,7 @@ Verify if these years are accurately parsed.
 <br>
 
 You may notice an orange warning dot at the bottom of the panel initially.
-However, after setting all three substitution rates to estimate, the warning will disappear, and the option to "fix mean mutation rate" will be triggered.
+However, after setting all three substitution rates to estimate, the warning will disappear, and the option to "fix mean mutation rate" will be triggered. This option constrains the mean substitution rate of all partitions to be equal to 1 (by default).
 
 To streamline this process, utilize the "Clone" function to replicate the configuration.
 Hold the `shift` key to select all site models on the left side, then click "OK" to clone the settings from a selected site model (the first one).
