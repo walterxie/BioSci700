@@ -5,37 +5,7 @@ title: "BIOSCI 700: Phylogenetics"
 
 ## Assignment 1
 
-  1. [Assignment 1 - template](Assignment1/Assignment1Template.Rmd), 
-  2. [tree2t.png](Assignment1/tree2t.png) for Question 2,
-  3. [RSV2.nex](Assignment1/RSV2.nex) for Question 3.
-  
-
-Download the files and put them into the same directory.
-
-Please follow the instruction to complete the assignment. 
-Submit your original .Rmd file with the generated HTML file, 
-including the downloaded alignment and figures, and also the generated tree files and figures.
-
-To generate HTML from .Rmd file, you can go to "Knit options", 
-and click the menu item [Knit to HTML](./Knit2HTML.png).
-
-
-## Assignment 2
-
-View the [template](Assignment2/Assignment2-template) by browser.
-
-  1. <a href="https://github.com/walterxie/BioSci700/raw/main/Assignment2/Assignment2-template.md">Assignment 2 - template</a>, right-click the link and select "Download Linked File ...",
-  2. Required figures [figs.zip](Assignment2/figs.zip) for the template.
-  3. [RSV2.nex](Assignment2/RSV2.nex).
-
-Download the files and put them into the same directory. 
-Unzip the `figs.zip` and make sure all images under the subfolder `figs`, 
-and the subfolder must be in the same directory with the `Assignment2-template.md` file.
-
-Please follow the instruction in the template to complete the assignment. 
-
-Please install all required software packages in advance, and test if they can open properly. 
-This preparation will help optimise your time during the 2nd lab.
+  coming soon ...
 
 
 ## Useful links
