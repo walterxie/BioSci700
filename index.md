@@ -2,6 +2,20 @@
 title: "BIOSCI 700: Phylogenetics"
 ---
 
+## Required Software
+
+- Java (Install it, only if it is not available in your machine) 
+
+- PRANK: http://wasabiapp.org/software/prank/
+
+- iqtree2 : http://www.iqtree.org/#download
+
+- TempEst: http://tree.bio.ed.ac.uk/software/tempest/
+
+-   To visualize the tree, you may use [FigTree 1.4.4](http://tree.bio.ed.ac.uk/software/figtree/) 
+or [icytree](https://icytree.org) if you prefer a software with a GUI, 
+or [ggtree](https://bioconductor.org/packages/release/bioc/html/ggtree.html) if you prefer R.
+
 
 ## Assignment 1
 
