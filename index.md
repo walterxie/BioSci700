@@ -6,6 +6,8 @@ title: "BIOSCI 700: Phylogenetics"
 
 - Java (Install it, only if it is not available in your machine) 
 
+- MAFFT: https://mafft.cbrc.jp/alignment/software/
+
 - PRANK: http://wasabiapp.org/software/prank/
 
 - iqtree2 : http://www.iqtree.org/#download

@@ -10,8 +10,8 @@ Your name (UPI)
 Please write a report using this template and save it into the PDF format. 
 You can either use [Overleaf](https://www.overleaf.com), or MS Word, or Google Doc, and then export the completed report as a PDF file. The PDF file name must contain your name and UPI.
 
-You can simply copy this template, and then replace the author into your name in the header above, including UPI insider the bracket.
-
+In your report, please replace the author into your name in the header above, including UPI insider the bracket.
+For the content of the report, you need to copy all the questions and the section titles from this template, and then fill in your answers accordingly. 
 Please follow the provided instructions carefully to set up the analysis and answer all questions, which are numbered using Roman numerals, such as **Question i:**.
 One point for each question, and one bonus point for **clarity** and producing a well-written report.
 
@@ -28,50 +28,109 @@ Your answer
 
 Ensure you answer all questions and submit your report in the PDF format.
 Before submitting, please verify that your report opens and displays correctly.
-
 Additionally, it's beneficial to include all relevant figures in your answers, along with the log files and tree files associated with your analysis.
-
 For example, iqtree's tree file (e.g., `*.treefile`) and log file (e.g., `*.log`).
 
-To minimize the size of your submission, consider compressing the files, ensuring to use only the ZIP format for compatibility. 
+To minimize the size of your submission, consider compressing the files, ensuring to use only the ZIP format for compatibility. Remember to add your name and UPI to the file name, and test if it can be decompressed properly before submission.
 
 
-## Data and methods
+## 1. Multiple sequence alignment (MSA) application (4 points)
 
-We will conduct two analyses on two different dataset - one  method, and the second .
+In this section, we will practise how to use homologous sequences from different species to reconstruct evolutionary relationships. We choose mitochondrial DNA from five species:
 
-
-
-Please download the [alignment](./data/nz_cluster.fasta) of one of largest SARS-CoV-2 clusters in Aotearoa New Zealand ([Geoghegan et al. 2020](https://www.nature.com/articles/s41467-020-20235-8#MOESM3)). The alignment consists of 81 SARS-CoV-2 genome sequences from infected patients, where the label contains the meta data of each sequence, such as the sample location by DHB, lineage, the collection date, etc. We will employ the maximum likelihood method using iqtree to produce a phylogenetic tree, and apply another software, TempEst, to explore the temporal signal.
-
-
-
-## 1. Tree-based Alignment (4 points)
+Homo sapiens (Human): NC_012920.1
+Pan troglodytes (Chimpanzee): NC_001643.1
+Canis lupus (Dog): NC_002008.4
+Felis catus (Cat): NC_001700.1
+Gallus gallus (Chicken): GU261700.1 
 
 
+### 1.1 Download data 
+
+Please use the above accession numbers to download the sequences from NIH https://www.ncbi.nlm.nih.gov/nuccore/.
+
+You can follow the following steps: 
+1. open the web page in a browser;
+2. type "NC_012920.1 OR NC_001643.1 OR NC_002008.4 OR NC_001700.1 OR GU261700.1" in the text field;
+3. click "Search" button, and select the top five results;
+4. click "Send to" and choose "File", then change the format to "FASTA", and click the button "Create file".
+5. find the downloaded file mostly named as "sequence.fasta".
+
+Copy the sequences file to your working directory. 
+Open it using any text editor, and then simplify the label by searching for every ">".
+For example, the 1st line, rename it to "Chicken|GU261700.1" (remove the rest texts in the label).
+
+We will conduct two different alignment method on this dataset and compare the results.
+
+
+**Question i:** Do you think we should apply the local or global alignment method for studying the  evolutionary history in species level? Why?
+
+**Answer starts:**
+
+Your answer
+
+**Answer ends**
+
+
+### 1.2 Progressive method
+
+These methods build the alignment step by step, starting from pairwise alignments and progressively adding more sequences.
+Here, we will use the software [MAFFT](https://mafft.cbrc.jp/alignment/software/manual/manual.html) to create the global alignment from the downloaded sequences. 
+
+Open the terminal, and use the following command line to create the alignment "global.fasta".
+
+```bash
+mafft --maxiterate 1000 --globalpair sequence.fasta > global.fasta
+```
+
+
+### 1.3 Tree-based method
+
+These methods use a phylogenetic tree to guide the alignment process, aligning sequences based on their evolutionary relationships.
+Here, we will use another software [PRANK](https://ariloytynoja.github.io/prank-msa/docs/prank_installation.html) to create the tree-based alignment from the downloaded sequences. 
+
+Open the terminal, first, use the following command line to create the guide tree "global.fasta.treefile" using iqtree. Replace "MY_PATH" to the parent folder path containing iqtree.
+
+```bash
+/MY_PATH/bin/iqtree2 -s global.fasta
+```
+
+Secondly, use the following command line to create the alignment given a guide tree.
+
+```bash
+prank -d=sequence.fasta -o=treeb -t=global.fasta.treefile -F -showxml
+```
+
+Quickly read the webpage [PRANK differences](http://wasabiapp.org/software/prank/prank_differences/) or [their publication](https://academic.oup.com/mbe/article/33/4/1126/2579418).
+
+
+**Question ii:** Briefly explain how the tree-based alignment method to provide more accurate alignment compared to other progressive methods.
+
+**Answer starts:**
+
+Your answer
+
+**Answer ends**
+
+
+### 1.4 Compare results
 
 
 
-http://wasabiapp.org/software/prank/
 
-https://academic.oup.com/mbe/article/33/4/1126/2579418
+**Question iii:** 
 
+**Answer starts:**
 
+Your answer
 
-
-
-
-
-
-
-
-
-
-
+**Answer ends**
 
 
 
 ## 2. Maximum likelihood tree (5 points)
+
+Please download the [alignment](./data/nz_cluster.fasta) of one of largest SARS-CoV-2 clusters in Aotearoa New Zealand ([Geoghegan et al. 2020](https://www.nature.com/articles/s41467-020-20235-8#MOESM3)). The alignment consists of 81 SARS-CoV-2 genome sequences from infected patients, where the label contains the meta data of each sequence, such as the sample location by DHB, lineage, the collection date, etc. We will employ the maximum likelihood method using iqtree to produce a phylogenetic tree, and apply another software, TempEst, to explore the temporal signal.
 
 Run [iqtree2](http://www.iqtree.org/#download) on the dataset to construct a maximum likelihood tree, using the command `iqtree -s nz_cluster.fasta`.
 Please attach the maximum likelihood tree file (e.g., "nz_cluster.treefile") and iqtree log file (e.g., "nz_cluster.log") with the report.
