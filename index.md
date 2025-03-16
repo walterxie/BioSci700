@@ -6,6 +6,8 @@ title: "BIOSCI 700: Phylogenetics"
 
 - Java (Install it, only if it is not available in your machine) 
 
+- R and R studio: https://posit.co/download/rstudio-desktop/
+
 - MAFFT: https://mafft.cbrc.jp/alignment/software/
 
 - PRANK: http://wasabiapp.org/software/prank/
