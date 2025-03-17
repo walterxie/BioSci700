@@ -223,30 +223,33 @@ Your answer
 
 ### 1.5 Tree-based alignment method
 
-In the subsequent sections, we will apply two different multiple sequence alignment (MSA) methods to this dataset and compare the resulting alignments.
+In this section, we introduce an alternative multiple sequence alignment (MSA) method that uses a phylogenetic tree to guide the alignment process. Unlike traditional progressive alignment methods, tree-based alignment incorporates evolutionary relationships to improve accuracy.
 
+We will use [PRANK](https://ariloytynoja.github.io/prank-msa/docs/prank_installation.html) to perform tree-based alignment. 
 
-These methods use a phylogenetic tree to guide the alignment process, aligning sequences based on their evolutionary relationships.
-Here, we will use another software [PRANK](https://ariloytynoja.github.io/prank-msa/docs/prank_installation.html) to create the tree-based alignment from the downloaded sequences. 
-
-Open the terminal, first, we will use the pervious result "global.fasta.treefile" as the guide tree,  and use the following command line to create the alignment.
+Open the terminal and run the following command, using "global.fasta.treefile" as the guide tree:
 
 ```bash
 prank -d=sequence.fasta -o=treeb -t=global.fasta.treefile -F -showxml
 ```
 
-Quickly read the webpage [PRANK differences](http://wasabiapp.org/software/prank/prank_differences/) or [their publication](https://academic.oup.com/mbe/article/33/4/1126/2579418).
+* -d=sequence.fasta : Input sequence file.
+* -o=treeb : Output file prefix.
+* -t=global.fasta.treefile : Uses the previously generated ML tree to guide alignment.
+* -F : Keeps gap placement consistent with evolutionary history.
+* -showxml : Outputs results in XML format for further analysis.
+
+For more details, visit the webpage [PRANK differences](http://wasabiapp.org/software/prank/prank_differences/) or refer to [their publication](https://academic.oup.com/mbe/article/33/4/1126/2579418).
 
 
-**Question vi:** Briefly explain how the tree-based alignment method to provide more accurate alignment compared to other progressive methods.
+**Question vi:** 
+How does a tree-based alignment method improve accuracy compared to other progressive methods?
 
 **Answer starts:**
 
 Your answer
 
 **Answer ends**
-
-
 
 
 ## 2. Phylogenetic analysis with temporal data (3 points)
