@@ -369,12 +369,12 @@ Your answer
 
 ### 3.3. Exploring temporal signal
 
-As [Rambaut et al 2016](https://doi.org/10.1093/ve/vew007) demonstrated, regression of root-to-tip genetic distance against sampling time can be used as a simple diagnostic tool for molecular clock models.
+As [Rambaut et al 2016](https://doi.org/10.1093/ve/vew007) demonstrated, regressing root-to-tip genetic distance against sampling time can serve as a simple diagnostic tool for assessing molecular clock models.
 
-Keep the same option in TempEst, navigate to the "Root-to-tip" tab, and answer the following questions. Use the number and figure to support your conclusion.
+Keep the same options in TempEst and navigate to the "Root-to-tip" tab. Use the number and figure to support your conclusions when answering the following questions.
 
 **Question iv:** 
-Does this dataset contain enough temporal signal to apply a molecular clock model? Why or why not?
+Does this dataset contain enough temporal signal to apply a molecular clock model? Explain why or why not. 
 
 **Answer starts:**
 
@@ -385,8 +385,8 @@ Your answer
 <br>
 
 **Question v:** 
-If yes for the above answer, which type of molecular clock model would fit in to this dataset better? Why?
-If no, how to improve the temporal signals?
+If you answered "yes" to the above, which type of molecular clock model would fit this dataset best? Explain why.
+If you answered "no," how could the temporal signal in this dataset be improved?
 
 **Answer starts:**
 
