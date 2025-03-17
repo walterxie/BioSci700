@@ -1,0 +1,3807 @@
+NCBI.Genbank.Accession	Date.Sampled	Region	Age
+ON669306	7/11/21	Auckland	16
+ON669307	25/11/21	Waitemata	59
+ON669308	25/11/21	Waitemata	69
+ON669309	30/11/21	Counties Manukau	34
+ON669310	31/08/21	Counties Manukau	12
+ON669311	2/09/21	Counties Manukau	33
+ON669312	2/09/21	Counties Manukau	47
+ON669313	5/10/21	Counties Manukau	20
+ON669314	15/10/21	Counties Manukau	4
+ON669315	19/11/21	Capital and Coast	74
+ON669316	1/12/21	Nelson Marlborough	22
+ON669317	28/10/21	Counties Manukau	16
+ON669318	27/08/21	Counties Manukau	62
+ON669319	7/09/21	Counties Manukau	5
+ON669320	2/10/21	Auckland	11
+ON669321	11/10/21	Waitemata	13
+ON669322	12/10/21	Auckland	40
+ON669323	12/10/21	Auckland	27
+ON669324	12/10/21	Counties Manukau	8
+ON669325	15/10/21	Auckland	64
+ON669326	30/10/21	Waitemata	72
+ON669327	4/11/21	Counties Manukau	29
+ON669328	4/11/21	Waitemata	40
+ON669329	4/11/21	Waitemata	4
+ON669330	9/11/21	Waikato	16
+ON669331	11/11/21	Waitemata	58
+ON669332	10/11/21	Waikato	19
+ON669333	11/11/21	Waikato	10
+ON669334	15/11/21	Waikato	8
+ON669335	16/11/21	Waikato	20
+ON669336	18/11/21	Waikato	50
+ON669337	18/11/21	Waikato	21
+ON669338	19/11/21	Waikato	19
+ON669339	31/10/21	Waikato	53
+ON669340	3/11/21	Waitemata	1
+ON669341	17/10/21	Counties Manukau	15
+ON669342	22/10/21	Waitemata	68
+ON669343	16/10/21	Auckland	24
+ON669344	21/08/21	Auckland	45
+ON669345	23/08/21	Counties Manukau	20
+ON669346	23/08/21	Counties Manukau	14
+ON669347	23/08/21	Counties Manukau	13
+ON669348	23/08/21	Counties Manukau	6
+ON669349	24/08/21	Auckland	17
+ON669350	23/08/21	Waitemata	22
+ON669351	24/08/21	Auckland	45
+ON669352	24/08/21	Waitemata	53
+ON669353	24/08/21	Counties Manukau	31
+ON669354	25/08/21	Auckland	10
+ON669355	25/08/21	Auckland	55
+ON669356	25/08/21	Counties Manukau	51
+ON669357	24/08/21	Counties Manukau	38
+ON669358	25/08/21	Auckland	20
+ON669359	25/08/21	Waitemata	45
+ON669360	25/08/21	Auckland	27
+ON669361	26/08/21	Waitemata	56
+ON669362	25/08/21	Counties Manukau	11
+ON669363	23/08/21	Waitemata	31
+ON669364	26/08/21	Counties Manukau	47
+ON669365	26/08/21	Auckland	19
+ON669366	26/08/21	Waitemata	20
+ON669367	27/08/21	Auckland	30
+ON669368	27/08/21	Counties Manukau	16
+ON669369	27/08/21	Counties Manukau	NA
+ON669370	27/08/21	Waitemata	23
+ON669371	27/08/21	Waitemata	41
+ON669372	24/08/21	Auckland	45
+ON669373	27/08/21	Auckland	18
+ON669374	28/08/21	Waitemata	19
+ON669375	28/08/21	Counties Manukau	17
+ON669376	28/08/21	Counties Manukau	16
+ON669377	28/08/21	Counties Manukau	21
+ON669378	28/08/21	Counties Manukau	11
+ON669379	27/08/21	Counties Manukau	16
+ON669380	28/08/21	Counties Manukau	35
+ON669381	26/08/21	Counties Manukau	60
+ON669382	8/10/21	Waitemata	52
+ON669383	8/10/21	Counties Manukau	9
+ON669384	8/10/21	Counties Manukau	5
+ON669385	7/10/21	Waitemata	24
+ON669386	8/10/21	Counties Manukau	5
+ON669387	8/10/21	Auckland	27
+ON669388	8/10/21	Auckland	28
+ON669389	8/10/21	Counties Manukau	31
+ON669390	8/10/21	Waitemata	9
+ON669391	12/10/21	Counties Manukau	10
+ON669392	13/10/21	Counties Manukau	49
+ON669393	13/10/21	Counties Manukau	48
+ON669394	14/10/21	Counties Manukau	51
+ON669395	14/10/21	Waitemata	23
+ON669396	14/10/21	Waitemata	45
+ON669397	14/10/21	Counties Manukau	47
+ON669398	16/10/21	Waitemata	31
+ON669399	16/10/21	Auckland	39
+ON669400	16/10/21	Counties Manukau	34
+ON669401	15/10/21	Counties Manukau	68
+ON669402	15/10/21	Auckland	72
+ON669403	18/10/21	Counties Manukau	33
+ON669404	18/10/21	Counties Manukau	4
+ON669405	18/10/21	Counties Manukau	41
+ON669406	18/10/21	Counties Manukau	65
+ON669407	18/10/21	Counties Manukau	22
+ON669408	18/10/21	Waitemata	41
+ON669409	19/10/21	Waitemata	27
+ON669410	18/10/21	Waitemata	10
+ON669411	18/10/21	Counties Manukau	76
+ON669412	18/10/21	Waitemata	71
+ON669413	19/10/21	Waitemata	25
+ON669414	19/10/21	Auckland	43
+ON669415	19/10/21	Auckland	34
+ON669416	18/10/21	Waitemata	14
+ON669417	19/10/21	Auckland	33
+ON669418	19/10/21	Counties Manukau	1
+ON669419	19/10/21	Counties Manukau	21
+ON669420	19/10/21	Waitemata	32
+ON669421	19/10/21	Waitemata	7
+ON669422	19/10/21	Auckland	27
+ON669423	19/10/21	Waitemata	27
+ON669424	19/10/21	Waitemata	30
+ON669425	19/10/21	Counties Manukau	8
+ON669426	19/10/21	Auckland	50
+ON669427	19/10/21	Waitemata	42
+ON669428	20/10/21	Counties Manukau	34
+ON669429	20/10/21	Auckland	2
+ON669430	20/10/21	Auckland	31
+ON669431	20/10/21	Auckland	28
+ON669432	20/10/21	Counties Manukau	1
+ON669433	20/10/21	Auckland	56
+ON669434	20/10/21	Auckland	29
+ON669435	20/10/21	Waitemata	21
+ON669436	20/10/21	Counties Manukau	12
+ON669437	20/10/21	Auckland	29
+ON669438	20/10/21	Waitemata	73
+ON669439	20/10/21	Waitemata	24
+ON669440	20/10/21	Waitemata	59
+ON669441	20/10/21	Waitemata	29
+ON669442	20/10/21	Waitemata	44
+ON669443	20/10/21	Waitemata	14
+ON669444	20/10/21	Waitemata	34
+ON669445	20/10/21	Waitemata	39
+ON669446	20/10/21	Counties Manukau	31
+ON669447	20/10/21	Waitemata	10
+ON669448	21/10/21	Counties Manukau	3
+ON669449	20/10/21	Counties Manukau	39
+ON669450	20/10/21	Auckland	29
+ON669451	21/10/21	Counties Manukau	29
+ON669452	21/10/21	Waitemata	45
+ON669453	21/10/21	Counties Manukau	10
+ON669454	21/10/21	Counties Manukau	14
+ON669455	21/10/21	Auckland	37
+ON669456	21/10/21	Counties Manukau	41
+ON669457	21/10/21	Auckland	25
+ON669458	21/10/21	Auckland	43
+ON669459	21/10/21	Auckland	2
+ON669460	21/10/21	Waitemata	23
+ON669461	21/10/21	Counties Manukau	50
+ON669462	21/10/21	Counties Manukau	21
+ON669463	19/10/21	Auckland	24
+ON669464	21/10/21	Counties Manukau	24
+ON669465	21/10/21	Counties Manukau	53
+ON669466	21/10/21	Counties Manukau	28
+ON669467	21/10/21	Waitemata	28
+ON669468	21/10/21	Auckland	39
+ON669469	22/10/21	Nelson Marlborough	22
+ON669470	23/10/21	Counties Manukau	21
+ON669471	23/10/21	Counties Manukau	43
+ON669472	23/10/21	Counties Manukau	11
+ON669473	23/10/21	Counties Manukau	18
+ON669474	23/10/21	Waitemata	35
+ON669475	23/10/21	Counties Manukau	9
+ON669476	23/10/21	Counties Manukau	36
+ON669477	25/10/21	Counties Manukau	25
+ON669478	25/10/21	Waitemata	46
+ON669479	24/10/21	Waitemata	51
+ON669480	25/10/21	Counties Manukau	56
+ON669481	25/10/21	Counties Manukau	35
+ON669482	25/10/21	Counties Manukau	41
+ON669483	24/10/21	Auckland	6
+ON669484	25/10/21	Waitemata	58
+ON669485	25/10/21	Counties Manukau	46
+ON669486	24/10/21	Auckland	34
+ON669487	25/10/21	Waitemata	23
+ON669488	24/10/21	Waitemata	26
+ON669489	25/10/21	Auckland	36
+ON669490	24/10/21	Waitemata	9
+ON669491	25/10/21	Waitemata	50
+ON669492	24/10/21	Waitemata	39
+ON669493	24/10/21	Auckland	57
+ON669494	21/10/21	Auckland	34
+ON669495	24/10/21	Auckland	42
+ON669496	24/10/21	Waitemata	50
+ON669497	23/10/21	Auckland	50
+ON669498	24/10/21	Auckland	25
+ON669499	24/10/21	Counties Manukau	19
+ON669500	24/10/21	Counties Manukau	3
+ON669501	23/10/21	Counties Manukau	1
+ON669502	23/10/21	Counties Manukau	2
+ON669503	23/10/21	Waitemata	25
+ON669504	18/10/21	Auckland	25
+ON669505	18/10/21	Counties Manukau	28
+ON669506	18/10/21	Waitemata	30
+ON669507	18/10/21	Waitemata	35
+ON669508	22/10/21	Waitemata	9
+ON669509	22/10/21	Waitemata	50
+ON669510	22/10/21	Counties Manukau	40
+ON669511	22/10/21	Counties Manukau	17
+ON669512	27/10/21	Canterbury	45
+ON669513	27/10/21	Canterbury	51
+ON669514	29/10/21	Canterbury	49
+ON669515	29/10/21	Canterbury	56
+ON669516	23/10/21	Waitemata	35
+ON669517	23/10/21	Auckland	31
+ON669518	21/10/21	Counties Manukau	26
+ON669519	23/10/21	Waitemata	29
+ON669520	23/10/21	Counties Manukau	53
+ON669521	23/10/21	Auckland	38
+ON669522	23/10/21	Auckland	49
+ON669523	26/10/21	Auckland	36
+ON669524	26/10/21	Counties Manukau	28
+ON669525	26/10/21	Waitemata	7
+ON669526	26/10/21	Counties Manukau	16
+ON669527	27/10/21	Counties Manukau	90
+ON669528	27/10/21	Counties Manukau	57
+ON669529	28/10/21	Counties Manukau	25
+ON669530	28/10/21	Counties Manukau	31
+ON669531	28/10/21	Auckland	29
+ON669532	29/10/21	Auckland	53
+ON669533	28/10/21	Auckland	68
+ON669534	29/10/21	Canterbury	50
+ON669535	30/10/21	Counties Manukau	37
+ON669536	30/10/21	Auckland	11
+ON669537	30/10/21	Counties Manukau	2
+ON669538	30/10/21	Auckland	31
+ON669539	29/10/21	Counties Manukau	15
+ON669540	29/10/21	Counties Manukau	26
+ON669541	28/10/21	Waitemata	5
+ON669542	28/10/21	Waitemata	1
+ON669543	29/10/21	Waitemata	5
+ON669544	29/10/21	Auckland	35
+ON669545	27/10/21	Auckland	24
+ON669546	27/10/21	Waitemata	50
+ON669547	27/10/21	Waitemata	48
+ON669548	28/10/21	Waitemata	22
+ON669549	24/10/21	Auckland	35
+ON669550	28/10/21	Auckland	50
+ON669551	28/10/21	Counties Manukau	41
+ON669552	28/10/21	Waitemata	1
+ON669553	1/11/21	Waitemata	24
+ON669554	29/10/21	Counties Manukau	36
+ON669555	28/10/21	Waitemata	24
+ON669556	28/10/21	Auckland	43
+ON669557	29/10/21	Counties Manukau	1
+ON669558	29/10/21	Waitemata	53
+ON669559	29/10/21	Counties Manukau	22
+ON669560	29/10/21	Auckland	33
+ON669561	31/10/21	Waitemata	39
+ON669562	31/10/21	Waitemata	41
+ON669563	29/10/21	Waitemata	23
+ON669564	1/11/21	Auckland	28
+ON669565	1/11/21	Waitemata	58
+ON669566	24/10/21	Counties Manukau	16
+ON669567	1/11/21	Counties Manukau	13
+ON669568	1/11/21	Waitemata	25
+ON669569	31/10/21	Counties Manukau	7
+ON669570	31/10/21	Counties Manukau	13
+ON669571	31/10/21	Auckland	36
+ON669572	31/10/21	Auckland	34
+ON669573	31/10/21	Auckland	23
+ON669574	29/10/21	Counties Manukau	39
+ON669575	30/10/21	Counties Manukau	11
+ON669576	29/10/21	Auckland	9
+ON669577	29/10/21	Auckland	1
+ON669578	29/10/21	Auckland	42
+ON669579	29/10/21	Waitemata	26
+ON669580	31/10/21	Counties Manukau	10
+ON669581	31/10/21	Counties Manukau	39
+ON669582	1/11/21	Counties Manukau	57
+ON669583	2/11/21	Waitemata	6
+ON669584	2/11/21	Counties Manukau	20
+ON669585	2/11/21	Waitemata	24
+ON669586	2/11/21	Waitemata	45
+ON669587	2/11/21	Waitemata	44
+ON669588	2/11/21	Waitemata	30
+ON669589	2/11/21	Auckland	17
+ON669590	2/11/21	Waitemata	32
+ON669591	1/11/21	Waitemata	39
+ON669592	2/11/21	Counties Manukau	25
+ON669593	3/11/21	Auckland	63
+ON669594	2/11/21	Auckland	5
+ON669595	3/11/21	Auckland	43
+ON669596	2/11/21	Counties Manukau	49
+ON669597	2/11/21	Counties Manukau	22
+ON669598	2/11/21	Auckland	35
+ON669599	2/11/21	Counties Manukau	39
+ON669600	2/11/21	Counties Manukau	3
+ON669601	2/11/21	Auckland	46
+ON669602	3/11/21	Waitemata	52
+ON669603	2/11/21	Counties Manukau	26
+ON669604	28/10/21	Auckland	56
+ON669605	2/11/21	Counties Manukau	11
+ON669606	2/11/21	Waitemata	36
+ON669607	2/11/21	Counties Manukau	51
+ON669608	2/11/21	Auckland	38
+ON669609	4/11/21	Counties Manukau	26
+ON669610	3/11/21	Auckland	39
+ON669611	3/11/21	Auckland	25
+ON669612	3/11/21	Auckland	44
+ON669613	3/11/21	Counties Manukau	23
+ON669614	3/11/21	Auckland	53
+ON669615	3/11/21	Waitemata	41
+ON669616	3/11/21	Auckland	45
+ON669617	3/11/21	Auckland	3
+ON669618	3/11/21	Auckland	39
+ON669619	3/11/21	Counties Manukau	24
+ON669620	3/11/21	Counties Manukau	9
+ON669621	3/11/21	Counties Manukau	37
+ON669622	3/11/21	Counties Manukau	33
+ON669623	3/11/21	Counties Manukau	1
+ON669624	3/11/21	Waitemata	48
+ON669625	3/11/21	Counties Manukau	41
+ON669626	4/11/21	Waitemata	49
+ON669627	4/11/21	Waitemata	33
+ON669628	4/11/21	Waitemata	34
+ON669629	4/11/21	Waitemata	36
+ON669630	4/11/21	Counties Manukau	49
+ON669631	4/11/21	Waitemata	25
+ON669632	4/11/21	Counties Manukau	3
+ON669633	4/11/21	Waitemata	55
+ON669634	4/11/21	Waitemata	93
+ON669635	4/11/21	Auckland	1
+ON669636	4/11/21	Auckland	44
+ON669637	4/11/21	Auckland	22
+ON669638	6/11/21	Auckland	17
+ON669639	6/11/21	Waitemata	21
+ON669640	6/11/21	Counties Manukau	32
+ON669641	6/11/21	Counties Manukau	45
+ON669642	6/11/21	Counties Manukau	7
+ON669643	6/11/21	Counties Manukau	36
+ON669644	6/11/21	Auckland	38
+ON669645	6/11/21	Counties Manukau	33
+ON669646	6/11/21	Counties Manukau	5
+ON669647	6/11/21	Waitemata	27
+ON669648	6/11/21	Waitemata	36
+ON669649	3/11/21	Waitemata	49
+ON669650	3/11/21	Auckland	24
+ON669651	3/11/21	Counties Manukau	22
+ON669652	4/11/21	Counties Manukau	57
+ON669653	4/11/21	Auckland	39
+ON669654	4/11/21	Counties Manukau	7
+ON669655	4/11/21	Counties Manukau	32
+ON669656	7/11/21	Counties Manukau	18
+ON669657	7/11/21	Auckland	52
+ON669658	7/11/21	Counties Manukau	29
+ON669659	8/11/21	Auckland	23
+ON669660	6/11/21	Counties Manukau	4
+ON669661	6/11/21	Counties Manukau	55
+ON669662	6/11/21	Counties Manukau	26
+ON669663	6/11/21	Auckland	27
+ON669664	6/11/21	Auckland	50
+ON669665	6/11/21	Counties Manukau	27
+ON669666	6/11/21	Counties Manukau	3
+ON669667	6/11/21	Auckland	25
+ON669668	9/11/21	Counties Manukau	53
+ON669669	9/11/21	Auckland	49
+ON669670	9/11/21	Auckland	7
+ON669671	9/11/21	Waitemata	11
+ON669672	9/11/21	Counties Manukau	71
+ON669673	9/11/21	Counties Manukau	46
+ON669674	9/11/21	Auckland	54
+ON669675	9/11/21	Auckland	55
+ON669676	9/11/21	Waitemata	60
+ON669677	9/11/21	Counties Manukau	19
+ON669678	9/11/21	Auckland	41
+ON669679	9/11/21	Counties Manukau	17
+ON669680	9/11/21	Auckland	38
+ON669681	9/11/21	Auckland	33
+ON669682	9/11/21	Counties Manukau	28
+ON669683	9/11/21	Counties Manukau	61
+ON669684	10/11/21	Auckland	12
+ON669685	10/11/21	Counties Manukau	40
+ON669686	10/11/21	Counties Manukau	20
+ON669687	10/11/21	Auckland	54
+ON669688	10/11/21	Auckland	11
+ON669689	10/11/21	Waitemata	8
+ON669690	10/11/21	Auckland	75
+ON669691	9/11/21	Auckland	44
+ON669692	11/11/21	Counties Manukau	14
+ON669693	11/11/21	Auckland	44
+ON669694	11/11/21	Waitemata	28
+ON669695	9/11/21	Counties Manukau	24
+ON669696	9/11/21	Auckland	62
+ON669697	9/11/21	Auckland	35
+ON669698	9/11/21	Counties Manukau	17
+ON669699	9/11/21	Waitemata	4
+ON669700	9/11/21	Counties Manukau	41
+ON669701	9/11/21	Waitemata	NA
+ON669702	9/11/21	Counties Manukau	31
+ON669703	9/11/21	Counties Manukau	37
+ON669704	10/11/21	Counties Manukau	39
+ON669705	10/11/21	Waitemata	3
+ON669706	10/11/21	Counties Manukau	26
+ON669707	10/11/21	Counties Manukau	50
+ON669708	10/11/21	Waitemata	76
+ON669709	10/11/21	Counties Manukau	22
+ON669710	8/11/21	Auckland	32
+ON669711	10/11/21	Counties Manukau	29
+ON669712	10/11/21	Counties Manukau	23
+ON669713	11/11/21	Auckland	6
+ON669714	11/11/21	Auckland	27
+ON669715	11/11/21	Counties Manukau	34
+ON669716	11/11/21	Counties Manukau	22
+ON669717	11/11/21	Counties Manukau	16
+ON669718	11/11/21	Counties Manukau	24
+ON669719	11/11/21	Counties Manukau	26
+ON669720	12/11/21	Counties Manukau	33
+ON669721	11/11/21	Counties Manukau	26
+ON669722	11/11/21	Counties Manukau	45
+ON669723	12/11/21	Counties Manukau	29
+ON669724	12/11/21	Counties Manukau	30
+ON669725	12/11/21	Auckland	44
+ON669726	12/11/21	Auckland	23
+ON669727	11/11/21	Auckland	39
+ON669728	11/11/21	Northland	21
+ON669729	11/11/21	Auckland	22
+ON669730	11/11/21	Counties Manukau	40
+ON669731	11/11/21	Counties Manukau	39
+ON669732	11/11/21	Auckland	32
+ON669733	11/11/21	Counties Manukau	21
+ON669734	11/11/21	Counties Manukau	27
+ON669735	11/11/21	Waitemata	21
+ON669736	11/11/21	Auckland	20
+ON669737	11/11/21	Counties Manukau	9
+ON669738	11/11/21	Auckland	58
+ON669739	11/11/21	Waitemata	42
+ON669740	11/11/21	Counties Manukau	26
+ON669741	16/11/21	Auckland	25
+ON669742	16/11/21	Counties Manukau	32
+ON669743	16/11/21	Counties Manukau	6
+ON669744	16/11/21	Auckland	6
+ON669745	16/11/21	Counties Manukau	22
+ON669746	16/11/21	Counties Manukau	2
+ON669747	16/11/21	Waitemata	46
+ON669748	14/11/21	Counties Manukau	22
+ON669749	14/11/21	Counties Manukau	17
+ON669750	14/11/21	Counties Manukau	19
+ON669751	7/11/21	Auckland	18
+ON669752	14/11/21	Counties Manukau	37
+ON669753	11/11/21	Waitemata	35
+ON669754	11/11/21	Auckland	16
+ON669755	11/11/21	Auckland	16
+ON669756	11/11/21	Counties Manukau	50
+ON669757	13/11/21	Counties Manukau	72
+ON669758	14/11/21	Counties Manukau	20
+ON669759	16/11/21	Canterbury	36
+ON669760	15/11/21	Counties Manukau	23
+ON669761	15/11/21	Auckland	52
+ON669762	16/11/21	Counties Manukau	25
+ON669763	16/11/21	Counties Manukau	18
+ON669764	16/11/21	Auckland	3
+ON669765	15/11/21	Auckland	41
+ON669766	16/11/21	Counties Manukau	19
+ON669767	16/11/21	Waitemata	40
+ON669768	15/11/21	Counties Manukau	27
+ON669769	12/11/21	Counties Manukau	25
+ON669770	12/11/21	Auckland	37
+ON669771	12/11/21	Counties Manukau	27
+ON669772	15/11/21	Counties Manukau	43
+ON669773	16/11/21	Counties Manukau	34
+ON669774	17/11/21	Counties Manukau	44
+ON669775	16/11/21	Counties Manukau	4
+ON669776	16/11/21	Counties Manukau	47
+ON669777	16/11/21	Counties Manukau	9
+ON669778	15/11/21	Counties Manukau	33
+ON669779	15/11/21	Counties Manukau	15
+ON669780	15/11/21	Auckland	6
+ON669781	17/11/21	Waitemata	4
+ON669782	18/11/21	Counties Manukau	30
+ON669783	17/11/21	Counties Manukau	2
+ON669784	18/11/21	Auckland	34
+ON669785	17/11/21	Waitemata	11
+ON669786	17/11/21	Counties Manukau	4
+ON669787	17/11/21	Counties Manukau	19
+ON669788	17/11/21	Auckland	31
+ON669789	17/11/21	Waitemata	51
+ON669790	17/11/21	Counties Manukau	26
+ON669791	17/11/21	Auckland	15
+ON669792	17/11/21	Auckland	27
+ON669793	17/11/21	Counties Manukau	70
+ON669794	17/11/21	Counties Manukau	18
+ON669795	17/11/21	Counties Manukau	44
+ON669796	17/11/21	Counties Manukau	30
+ON669797	17/11/21	Counties Manukau	56
+ON669798	17/11/21	Counties Manukau	54
+ON669799	17/11/21	Counties Manukau	58
+ON669800	17/11/21	Counties Manukau	10
+ON669801	17/11/21	Counties Manukau	50
+ON669802	19/11/21	Counties Manukau	8
+ON669803	19/11/21	Auckland	19
+ON669804	19/11/21	Counties Manukau	11
+ON669805	19/11/21	Counties Manukau	18
+ON669806	19/11/21	Waitemata	9
+ON669807	19/11/21	Auckland	34
+ON669808	20/11/21	Counties Manukau	69
+ON669809	19/11/21	Waitemata	43
+ON669810	18/11/21	Counties Manukau	49
+ON669811	18/11/21	Waitemata	18
+ON669812	18/11/21	Waitemata	5
+ON669813	18/11/21	Counties Manukau	3
+ON669814	18/11/21	Auckland	29
+ON669815	18/11/21	Waitemata	31
+ON669816	19/11/21	Counties Manukau	26
+ON669817	18/11/21	Counties Manukau	35
+ON669818	16/11/21	Counties Manukau	51
+ON669819	21/11/21	Counties Manukau	32
+ON669820	21/11/21	Waitemata	23
+ON669821	21/11/21	Counties Manukau	43
+ON669822	20/11/21	Counties Manukau	6
+ON669823	20/11/21	Waitemata	5
+ON669824	18/11/21	Auckland	16
+ON669825	19/11/21	Canterbury	36
+ON669826	21/11/21	Auckland	33
+ON669827	19/11/21	Auckland	64
+ON669828	20/11/21	Auckland	1
+ON669829	14/11/21	Counties Manukau	24
+ON669830	16/11/21	Counties Manukau	29
+ON669831	20/11/21	Auckland	22
+ON669832	19/11/21	Counties Manukau	11
+ON669833	18/11/21	Waitemata	23
+ON669834	20/11/21	Waitemata	1
+ON669835	20/11/21	Counties Manukau	6
+ON669836	20/11/21	Counties Manukau	56
+ON669837	19/11/21	Counties Manukau	11
+ON669838	19/11/21	Counties Manukau	38
+ON669839	20/11/21	Auckland	10
+ON669840	18/11/21	Counties Manukau	78
+ON669841	20/11/21	Counties Manukau	32
+ON669842	20/11/21	Counties Manukau	50
+ON669843	19/11/21	Auckland	21
+ON669844	20/11/21	Counties Manukau	3
+ON669845	18/11/21	Auckland	57
+ON669846	23/11/21	Auckland	29
+ON669847	23/11/21	Counties Manukau	34
+ON669848	23/11/21	Counties Manukau	7
+ON669849	23/11/21	Auckland	6
+ON669850	23/11/21	Waitemata	53
+ON669851	23/11/21	Counties Manukau	34
+ON669852	23/11/21	Counties Manukau	24
+ON669853	23/11/21	Auckland	51
+ON669854	16/11/21	Counties Manukau	19
+ON669855	23/11/21	Counties Manukau	20
+ON669856	23/11/21	Counties Manukau	3
+ON669857	24/11/21	Counties Manukau	16
+ON669858	24/11/21	Counties Manukau	17
+ON669859	23/11/21	Auckland	43
+ON669860	23/11/21	Auckland	22
+ON669861	23/11/21	Auckland	37
+ON669862	23/11/21	Counties Manukau	14
+ON669863	23/11/21	Waitemata	3
+ON669864	23/11/21	Waitemata	43
+ON669865	23/11/21	Counties Manukau	26
+ON669866	24/11/21	Counties Manukau	29
+ON669867	17/11/21	Counties Manukau	24
+ON669868	24/11/21	Counties Manukau	48
+ON669869	24/11/21	Counties Manukau	3
+ON669870	24/11/21	Counties Manukau	25
+ON669871	24/11/21	Counties Manukau	69
+ON669872	24/11/21	Waitemata	40
+ON669873	24/11/21	Counties Manukau	40
+ON669874	24/11/21	Counties Manukau	24
+ON669875	24/11/21	Waitemata	11
+ON669876	25/11/21	Counties Manukau	78
+ON669877	25/11/21	Waitemata	11
+ON669878	25/11/21	Waitemata	13
+ON669879	24/11/21	Auckland	37
+ON669880	24/11/21	Counties Manukau	1
+ON669881	24/11/21	Counties Manukau	36
+ON669882	24/11/21	Waitemata	23
+ON669883	24/11/21	Counties Manukau	3
+ON669884	25/11/21	Counties Manukau	9
+ON669885	24/11/21	Counties Manukau	3
+ON669886	25/11/21	Counties Manukau	32
+ON669887	25/11/21	Waitemata	28
+ON669888	25/11/21	Waitemata	33
+ON669889	25/11/21	Auckland	29
+ON669890	25/11/21	Auckland	36
+ON669891	25/11/21	Auckland	43
+ON669892	25/11/21	Counties Manukau	32
+ON669893	25/11/21	Auckland	32
+ON669894	25/11/21	Auckland	1
+ON669895	23/11/21	Auckland	1
+ON669896	25/11/21	Waitemata	30
+ON669897	26/11/21	Auckland	24
+ON669898	24/11/21	Auckland	41
+ON669899	24/11/21	Waitemata	37
+ON669900	24/11/21	Auckland	35
+ON669901	20/11/21	Auckland	27
+ON669902	25/11/21	Auckland	4
+ON669903	26/11/21	Auckland	25
+ON669904	26/11/21	Auckland	41
+ON669905	26/11/21	Auckland	1
+ON669906	26/11/21	Auckland	11
+ON669907	26/11/21	Auckland	NA
+ON669908	27/11/21	Auckland	27
+ON669909	28/11/21	Auckland	28
+ON669910	25/11/21	Waitemata	16
+ON669911	28/11/21	Auckland	10
+ON669912	29/11/21	Auckland	23
+ON669913	29/11/21	Auckland	64
+ON669914	29/11/21	Counties Manukau	10
+ON669915	29/11/21	Auckland	32
+ON669916	26/11/21	Counties Manukau	12
+ON669917	27/11/21	Auckland	54
+ON669918	27/11/21	Auckland	10
+ON669919	27/11/21	Counties Manukau	26
+ON669920	25/11/21	Waitemata	3
+ON669921	26/11/21	Auckland	26
+ON669922	27/11/21	Counties Manukau	32
+ON669923	26/11/21	Waitemata	61
+ON669924	26/11/21	Waitemata	8
+ON669925	26/11/21	Auckland	49
+ON669926	27/11/21	Counties Manukau	4
+ON669927	26/11/21	Waitemata	73
+ON669928	27/11/21	Counties Manukau	51
+ON669929	27/11/21	Waitemata	6
+ON669930	27/11/21	Counties Manukau	36
+ON669931	27/11/21	Auckland	49
+ON669932	27/11/21	Counties Manukau	44
+ON669933	25/11/21	Auckland	35
+ON669934	30/11/21	Counties Manukau	4
+ON669935	30/11/21	Counties Manukau	76
+ON669936	30/11/21	Auckland	17
+ON669937	30/11/21	Counties Manukau	2
+ON669938	29/11/21	Counties Manukau	60
+ON669939	30/11/21	Counties Manukau	7
+ON669940	30/11/21	Counties Manukau	10
+ON669941	30/11/21	Auckland	26
+ON669942	30/11/21	Waitemata	28
+ON669943	30/11/21	Counties Manukau	17
+ON669944	1/12/21	Auckland	21
+ON669945	1/12/21	Auckland	29
+ON669946	1/12/21	Waitemata	49
+ON669947	20/08/21	Capital and Coast	24
+ON669948	20/08/21	Capital and Coast	54
+ON669949	20/08/21	Capital and Coast	18
+ON669950	20/08/21	Capital and Coast	21
+ON669951	21/08/21	Capital and Coast	53
+ON669952	21/08/21	Capital and Coast	51
+ON669953	22/08/21	Capital and Coast	22
+ON669954	22/08/21	Capital and Coast	16
+ON669955	22/08/21	Capital and Coast	27
+ON669956	22/08/21	Auckland	33
+ON669957	22/08/21	Counties Manukau	52
+ON669958	22/08/21	Counties Manukau	21
+ON669959	22/08/21	Counties Manukau	62
+ON669960	22/08/21	Auckland	32
+ON669961	21/08/21	Waitemata	33
+ON669962	22/08/21	Capital and Coast	60
+ON669963	22/08/21	Capital and Coast	20
+ON669964	23/08/21	Counties Manukau	57
+ON669965	24/08/21	Counties Manukau	24
+ON669966	24/08/21	Counties Manukau	24
+ON669967	24/08/21	Capital and Coast	26
+ON669968	25/08/21	Capital and Coast	52
+ON669969	25/08/21	Capital and Coast	75
+ON669970	26/08/21	Counties Manukau	27
+ON669971	27/08/21	Counties Manukau	26
+ON669972	26/08/21	Auckland	60
+ON669973	26/08/21	Counties Manukau	26
+ON669974	26/08/21	Counties Manukau	46
+ON669975	26/08/21	Counties Manukau	19
+ON669976	26/08/21	Counties Manukau	24
+ON669977	26/08/21	Counties Manukau	16
+ON669978	26/08/21	Counties Manukau	17
+ON669979	26/08/21	Counties Manukau	18
+ON669980	26/08/21	Counties Manukau	24
+ON669981	26/08/21	Counties Manukau	51
+ON669982	26/08/21	Counties Manukau	45
+ON669983	26/08/21	Auckland	19
+ON669984	26/08/21	Counties Manukau	13
+ON669985	26/08/21	Counties Manukau	23
+ON669986	26/08/21	Counties Manukau	3
+ON669987	26/08/21	Counties Manukau	17
+ON669988	26/08/21	Counties Manukau	53
+ON669989	27/08/21	Auckland	44
+ON669990	26/08/21	Counties Manukau	35
+ON669991	26/08/21	Counties Manukau	1
+ON669992	26/08/21	Auckland	52
+ON669993	27/08/21	Counties Manukau	15
+ON669994	27/08/21	Counties Manukau	19
+ON669995	27/08/21	Waitemata	50
+ON669996	27/08/21	Counties Manukau	34
+ON669997	27/08/21	Counties Manukau	3
+ON669998	28/08/21	Auckland	41
+ON669999	28/08/21	Waitemata	12
+ON670000	27/08/21	Waitemata	55
+ON670001	27/08/21	Waitemata	20
+ON670002	27/08/21	Waitemata	75
+ON670003	27/08/21	Auckland	55
+ON670004	28/08/21	Waitemata	43
+ON670005	28/08/21	Auckland	1
+ON670006	28/08/21	Waitemata	21
+ON670007	28/08/21	Waitemata	22
+ON670008	28/08/21	Waitemata	9
+ON670009	28/08/21	Waitemata	50
+ON670010	28/08/21	Waitemata	52
+ON670011	28/08/21	Counties Manukau	3
+ON670012	28/08/21	Counties Manukau	41
+ON670013	28/08/21	Counties Manukau	3
+ON670014	28/08/21	Counties Manukau	25
+ON670015	28/08/21	Counties Manukau	24
+ON670016	28/08/21	Waitemata	18
+ON670017	28/08/21	Capital and Coast	12
+ON670018	29/08/21	Counties Manukau	38
+ON670019	29/08/21	Counties Manukau	12
+ON670020	29/08/21	Waitemata	59
+ON670021	29/08/21	Counties Manukau	18
+ON670022	29/08/21	Counties Manukau	36
+ON670023	29/08/21	Counties Manukau	14
+ON670024	29/08/21	Counties Manukau	28
+ON670025	29/08/21	Counties Manukau	24
+ON670026	29/08/21	Auckland	40
+ON670027	29/08/21	Counties Manukau	36
+ON670028	29/08/21	Counties Manukau	13
+ON670029	29/08/21	Counties Manukau	10
+ON670030	29/08/21	Counties Manukau	3
+ON670031	29/08/21	Counties Manukau	27
+ON670032	29/08/21	Counties Manukau	28
+ON670033	29/08/21	Counties Manukau	18
+ON670034	29/08/21	Counties Manukau	51
+ON670035	29/08/21	Counties Manukau	16
+ON670036	29/08/21	Counties Manukau	37
+ON670037	29/08/21	Counties Manukau	43
+ON670038	29/08/21	Counties Manukau	4
+ON670039	29/08/21	Counties Manukau	2
+ON670040	29/08/21	Counties Manukau	8
+ON670041	29/08/21	Counties Manukau	8
+ON670042	29/08/21	Auckland	4
+ON670043	30/08/21	Auckland	75
+ON670044	30/08/21	Counties Manukau	18
+ON670045	30/08/21	Counties Manukau	20
+ON670046	30/08/21	Waitemata	17
+ON670047	30/08/21	Waitemata	6
+ON670048	30/08/21	Waitemata	21
+ON670049	30/08/21	Waitemata	24
+ON670050	30/08/21	Counties Manukau	50
+ON670051	30/08/21	Waitemata	18
+ON670052	30/08/21	Waitemata	20
+ON670053	31/08/21	Counties Manukau	27
+ON670054	31/08/21	Counties Manukau	24
+ON670055	31/08/21	Counties Manukau	8
+ON670056	31/08/21	Counties Manukau	25
+ON670057	31/08/21	Counties Manukau	17
+ON670058	31/08/21	Auckland	4
+ON670059	31/08/21	Counties Manukau	22
+ON670060	31/08/21	Counties Manukau	8
+ON670061	31/08/21	Counties Manukau	25
+ON670062	31/08/21	Counties Manukau	28
+ON670063	31/08/21	Counties Manukau	24
+ON670064	31/08/21	Counties Manukau	4
+ON670065	31/08/21	Waitemata	91
+ON670066	31/08/21	Counties Manukau	12
+ON670067	31/08/21	Counties Manukau	21
+ON670068	30/08/21	Counties Manukau	7
+ON670069	30/08/21	Counties Manukau	14
+ON670070	30/08/21	Counties Manukau	44
+ON670071	30/08/21	Counties Manukau	25
+ON670072	30/08/21	Auckland	21
+ON670073	30/08/21	Counties Manukau	29
+ON670074	30/08/21	Counties Manukau	54
+ON670075	31/08/21	Capital and Coast	13
+ON670076	1/09/21	Counties Manukau	28
+ON670077	1/09/21	Counties Manukau	8
+ON670078	1/09/21	Counties Manukau	22
+ON670079	1/09/21	Counties Manukau	6
+ON670080	1/09/21	Counties Manukau	7
+ON670081	1/09/21	Counties Manukau	17
+ON670082	1/09/21	Counties Manukau	46
+ON670083	1/09/21	Counties Manukau	10
+ON670084	1/09/21	Auckland	16
+ON670085	1/09/21	Counties Manukau	49
+ON670086	1/09/21	Counties Manukau	49
+ON670087	1/09/21	Counties Manukau	21
+ON670088	1/09/21	Counties Manukau	8
+ON670089	1/09/21	Counties Manukau	1
+ON670090	1/09/21	Counties Manukau	30
+ON670091	1/09/21	Counties Manukau	28
+ON670092	31/08/21	Counties Manukau	16
+ON670093	1/09/21	Counties Manukau	20
+ON670094	1/09/21	Counties Manukau	28
+ON670095	1/09/21	Waitemata	22
+ON670096	1/09/21	Counties Manukau	25
+ON670097	1/09/21	Counties Manukau	21
+ON670098	1/09/21	Counties Manukau	24
+ON670099	30/08/21	Auckland	74
+ON670100	2/09/21	Capital and Coast	11
+ON670101	31/08/21	Counties Manukau	53
+ON670102	2/09/21	Counties Manukau	3
+ON670103	2/09/21	Counties Manukau	24
+ON670104	2/09/21	Counties Manukau	10
+ON670105	2/09/21	Auckland	23
+ON670106	2/09/21	Counties Manukau	13
+ON670107	2/09/21	Auckland	43
+ON670108	2/09/21	Auckland	48
+ON670109	2/09/21	Counties Manukau	11
+ON670110	2/09/21	Counties Manukau	23
+ON670111	2/09/21	Auckland	7
+ON670112	13/09/21	Counties Manukau	1
+ON670113	12/09/21	Counties Manukau	17
+ON670114	13/09/21	Counties Manukau	1
+ON670115	12/09/21	Counties Manukau	47
+ON670116	13/09/21	Counties Manukau	22
+ON670117	13/09/21	Counties Manukau	27
+ON670118	11/09/21	Counties Manukau	7
+ON670119	12/09/21	Counties Manukau	19
+ON670120	14/09/21	Counties Manukau	23
+ON670121	30/08/21	Counties Manukau	56
+ON670122	14/09/21	Counties Manukau	15
+ON670123	14/09/21	Counties Manukau	18
+ON670124	15/09/21	Counties Manukau	11
+ON670125	15/09/21	Counties Manukau	23
+ON670126	14/09/21	Counties Manukau	13
+ON670127	15/09/21	Auckland	37
+ON670128	14/09/21	Auckland	18
+ON670129	14/09/21	Counties Manukau	20
+ON670130	14/09/21	Auckland	45
+ON670131	14/09/21	Counties Manukau	12
+ON670132	14/09/21	Counties Manukau	15
+ON670133	15/09/21	Counties Manukau	61
+ON670134	15/09/21	Counties Manukau	59
+ON670135	15/09/21	Counties Manukau	10
+ON670136	15/09/21	Counties Manukau	7
+ON670137	15/09/21	Counties Manukau	24
+ON670138	15/09/21	Counties Manukau	51
+ON670139	15/09/21	Counties Manukau	13
+ON670140	15/09/21	Counties Manukau	21
+ON670141	15/09/21	Counties Manukau	11
+ON670142	15/09/21	Counties Manukau	25
+ON670143	17/09/21	Counties Manukau	9
+ON670144	17/09/21	Counties Manukau	28
+ON670145	17/09/21	Counties Manukau	18
+ON670146	17/09/21	Counties Manukau	23
+ON670147	17/09/21	Counties Manukau	24
+ON670148	17/09/21	Counties Manukau	25
+ON670149	18/09/21	Counties Manukau	2
+ON670150	18/09/21	Counties Manukau	62
+ON670151	18/09/21	Counties Manukau	10
+ON670152	18/09/21	Counties Manukau	36
+ON670153	18/09/21	Counties Manukau	60
+ON670154	18/09/21	Counties Manukau	27
+ON670155	18/09/21	Counties Manukau	8
+ON670156	18/09/21	Counties Manukau	5
+ON670157	18/09/21	Counties Manukau	4
+ON670158	18/09/21	Counties Manukau	67
+ON670159	26/08/21	Counties Manukau	47
+ON670160	19/09/21	Counties Manukau	11
+ON670161	18/09/21	Counties Manukau	4
+ON670162	18/09/21	Counties Manukau	27
+ON670163	18/09/21	Counties Manukau	2
+ON670164	18/09/21	Counties Manukau	1
+ON670165	18/09/21	Counties Manukau	20
+ON670166	21/09/21	Counties Manukau	8
+ON670167	21/09/21	Counties Manukau	41
+ON670168	21/09/21	Counties Manukau	18
+ON670169	20/09/21	Auckland	74
+ON670170	20/09/21	Auckland	4
+ON670171	20/09/21	Counties Manukau	31
+ON670172	20/09/21	Counties Manukau	3
+ON670173	20/09/21	Counties Manukau	21
+ON670174	20/09/21	Counties Manukau	39
+ON670175	20/09/21	Counties Manukau	25
+ON670176	19/09/21	Counties Manukau	26
+ON670177	20/09/21	Counties Manukau	47
+ON670178	21/09/21	Counties Manukau	16
+ON670179	21/09/21	Counties Manukau	40
+ON670180	21/09/21	Auckland	6
+ON670181	21/09/21	Counties Manukau	8
+ON670182	21/09/21	Counties Manukau	11
+ON670183	21/09/21	Counties Manukau	40
+ON670184	21/09/21	Counties Manukau	16
+ON670185	21/09/21	Counties Manukau	6
+ON670186	21/09/21	Counties Manukau	44
+ON670187	21/09/21	Counties Manukau	29
+ON670188	21/09/21	Counties Manukau	14
+ON670189	21/09/21	Counties Manukau	18
+ON670190	21/09/21	Counties Manukau	3
+ON670191	21/09/21	Auckland	40
+ON670192	21/09/21	Auckland	43
+ON670193	21/09/21	Auckland	27
+ON670194	22/09/21	Auckland	21
+ON670195	17/09/21	Auckland	35
+ON670196	10/09/21	Counties Manukau	8
+ON670197	10/09/21	Waitemata	59
+ON670198	18/09/21	Auckland	22
+ON670199	10/09/21	Auckland	1
+ON670200	14/09/21	Auckland	35
+ON670201	22/09/21	Counties Manukau	26
+ON670202	21/09/21	Counties Manukau	8
+ON670203	22/09/21	Auckland	44
+ON670204	22/09/21	Counties Manukau	6
+ON670205	22/09/21	Counties Manukau	69
+ON670206	22/09/21	Counties Manukau	51
+ON670207	22/09/21	Counties Manukau	30
+ON670208	22/09/21	Auckland	13
+ON670209	22/09/21	Auckland	9
+ON670210	22/09/21	Auckland	3
+ON670211	22/09/21	Counties Manukau	24
+ON670212	22/09/21	Counties Manukau	4
+ON670213	23/09/21	Counties Manukau	53
+ON670214	28/09/21	Counties Manukau	26
+ON670215	28/09/21	Counties Manukau	6
+ON670216	28/09/21	Counties Manukau	3
+ON670217	28/09/21	Counties Manukau	7
+ON670218	28/09/21	Counties Manukau	1
+ON670219	28/09/21	Counties Manukau	50
+ON670220	28/09/21	Counties Manukau	39
+ON670221	28/09/21	Counties Manukau	8
+ON670222	28/09/21	Counties Manukau	4
+ON670223	28/09/21	Counties Manukau	14
+ON670224	28/09/21	Auckland	18
+ON670225	27/09/21	Counties Manukau	34
+ON670226	28/09/21	Counties Manukau	5
+ON670227	28/09/21	Counties Manukau	20
+ON670228	28/09/21	Counties Manukau	9
+ON670229	28/09/21	Auckland	25
+ON670230	28/09/21	Counties Manukau	5
+ON670231	29/09/21	Counties Manukau	14
+ON670232	29/09/21	Counties Manukau	20
+ON670233	29/09/21	Counties Manukau	23
+ON670234	29/09/21	Counties Manukau	91
+ON670235	29/09/21	Counties Manukau	44
+ON670236	29/09/21	Counties Manukau	20
+ON670237	29/09/21	Counties Manukau	18
+ON670238	29/09/21	Counties Manukau	16
+ON670239	29/09/21	Counties Manukau	17
+ON670240	29/09/21	Counties Manukau	8
+ON670241	29/09/21	Counties Manukau	9
+ON670242	29/09/21	Counties Manukau	22
+ON670243	28/09/21	Counties Manukau	10
+ON670244	25/09/21	Counties Manukau	17
+ON670245	30/09/21	Counties Manukau	27
+ON670246	29/09/21	Counties Manukau	52
+ON670247	30/09/21	Counties Manukau	25
+ON670248	30/09/21	Counties Manukau	20
+ON670249	30/09/21	Counties Manukau	42
+ON670250	1/10/21	Counties Manukau	52
+ON670251	1/10/21	Counties Manukau	11
+ON670252	1/10/21	Waitemata	15
+ON670253	1/10/21	Auckland	31
+ON670254	2/10/21	Counties Manukau	32
+ON670255	2/10/21	Auckland	26
+ON670256	2/10/21	Counties Manukau	40
+ON670257	2/10/21	Counties Manukau	21
+ON670258	2/10/21	Counties Manukau	55
+ON670259	1/10/21	Auckland	61
+ON670260	1/10/21	Counties Manukau	19
+ON670261	1/10/21	Counties Manukau	1
+ON670262	1/10/21	Counties Manukau	39
+ON670263	1/10/21	Counties Manukau	31
+ON670264	1/10/21	Counties Manukau	8
+ON670265	1/10/21	Counties Manukau	58
+ON670266	28/09/21	Auckland	45
+ON670267	1/10/21	Counties Manukau	19
+ON670268	1/10/21	Counties Manukau	23
+ON670269	3/10/21	Counties Manukau	13
+ON670270	3/10/21	Counties Manukau	64
+ON670271	3/10/21	Counties Manukau	33
+ON670272	3/10/21	Auckland	7
+ON670273	3/10/21	Auckland	43
+ON670274	4/10/21	Counties Manukau	4
+ON670275	4/10/21	Counties Manukau	5
+ON670276	3/10/21	Counties Manukau	63
+ON670277	4/10/21	Counties Manukau	18
+ON670278	4/10/21	Counties Manukau	20
+ON670279	4/10/21	Counties Manukau	50
+ON670280	4/10/21	Counties Manukau	18
+ON670281	4/10/21	Counties Manukau	16
+ON670282	4/10/21	Counties Manukau	36
+ON670283	4/10/21	Auckland	37
+ON670284	5/10/21	Counties Manukau	63
+ON670285	5/10/21	Counties Manukau	52
+ON670286	5/10/21	Counties Manukau	33
+ON670287	5/10/21	Counties Manukau	37
+ON670288	5/10/21	Counties Manukau	19
+ON670289	5/10/21	Counties Manukau	30
+ON670290	5/10/21	Counties Manukau	32
+ON670291	5/10/21	Counties Manukau	33
+ON670292	5/10/21	Counties Manukau	21
+ON670293	5/10/21	Auckland	57
+ON670294	5/10/21	Counties Manukau	55
+ON670295	6/10/21	Waitemata	15
+ON670296	6/10/21	Waitemata	18
+ON670297	6/10/21	Counties Manukau	59
+ON670298	6/10/21	Counties Manukau	8
+ON670299	6/10/21	Counties Manukau	31
+ON670300	6/10/21	Counties Manukau	2
+ON670301	6/10/21	Counties Manukau	11
+ON670302	6/10/21	Counties Manukau	5
+ON670303	6/10/21	Counties Manukau	8
+ON670304	6/10/21	Counties Manukau	10
+ON670305	6/10/21	Counties Manukau	8
+ON670306	6/10/21	Counties Manukau	6
+ON670307	6/10/21	Counties Manukau	52
+ON670308	6/10/21	Counties Manukau	14
+ON670309	6/10/21	Waitemata	46
+ON670310	6/10/21	Counties Manukau	24
+ON670311	8/10/21	Counties Manukau	52
+ON670312	7/10/21	Counties Manukau	40
+ON670313	7/10/21	Counties Manukau	57
+ON670314	7/10/21	Waitemata	1
+ON670315	7/10/21	Counties Manukau	15
+ON670316	8/10/21	Waitemata	48
+ON670317	8/10/21	Counties Manukau	51
+ON670318	8/10/21	Waikato	52
+ON670319	8/10/21	Counties Manukau	36
+ON670320	8/10/21	Waitemata	17
+ON670321	10/10/21	Counties Manukau	19
+ON670322	10/10/21	Counties Manukau	2
+ON670323	10/10/21	Auckland	66
+ON670324	10/10/21	Auckland	40
+ON670325	10/10/21	Counties Manukau	38
+ON670326	10/10/21	Counties Manukau	37
+ON670327	10/10/21	Counties Manukau	46
+ON670328	10/10/21	Counties Manukau	47
+ON670329	10/10/21	Counties Manukau	18
+ON670330	10/10/21	Counties Manukau	21
+ON670331	10/10/21	Counties Manukau	1
+ON670332	10/10/21	Counties Manukau	16
+ON670333	10/10/21	Counties Manukau	2
+ON670334	10/10/21	Counties Manukau	29
+ON670335	10/10/21	Counties Manukau	52
+ON670336	10/10/21	Counties Manukau	27
+ON670337	10/10/21	Counties Manukau	2
+ON670338	10/10/21	Auckland	18
+ON670339	11/10/21	Counties Manukau	25
+ON670340	11/10/21	Counties Manukau	4
+ON670341	11/10/21	Counties Manukau	13
+ON670342	11/10/21	Counties Manukau	26
+ON670343	11/10/21	Counties Manukau	43
+ON670344	11/10/21	Counties Manukau	50
+ON670345	11/10/21	Counties Manukau	11
+ON670346	11/10/21	Auckland	41
+ON670347	11/10/21	Counties Manukau	35
+ON670348	11/10/21	Waitemata	1
+ON670349	11/10/21	Counties Manukau	4
+ON670350	11/10/21	Waikato	13
+ON670351	11/10/21	Counties Manukau	68
+ON670352	11/10/21	Counties Manukau	39
+ON670353	11/10/21	Auckland	33
+ON670354	12/10/21	Auckland	40
+ON670355	12/10/21	Counties Manukau	25
+ON670356	11/10/21	Auckland	26
+ON670357	13/10/21	Counties Manukau	19
+ON670358	13/10/21	Counties Manukau	37
+ON670359	13/10/21	Counties Manukau	8
+ON670360	13/10/21	Counties Manukau	5
+ON670361	12/10/21	Counties Manukau	64
+ON670362	12/10/21	Counties Manukau	37
+ON670363	12/10/21	Counties Manukau	46
+ON670364	12/10/21	Counties Manukau	14
+ON670365	12/10/21	Counties Manukau	14
+ON670366	12/10/21	Counties Manukau	29
+ON670367	12/11/21	Waikato	NA
+ON670368	12/10/21	Counties Manukau	3
+ON670369	12/10/21	Counties Manukau	22
+ON670370	12/10/21	Counties Manukau	35
+ON670371	14/10/21	Counties Manukau	45
+ON670372	13/10/21	Counties Manukau	10
+ON670373	13/10/21	Counties Manukau	22
+ON670374	13/10/21	Auckland	15
+ON670375	13/10/21	Counties Manukau	41
+ON670376	13/10/21	Counties Manukau	13
+ON670377	13/10/21	Counties Manukau	23
+ON670378	13/10/21	Counties Manukau	51
+ON670379	13/10/21	Waitemata	10
+ON670380	13/10/21	Auckland	7
+ON670381	13/10/21	Waitemata	10
+ON670382	13/10/21	Waitemata	0
+ON670383	13/10/21	Counties Manukau	2
+ON670384	13/10/21	Counties Manukau	26
+ON670385	13/10/21	Auckland	24
+ON670386	13/10/21	Counties Manukau	1
+ON670387	13/10/21	Counties Manukau	29
+ON670388	13/10/21	Waitemata	1
+ON670389	13/10/21	Counties Manukau	57
+ON670390	13/10/21	Counties Manukau	19
+ON670391	13/10/21	Counties Manukau	12
+ON670392	13/10/21	Counties Manukau	21
+ON670393	14/10/21	Counties Manukau	14
+ON670394	14/10/21	Counties Manukau	39
+ON670395	14/10/21	Counties Manukau	23
+ON670396	14/10/21	Counties Manukau	36
+ON670397	14/10/21	Counties Manukau	44
+ON670398	14/10/21	Counties Manukau	1
+ON670399	14/10/21	Counties Manukau	7
+ON670400	14/10/21	Counties Manukau	53
+ON670401	14/10/21	Counties Manukau	9
+ON670402	14/10/21	Auckland	1
+ON670403	14/10/21	Counties Manukau	66
+ON670404	14/10/21	Counties Manukau	6
+ON670405	14/10/21	Waitemata	34
+ON670406	15/10/21	Auckland	24
+ON670407	15/10/21	Waitemata	34
+ON670408	14/10/21	Counties Manukau	16
+ON670409	14/10/21	Waitemata	44
+ON670410	14/10/21	Waitemata	38
+ON670411	14/10/21	Auckland	47
+ON670412	14/10/21	Counties Manukau	46
+ON670413	14/10/21	Waitemata	25
+ON670414	14/10/21	Counties Manukau	21
+ON670415	14/10/21	Counties Manukau	37
+ON670416	14/10/21	Waitemata	59
+ON670417	15/10/21	Auckland	28
+ON670418	15/10/21	Waitemata	25
+ON670419	15/10/21	Counties Manukau	24
+ON670420	16/10/21	Counties Manukau	62
+ON670421	16/10/21	Counties Manukau	29
+ON670422	16/10/21	Waitemata	17
+ON670423	15/10/21	Auckland	15
+ON670424	16/10/21	Counties Manukau	23
+ON670425	16/10/21	Waitemata	8
+ON670426	16/10/21	Counties Manukau	24
+ON670427	16/10/21	Counties Manukau	66
+ON670428	16/10/21	Counties Manukau	14
+ON670429	15/10/21	Auckland	33
+ON670430	15/10/21	Counties Manukau	24
+ON670431	15/10/21	Counties Manukau	3
+ON670432	16/10/21	Counties Manukau	52
+ON670433	15/10/21	Counties Manukau	50
+ON670434	15/10/21	Counties Manukau	20
+ON670435	16/10/21	Waitemata	18
+ON670436	15/10/21	Auckland	45
+ON670437	16/10/21	Waitemata	21
+ON670438	16/10/21	Auckland	33
+ON670439	16/10/21	Counties Manukau	47
+ON670440	16/10/21	Counties Manukau	18
+ON670441	16/10/21	Counties Manukau	42
+ON670442	16/10/21	Counties Manukau	33
+ON670443	16/10/21	Counties Manukau	39
+ON670444	15/10/21	Counties Manukau	28
+ON670445	16/10/21	Counties Manukau	13
+ON670446	16/10/21	Counties Manukau	37
+ON670447	5/10/21	Counties Manukau	32
+ON670448	16/10/21	Counties Manukau	49
+ON670449	16/10/21	Counties Manukau	22
+ON670450	16/10/21	Waitemata	26
+ON670451	15/10/21	Counties Manukau	42
+ON670452	15/10/21	Counties Manukau	30
+ON670453	16/10/21	Waitemata	9
+ON670454	16/10/21	Auckland	30
+ON670455	16/10/21	Auckland	36
+ON670456	17/10/21	Auckland	28
+ON670457	17/10/21	Auckland	46
+ON670458	18/10/21	Auckland	40
+ON670459	18/10/21	Auckland	71
+ON670460	17/10/21	Waitemata	2
+ON670461	17/10/21	Waitemata	1
+ON670462	17/10/21	Auckland	19
+ON670463	17/10/21	Waitemata	26
+ON670464	16/10/21	Auckland	61
+ON670465	17/10/21	Counties Manukau	3
+ON670466	17/10/21	Auckland	26
+ON670467	17/10/21	Counties Manukau	44
+ON670468	17/10/21	Counties Manukau	35
+ON670469	17/10/21	Counties Manukau	32
+ON670470	18/10/21	Waitemata	12
+ON670471	17/10/21	Counties Manukau	8
+ON670472	17/10/21	Counties Manukau	25
+ON670473	17/10/21	Counties Manukau	13
+ON670474	15/10/21	Auckland	50
+ON670475	16/10/21	Auckland	53
+ON670476	20/10/21	Counties Manukau	1
+ON670477	19/10/21	Waitemata	51
+ON670478	19/10/21	Waitemata	22
+ON670479	19/10/21	Waitemata	16
+ON670480	19/10/21	Waitemata	46
+ON670481	19/10/21	Waitemata	34
+ON670482	19/10/21	Auckland	31
+ON670483	19/10/21	Auckland	20
+ON670484	19/10/21	Counties Manukau	43
+ON670485	19/10/21	Counties Manukau	14
+ON670486	19/10/21	Counties Manukau	10
+ON670487	19/10/21	Counties Manukau	9
+ON670488	19/10/21	Counties Manukau	6
+ON670489	19/10/21	Auckland	8
+ON670490	19/10/21	Auckland	32
+ON670491	19/10/21	Waitemata	26
+ON670492	19/10/21	Auckland	61
+ON670493	19/10/21	Counties Manukau	29
+ON670494	22/10/21	Counties Manukau	55
+ON670495	22/10/21	Counties Manukau	25
+ON670496	20/10/21	Waitemata	39
+ON670497	19/10/21	Counties Manukau	25
+ON670498	19/10/21	Counties Manukau	39
+ON670499	19/10/21	Counties Manukau	39
+ON670500	19/10/21	Counties Manukau	40
+ON670501	20/10/21	Auckland	25
+ON670502	20/10/21	Counties Manukau	71
+ON670503	20/10/21	Counties Manukau	59
+ON670504	20/10/21	Auckland	42
+ON670505	20/10/21	Counties Manukau	28
+ON670506	20/10/21	Counties Manukau	29
+ON670507	20/10/21	Counties Manukau	20
+ON670508	20/10/21	Counties Manukau	5
+ON670509	20/10/21	Counties Manukau	9
+ON670510	20/10/21	Auckland	2
+ON670511	20/10/21	Waitemata	32
+ON670512	20/10/21	Counties Manukau	50
+ON670513	20/10/21	Counties Manukau	11
+ON670514	20/10/21	Counties Manukau	18
+ON670515	20/10/21	Auckland	30
+ON670516	20/10/21	Auckland	39
+ON670517	20/10/21	Auckland	38
+ON670518	20/10/21	Waitemata	53
+ON670519	20/10/21	Auckland	45
+ON670520	20/10/21	Auckland	29
+ON670521	20/10/21	Auckland	11
+ON670522	20/10/21	Auckland	21
+ON670523	20/10/21	Auckland	32
+ON670524	20/10/21	Auckland	14
+ON670525	20/10/21	Auckland	56
+ON670526	20/10/21	Counties Manukau	15
+ON670527	20/10/21	Counties Manukau	9
+ON670528	22/10/21	Counties Manukau	33
+ON670529	21/10/21	Counties Manukau	70
+ON670530	21/10/21	Counties Manukau	28
+ON670531	22/10/21	Northland	41
+ON670532	22/10/21	Northland	23
+ON670533	22/10/21	Auckland	38
+ON670534	22/10/21	Waitemata	37
+ON670535	22/10/21	Auckland	26
+ON670536	22/10/21	Auckland	32
+ON670537	22/10/21	Waitemata	35
+ON670538	22/10/21	Waitemata	34
+ON670539	22/10/21	Waitemata	19
+ON670540	22/10/21	Waitemata	33
+ON670541	22/10/21	Counties Manukau	48
+ON670542	22/10/21	Waitemata	75
+ON670543	22/10/21	Waitemata	25
+ON670544	22/10/21	Waitemata	38
+ON670545	22/10/21	Auckland	48
+ON670546	22/10/21	Waitemata	44
+ON670547	22/10/21	Counties Manukau	13
+ON670548	22/10/21	Counties Manukau	7
+ON670549	22/10/21	Counties Manukau	33
+ON670550	22/10/21	Counties Manukau	6
+ON670551	22/10/21	Counties Manukau	22
+ON670552	22/10/21	Counties Manukau	55
+ON670553	23/10/21	Auckland	30
+ON670554	23/10/21	Counties Manukau	32
+ON670555	22/10/21	Northland	3
+ON670556	22/10/21	Northland	4
+ON670557	23/10/21	Auckland	57
+ON670558	23/10/21	Auckland	43
+ON670559	23/10/21	Auckland	1
+ON670560	23/10/21	Auckland	16
+ON670561	23/10/21	Waitemata	44
+ON670562	24/10/21	Counties Manukau	40
+ON670563	24/10/21	Counties Manukau	39
+ON670564	24/10/21	Counties Manukau	18
+ON670565	24/10/21	Counties Manukau	56
+ON670566	24/10/21	Counties Manukau	47
+ON670567	21/10/21	Auckland	8
+ON670568	21/10/21	Counties Manukau	12
+ON670569	21/10/21	Counties Manukau	20
+ON670570	21/10/21	Counties Manukau	59
+ON670571	21/10/21	Counties Manukau	47
+ON670572	21/10/21	Counties Manukau	47
+ON670573	21/10/21	Counties Manukau	4
+ON670574	21/10/21	Counties Manukau	28
+ON670575	21/10/21	Waitemata	11
+ON670576	21/10/21	Counties Manukau	14
+ON670577	21/10/21	Waitemata	83
+ON670578	22/10/21	Waitemata	51
+ON670579	22/10/21	Waitemata	67
+ON670580	22/10/21	Waitemata	10
+ON670581	22/10/21	Waitemata	46
+ON670582	22/10/21	Waitemata	40
+ON670583	22/10/21	Auckland	6
+ON670584	24/10/21	Counties Manukau	59
+ON670585	24/10/21	Waitemata	9
+ON670586	23/10/21	Waitemata	46
+ON670587	23/10/21	Counties Manukau	82
+ON670588	23/10/21	Auckland	27
+ON670589	24/10/21	Northland	23
+ON670590	25/10/21	Auckland	8
+ON670591	25/10/21	Auckland	35
+ON670592	25/10/21	Counties Manukau	64
+ON670593	25/10/21	Auckland	41
+ON670594	25/10/21	Counties Manukau	53
+ON670595	26/10/21	Auckland	56
+ON670596	26/10/21	Waitemata	59
+ON670597	26/10/21	Auckland	21
+ON670598	26/10/21	Counties Manukau	62
+ON670599	26/10/21	Counties Manukau	29
+ON670600	26/10/21	Counties Manukau	15
+ON670601	26/10/21	Counties Manukau	8
+ON670602	25/10/21	Counties Manukau	32
+ON670603	26/10/21	Auckland	23
+ON670604	24/10/21	Counties Manukau	14
+ON670605	28/10/21	Counties Manukau	31
+ON670606	28/10/21	Auckland	30
+ON670607	28/10/21	Auckland	32
+ON670608	28/10/21	Waitemata	6
+ON670609	28/10/21	Counties Manukau	11
+ON670610	27/10/21	Counties Manukau	23
+ON670611	28/10/21	Counties Manukau	15
+ON670612	28/10/21	Waitemata	4
+ON670613	27/10/21	Counties Manukau	28
+ON670614	28/10/21	Counties Manukau	34
+ON670615	27/10/21	Counties Manukau	19
+ON670616	28/10/21	Waitemata	16
+ON670617	28/10/21	Counties Manukau	5
+ON670618	27/10/21	Counties Manukau	1
+ON670619	29/10/21	Auckland	39
+ON670620	29/10/21	Auckland	26
+ON670621	28/10/21	Counties Manukau	4
+ON670622	28/10/21	Auckland	23
+ON670623	30/10/21	Counties Manukau	27
+ON670624	29/10/21	Counties Manukau	23
+ON670625	30/10/21	Counties Manukau	39
+ON670626	30/10/21	Auckland	41
+ON670627	30/10/21	Auckland	50
+ON670628	30/10/21	Auckland	20
+ON670629	31/10/21	Auckland	48
+ON670630	31/10/21	Auckland	56
+ON670631	1/11/21	Northland	37
+ON670632	25/10/21	Waitemata	1
+ON670633	23/10/21	Waitemata	12
+ON670634	25/10/21	Counties Manukau	30
+ON670635	18/10/21	Auckland	2
+ON670636	22/10/21	Counties Manukau	18
+ON670637	23/10/21	Auckland	31
+ON670638	22/10/21	Auckland	33
+ON670639	23/10/21	Waitemata	29
+ON670640	21/10/21	Auckland	23
+ON670641	21/10/21	Auckland	37
+ON670642	21/10/21	Auckland	30
+ON670643	23/10/21	Counties Manukau	2
+ON670644	23/10/21	Counties Manukau	15
+ON670645	22/10/21	Counties Manukau	47
+ON670646	26/10/21	Waitemata	2
+ON670647	27/10/21	Counties Manukau	25
+ON670648	27/10/21	Waitemata	29
+ON670649	27/10/21	Counties Manukau	14
+ON670650	29/10/21	Waitemata	27
+ON670651	29/10/21	Waitemata	39
+ON670652	30/10/21	Waitemata	12
+ON670653	31/10/21	Waitemata	5
+ON670654	31/10/21	Waitemata	60
+ON670655	30/10/21	Waitemata	35
+ON670656	31/10/21	Waitemata	61
+ON670657	1/11/21	Auckland	4
+ON670658	1/11/21	Waitemata	54
+ON670659	1/11/21	Waitemata	49
+ON670660	28/10/21	Waitemata	1
+ON670661	28/10/21	Northland	34
+ON670662	28/10/21	Waitemata	1
+ON670663	30/10/21	Auckland	18
+ON670664	30/10/21	Auckland	8
+ON670665	31/10/21	Auckland	20
+ON670666	1/11/21	Auckland	36
+ON670667	3/11/21	Auckland	34
+ON670668	2/11/21	Auckland	44
+ON670669	2/11/21	Waitemata	36
+ON670670	2/11/21	Auckland	33
+ON670671	2/11/21	Auckland	70
+ON670672	2/11/21	Auckland	59
+ON670673	30/10/21	Counties Manukau	22
+ON670674	30/10/21	Counties Manukau	18
+ON670675	27/10/21	Counties Manukau	12
+ON670676	31/10/21	Counties Manukau	53
+ON670677	31/10/21	Counties Manukau	30
+ON670678	31/10/21	Counties Manukau	4
+ON670679	30/10/21	Counties Manukau	14
+ON670680	30/10/21	Waitemata	87
+ON670681	30/10/21	Counties Manukau	21
+ON670682	1/11/21	Waitemata	11
+ON670683	31/10/21	Counties Manukau	24
+ON670684	3/11/21	Waitemata	5
+ON670685	3/11/21	Waitemata	57
+ON670686	3/11/21	Waitemata	8
+ON670687	31/10/21	Waitemata	42
+ON670688	31/10/21	Waitemata	29
+ON670689	29/10/21	Waitemata	82
+ON670690	31/10/21	Counties Manukau	18
+ON670691	1/11/21	Waitemata	29
+ON670692	1/11/21	Auckland	24
+ON670693	2/11/21	Auckland	19
+ON670694	1/11/21	Waitemata	1
+ON670695	1/11/21	Auckland	30
+ON670696	2/11/21	Counties Manukau	49
+ON670697	1/11/21	Auckland	25
+ON670698	1/11/21	Waitemata	8
+ON670699	3/11/21	Auckland	20
+ON670700	3/11/21	Auckland	27
+ON670701	3/11/21	Auckland	57
+ON670702	3/11/21	Waitemata	18
+ON670703	3/11/21	Auckland	34
+ON670704	3/11/21	Waitemata	19
+ON670705	3/11/21	Auckland	25
+ON670706	3/11/21	Auckland	22
+ON670707	3/11/21	Counties Manukau	43
+ON670708	3/11/21	Auckland	51
+ON670709	3/11/21	Waitemata	31
+ON670710	3/11/21	Auckland	34
+ON670711	4/11/21	Counties Manukau	31
+ON670712	4/11/21	Counties Manukau	18
+ON670713	4/11/21	Auckland	20
+ON670714	4/11/21	Auckland	20
+ON670715	4/11/21	Auckland	18
+ON670716	3/11/21	Auckland	54
+ON670717	5/11/21	Auckland	23
+ON670718	5/11/21	Auckland	30
+ON670719	4/11/21	Auckland	2
+ON670720	1/11/21	Counties Manukau	14
+ON670721	4/11/21	Waitemata	34
+ON670722	5/11/21	Counties Manukau	30
+ON670723	2/11/21	Counties Manukau	4
+ON670724	2/11/21	Auckland	36
+ON670725	3/11/21	Counties Manukau	24
+ON670726	3/11/21	Counties Manukau	69
+ON670727	3/11/21	Counties Manukau	27
+ON670728	3/11/21	Counties Manukau	27
+ON670729	3/11/21	Counties Manukau	14
+ON670730	2/11/21	Counties Manukau	7
+ON670731	3/11/21	Counties Manukau	28
+ON670732	2/11/21	Counties Manukau	25
+ON670733	4/11/21	Counties Manukau	25
+ON670734	5/11/21	Counties Manukau	21
+ON670735	5/11/21	Auckland	44
+ON670736	5/11/21	Auckland	45
+ON670737	7/11/21	Auckland	84
+ON670738	8/11/21	Waitemata	33
+ON670739	8/11/21	Waitemata	39
+ON670740	8/11/21	Waitemata	51
+ON670741	7/11/21	Counties Manukau	25
+ON670742	7/11/21	Northland	6
+ON670743	8/11/21	Waitemata	1
+ON670744	6/11/21	Northland	13
+ON670745	6/11/21	Auckland	22
+ON670746	10/11/21	Counties Manukau	49
+ON670747	9/11/21	Counties Manukau	32
+ON670748	9/11/21	Counties Manukau	27
+ON670749	8/11/21	Counties Manukau	32
+ON670750	10/11/21	Waitemata	7
+ON670751	11/11/21	Auckland	61
+ON670752	11/11/21	Auckland	59
+ON670753	11/11/21	Taranaki	3
+ON670754	11/11/21	Taranaki	1
+ON670755	11/11/21	Taranaki	28
+ON670756	11/11/21	Taranaki	5
+ON670757	11/11/21	Taranaki	30
+ON670758	12/11/21	Auckland	50
+ON670759	7/11/21	Auckland	25
+ON670760	8/11/21	Counties Manukau	24
+ON670761	9/11/21	Counties Manukau	22
+ON670762	9/11/21	Counties Manukau	35
+ON670763	9/11/21	Counties Manukau	56
+ON670764	13/11/21	MidCentral	69
+ON670765	13/11/21	MidCentral	24
+ON670766	11/11/21	Counties Manukau	62
+ON670767	11/11/21	Counties Manukau	1
+ON670768	11/11/21	Counties Manukau	21
+ON670769	11/11/21	Counties Manukau	48
+ON670770	12/11/21	Counties Manukau	18
+ON670771	11/11/21	Auckland	25
+ON670772	11/11/21	Northland	7
+ON670773	12/11/21	Northland	10
+ON670774	11/11/21	Northland	8
+ON670775	14/11/21	Counties Manukau	32
+ON670776	15/11/21	Wairarapa	21
+ON670777	15/11/21	Wairarapa	1
+ON670778	12/11/21	Auckland	29
+ON670779	14/11/21	Waitemata	12
+ON670780	14/11/21	Counties Manukau	16
+ON670781	15/11/21	Waitemata	31
+ON670782	15/11/21	Waitemata	4
+ON670783	15/11/21	Counties Manukau	26
+ON670784	15/11/21	Counties Manukau	26
+ON670785	15/11/21	Waitemata	5
+ON670786	15/11/21	Counties Manukau	36
+ON670787	16/11/21	Waitemata	13
+ON670788	16/11/21	Waitemata	23
+ON670789	16/11/21	Waitemata	3
+ON670790	16/11/21	Waitemata	73
+ON670791	16/11/21	Auckland	22
+ON670792	16/11/21	Auckland	83
+ON670793	17/11/21	Auckland	60
+ON670794	17/11/21	Auckland	7
+ON670795	17/11/21	Auckland	11
+ON670796	17/11/21	Auckland	37
+ON670797	18/11/21	Auckland	36
+ON670798	18/11/21	Auckland	21
+ON670799	15/11/21	Counties Manukau	30
+ON670800	21/11/21	Counties Manukau	27
+ON670801	22/11/21	Auckland	26
+ON670802	22/11/21	Auckland	42
+ON670803	22/11/21	Auckland	9
+ON670804	24/11/21	MidCentral	26
+ON670805	25/11/21	Counties Manukau	15
+ON670806	25/11/21	Auckland	12
+ON670807	27/11/21	Counties Manukau	2
+ON670808	28/11/21	Auckland	36
+ON670809	29/11/21	Nelson Marlborough	43
+ON670810	24/11/21	Counties Manukau	2
+ON670811	28/11/21	Auckland	31
+ON670812	27/11/21	Counties Manukau	27
+ON670813	27/11/21	Counties Manukau	45
+ON670814	23/11/21	Counties Manukau	7
+ON670815	24/11/21	Counties Manukau	24
+ON670816	24/11/21	Counties Manukau	5
+ON670817	24/11/21	Waitemata	2
+ON670818	24/11/21	Counties Manukau	4
+ON670819	24/11/21	Counties Manukau	28
+ON670820	22/11/21	Counties Manukau	31
+ON670821	30/11/21	MidCentral	28
+ON670822	1/12/21	Nelson Marlborough	34
+ON670823	1/12/21	Nelson Marlborough	21
+ON670824	1/12/21	Nelson Marlborough	21
+ON670825	1/12/21	Nelson Marlborough	22
+ON670826	1/12/21	Nelson Marlborough	20
+ON670827	1/12/21	Nelson Marlborough	22
+ON670828	1/12/21	Nelson Marlborough	42
+ON670829	1/12/21	Nelson Marlborough	17
+ON670830	2/12/21	Nelson Marlborough	32
+ON670831	30/11/21	Nelson Marlborough	52
+ON670832	30/11/21	Nelson Marlborough	22
+ON670833	20/11/21	Counties Manukau	28
+ON670834	27/10/21	Counties Manukau	64
+ON670835	29/10/21	Auckland	22
+ON670836	28/10/21	Waitemata	35
+ON670837	29/10/21	Auckland	51
+ON670838	28/10/21	Counties Manukau	31
+ON670839	2/11/21	Counties Manukau	30
+ON670840	2/11/21	Counties Manukau	31
+ON670841	8/11/21	Counties Manukau	29
+ON670842	8/11/21	Counties Manukau	18
+ON670843	9/11/21	Waitemata	48
+ON670844	9/11/21	Waitemata	21
+ON670845	9/11/21	Auckland	59
+ON670846	9/11/21	Auckland	54
+ON670847	9/11/21	Auckland	34
+ON670848	9/11/21	Waitemata	37
+ON670849	9/11/21	Auckland	21
+ON670850	9/11/21	Auckland	42
+ON670851	9/11/21	Waitemata	53
+ON670852	9/11/21	Waitemata	36
+ON670853	9/11/21	Counties Manukau	61
+ON670854	9/11/21	Counties Manukau	52
+ON670855	7/11/21	Northland	25
+ON670856	8/11/21	Northland	8
+ON670857	10/11/21	Northland	32
+ON670858	10/11/21	Waitemata	22
+ON670859	5/11/21	Waitemata	43
+ON670860	11/11/21	Waitemata	4
+ON670861	11/11/21	Waitemata	2
+ON670862	12/11/21	Northland	32
+ON670863	8/11/21	Waitemata	19
+ON670864	8/11/21	Waitemata	28
+ON670865	8/11/21	Waitemata	44
+ON670866	15/11/21	Auckland	11
+ON670867	15/11/21	Counties Manukau	18
+ON670868	15/11/21	Auckland	32
+ON670869	15/11/21	Waitemata	13
+ON670870	17/11/21	MidCentral	19
+ON670871	18/11/21	Wairarapa	14
+ON670872	17/11/21	Counties Manukau	42
+ON670873	17/11/21	Counties Manukau	1
+ON670874	16/11/21	Counties Manukau	58
+ON670875	16/11/21	Counties Manukau	48
+ON670876	16/11/21	Counties Manukau	20
+ON670877	16/11/21	Counties Manukau	64
+ON670878	16/11/21	Counties Manukau	29
+ON670879	17/11/21	Counties Manukau	1
+ON670880	16/11/21	Auckland	44
+ON670881	16/11/21	Waitemata	18
+ON670882	17/11/21	Counties Manukau	20
+ON670883	17/11/21	Auckland	17
+ON670884	17/11/21	Counties Manukau	4
+ON670885	17/11/21	Auckland	5
+ON670886	17/11/21	Counties Manukau	29
+ON670887	17/11/21	Counties Manukau	24
+ON670888	17/11/21	Counties Manukau	6
+ON670889	29/11/21	Bay of Plenty	5
+ON670890	26/11/21	Bay of Plenty	63
+ON670891	29/11/21	Bay of Plenty	60
+ON670892	27/11/21	Bay of Plenty	49
+ON670893	29/11/21	Bay of Plenty	9
+ON670894	27/11/21	Bay of Plenty	1
+ON670895	29/11/21	Bay of Plenty	40
+ON670896	30/11/21	Bay of Plenty	7
+ON670897	26/11/21	Bay of Plenty	41
+ON670898	26/11/21	Bay of Plenty	8
+ON670899	26/11/21	Bay of Plenty	35
+ON670900	27/11/21	Bay of Plenty	39
+ON670901	27/11/21	Bay of Plenty	30
+ON670902	29/11/21	Bay of Plenty	5
+ON670903	29/11/21	Bay of Plenty	5
+ON670904	29/11/21	Bay of Plenty	44
+ON670905	30/11/21	Bay of Plenty	34
+ON670906	1/12/21	Bay of Plenty	56
+ON670907	1/12/21	Lakes	21
+ON670908	1/12/21	Lakes	22
+ON670909	18/08/21	Waitemata	NA
+ON670910	18/08/21	Auckland	NA
+ON670911	17/08/21	Waitemata	29
+ON670912	17/08/21	Waitemata	NA
+ON670913	17/08/21	Waitemata	21
+ON670914	17/08/21	Waitemata	58
+ON670915	17/08/21	Waitemata	20
+ON670916	19/08/21	Waitemata	44
+ON670917	19/08/21	Waitemata	16
+ON670918	18/08/21	Auckland	21
+ON670919	18/08/21	Auckland	40
+ON670920	18/08/21	Auckland	19
+ON670921	19/08/21	Waitemata	21
+ON670922	19/08/21	Auckland	14
+ON670923	19/08/21	Auckland	22
+ON670924	19/08/21	Auckland	15
+ON670925	19/08/21	Waitemata	52
+ON670926	18/08/21	Waitemata	21
+ON670927	19/08/21	Counties Manukau	23
+ON670928	8/09/21	Auckland	47
+ON670929	19/08/21	Waitemata	49
+ON670930	19/08/21	Counties Manukau	24
+ON670931	19/08/21	Counties Manukau	52
+ON670932	19/08/21	Waitemata	16
+ON670933	18/08/21	Waitemata	21
+ON670934	20/08/21	Waitemata	20
+ON670935	19/08/21	Waitemata	18
+ON670936	20/08/21	Auckland	30
+ON670937	20/08/21	Waitemata	55
+ON670938	20/08/21	Counties Manukau	22
+ON670939	20/08/21	Auckland	65
+ON670940	20/08/21	Counties Manukau	14
+ON670941	19/08/21	Auckland	3
+ON670942	20/08/21	Counties Manukau	15
+ON670943	21/08/21	Counties Manukau	68
+ON670944	20/08/21	Counties Manukau	69
+ON670945	20/08/21	Counties Manukau	59
+ON670946	20/08/21	Auckland	17
+ON670947	20/08/21	Counties Manukau	21
+ON670948	20/08/21	Counties Manukau	20
+ON670949	21/08/21	Counties Manukau	19
+ON670950	21/08/21	Counties Manukau	39
+ON670951	21/08/21	Counties Manukau	74
+ON670952	21/08/21	Counties Manukau	11
+ON670953	21/08/21	Counties Manukau	34
+ON670954	21/08/21	Counties Manukau	25
+ON670955	21/08/21	Auckland	15
+ON670956	21/08/21	Auckland	66
+ON670957	21/08/21	Counties Manukau	40
+ON670958	22/08/21	Waitemata	12
+ON670959	20/08/21	Counties Manukau	23
+ON670960	21/08/21	Waitemata	NA
+ON670961	21/08/21	Waitemata	NA
+ON670962	21/08/21	Auckland	18
+ON670963	21/08/21	Auckland	55
+ON670964	21/08/21	Counties Manukau	19
+ON670965	21/08/21	Counties Manukau	50
+ON670966	19/08/21	Waitemata	16
+ON670967	20/08/21	Waitemata	56
+ON670968	20/08/21	Auckland	23
+ON670969	21/08/21	Auckland	20
+ON670970	21/08/21	Counties Manukau	57
+ON670971	22/08/21	Waitemata	NA
+ON670972	22/08/21	Waitemata	NA
+ON670973	22/08/21	Counties Manukau	51
+ON670974	22/08/21	Auckland	24
+ON670975	22/08/21	Waitemata	44
+ON670976	22/08/21	Counties Manukau	22
+ON670977	22/08/21	Counties Manukau	9
+ON670978	22/08/21	Auckland	5
+ON670979	22/08/21	Counties Manukau	27
+ON670980	23/08/21	Auckland	48
+ON670981	22/08/21	Waitemata	51
+ON670982	22/08/21	Waitemata	14
+ON670983	22/08/21	Auckland	19
+ON670984	22/08/21	Counties Manukau	30
+ON670985	22/08/21	Counties Manukau	25
+ON670986	22/08/21	Counties Manukau	72
+ON670987	22/08/21	Waitemata	19
+ON670988	21/08/21	Waitemata	66
+ON670989	22/08/21	Waitemata	22
+ON670990	22/08/21	Waitemata	50
+ON670991	23/08/21	Waitemata	8
+ON670992	23/08/21	Waitemata	9
+ON670993	23/08/21	Counties Manukau	14
+ON670994	23/08/21	Counties Manukau	11
+ON670995	23/08/21	Counties Manukau	52
+ON670996	23/08/21	Counties Manukau	11
+ON670997	23/08/21	Counties Manukau	23
+ON670998	23/08/21	Counties Manukau	5
+ON670999	23/08/21	Counties Manukau	16
+ON671000	23/08/21	Waitemata	30
+ON671001	23/08/21	Counties Manukau	20
+ON671002	23/08/21	Counties Manukau	39
+ON671003	23/08/21	Counties Manukau	16
+ON671004	23/08/21	Auckland	75
+ON671005	23/08/21	Counties Manukau	7
+ON671006	20/08/21	Waitemata	35
+ON671007	23/08/21	Counties Manukau	3
+ON671008	23/08/21	Counties Manukau	9
+ON671009	23/08/21	Counties Manukau	21
+ON671010	23/08/21	Counties Manukau	4
+ON671011	23/08/21	Counties Manukau	27
+ON671012	22/08/21	Counties Manukau	9
+ON671013	22/08/21	Waitemata	43
+ON671014	23/08/21	Counties Manukau	24
+ON671015	22/08/21	Waitemata	39
+ON671016	24/08/21	Waitemata	20
+ON671017	23/08/21	Auckland	23
+ON671018	24/08/21	Counties Manukau	28
+ON671019	21/08/21	Waitemata	21
+ON671020	24/08/21	Auckland	22
+ON671021	24/08/21	Counties Manukau	17
+ON671022	24/08/21	Counties Manukau	44
+ON671023	24/08/21	Counties Manukau	27
+ON671024	24/08/21	Auckland	32
+ON671025	24/08/21	Waitemata	20
+ON671026	24/08/21	Waitemata	17
+ON671027	24/08/21	Waitemata	47
+ON671028	24/08/21	Waitemata	52
+ON671029	24/08/21	Waitemata	17
+ON671030	24/08/21	Waitemata	25
+ON671031	24/08/21	Waitemata	22
+ON671032	24/08/21	Waitemata	42
+ON671033	24/08/21	Waitemata	52
+ON671034	24/08/21	Auckland	3
+ON671035	24/08/21	Auckland	25
+ON671036	24/08/21	Counties Manukau	20
+ON671037	24/08/21	Counties Manukau	18
+ON671038	25/08/21	Waitemata	17
+ON671039	25/08/21	Counties Manukau	27
+ON671040	24/08/21	Waitemata	29
+ON671041	25/08/21	Counties Manukau	48
+ON671042	25/08/21	Counties Manukau	51
+ON671043	25/08/21	Waitemata	42
+ON671044	25/08/21	Counties Manukau	64
+ON671045	25/08/21	Counties Manukau	58
+ON671046	24/08/21	Waitemata	41
+ON671047	24/08/21	Counties Manukau	31
+ON671048	24/08/21	Counties Manukau	27
+ON671049	24/08/21	Auckland	1
+ON671050	24/08/21	Auckland	25
+ON671051	24/08/21	Auckland	29
+ON671052	24/08/21	Auckland	11
+ON671053	24/08/21	Counties Manukau	43
+ON671054	24/08/21	Counties Manukau	11
+ON671055	25/08/21	Counties Manukau	49
+ON671056	25/08/21	Counties Manukau	71
+ON671057	24/08/21	Counties Manukau	17
+ON671058	24/08/21	Counties Manukau	27
+ON671059	24/08/21	Counties Manukau	19
+ON671060	25/08/21	Counties Manukau	24
+ON671061	25/08/21	Counties Manukau	32
+ON671062	25/08/21	Counties Manukau	39
+ON671063	25/08/21	Counties Manukau	50
+ON671064	25/08/21	Counties Manukau	49
+ON671065	25/08/21	Counties Manukau	11
+ON671066	24/08/21	Counties Manukau	32
+ON671067	25/08/21	Counties Manukau	8
+ON671068	23/08/21	Auckland	NA
+ON671069	23/08/21	Waitemata	NA
+ON671070	25/08/21	Counties Manukau	24
+ON671071	25/08/21	Counties Manukau	9
+ON671072	25/08/21	Counties Manukau	6
+ON671073	25/08/21	Counties Manukau	51
+ON671074	25/08/21	Auckland	9
+ON671075	25/08/21	Counties Manukau	17
+ON671076	25/08/21	Counties Manukau	49
+ON671077	25/08/21	Counties Manukau	20
+ON671078	25/08/21	Auckland	27
+ON671079	25/08/21	Counties Manukau	18
+ON671080	25/08/21	Counties Manukau	14
+ON671081	25/08/21	Counties Manukau	16
+ON671082	25/08/21	Counties Manukau	22
+ON671083	25/08/21	Counties Manukau	11
+ON671084	25/08/21	Counties Manukau	11
+ON671085	25/08/21	Counties Manukau	49
+ON671086	25/08/21	Auckland	22
+ON671087	25/08/21	Counties Manukau	21
+ON671088	25/08/21	Counties Manukau	50
+ON671089	25/08/21	Counties Manukau	17
+ON671090	25/08/21	Counties Manukau	6
+ON671091	25/08/21	Counties Manukau	56
+ON671092	25/08/21	Waitemata	18
+ON671093	24/08/21	Waitemata	19
+ON671094	26/08/21	Auckland	60
+ON671095	26/08/21	Counties Manukau	70
+ON671096	25/08/21	Counties Manukau	55
+ON671097	25/08/21	Auckland	45
+ON671098	25/08/21	Counties Manukau	37
+ON671099	25/08/21	Auckland	56
+ON671100	25/08/21	Counties Manukau	9
+ON671101	25/08/21	Counties Manukau	14
+ON671102	25/08/21	Counties Manukau	7
+ON671103	25/08/21	Counties Manukau	28
+ON671104	26/08/21	Auckland	9
+ON671105	26/08/21	Waitemata	41
+ON671106	26/08/21	Waitemata	7
+ON671107	26/08/21	Waitemata	20
+ON671108	26/08/21	Waitemata	17
+ON671109	26/08/21	Waitemata	32
+ON671110	26/08/21	Waitemata	31
+ON671111	26/08/21	Auckland	28
+ON671112	26/08/21	Auckland	44
+ON671113	24/08/21	Waitemata	70
+ON671114	26/08/21	Auckland	17
+ON671115	26/08/21	Waitemata	47
+ON671116	26/08/21	Waitemata	24
+ON671117	26/08/21	Auckland	54
+ON671118	26/08/21	Auckland	37
+ON671119	26/08/21	Counties Manukau	35
+ON671120	26/08/21	Counties Manukau	39
+ON671121	26/08/21	Counties Manukau	31
+ON671122	26/08/21	Counties Manukau	53
+ON671123	26/08/21	Counties Manukau	20
+ON671124	26/08/21	Auckland	17
+ON671125	26/08/21	Counties Manukau	25
+ON671126	26/08/21	Auckland	43
+ON671127	26/08/21	Counties Manukau	58
+ON671128	26/08/21	Counties Manukau	70
+ON671129	26/08/21	Counties Manukau	41
+ON671130	26/08/21	Counties Manukau	15
+ON671131	26/08/21	Counties Manukau	26
+ON671132	26/08/21	Auckland	21
+ON671133	26/08/21	Counties Manukau	27
+ON671134	26/08/21	Counties Manukau	52
+ON671135	26/08/21	Auckland	32
+ON671136	26/08/21	Auckland	41
+ON671137	26/08/21	Auckland	53
+ON671138	26/08/21	Counties Manukau	55
+ON671139	24/08/21	Waitemata	70
+ON671140	25/08/21	Auckland	67
+ON671141	22/08/21	Auckland	44
+ON671142	25/08/21	Counties Manukau	31
+ON671143	24/08/21	Waitemata	18
+ON671144	25/08/21	Counties Manukau	26
+ON671145	25/08/21	Auckland	45
+ON671146	25/08/21	Auckland	1
+ON671147	25/08/21	Waitemata	55
+ON671148	24/08/21	Counties Manukau	15
+ON671149	26/08/21	Counties Manukau	47
+ON671150	26/08/21	Waitemata	59
+ON671151	26/08/21	Auckland	45
+ON671152	24/08/21	Waitemata	22
+ON671153	26/08/21	Waitemata	18
+ON671154	26/08/21	Counties Manukau	18
+ON671155	25/08/21	Counties Manukau	10
+ON671156	26/08/21	Counties Manukau	20
+ON671157	26/08/21	Counties Manukau	12
+ON671158	27/08/21	Counties Manukau	10
+ON671159	27/08/21	Counties Manukau	36
+ON671160	27/08/21	Counties Manukau	9
+ON671161	27/08/21	Counties Manukau	26
+ON671162	27/08/21	Waitemata	61
+ON671163	27/08/21	Auckland	14
+ON671164	27/08/21	Counties Manukau	14
+ON671165	27/08/21	Counties Manukau	61
+ON671166	27/08/21	Auckland	79
+ON671167	27/08/21	Auckland	27
+ON671168	27/08/21	Auckland	6
+ON671169	27/08/21	Auckland	20
+ON671170	27/08/21	Waitemata	46
+ON671171	27/08/21	Auckland	23
+ON671172	27/08/21	Counties Manukau	50
+ON671173	27/08/21	Waitemata	25
+ON671174	27/08/21	Counties Manukau	37
+ON671175	28/08/21	Counties Manukau	53
+ON671176	27/08/21	Waitemata	25
+ON671177	28/08/21	Counties Manukau	17
+ON671178	28/08/21	Counties Manukau	12
+ON671179	28/08/21	Counties Manukau	10
+ON671180	28/08/21	Counties Manukau	17
+ON671181	28/08/21	Counties Manukau	27
+ON671182	28/08/21	Counties Manukau	70
+ON671183	28/08/21	Counties Manukau	40
+ON671184	28/08/21	Counties Manukau	17
+ON671185	28/08/21	Counties Manukau	71
+ON671186	28/08/21	Counties Manukau	8
+ON671187	28/08/21	Counties Manukau	9
+ON671188	28/08/21	Counties Manukau	3
+ON671189	28/08/21	Counties Manukau	13
+ON671190	27/08/21	Counties Manukau	13
+ON671191	27/08/21	Counties Manukau	20
+ON671192	27/08/21	Counties Manukau	24
+ON671193	27/08/21	Counties Manukau	19
+ON671194	27/08/21	Counties Manukau	16
+ON671195	27/08/21	Counties Manukau	14
+ON671196	27/08/21	Counties Manukau	16
+ON671197	27/08/21	Auckland	74
+ON671198	27/08/21	Auckland	35
+ON671199	27/08/21	Counties Manukau	10
+ON671200	27/08/21	Counties Manukau	45
+ON671201	27/08/21	Auckland	43
+ON671202	27/08/21	Counties Manukau	55
+ON671203	27/08/21	Counties Manukau	48
+ON671204	27/08/21	Counties Manukau	68
+ON671205	27/08/21	Counties Manukau	29
+ON671206	28/08/21	Counties Manukau	46
+ON671207	28/08/21	Counties Manukau	24
+ON671208	28/08/21	Counties Manukau	22
+ON671209	28/08/21	Counties Manukau	15
+ON671210	27/08/21	Counties Manukau	20
+ON671211	27/08/21	Counties Manukau	25
+ON671212	27/08/21	Counties Manukau	45
+ON671213	27/08/21	Counties Manukau	24
+ON671214	28/08/21	Counties Manukau	6
+ON671215	28/08/21	Waitemata	39
+ON671216	29/08/21	Counties Manukau	12
+ON671217	29/08/21	Waitemata	58
+ON671218	27/08/21	Auckland	39
+ON671219	28/08/21	Counties Manukau	39
+ON671220	29/08/21	Waitemata	16
+ON671221	29/08/21	Waitemata	26
+ON671222	29/08/21	Waitemata	15
+ON671223	29/08/21	Waitemata	24
+ON671224	29/08/21	Waitemata	60
+ON671225	28/08/21	Waitemata	33
+ON671226	28/08/21	Waitemata	34
+ON671227	29/08/21	Waitemata	11
+ON671228	28/08/21	Waitemata	9
+ON671229	29/08/21	Waitemata	64
+ON671230	29/08/21	Waitemata	52
+ON671231	29/08/21	Waitemata	13
+ON671232	28/08/21	Auckland	16
+ON671233	28/08/21	Counties Manukau	22
+ON671234	28/08/21	Counties Manukau	48
+ON671235	28/08/21	Counties Manukau	21
+ON671236	28/08/21	Counties Manukau	20
+ON671237	28/08/21	Counties Manukau	5
+ON671238	28/08/21	Counties Manukau	29
+ON671239	28/08/21	Counties Manukau	60
+ON671240	28/08/21	Counties Manukau	48
+ON671241	28/08/21	Counties Manukau	45
+ON671242	28/08/21	Counties Manukau	39
+ON671243	28/08/21	Counties Manukau	28
+ON671244	28/08/21	Counties Manukau	5
+ON671245	28/08/21	Counties Manukau	3
+ON671246	28/08/21	Counties Manukau	17
+ON671247	28/08/21	Counties Manukau	24
+ON671248	27/08/21	Auckland	18
+ON671249	21/08/21	Auckland	60
+ON671250	29/08/21	Counties Manukau	11
+ON671251	29/08/21	Counties Manukau	29
+ON671252	29/08/21	Counties Manukau	21
+ON671253	29/08/21	Counties Manukau	44
+ON671254	28/08/21	Counties Manukau	25
+ON671255	28/08/21	Counties Manukau	53
+ON671256	28/08/21	Counties Manukau	22
+ON671257	24/08/21	Counties Manukau	32
+ON671258	28/08/21	Counties Manukau	15
+ON671259	27/08/21	Counties Manukau	14
+ON671260	29/08/21	Counties Manukau	24
+ON671261	30/08/21	Counties Manukau	11
+ON671262	30/08/21	Counties Manukau	9
+ON671263	27/08/21	Counties Manukau	49
+ON671264	27/08/21	Counties Manukau	10
+ON671265	27/08/21	Counties Manukau	1
+ON671266	27/08/21	Counties Manukau	23
+ON671267	28/08/21	Counties Manukau	6
+ON671268	28/08/21	Counties Manukau	6
+ON671269	29/08/21	Auckland	7
+ON671270	29/08/21	Waitemata	47
+ON671271	29/08/21	Waitemata	52
+ON671272	29/08/21	Auckland	15
+ON671273	29/08/21	Auckland	4
+ON671274	29/08/21	Waitemata	7
+ON671275	29/08/21	Waitemata	24
+ON671276	29/08/21	Waitemata	9
+ON671277	29/08/21	Auckland	33
+ON671278	29/08/21	Auckland	50
+ON671279	22/08/21	Counties Manukau	48
+ON671280	30/08/21	Counties Manukau	49
+ON671281	30/08/21	Auckland	17
+ON671282	30/08/21	Auckland	13
+ON671283	30/08/21	Auckland	15
+ON671284	30/08/21	Waitemata	29
+ON671285	30/08/21	Waitemata	16
+ON671286	30/08/21	Waitemata	14
+ON671287	30/08/21	Waitemata	11
+ON671288	30/08/21	Auckland	6
+ON671289	29/08/21	Waitemata	20
+ON671290	28/08/21	Auckland	6
+ON671291	29/08/21	Counties Manukau	13
+ON671292	31/08/21	Counties Manukau	21
+ON671293	30/08/21	Counties Manukau	12
+ON671294	30/08/21	Counties Manukau	42
+ON671295	30/08/21	Counties Manukau	10
+ON671296	30/08/21	Counties Manukau	26
+ON671297	30/08/21	Counties Manukau	54
+ON671298	30/08/21	Counties Manukau	45
+ON671299	30/08/21	Counties Manukau	15
+ON671300	30/08/21	Counties Manukau	14
+ON671301	30/08/21	Auckland	12
+ON671302	30/08/21	Counties Manukau	52
+ON671303	30/08/21	Auckland	51
+ON671304	30/08/21	Counties Manukau	14
+ON671305	30/08/21	Counties Manukau	13
+ON671306	30/08/21	Counties Manukau	15
+ON671307	30/08/21	Counties Manukau	21
+ON671308	30/08/21	Counties Manukau	32
+ON671309	30/08/21	Counties Manukau	18
+ON671310	30/08/21	Counties Manukau	13
+ON671311	30/08/21	Counties Manukau	13
+ON671312	31/08/21	Waitemata	1
+ON671313	31/08/21	Waitemata	44
+ON671314	31/08/21	Counties Manukau	39
+ON671315	31/08/21	Counties Manukau	22
+ON671316	31/08/21	Waitemata	13
+ON671317	30/08/21	Waitemata	7
+ON671318	30/08/21	Counties Manukau	27
+ON671319	30/08/21	Counties Manukau	15
+ON671320	30/08/21	Counties Manukau	14
+ON671321	30/08/21	Counties Manukau	7
+ON671322	30/08/21	Auckland	23
+ON671323	31/08/21	Waitemata	29
+ON671324	31/08/21	Counties Manukau	15
+ON671325	31/08/21	Counties Manukau	14
+ON671326	31/08/21	Waitemata	41
+ON671327	30/08/21	Auckland	14
+ON671328	31/08/21	Waitemata	58
+ON671329	31/08/21	Waitemata	52
+ON671330	31/08/21	Counties Manukau	54
+ON671331	31/08/21	Auckland	25
+ON671332	31/08/21	Waitemata	13
+ON671333	30/08/21	Auckland	37
+ON671334	30/08/21	Waitemata	37
+ON671335	30/08/21	Waitemata	62
+ON671336	1/09/21	Auckland	47
+ON671337	1/09/21	Counties Manukau	26
+ON671338	1/09/21	Counties Manukau	43
+ON671339	31/08/21	Counties Manukau	13
+ON671340	31/08/21	Counties Manukau	41
+ON671341	1/09/21	Waitemata	4
+ON671342	1/09/21	Auckland	12
+ON671343	1/09/21	Counties Manukau	37
+ON671344	1/09/21	Counties Manukau	22
+ON671345	31/08/21	Waitemata	31
+ON671346	1/09/21	Waitemata	55
+ON671347	1/09/21	Waitemata	53
+ON671348	1/09/21	Auckland	59
+ON671349	1/09/21	Auckland	20
+ON671350	1/09/21	Counties Manukau	42
+ON671351	1/09/21	Counties Manukau	30
+ON671352	1/09/21	Counties Manukau	63
+ON671353	2/09/21	Counties Manukau	26
+ON671354	2/09/21	Auckland	12
+ON671355	2/09/21	Auckland	55
+ON671356	2/09/21	Counties Manukau	30
+ON671357	2/09/21	Waitemata	22
+ON671358	1/09/21	Counties Manukau	37
+ON671359	2/09/21	Auckland	57
+ON671360	27/08/21	Waitemata	21
+ON671361	27/08/21	Auckland	27
+ON671362	26/08/21	Counties Manukau	42
+ON671363	27/08/21	Waitemata	66
+ON671364	28/08/21	Auckland	20
+ON671365	27/08/21	Auckland	30
+ON671366	27/08/21	Auckland	55
+ON671367	28/08/21	Waitemata	10
+ON671368	28/08/21	Counties Manukau	22
+ON671369	26/08/21	Waitemata	23
+ON671370	26/08/21	Counties Manukau	28
+ON671371	27/08/21	Counties Manukau	56
+ON671372	27/08/21	Counties Manukau	26
+ON671373	2/09/21	Counties Manukau	38
+ON671374	3/09/21	Waitemata	52
+ON671375	3/09/21	Waitemata	19
+ON671376	2/09/21	Waitemata	62
+ON671377	3/09/21	Counties Manukau	35
+ON671378	3/09/21	Counties Manukau	5
+ON671379	3/09/21	Counties Manukau	7
+ON671380	3/09/21	Counties Manukau	29
+ON671381	3/09/21	Auckland	44
+ON671382	3/09/21	Waitemata	23
+ON671383	2/09/21	Auckland	28
+ON671384	2/09/21	Counties Manukau	22
+ON671385	2/09/21	Counties Manukau	40
+ON671386	2/09/21	Counties Manukau	8
+ON671387	3/09/21	Waitemata	20
+ON671388	3/09/21	Auckland	13
+ON671389	3/09/21	Waitemata	22
+ON671390	3/09/21	Auckland	10
+ON671391	3/09/21	Waitemata	19
+ON671392	3/09/21	Counties Manukau	2
+ON671393	3/09/21	Counties Manukau	33
+ON671394	3/09/21	Counties Manukau	51
+ON671395	3/09/21	Counties Manukau	37
+ON671396	4/09/21	Counties Manukau	75
+ON671397	3/09/21	Waitemata	61
+ON671398	4/09/21	Counties Manukau	23
+ON671399	4/09/21	Waitemata	23
+ON671400	31/08/21	Counties Manukau	3
+ON671401	4/09/21	Counties Manukau	20
+ON671402	4/09/21	Counties Manukau	7
+ON671403	4/09/21	Counties Manukau	33
+ON671404	4/09/21	Counties Manukau	5
+ON671405	4/09/21	Auckland	7
+ON671406	4/09/21	Counties Manukau	26
+ON671407	4/09/21	Waitemata	21
+ON671408	4/09/21	Waitemata	74
+ON671409	4/09/21	Counties Manukau	24
+ON671410	4/09/21	Counties Manukau	26
+ON671411	4/09/21	Counties Manukau	8
+ON671412	4/09/21	Auckland	8
+ON671413	4/09/21	Counties Manukau	28
+ON671414	4/09/21	Counties Manukau	31
+ON671415	4/09/21	Counties Manukau	28
+ON671416	4/09/21	Waitemata	21
+ON671417	4/09/21	Counties Manukau	12
+ON671418	5/09/21	Waitemata	5
+ON671419	4/09/21	Counties Manukau	22
+ON671420	5/09/21	Waitemata	2
+ON671421	5/09/21	Counties Manukau	39
+ON671422	5/09/21	Counties Manukau	31
+ON671423	5/09/21	Auckland	37
+ON671424	5/09/21	Counties Manukau	9
+ON671425	5/09/21	Auckland	35
+ON671426	5/09/21	Auckland	60
+ON671427	2/09/21	Counties Manukau	16
+ON671428	2/09/21	Counties Manukau	39
+ON671429	2/09/21	Counties Manukau	1
+ON671430	5/09/21	Counties Manukau	49
+ON671431	5/09/21	Counties Manukau	8
+ON671432	1/09/21	Auckland	17
+ON671433	1/09/21	Auckland	23
+ON671434	3/09/21	Auckland	22
+ON671435	3/09/21	Waitemata	15
+ON671436	3/09/21	Waitemata	56
+ON671437	31/08/21	Auckland	9
+ON671438	31/08/21	Auckland	33
+ON671439	5/09/21	Auckland	48
+ON671440	5/09/21	Auckland	44
+ON671441	5/09/21	Counties Manukau	41
+ON671442	5/09/21	Counties Manukau	44
+ON671443	6/09/21	Counties Manukau	5
+ON671444	6/09/21	Auckland	26
+ON671445	6/09/21	Counties Manukau	32
+ON671446	6/09/21	Counties Manukau	28
+ON671447	6/09/21	Auckland	12
+ON671448	6/09/21	Waitemata	20
+ON671449	6/09/21	Counties Manukau	10
+ON671450	6/09/21	Counties Manukau	41
+ON671451	6/09/21	Counties Manukau	27
+ON671452	6/09/21	Counties Manukau	33
+ON671453	6/09/21	Counties Manukau	18
+ON671454	6/09/21	Counties Manukau	8
+ON671455	6/09/21	Counties Manukau	27
+ON671456	6/09/21	Counties Manukau	8
+ON671457	6/09/21	Counties Manukau	12
+ON671458	6/09/21	Waitemata	25
+ON671459	6/09/21	Waitemata	29
+ON671460	6/09/21	Waitemata	8
+ON671461	31/08/21	Auckland	34
+ON671462	31/08/21	Waitemata	24
+ON671463	31/08/21	Waitemata	26
+ON671464	31/08/21	Auckland	50
+ON671465	31/08/21	Auckland	54
+ON671466	31/08/21	Waitemata	17
+ON671467	31/08/21	Waitemata	56
+ON671468	31/08/21	Waitemata	52
+ON671469	31/08/21	Waitemata	25
+ON671470	31/08/21	Auckland	55
+ON671471	6/09/21	Counties Manukau	9
+ON671472	6/09/21	Counties Manukau	9
+ON671473	6/09/21	Counties Manukau	12
+ON671474	6/09/21	Counties Manukau	20
+ON671475	6/09/21	Counties Manukau	3
+ON671476	6/09/21	Counties Manukau	20
+ON671477	7/09/21	Auckland	50
+ON671478	7/09/21	Counties Manukau	2
+ON671479	7/09/21	Counties Manukau	27
+ON671480	6/09/21	Counties Manukau	57
+ON671481	7/09/21	Counties Manukau	72
+ON671482	27/08/21	Waitemata	50
+ON671483	8/09/21	Counties Manukau	5
+ON671484	8/09/21	Waitemata	31
+ON671485	8/09/21	Waitemata	7
+ON671486	8/09/21	Waitemata	6
+ON671487	7/09/21	Counties Manukau	30
+ON671488	22/08/21	Counties Manukau	53
+ON671489	7/09/21	Counties Manukau	47
+ON671490	8/09/21	Counties Manukau	11
+ON671491	8/09/21	Auckland	13
+ON671492	4/09/21	Waitemata	16
+ON671493	8/09/21	Auckland	17
+ON671494	9/09/21	Counties Manukau	37
+ON671495	9/09/21	Counties Manukau	11
+ON671496	7/09/21	Waitemata	23
+ON671497	7/09/21	Counties Manukau	29
+ON671498	7/09/21	Waitemata	61
+ON671499	9/09/21	Counties Manukau	14
+ON671500	9/09/21	Counties Manukau	13
+ON671501	9/09/21	Counties Manukau	49
+ON671502	9/09/21	Counties Manukau	20
+ON671503	9/09/21	Auckland	2
+ON671504	4/09/21	Counties Manukau	32
+ON671505	6/09/21	Auckland	20
+ON671506	4/09/21	Auckland	14
+ON671507	9/09/21	Counties Manukau	24
+ON671508	8/09/21	Auckland	5
+ON671509	10/09/21	Counties Manukau	24
+ON671510	7/09/21	Waitemata	58
+ON671511	8/09/21	Waitemata	22
+ON671512	9/09/21	Counties Manukau	36
+ON671513	8/09/21	Waitemata	26
+ON671514	10/09/21	Counties Manukau	19
+ON671515	10/09/21	Counties Manukau	45
+ON671516	9/09/21	Counties Manukau	17
+ON671517	8/09/21	Waitemata	27
+ON671518	10/09/21	Counties Manukau	24
+ON671519	10/09/21	Counties Manukau	38
+ON671520	10/09/21	Counties Manukau	26
+ON671521	10/09/21	Counties Manukau	14
+ON671522	10/09/21	Counties Manukau	49
+ON671523	10/09/21	Counties Manukau	8
+ON671524	11/09/21	Counties Manukau	73
+ON671525	11/09/21	Counties Manukau	49
+ON671526	11/09/21	Counties Manukau	50
+ON671527	10/09/21	Counties Manukau	6
+ON671528	10/09/21	Counties Manukau	34
+ON671529	10/09/21	Counties Manukau	3
+ON671530	10/09/21	Counties Manukau	39
+ON671531	10/09/21	Counties Manukau	7
+ON671532	10/09/21	Counties Manukau	11
+ON671533	10/09/21	Counties Manukau	2
+ON671534	10/09/21	Counties Manukau	5
+ON671535	11/09/21	Counties Manukau	15
+ON671536	11/09/21	Counties Manukau	5
+ON671537	11/09/21	Auckland	23
+ON671538	11/09/21	Counties Manukau	14
+ON671539	11/09/21	Counties Manukau	14
+ON671540	10/09/21	Counties Manukau	68
+ON671541	11/09/21	Counties Manukau	22
+ON671542	11/09/21	Counties Manukau	21
+ON671543	12/09/21	Counties Manukau	59
+ON671544	12/09/21	Counties Manukau	1
+ON671545	12/09/21	Counties Manukau	3
+ON671546	12/09/21	Auckland	5
+ON671547	11/09/21	Counties Manukau	48
+ON671548	12/09/21	Counties Manukau	6
+ON671549	12/09/21	Counties Manukau	22
+ON671550	11/09/21	Counties Manukau	10
+ON671551	11/09/21	Counties Manukau	8
+ON671552	12/09/21	Counties Manukau	4
+ON671553	12/09/21	Counties Manukau	26
+ON671554	12/09/21	Counties Manukau	32
+ON671555	12/09/21	Counties Manukau	4
+ON671556	12/09/21	Counties Manukau	8
+ON671557	12/09/21	Waitemata	11
+ON671558	12/09/21	Counties Manukau	11
+ON671559	12/09/21	Waitemata	3
+ON671560	12/09/21	Counties Manukau	14
+ON671561	12/09/21	Counties Manukau	8
+ON671562	12/09/21	Counties Manukau	19
+ON671563	12/09/21	Waitemata	31
+ON671564	12/09/21	Counties Manukau	6
+ON671565	12/09/21	Counties Manukau	8
+ON671566	12/09/21	Counties Manukau	1
+ON671567	12/09/21	Counties Manukau	7
+ON671568	12/09/21	Counties Manukau	2
+ON671569	12/09/21	Counties Manukau	47
+ON671570	13/09/21	Waitemata	9
+ON671571	13/09/21	Counties Manukau	8
+ON671572	13/09/21	Counties Manukau	27
+ON671573	13/09/21	Counties Manukau	1
+ON671574	13/09/21	Counties Manukau	6
+ON671575	12/09/21	Counties Manukau	6
+ON671576	12/09/21	Counties Manukau	57
+ON671577	12/09/21	Counties Manukau	18
+ON671578	12/09/21	Counties Manukau	8
+ON671579	12/09/21	Counties Manukau	10
+ON671580	12/09/21	Counties Manukau	75
+ON671581	11/09/21	Counties Manukau	23
+ON671582	12/09/21	Counties Manukau	58
+ON671583	12/09/21	Counties Manukau	18
+ON671584	12/09/21	Counties Manukau	11
+ON671585	16/09/21	Counties Manukau	31
+ON671586	16/09/21	Counties Manukau	72
+ON671587	16/09/21	Counties Manukau	73
+ON671588	18/09/21	Auckland	36
+ON671589	16/09/21	Auckland	17
+ON671590	16/09/21	Counties Manukau	11
+ON671591	16/09/21	Counties Manukau	19
+ON671592	16/09/21	Counties Manukau	62
+ON671593	15/09/21	Waitemata	9
+ON671594	17/09/21	Counties Manukau	23
+ON671595	17/09/21	Counties Manukau	3
+ON671596	17/09/21	Auckland	10
+ON671597	18/09/21	Counties Manukau	19
+ON671598	16/09/21	Counties Manukau	22
+ON671599	17/09/21	Auckland	8
+ON671600	17/09/21	Counties Manukau	21
+ON671601	17/09/21	Counties Manukau	20
+ON671602	17/09/21	Counties Manukau	53
+ON671603	17/09/21	Counties Manukau	3
+ON671604	17/09/21	Waitemata	26
+ON671605	18/09/21	Counties Manukau	41
+ON671606	17/09/21	Counties Manukau	45
+ON671607	17/09/21	Auckland	12
+ON671608	18/09/21	Counties Manukau	42
+ON671609	18/09/21	Counties Manukau	17
+ON671610	18/09/21	Counties Manukau	32
+ON671611	19/09/21	Counties Manukau	26
+ON671612	19/09/21	Auckland	27
+ON671613	19/09/21	Counties Manukau	23
+ON671614	19/09/21	Counties Manukau	56
+ON671615	19/09/21	Auckland	48
+ON671616	19/09/21	Counties Manukau	27
+ON671617	19/09/21	Counties Manukau	27
+ON671618	19/09/21	Counties Manukau	43
+ON671619	19/09/21	Auckland	12
+ON671620	19/09/21	Auckland	40
+ON671621	19/09/21	Auckland	45
+ON671622	19/09/21	Counties Manukau	46
+ON671623	19/09/21	Counties Manukau	48
+ON671624	19/09/21	Counties Manukau	38
+ON671625	19/09/21	Counties Manukau	5
+ON671626	19/09/21	Counties Manukau	50
+ON671627	19/09/21	Counties Manukau	15
+ON671628	19/09/21	Counties Manukau	12
+ON671629	20/09/21	Waitemata	44
+ON671630	21/09/21	Waitemata	42
+ON671631	19/09/21	Counties Manukau	4
+ON671632	19/09/21	Counties Manukau	9
+ON671633	19/09/21	Counties Manukau	10
+ON671634	19/09/21	Counties Manukau	17
+ON671635	24/09/21	Waitemata	52
+ON671636	21/09/21	Waitemata	28
+ON671637	24/09/21	Waitemata	29
+ON671638	25/09/21	Waitemata	34
+ON671639	25/09/21	Counties Manukau	59
+ON671640	23/09/21	Counties Manukau	8
+ON671641	23/09/21	Counties Manukau	26
+ON671642	23/09/21	Counties Manukau	37
+ON671643	23/09/21	Counties Manukau	11
+ON671644	23/09/21	Counties Manukau	47
+ON671645	24/09/21	Counties Manukau	50
+ON671646	22/09/21	Counties Manukau	64
+ON671647	23/09/21	Counties Manukau	7
+ON671648	21/09/21	Counties Manukau	9
+ON671649	23/09/21	Counties Manukau	61
+ON671650	23/09/21	Counties Manukau	11
+ON671651	23/09/21	Counties Manukau	1
+ON671652	24/09/21	Auckland	33
+ON671653	22/09/21	Auckland	23
+ON671654	24/09/21	Counties Manukau	38
+ON671655	24/09/21	Counties Manukau	NA
+ON671656	24/09/21	Counties Manukau	10
+ON671657	24/09/21	Counties Manukau	28
+ON671658	24/09/21	Counties Manukau	10
+ON671659	24/09/21	Counties Manukau	38
+ON671660	24/09/21	Counties Manukau	10
+ON671661	25/09/21	Counties Manukau	40
+ON671662	25/09/21	Counties Manukau	6
+ON671663	25/09/21	Counties Manukau	23
+ON671664	25/09/21	Counties Manukau	50
+ON671665	25/09/21	Waitemata	10
+ON671666	25/09/21	Waitemata	29
+ON671667	25/09/21	Auckland	53
+ON671668	25/09/21	Waitemata	8
+ON671669	25/09/21	Waitemata	32
+ON671670	26/09/21	Counties Manukau	24
+ON671671	25/09/21	Counties Manukau	51
+ON671672	25/09/21	Counties Manukau	21
+ON671673	25/09/21	Counties Manukau	53
+ON671674	25/09/21	Counties Manukau	4
+ON671675	25/09/21	Counties Manukau	34
+ON671676	25/09/21	Counties Manukau	18
+ON671677	25/09/21	Auckland	68
+ON671678	25/09/21	Waitemata	45
+ON671679	25/09/21	Waitemata	43
+ON671680	26/09/21	Counties Manukau	33
+ON671681	26/09/21	Counties Manukau	45
+ON671682	26/09/21	Counties Manukau	67
+ON671683	26/09/21	Auckland	15
+ON671684	26/09/21	Counties Manukau	24
+ON671685	26/09/21	Counties Manukau	5
+ON671686	26/09/21	Counties Manukau	8
+ON671687	26/09/21	Counties Manukau	8
+ON671688	26/09/21	Counties Manukau	2
+ON671689	27/09/21	Auckland	13
+ON671690	27/09/21	Counties Manukau	23
+ON671691	27/09/21	Waitemata	56
+ON671692	29/09/21	Auckland	48
+ON671693	30/09/21	Auckland	41
+ON671694	29/09/21	Auckland	22
+ON671695	29/09/21	Auckland	49
+ON671696	29/09/21	Auckland	43
+ON671697	29/09/21	Counties Manukau	17
+ON671698	28/09/21	Waitemata	25
+ON671699	28/09/21	Auckland	60
+ON671700	28/09/21	Auckland	6
+ON671701	28/09/21	Counties Manukau	2
+ON671702	28/09/21	Counties Manukau	12
+ON671703	28/09/21	Waitemata	24
+ON671704	28/09/21	Counties Manukau	47
+ON671705	28/09/21	Waitemata	43
+ON671706	28/09/21	Waitemata	8
+ON671707	28/09/21	Counties Manukau	34
+ON671708	28/09/21	Counties Manukau	14
+ON671709	28/09/21	Counties Manukau	4
+ON671710	28/09/21	Counties Manukau	3
+ON671711	28/09/21	Counties Manukau	23
+ON671712	28/09/21	Counties Manukau	1
+ON671713	28/09/21	Counties Manukau	NA
+ON671714	28/09/21	Counties Manukau	18
+ON671715	28/09/21	Counties Manukau	56
+ON671716	28/09/21	Counties Manukau	34
+ON671717	28/09/21	Counties Manukau	48
+ON671718	28/09/21	Auckland	45
+ON671719	28/09/21	Auckland	25
+ON671720	28/09/21	Waitemata	28
+ON671721	28/09/21	Waitemata	20
+ON671722	28/09/21	Auckland	30
+ON671723	29/09/21	Auckland	68
+ON671724	29/09/21	Counties Manukau	11
+ON671725	30/09/21	Counties Manukau	21
+ON671726	30/09/21	Waitemata	33
+ON671727	30/09/21	Waitemata	26
+ON671728	30/09/21	Waitemata	51
+ON671729	1/10/21	Auckland	49
+ON671730	30/09/21	Counties Manukau	2
+ON671731	30/09/21	Counties Manukau	6
+ON671732	30/09/21	Counties Manukau	26
+ON671733	30/09/21	Counties Manukau	32
+ON671734	30/09/21	Counties Manukau	23
+ON671735	1/10/21	Auckland	8
+ON671736	1/10/21	Auckland	1
+ON671737	1/10/21	Counties Manukau	34
+ON671738	1/10/21	Counties Manukau	7
+ON671739	1/10/21	Counties Manukau	61
+ON671740	1/10/21	Counties Manukau	42
+ON671741	30/09/21	Auckland	31
+ON671742	1/10/21	Waitemata	50
+ON671743	1/10/21	Waitemata	NA
+ON671744	2/10/21	Auckland	51
+ON671745	2/10/21	Waitemata	17
+ON671746	1/10/21	Counties Manukau	18
+ON671747	1/10/21	Auckland	26
+ON671748	1/10/21	Counties Manukau	51
+ON671749	1/10/21	Auckland	18
+ON671750	30/09/21	Auckland	6
+ON671751	2/10/21	Auckland	49
+ON671752	2/10/21	Auckland	76
+ON671753	2/10/21	Auckland	11
+ON671754	2/10/21	Auckland	34
+ON671755	2/10/21	Auckland	32
+ON671756	2/10/21	Counties Manukau	3
+ON671757	2/10/21	Auckland	48
+ON671758	3/10/21	Auckland	42
+ON671759	2/10/21	Auckland	52
+ON671760	2/10/21	Counties Manukau	27
+ON671761	2/10/21	Counties Manukau	24
+ON671762	2/10/21	Waikato	52
+ON671763	3/10/21	Waikato	46
+ON671764	3/10/21	Waitemata	32
+ON671765	2/10/21	Counties Manukau	31
+ON671766	1/10/21	Counties Manukau	30
+ON671767	3/10/21	Counties Manukau	42
+ON671768	2/10/21	Counties Manukau	44
+ON671769	2/10/21	Counties Manukau	20
+ON671770	2/10/21	Waitemata	48
+ON671771	2/10/21	Counties Manukau	1
+ON671772	2/10/21	Waitemata	41
+ON671773	2/10/21	Waitemata	13
+ON671774	2/10/21	Waitemata	45
+ON671775	3/10/21	Auckland	31
+ON671776	3/10/21	Counties Manukau	29
+ON671777	3/10/21	Waitemata	38
+ON671778	3/10/21	Auckland	33
+ON671779	3/10/21	Counties Manukau	3
+ON671780	4/10/21	Auckland	54
+ON671781	3/10/21	Waitemata	51
+ON671782	3/10/21	Waitemata	50
+ON671783	3/10/21	Counties Manukau	19
+ON671784	3/10/21	Waitemata	51
+ON671785	3/10/21	Waitemata	56
+ON671786	4/10/21	Waitemata	39
+ON671787	4/10/21	Waitemata	56
+ON671788	3/10/21	Waitemata	7
+ON671789	3/10/21	Waikato	21
+ON671790	3/10/21	Waikato	45
+ON671791	3/10/21	Waikato	52
+ON671792	4/10/21	Counties Manukau	26
+ON671793	4/10/21	Waitemata	52
+ON671794	4/10/21	Counties Manukau	8
+ON671795	4/10/21	Waitemata	45
+ON671796	4/10/21	Waitemata	28
+ON671797	4/10/21	Waikato	27
+ON671798	4/10/21	Waikato	43
+ON671799	5/10/21	Waikato	39
+ON671800	5/10/21	Waitemata	19
+ON671801	4/10/21	Waitemata	44
+ON671802	4/10/21	Counties Manukau	43
+ON671803	4/10/21	Counties Manukau	39
+ON671804	4/10/21	Auckland	54
+ON671805	4/10/21	Auckland	51
+ON671806	5/10/21	Counties Manukau	31
+ON671807	5/10/21	Auckland	6
+ON671808	5/10/21	Waitemata	64
+ON671809	5/10/21	Waitemata	65
+ON671810	5/10/21	Waitemata	26
+ON671811	5/10/21	Auckland	26
+ON671812	5/10/21	Waitemata	55
+ON671813	5/10/21	Auckland	45
+ON671814	5/10/21	Waitemata	26
+ON671815	5/10/21	Waitemata	47
+ON671816	5/10/21	Waitemata	36
+ON671817	6/10/21	Waitemata	27
+ON671818	6/10/21	Waitemata	25
+ON671819	6/10/21	Auckland	52
+ON671820	5/10/21	Auckland	6
+ON671821	6/10/21	Waitemata	23
+ON671822	5/10/21	Waitemata	47
+ON671823	5/10/21	Counties Manukau	20
+ON671824	5/10/21	Waitemata	55
+ON671825	6/10/21	Waikato	31
+ON671826	5/10/21	Waikato	17
+ON671827	5/10/21	Waikato	74
+ON671828	5/10/21	Waikato	53
+ON671829	5/10/21	Waikato	49
+ON671830	6/10/21	Waitemata	39
+ON671831	6/10/21	Waitemata	33
+ON671832	7/10/21	Counties Manukau	35
+ON671833	6/10/21	Auckland	29
+ON671834	7/10/21	Waitemata	46
+ON671835	7/10/21	Waitemata	53
+ON671836	7/10/21	Auckland	26
+ON671837	7/10/21	Counties Manukau	NA
+ON671838	6/10/21	Waitemata	26
+ON671839	6/10/21	Waitemata	43
+ON671840	7/10/21	Waitemata	28
+ON671841	7/10/21	Waitemata	29
+ON671842	7/10/21	Waitemata	21
+ON671843	5/10/21	Auckland	26
+ON671844	6/10/21	Auckland	44
+ON671845	6/10/21	Auckland	42
+ON671846	6/10/21	Counties Manukau	40
+ON671847	6/10/21	Auckland	NA
+ON671848	7/10/21	Auckland	29
+ON671849	7/10/21	Counties Manukau	57
+ON671850	7/10/21	Waitemata	54
+ON671851	7/10/21	Auckland	31
+ON671852	7/10/21	Auckland	56
+ON671853	7/10/21	Counties Manukau	12
+ON671854	7/10/21	Counties Manukau	49
+ON671855	7/10/21	Counties Manukau	4
+ON671856	7/10/21	Waitemata	35
+ON671857	7/10/21	Counties Manukau	31
+ON671858	8/10/21	Counties Manukau	58
+ON671859	8/10/21	Counties Manukau	24
+ON671860	7/10/21	Auckland	4
+ON671861	7/10/21	Auckland	4
+ON671862	7/10/21	Waitemata	34
+ON671863	8/10/21	Waitemata	13
+ON671864	7/10/21	Waitemata	32
+ON671865	8/10/21	Waitemata	20
+ON671866	8/10/21	Waitemata	17
+ON671867	6/10/21	Waikato	30
+ON671868	7/10/21	Waikato	18
+ON671869	6/10/21	Waikato	33
+ON671870	7/10/21	Waikato	28
+ON671871	6/10/21	Waikato	42
+ON671872	7/10/21	Waikato	35
+ON671873	6/10/21	Waikato	30
+ON671874	8/10/21	Counties Manukau	53
+ON671875	7/10/21	Counties Manukau	40
+ON671876	8/10/21	Counties Manukau	11
+ON671877	8/10/21	Counties Manukau	32
+ON671878	8/10/21	Waitemata	61
+ON671879	8/10/21	Counties Manukau	31
+ON671880	8/10/21	Counties Manukau	11
+ON671881	8/10/21	Counties Manukau	1
+ON671882	8/10/21	Counties Manukau	7
+ON671883	4/10/21	Waitemata	35
+ON671884	9/10/21	Counties Manukau	27
+ON671885	9/10/21	Counties Manukau	23
+ON671886	9/10/21	Counties Manukau	30
+ON671887	8/10/21	Counties Manukau	19
+ON671888	9/10/21	Auckland	27
+ON671889	9/10/21	Counties Manukau	37
+ON671890	9/10/21	Waitemata	23
+ON671891	5/10/21	Auckland	35
+ON671892	8/10/21	Auckland	50
+ON671893	8/10/21	Waitemata	26
+ON671894	8/10/21	Waitemata	41
+ON671895	8/10/21	Waitemata	60
+ON671896	8/10/21	Auckland	50
+ON671897	8/10/21	Waitemata	42
+ON671898	9/10/21	Bay of Plenty	59
+ON671899	9/10/21	Auckland	37
+ON671900	10/10/21	Counties Manukau	51
+ON671901	9/10/21	Waitemata	45
+ON671902	9/10/21	Counties Manukau	12
+ON671903	9/10/21	Waitemata	76
+ON671904	9/10/21	Counties Manukau	11
+ON671905	9/10/21	Counties Manukau	5
+ON671906	9/10/21	Counties Manukau	24
+ON671907	9/10/21	Auckland	32
+ON671908	8/10/21	Counties Manukau	55
+ON671909	9/10/21	Waitemata	43
+ON671910	9/10/21	Waitemata	30
+ON671911	9/10/21	Waitemata	42
+ON671912	10/10/21	Waitemata	62
+ON671913	9/10/21	Waitemata	28
+ON671914	9/10/21	Waitemata	49
+ON671915	26/10/21	Counties Manukau	41
+ON671916	9/10/21	Waitemata	56
+ON671917	9/10/21	Counties Manukau	1
+ON671918	9/10/21	Counties Manukau	90
+ON671919	9/10/21	Auckland	39
+ON671920	9/10/21	Auckland	46
+ON671921	9/10/21	Auckland	47
+ON671922	9/10/21	Auckland	48
+ON671923	9/10/21	Counties Manukau	44
+ON671924	9/10/21	Counties Manukau	44
+ON671925	9/10/21	Auckland	40
+ON671926	9/10/21	Counties Manukau	1
+ON671927	9/10/21	Counties Manukau	44
+ON671928	9/10/21	Counties Manukau	29
+ON671929	9/10/21	Counties Manukau	28
+ON671930	9/10/21	Counties Manukau	42
+ON671931	8/10/21	Counties Manukau	28
+ON671932	9/10/21	Counties Manukau	33
+ON671933	9/10/21	Counties Manukau	46
+ON671934	9/10/21	Counties Manukau	10
+ON671935	9/10/21	Counties Manukau	16
+ON671936	11/10/21	Waitemata	55
+ON671937	11/10/21	Waitemata	52
+ON671938	10/10/21	Waitemata	57
+ON671939	10/10/21	Waitemata	55
+ON671940	10/10/21	Waitemata	55
+ON671941	10/10/21	Waitemata	46
+ON671942	10/10/21	Counties Manukau	16
+ON671943	10/10/21	Waitemata	7
+ON671944	10/10/21	Waitemata	49
+ON671945	10/10/21	Waikato	5
+ON671946	10/10/21	Auckland	39
+ON671947	10/10/21	Auckland	34
+ON671948	9/10/21	Counties Manukau	31
+ON671949	10/10/21	Waitemata	25
+ON671950	10/10/21	Auckland	25
+ON671951	10/10/21	Waitemata	21
+ON671952	10/10/21	Waitemata	31
+ON671953	10/10/21	Waitemata	44
+ON671954	10/10/21	Counties Manukau	30
+ON671955	10/10/21	Waitemata	6
+ON671956	10/10/21	Waitemata	33
+ON671957	8/10/21	Waikato	37
+ON671958	9/10/21	Waikato	52
+ON671959	9/10/21	Waikato	42
+ON671960	10/10/21	Waikato	37
+ON671961	10/10/21	Waikato	30
+ON671962	11/10/21	Auckland	38
+ON671963	11/10/21	Auckland	51
+ON671964	11/10/21	Counties Manukau	36
+ON671965	11/10/21	Auckland	30
+ON671966	11/10/21	Counties Manukau	26
+ON671967	11/10/21	Counties Manukau	33
+ON671968	11/10/21	Waitemata	25
+ON671969	11/10/21	Waitemata	25
+ON671970	11/10/21	Waitemata	30
+ON671971	11/10/21	Waitemata	2
+ON671972	11/10/21	Waitemata	42
+ON671973	12/10/21	Waitemata	25
+ON671974	12/10/21	Waitemata	43
+ON671975	12/10/21	Waitemata	34
+ON671976	12/10/21	Waitemata	2
+ON671977	11/10/21	Auckland	51
+ON671978	9/10/21	Auckland	37
+ON671979	10/10/21	Auckland	41
+ON671980	12/10/21	Waitemata	40
+ON671981	12/10/21	Auckland	1
+ON671982	1/10/21	Auckland	18
+ON671983	13/10/21	Auckland	3
+ON671984	13/10/21	Auckland	26
+ON671985	12/10/21	Auckland	4
+ON671986	12/10/21	Auckland	1
+ON671987	12/10/21	Auckland	3
+ON671988	13/10/21	Auckland	35
+ON671989	12/10/21	Counties Manukau	19
+ON671990	12/10/21	Counties Manukau	4
+ON671991	12/10/21	Counties Manukau	36
+ON671992	12/10/21	Counties Manukau	4
+ON671993	12/10/21	Waitemata	84
+ON671994	12/10/21	Waitemata	49
+ON671995	12/10/21	Waitemata	33
+ON671996	12/10/21	Counties Manukau	40
+ON671997	12/10/21	Waikato	30
+ON671998	11/10/21	Waikato	12
+ON671999	12/10/21	Waikato	38
+ON672000	12/10/21	Waikato	35
+ON672001	13/10/21	Waitemata	36
+ON672002	13/10/21	Waitemata	31
+ON672003	13/10/21	Waitemata	17
+ON672004	13/10/21	Waitemata	24
+ON672005	13/10/21	Waitemata	16
+ON672006	12/10/21	Waitemata	70
+ON672007	12/10/21	Waitemata	34
+ON672008	12/10/21	Waitemata	3
+ON672009	12/10/21	Waitemata	37
+ON672010	12/10/21	Waitemata	5
+ON672011	12/10/21	Waitemata	50
+ON672012	12/10/21	Waitemata	38
+ON672013	12/10/21	Waitemata	32
+ON672014	12/10/21	Waitemata	44
+ON672015	14/10/21	Counties Manukau	33
+ON672016	13/10/21	Waitemata	30
+ON672017	13/10/21	Auckland	52
+ON672018	13/10/21	Counties Manukau	30
+ON672019	13/10/21	Waitemata	39
+ON672020	13/10/21	Waitemata	29
+ON672021	13/10/21	Counties Manukau	45
+ON672022	13/10/21	Counties Manukau	32
+ON672023	13/10/21	Waitemata	17
+ON672024	13/10/21	Auckland	35
+ON672025	13/10/21	Waitemata	24
+ON672026	13/10/21	Waitemata	9
+ON672027	13/10/21	Waitemata	83
+ON672028	13/10/21	Waitemata	46
+ON672029	13/10/21	Waitemata	11
+ON672030	14/10/21	Waitemata	36
+ON672031	13/10/21	Waitemata	63
+ON672032	14/10/21	Auckland	34
+ON672033	14/10/21	Auckland	3
+ON672034	14/10/21	Waitemata	20
+ON672035	14/10/21	Auckland	15
+ON672036	14/10/21	Waitemata	18
+ON672037	14/10/21	Waitemata	2
+ON672038	14/10/21	Waitemata	45
+ON672039	14/10/21	Waitemata	60
+ON672040	13/10/21	Auckland	16
+ON672041	14/10/21	Auckland	24
+ON672042	13/10/21	Waitemata	49
+ON672043	14/10/21	Waitemata	36
+ON672044	14/10/21	Waitemata	18
+ON672045	13/10/21	Waitemata	38
+ON672046	13/10/21	Waitemata	15
+ON672047	13/10/21	Waitemata	56
+ON672048	13/10/21	Waitemata	29
+ON672049	13/10/21	Waitemata	17
+ON672050	13/10/21	Waitemata	37
+ON672051	13/10/21	Waitemata	21
+ON672052	13/10/21	Waitemata	15
+ON672053	13/10/21	Waitemata	23
+ON672054	14/10/21	Waitemata	36
+ON672055	14/10/21	Waitemata	30
+ON672056	14/10/21	Waitemata	50
+ON672057	14/10/21	Waitemata	34
+ON672058	14/10/21	Waitemata	8
+ON672059	14/10/21	Waitemata	57
+ON672060	14/10/21	Auckland	48
+ON672061	14/10/21	Waitemata	33
+ON672062	13/10/21	Waitemata	59
+ON672063	12/10/21	Waitemata	6
+ON672064	14/10/21	Waitemata	24
+ON672065	14/10/21	Counties Manukau	38
+ON672066	15/10/21	Waitemata	51
+ON672067	15/10/21	Waitemata	27
+ON672068	14/10/21	Waitemata	45
+ON672069	13/10/21	Waitemata	27
+ON672070	13/10/21	Waitemata	49
+ON672071	13/10/21	Waitemata	40
+ON672072	13/10/21	Waitemata	39
+ON672073	13/10/21	Auckland	50
+ON672074	13/10/21	Waitemata	10
+ON672075	13/10/21	Waitemata	23
+ON672076	13/10/21	Waitemata	41
+ON672077	13/10/21	Waitemata	12
+ON672078	13/10/21	Waitemata	19
+ON672079	13/10/21	Waitemata	1
+ON672080	13/10/21	Waitemata	41
+ON672081	13/10/21	Waitemata	37
+ON672082	13/10/21	Waitemata	18
+ON672083	15/10/21	Counties Manukau	50
+ON672084	15/10/21	Waitemata	40
+ON672085	15/10/21	Waitemata	32
+ON672086	16/10/21	Auckland	63
+ON672087	15/10/21	Counties Manukau	55
+ON672088	14/10/21	Counties Manukau	9
+ON672089	15/10/21	Waitemata	5
+ON672090	15/10/21	Waitemata	1
+ON672091	15/10/21	Waitemata	49
+ON672092	15/10/21	Waitemata	3
+ON672093	15/10/21	Waitemata	54
+ON672094	16/10/21	Waitemata	57
+ON672095	16/10/21	Waitemata	NA
+ON672096	11/10/21	Waitemata	1
+ON672097	11/10/21	Auckland	35
+ON672098	16/10/21	Counties Manukau	19
+ON672099	11/10/21	Auckland	43
+ON672100	16/10/21	Counties Manukau	32
+ON672101	16/10/21	Auckland	33
+ON672102	16/10/21	Waitemata	37
+ON672103	13/10/21	Counties Manukau	3
+ON672104	13/10/21	Counties Manukau	27
+ON672105	13/10/21	Auckland	33
+ON672106	11/10/21	Waitemata	35
+ON672107	16/10/21	Waitemata	NA
+ON672108	16/10/21	Waitemata	32
+ON672109	16/10/21	Waitemata	27
+ON672110	16/10/21	Waitemata	61
+ON672111	16/10/21	Waitemata	43
+ON672112	16/10/21	Auckland	33
+ON672113	17/10/21	Waitemata	23
+ON672114	17/10/21	Waitemata	58
+ON672115	17/10/21	Waitemata	35
+ON672116	14/10/21	Waitemata	78
+ON672117	16/10/21	Waikato	38
+ON672118	16/10/21	Waikato	36
+ON672119	16/10/21	Waikato	37
+ON672120	16/10/21	Waikato	39
+ON672121	15/10/21	Waikato	40
+ON672122	16/10/21	Waitemata	27
+ON672123	15/10/21	Waitemata	4
+ON672124	17/10/21	Counties Manukau	35
+ON672125	17/10/21	Waitemata	22
+ON672126	17/10/21	Waitemata	31
+ON672127	17/10/21	Auckland	1
+ON672128	17/10/21	Waitemata	30
+ON672129	17/10/21	Counties Manukau	24
+ON672130	17/10/21	Waitemata	29
+ON672131	17/10/21	Waitemata	31
+ON672132	17/10/21	Auckland	43
+ON672133	17/10/21	Waitemata	1
+ON672134	18/10/21	Counties Manukau	41
+ON672135	17/10/21	Waitemata	51
+ON672136	18/10/21	Auckland	28
+ON672137	17/10/21	Waitemata	45
+ON672138	17/10/21	Waitemata	27
+ON672139	17/10/21	Waitemata	36
+ON672140	17/10/21	Waitemata	31
+ON672141	17/10/21	Waitemata	34
+ON672142	17/10/21	Waitemata	12
+ON672143	17/10/21	Waitemata	19
+ON672144	17/10/21	Waitemata	28
+ON672145	18/10/21	Waitemata	50
+ON672146	17/10/21	Waitemata	43
+ON672147	17/10/21	Waitemata	33
+ON672148	17/10/21	Waitemata	30
+ON672149	17/10/21	Waitemata	1
+ON672150	17/10/21	Waitemata	14
+ON672151	17/10/21	Waitemata	30
+ON672152	17/10/21	Waitemata	37
+ON672153	17/10/21	Waitemata	27
+ON672154	17/10/21	Waitemata	32
+ON672155	17/10/21	Waitemata	20
+ON672156	17/10/21	Waitemata	5
+ON672157	17/10/21	Waitemata	12
+ON672158	17/10/21	Auckland	40
+ON672159	17/10/21	Waitemata	58
+ON672160	17/10/21	Waitemata	34
+ON672161	17/10/21	Waitemata	1
+ON672162	17/10/21	Waikato	66
+ON672163	3/10/21	Waikato	48
+ON672164	17/10/21	Waikato	23
+ON672165	15/10/21	Auckland	22
+ON672166	16/10/21	Auckland	31
+ON672167	19/10/21	Waitemata	43
+ON672168	19/10/21	Waitemata	15
+ON672169	19/10/21	Waitemata	29
+ON672170	19/10/21	Waitemata	32
+ON672171	19/10/21	Waitemata	53
+ON672172	12/10/21	Waitemata	50
+ON672173	18/10/21	Waitemata	19
+ON672174	18/10/21	Waitemata	31
+ON672175	18/10/21	Waitemata	32
+ON672176	18/10/21	Waitemata	39
+ON672177	18/10/21	Waitemata	28
+ON672178	18/10/21	Waitemata	34
+ON672179	18/10/21	Waitemata	68
+ON672180	18/10/21	Waitemata	33
+ON672181	18/10/21	Waitemata	13
+ON672182	18/10/21	Waitemata	15
+ON672183	18/10/21	Waitemata	37
+ON672184	18/10/21	Waitemata	19
+ON672185	18/10/21	Waitemata	4
+ON672186	18/10/21	Waitemata	17
+ON672187	18/10/21	Waitemata	5
+ON672188	18/10/21	Waitemata	9
+ON672189	18/10/21	Waitemata	18
+ON672190	18/10/21	Waitemata	49
+ON672191	18/10/21	Waitemata	29
+ON672192	18/10/21	Waitemata	32
+ON672193	18/10/21	Waitemata	19
+ON672194	18/10/21	Waitemata	14
+ON672195	18/10/21	Waitemata	34
+ON672196	18/10/21	Waitemata	46
+ON672197	18/10/21	Waitemata	20
+ON672198	18/10/21	Waitemata	47
+ON672199	18/10/21	Waitemata	45
+ON672200	18/10/21	Waikato	45
+ON672201	18/10/21	Waikato	51
+ON672202	18/10/21	Waikato	43
+ON672203	18/10/21	Waikato	43
+ON672204	18/10/21	Waikato	47
+ON672205	18/10/21	Waikato	39
+ON672206	18/10/21	Waikato	49
+ON672207	19/10/21	Waitemata	62
+ON672208	19/10/21	Waitemata	36
+ON672209	19/10/21	Waitemata	60
+ON672210	19/10/21	Waitemata	69
+ON672211	19/10/21	Auckland	34
+ON672212	19/10/21	Waitemata	32
+ON672213	19/10/21	Waitemata	39
+ON672214	19/10/21	Waitemata	37
+ON672215	19/10/21	Waitemata	61
+ON672216	19/10/21	Waitemata	31
+ON672217	19/10/21	Waitemata	17
+ON672218	19/10/21	Waitemata	66
+ON672219	20/10/21	Auckland	20
+ON672220	20/10/21	Waitemata	44
+ON672221	18/10/21	Waitemata	55
+ON672222	19/10/21	Waitemata	1
+ON672223	19/10/21	Waitemata	44
+ON672224	19/10/21	Counties Manukau	39
+ON672225	20/10/21	Waitemata	9
+ON672226	20/10/21	Waitemata	3
+ON672227	20/10/21	Auckland	48
+ON672228	20/10/21	Waitemata	11
+ON672229	19/10/21	Waitemata	38
+ON672230	20/10/21	Waitemata	6
+ON672231	20/10/21	Auckland	43
+ON672232	19/10/21	Waikato	14
+ON672233	19/10/21	Waikato	66
+ON672234	19/10/21	Waikato	35
+ON672235	19/10/21	Waikato	42
+ON672236	21/10/21	Waitemata	48
+ON672237	21/10/21	Waitemata	25
+ON672238	20/10/21	Waitemata	14
+ON672239	20/10/21	Waitemata	35
+ON672240	20/10/21	Auckland	3
+ON672241	20/10/21	Waitemata	40
+ON672242	20/10/21	Waitemata	26
+ON672243	20/10/21	Counties Manukau	41
+ON672244	20/10/21	Waitemata	18
+ON672245	20/10/21	Waitemata	39
+ON672246	20/10/21	Waitemata	34
+ON672247	20/10/21	Waitemata	62
+ON672248	20/10/21	Waitemata	7
+ON672249	20/10/21	Waitemata	37
+ON672250	20/10/21	Waitemata	17
+ON672251	19/10/21	Waitemata	33
+ON672252	20/10/21	Waitemata	19
+ON672253	20/10/21	Waitemata	45
+ON672254	20/10/21	Waitemata	35
+ON672255	20/10/21	Waitemata	4
+ON672256	20/10/21	Waitemata	26
+ON672257	21/10/21	Waitemata	56
+ON672258	20/10/21	Waikato	16
+ON672259	20/10/21	Waikato	46
+ON672260	20/10/21	Waikato	59
+ON672261	20/10/21	Waikato	36
+ON672262	20/10/21	Waikato	34
+ON672263	20/10/21	Waikato	34
+ON672264	21/10/21	Waikato	65
+ON672265	21/10/21	Waikato	39
+ON672266	21/10/21	Waikato	16
+ON672267	21/10/21	Waikato	44
+ON672268	21/10/21	Waikato	18
+ON672269	21/10/21	Waikato	31
+ON672270	21/10/21	Waikato	7
+ON672271	21/10/21	Waikato	78
+ON672272	21/10/21	Waikato	55
+ON672273	21/10/21	Waikato	49
+ON672274	21/10/21	Waikato	42
+ON672275	22/10/21	Waikato	9
+ON672276	22/10/21	Waikato	6
+ON672277	22/10/21	Waikato	9
+ON672278	22/10/21	Waikato	6
+ON672279	22/10/21	Waikato	11
+ON672280	22/10/21	Waikato	37
+ON672281	23/10/21	Waikato	34
+ON672282	23/10/21	Waikato	59
+ON672283	23/10/21	Waitemata	33
+ON672284	23/10/21	Waitemata	28
+ON672285	23/10/21	Waitemata	10
+ON672286	23/10/21	Waitemata	12
+ON672287	23/10/21	Waitemata	53
+ON672288	23/10/21	Waitemata	42
+ON672289	24/10/21	Waitemata	35
+ON672290	24/10/21	Auckland	16
+ON672291	24/10/21	Waitemata	48
+ON672292	24/10/21	Waitemata	58
+ON672293	24/10/21	Waitemata	49
+ON672294	24/10/21	Waitemata	29
+ON672295	24/10/21	Waitemata	20
+ON672296	24/10/21	Auckland	32
+ON672297	24/10/21	Waitemata	36
+ON672298	23/10/21	Waitemata	45
+ON672299	23/10/21	Waitemata	8
+ON672300	23/10/21	Waitemata	22
+ON672301	23/10/21	Waitemata	32
+ON672302	23/10/21	Auckland	21
+ON672303	23/10/21	Waitemata	4
+ON672304	23/10/21	Waitemata	49
+ON672305	23/10/21	Counties Manukau	39
+ON672306	23/10/21	Auckland	52
+ON672307	23/10/21	Waitemata	52
+ON672308	23/10/21	Waitemata	34
+ON672309	23/10/21	Waitemata	43
+ON672310	24/10/21	Waitemata	31
+ON672311	23/10/21	Auckland	28
+ON672312	23/10/21	Auckland	29
+ON672313	23/10/21	Northland	47
+ON672314	23/10/21	Waitemata	29
+ON672315	23/10/21	Waitemata	5
+ON672316	24/10/21	Counties Manukau	35
+ON672317	24/10/21	Auckland	22
+ON672318	24/10/21	Waitemata	12
+ON672319	24/10/21	Waitemata	30
+ON672320	24/10/21	Auckland	56
+ON672321	24/10/21	Auckland	29
+ON672322	24/10/21	Auckland	28
+ON672323	24/10/21	Auckland	34
+ON672324	24/10/21	Auckland	32
+ON672325	24/10/21	Auckland	21
+ON672326	24/10/21	Counties Manukau	43
+ON672327	24/10/21	Waitemata	25
+ON672328	24/10/21	Auckland	34
+ON672329	24/10/21	Waitemata	30
+ON672330	24/10/21	Waitemata	42
+ON672331	24/10/21	Waitemata	39
+ON672332	24/10/21	Waitemata	5
+ON672333	24/10/21	Waitemata	2
+ON672334	24/10/21	Waitemata	51
+ON672335	24/10/21	Waitemata	43
+ON672336	24/10/21	Waitemata	40
+ON672337	24/10/21	Waitemata	3
+ON672338	24/10/21	Waitemata	28
+ON672339	24/10/21	Waitemata	21
+ON672340	24/10/21	Auckland	64
+ON672341	24/10/21	Auckland	21
+ON672342	15/10/21	Waitemata	29
+ON672343	24/10/21	Waitemata	55
+ON672344	25/10/21	Waitemata	18
+ON672345	25/10/21	Waitemata	60
+ON672346	25/10/21	Waitemata	13
+ON672347	24/10/21	Waitemata	5
+ON672348	24/10/21	Waitemata	10
+ON672349	24/10/21	Waitemata	33
+ON672350	24/10/21	Waitemata	32
+ON672351	24/10/21	Waitemata	39
+ON672352	24/10/21	Auckland	58
+ON672353	24/10/21	Waitemata	24
+ON672354	14/10/21	Waitemata	24
+ON672355	24/10/21	Waikato	32
+ON672356	24/10/21	Waikato	32
+ON672357	23/10/21	Waikato	38
+ON672358	24/10/21	Waikato	56
+ON672359	26/10/21	Waitemata	58
+ON672360	26/10/21	Waitemata	39
+ON672361	26/10/21	Waitemata	35
+ON672362	26/10/21	Waitemata	49
+ON672363	21/10/21	Waitemata	4
+ON672364	21/10/21	Waitemata	11
+ON672365	21/10/21	Waitemata	2
+ON672366	26/10/21	Waitemata	32
+ON672367	25/10/21	Waitemata	28
+ON672368	25/10/21	Waitemata	2
+ON672369	25/10/21	Waitemata	23
+ON672370	25/10/21	Waitemata	20
+ON672371	25/10/21	Waitemata	7
+ON672372	26/10/21	Waitemata	26
+ON672373	26/10/21	Waitemata	48
+ON672374	26/10/21	Waitemata	30
+ON672375	26/10/21	Waitemata	61
+ON672376	25/10/21	Waitemata	59
+ON672377	25/10/21	Waitemata	50
+ON672378	24/10/21	Waitemata	20
+ON672379	24/10/21	Auckland	26
+ON672380	25/10/21	Auckland	27
+ON672381	25/10/21	Waitemata	NA
+ON672382	25/10/21	Waitemata	NA
+ON672383	25/10/21	Waitemata	29
+ON672384	19/10/21	Waitemata	28
+ON672385	26/10/21	Waitemata	31
+ON672386	26/10/21	Waitemata	71
+ON672387	26/10/21	Waitemata	36
+ON672388	26/10/21	Waitemata	NA
+ON672389	26/10/21	Waitemata	7
+ON672390	26/10/21	Waitemata	58
+ON672391	26/10/21	Auckland	70
+ON672392	26/10/21	Auckland	53
+ON672393	26/10/21	Waitemata	32
+ON672394	26/10/21	Waitemata	35
+ON672395	26/10/21	Waitemata	50
+ON672396	26/10/21	Waitemata	33
+ON672397	26/10/21	Waitemata	22
+ON672398	26/10/21	Waitemata	14
+ON672399	26/10/21	Waitemata	31
+ON672400	26/10/21	Waitemata	44
+ON672401	26/10/21	Waitemata	68
+ON672402	26/10/21	Waitemata	17
+ON672403	26/10/21	Counties Manukau	56
+ON672404	26/10/21	Auckland	38
+ON672405	26/10/21	Auckland	25
+ON672406	27/10/21	Waitemata	57
+ON672407	27/10/21	Waitemata	53
+ON672408	27/10/21	Waitemata	28
+ON672409	27/10/21	Waitemata	1
+ON672410	27/10/21	Waitemata	16
+ON672411	27/10/21	Waitemata	42
+ON672412	27/10/21	Waitemata	36
+ON672413	27/10/21	Waitemata	49
+ON672414	27/10/21	Waitemata	40
+ON672415	26/10/21	Counties Manukau	NA
+ON672416	26/10/21	Waikato	47
+ON672417	26/10/21	Waikato	45
+ON672418	26/10/21	Waikato	62
+ON672419	26/10/21	Waikato	32
+ON672420	25/10/21	Waikato	11
+ON672421	25/10/21	Waikato	56
+ON672422	25/10/21	Waikato	10
+ON672423	25/10/21	Waikato	9
+ON672424	26/10/21	Waikato	28
+ON672425	26/10/21	Waikato	58
+ON672426	26/10/21	Waitemata	88
+ON672427	27/10/21	Waitemata	33
+ON672428	27/10/21	Waitemata	55
+ON672429	27/10/21	Waitemata	23
+ON672430	27/10/21	Waitemata	29
+ON672431	27/10/21	Waitemata	30
+ON672432	26/10/21	Waitemata	45
+ON672433	27/10/21	Waitemata	36
+ON672434	27/10/21	Waitemata	8
+ON672435	22/10/21	Waitemata	37
+ON672436	27/10/21	Waitemata	26
+ON672437	27/10/21	Waitemata	7
+ON672438	27/10/21	Waitemata	10
+ON672439	27/10/21	Waitemata	3
+ON672440	27/10/21	Auckland	57
+ON672441	27/10/21	Waitemata	46
+ON672442	28/10/21	Counties Manukau	67
+ON672443	28/10/21	Waitemata	37
+ON672444	28/10/21	Auckland	43
+ON672445	26/10/21	Auckland	31
+ON672446	27/10/21	Auckland	31
+ON672447	27/10/21	Auckland	39
+ON672448	27/10/21	Waitemata	25
+ON672449	27/10/21	Waitemata	8
+ON672450	27/10/21	Waitemata	57
+ON672451	27/10/21	Auckland	31
+ON672452	27/10/21	Auckland	42
+ON672453	27/10/21	Waitemata	31
+ON672454	27/10/21	Waitemata	51
+ON672455	27/10/21	Auckland	50
+ON672456	27/10/21	Waitemata	33
+ON672457	27/10/21	Auckland	56
+ON672458	27/10/21	Auckland	41
+ON672459	28/10/21	Auckland	12
+ON672460	28/10/21	Counties Manukau	35
+ON672461	28/10/21	Waitemata	36
+ON672462	27/10/21	Auckland	42
+ON672463	27/10/21	Waitemata	49
+ON672464	28/10/21	Waitemata	31
+ON672465	28/10/21	Waitemata	52
+ON672466	28/10/21	Waitemata	43
+ON672467	27/10/21	Auckland	30
+ON672468	27/10/21	Waitemata	46
+ON672469	27/10/21	Waitemata	26
+ON672470	27/10/21	Waitemata	1
+ON672471	27/10/21	Waitemata	27
+ON672472	28/10/21	Waitemata	61
+ON672473	28/10/21	Waitemata	51
+ON672474	28/10/21	Waitemata	21
+ON672475	28/10/21	Auckland	54
+ON672476	27/10/21	Waitemata	7
+ON672477	27/10/21	Waitemata	11
+ON672478	28/10/21	Waikato	40
+ON672479	28/10/21	Waikato	19
+ON672480	28/10/21	Waikato	49
+ON672481	28/10/21	Waikato	16
+ON672482	28/10/21	Waikato	17
+ON672483	27/10/21	Waikato	5
+ON672484	27/10/21	Waikato	29
+ON672485	27/10/21	Waikato	33
+ON672486	27/10/21	Waikato	51
+ON672487	28/10/21	Waikato	19
+ON672488	28/10/21	Waitemata	65
+ON672489	28/10/21	Waitemata	53
+ON672490	28/10/21	Waitemata	42
+ON672491	28/10/21	Waitemata	29
+ON672492	28/10/21	Waitemata	33
+ON672493	28/10/21	Waitemata	10
+ON672494	28/10/21	Counties Manukau	35
+ON672495	28/10/21	Waitemata	46
+ON672496	28/10/21	Auckland	48
+ON672497	28/10/21	Waitemata	40
+ON672498	28/10/21	Northland	34
+ON672499	29/10/21	Waitemata	33
+ON672500	29/10/21	Auckland	31
+ON672501	29/10/21	Waitemata	18
+ON672502	28/10/21	Waitemata	11
+ON672503	29/10/21	Waitemata	13
+ON672504	30/10/21	Waitemata	37
+ON672505	30/10/21	Counties Manukau	7
+ON672506	31/10/21	Waitemata	7
+ON672507	30/10/21	Waitemata	52
+ON672508	30/10/21	Waitemata	29
+ON672509	30/10/21	Waitemata	63
+ON672510	30/10/21	Waitemata	70
+ON672511	30/10/21	Waitemata	23
+ON672512	30/10/21	Waitemata	79
+ON672513	30/10/21	Waitemata	12
+ON672514	30/10/21	Waitemata	29
+ON672515	30/10/21	Waitemata	52
+ON672516	30/10/21	Auckland	30
+ON672517	30/10/21	Waitemata	1
+ON672518	30/10/21	Auckland	27
+ON672519	30/10/21	Waitemata	19
+ON672520	30/10/21	Waitemata	2
+ON672521	25/10/21	Auckland	20
+ON672522	30/10/21	Waitemata	36
+ON672523	31/10/21	Waitemata	39
+ON672524	29/10/21	Waitemata	35
+ON672525	31/10/21	Auckland	6
+ON672526	30/10/21	Waitemata	55
+ON672527	31/10/21	Waitemata	59
+ON672528	31/10/21	Waitemata	57
+ON672529	31/10/21	Waitemata	8
+ON672530	31/10/21	Waitemata	38
+ON672531	31/10/21	Waitemata	40
+ON672532	31/10/21	Auckland	5
+ON672533	31/10/21	Waitemata	57
+ON672534	31/10/21	Waitemata	15
+ON672535	31/10/21	Waitemata	40
+ON672536	21/10/21	Waitemata	20
+ON672537	31/10/21	Waitemata	11
+ON672538	31/10/21	Waitemata	33
+ON672539	31/10/21	Waitemata	27
+ON672540	31/10/21	Auckland	56
+ON672541	21/10/21	Auckland	3
+ON672542	30/10/21	Auckland	59
+ON672543	21/10/21	Auckland	31
+ON672544	30/10/21	Auckland	44
+ON672545	21/10/21	Auckland	4
+ON672546	27/10/21	Auckland	61
+ON672547	31/10/21	Waitemata	28
+ON672548	22/10/21	Auckland	25
+ON672549	28/10/21	Auckland	32
+ON672550	30/10/21	Auckland	53
+ON672551	31/10/21	Auckland	29
+ON672552	26/10/21	Auckland	23
+ON672553	31/10/21	Auckland	38
+ON672554	29/10/21	Northland	2
+ON672555	29/10/21	Northland	11
+ON672556	30/10/21	Waikato	47
+ON672557	30/10/21	Waikato	45
+ON672558	30/10/21	Waikato	11
+ON672559	30/10/21	Waikato	24
+ON672560	30/10/21	Waikato	30
+ON672561	30/10/21	Waikato	60
+ON672562	29/10/21	Waikato	50
+ON672563	29/10/21	Waikato	19
+ON672564	29/10/21	Waikato	51
+ON672565	29/10/21	Waikato	30
+ON672566	31/10/21	Waikato	47
+ON672567	30/10/21	Waikato	26
+ON672568	31/10/21	Waikato	33
+ON672569	1/11/21	Waitemata	31
+ON672570	1/11/21	Waitemata	40
+ON672571	1/11/21	Waitemata	33
+ON672572	1/11/21	Waitemata	46
+ON672573	1/11/21	Waitemata	53
+ON672574	2/11/21	Waitemata	27
+ON672575	2/11/21	Waitemata	36
+ON672576	1/11/21	Waitemata	30
+ON672577	1/11/21	Waitemata	50
+ON672578	2/11/21	Waitemata	27
+ON672579	2/11/21	Waitemata	33
+ON672580	2/11/21	Counties Manukau	24
+ON672581	1/11/21	Northland	27
+ON672582	1/11/21	Waikato	30
+ON672583	1/11/21	Waikato	40
+ON672584	1/11/21	Waikato	32
+ON672585	1/11/21	Waikato	34
+ON672586	1/11/21	Waikato	10
+ON672587	1/11/21	Waikato	34
+ON672588	1/11/21	Waikato	30
+ON672589	1/11/21	Waikato	6
+ON672590	1/11/21	Waikato	2
+ON672591	1/11/21	Waikato	12
+ON672592	1/11/21	Waikato	47
+ON672593	1/11/21	Waikato	6
+ON672594	1/11/21	Waikato	33
+ON672595	1/11/21	Waikato	41
+ON672596	1/11/21	Waikato	38
+ON672597	1/11/21	Waikato	7
+ON672598	1/11/21	Waikato	8
+ON672599	1/11/21	Waikato	5
+ON672600	31/10/21	Counties Manukau	52
+ON672601	2/11/21	Waitemata	46
+ON672602	2/11/21	Counties Manukau	34
+ON672603	2/11/21	Waitemata	52
+ON672604	2/11/21	Waitemata	17
+ON672605	2/11/21	Waitemata	25
+ON672606	2/11/21	Waitemata	37
+ON672607	2/11/21	Waitemata	17
+ON672608	2/11/21	Waitemata	7
+ON672609	2/11/21	Waitemata	21
+ON672610	2/11/21	Waitemata	1
+ON672611	2/11/21	Waitemata	22
+ON672612	2/11/21	Waitemata	18
+ON672613	2/11/21	Waitemata	7
+ON672614	2/11/21	Waitemata	13
+ON672615	2/11/21	Auckland	8
+ON672616	2/11/21	Waitemata	17
+ON672617	2/11/21	Waitemata	15
+ON672618	2/11/21	Waitemata	6
+ON672619	2/11/21	Waitemata	34
+ON672620	3/11/21	Waitemata	20
+ON672621	2/11/21	Auckland	35
+ON672622	2/11/21	Waitemata	18
+ON672623	2/11/21	Auckland	6
+ON672624	2/11/21	Waitemata	58
+ON672625	2/11/21	Waitemata	35
+ON672626	2/11/21	Waitemata	NA
+ON672627	2/11/21	Waitemata	28
+ON672628	29/10/21	Waitemata	60
+ON672629	29/10/21	Waitemata	49
+ON672630	2/11/21	Waitemata	2
+ON672631	2/11/21	Waitemata	29
+ON672632	2/11/21	Waitemata	1
+ON672633	3/11/21	Waitemata	82
+ON672634	2/11/21	Waitemata	68
+ON672635	3/11/21	Waitemata	32
+ON672636	3/11/21	Counties Manukau	11
+ON672637	3/11/21	Waitemata	55
+ON672638	3/11/21	Waitemata	NA
+ON672639	3/11/21	Waitemata	84
+ON672640	3/11/21	Waitemata	86
+ON672641	3/11/21	Waitemata	66
+ON672642	3/11/21	Waitemata	8
+ON672643	3/11/21	Waitemata	39
+ON672644	3/11/21	Waitemata	66
+ON672645	3/11/21	Waitemata	59
+ON672646	3/11/21	Waitemata	26
+ON672647	3/11/21	Waitemata	30
+ON672648	3/11/21	Waitemata	78
+ON672649	3/11/21	Waitemata	20
+ON672650	3/11/21	Waitemata	51
+ON672651	3/11/21	Auckland	29
+ON672652	3/11/21	Waitemata	31
+ON672653	3/11/21	Waitemata	19
+ON672654	3/11/21	Waitemata	19
+ON672655	3/11/21	Waitemata	6
+ON672656	3/11/21	Auckland	27
+ON672657	3/11/21	Waitemata	7
+ON672658	3/11/21	Waitemata	48
+ON672659	3/11/21	Waitemata	11
+ON672660	4/11/21	Waitemata	27
+ON672661	4/11/21	Waitemata	38
+ON672662	3/11/21	Waitemata	51
+ON672663	4/11/21	Waitemata	32
+ON672664	4/11/21	Waitemata	54
+ON672665	3/11/21	Waitemata	22
+ON672666	3/11/21	Waitemata	23
+ON672667	3/11/21	Waitemata	65
+ON672668	21/10/21	Waitemata	41
+ON672669	4/11/21	Auckland	36
+ON672670	3/11/21	Waitemata	34
+ON672671	3/11/21	Counties Manukau	33
+ON672672	4/11/21	Waitemata	30
+ON672673	4/11/21	Waitemata	NA
+ON672674	4/11/21	Waitemata	25
+ON672675	4/11/21	Waitemata	25
+ON672676	4/11/21	Waitemata	22
+ON672677	4/11/21	Waitemata	36
+ON672678	4/11/21	Counties Manukau	28
+ON672679	4/11/21	Auckland	18
+ON672680	3/11/21	Northland	34
+ON672681	4/11/21	Waitemata	39
+ON672682	4/11/21	Waitemata	49
+ON672683	4/11/21	Waitemata	66
+ON672684	4/11/21	Waitemata	38
+ON672685	4/11/21	Waitemata	56
+ON672686	5/11/21	Northland	1
+ON672687	5/11/21	Northland	30
+ON672688	2/11/21	Waikato	19
+ON672689	2/11/21	Waikato	58
+ON672690	2/11/21	Waikato	56
+ON672691	4/11/21	Waikato	NA
+ON672692	4/11/21	Waikato	18
+ON672693	4/11/21	Waikato	19
+ON672694	4/11/21	Waikato	64
+ON672695	3/11/21	Waikato	48
+ON672696	4/11/21	Waitemata	37
+ON672697	5/11/21	Waitemata	63
+ON672698	5/11/21	Northland	38
+ON672699	5/11/21	Waikato	45
+ON672700	5/11/21	Waikato	55
+ON672701	5/11/21	Waikato	19
+ON672702	6/11/21	Waikato	17
+ON672703	6/11/21	Waikato	30
+ON672704	7/11/21	Waikato	18
+ON672705	7/11/21	Waikato	17
+ON672706	7/11/21	Auckland	39
+ON672707	7/11/21	Waikato	23
+ON672708	7/11/21	Waikato	52
+ON672709	7/11/21	Waikato	54
+ON672710	7/11/21	Waikato	17
+ON672711	3/11/21	Waikato	17
+ON672712	8/11/21	Northland	30
+ON672713	8/11/21	Auckland	7
+ON672714	8/11/21	Waitemata	24
+ON672715	8/11/21	Waitemata	1
+ON672716	8/11/21	Waitemata	39
+ON672717	8/11/21	Waitemata	9
+ON672718	8/11/21	Auckland	26
+ON672719	8/11/21	Waitemata	11
+ON672720	8/11/21	Auckland	29
+ON672721	8/11/21	Auckland	19
+ON672722	8/11/21	Waitemata	13
+ON672723	8/11/21	Waitemata	7
+ON672724	8/11/21	Waitemata	51
+ON672725	8/11/21	Waitemata	1
+ON672726	8/11/21	Waitemata	18
+ON672727	8/11/21	Waitemata	50
+ON672728	8/11/21	Waitemata	4
+ON672729	8/11/21	Waitemata	8
+ON672730	8/11/21	Waitemata	12
+ON672731	8/11/21	Waitemata	33
+ON672732	8/11/21	Waitemata	2
+ON672733	8/11/21	Waitemata	53
+ON672734	8/11/21	Auckland	33
+ON672735	8/11/21	Waitemata	2
+ON672736	8/11/21	Waitemata	35
+ON672737	6/11/21	Waitemata	52
+ON672738	8/11/21	Waitemata	23
+ON672739	8/11/21	Waitemata	20
+ON672740	8/11/21	Waitemata	49
+ON672741	9/11/21	Auckland	31
+ON672742	8/11/21	Waitemata	33
+ON672743	9/11/21	Waitemata	48
+ON672744	9/11/21	Waitemata	29
+ON672745	8/11/21	Waikato	24
+ON672746	8/11/21	Waikato	19
+ON672747	8/11/21	Northland	5
+ON672748	8/11/21	Northland	6
+ON672749	9/11/21	Waitemata	23
+ON672750	5/11/21	Waitemata	54
+ON672751	8/11/21	Waitemata	23
+ON672752	8/11/21	Waitemata	18
+ON672753	9/11/21	Waitemata	18
+ON672754	9/11/21	Waitemata	21
+ON672755	9/11/21	Waitemata	47
+ON672756	9/11/21	Waitemata	57
+ON672757	9/11/21	Auckland	23
+ON672758	9/11/21	Waitemata	10
+ON672759	9/11/21	Auckland	46
+ON672760	9/11/21	Waitemata	36
+ON672761	9/11/21	Auckland	83
+ON672762	9/11/21	Auckland	41
+ON672763	9/11/21	Waitemata	6
+ON672764	4/11/21	Waitemata	8
+ON672765	9/11/21	Waitemata	6
+ON672766	9/11/21	Waitemata	2
+ON672767	9/11/21	Auckland	27
+ON672768	9/11/21	Waitemata	37
+ON672769	9/11/21	Waitemata	24
+ON672770	9/11/21	Auckland	52
+ON672771	4/11/21	Waitemata	3
+ON672772	9/11/21	Waitemata	6
+ON672773	9/11/21	Waitemata	53
+ON672774	9/11/21	Waitemata	82
+ON672775	9/11/21	Auckland	26
+ON672776	9/11/21	Waitemata	42
+ON672777	9/11/21	Waitemata	13
+ON672778	9/11/21	Waitemata	15
+ON672779	9/11/21	Waitemata	4
+ON672780	4/11/21	Waitemata	9
+ON672781	9/11/21	Auckland	21
+ON672782	9/11/21	Waitemata	24
+ON672783	9/11/21	Northland	34
+ON672784	9/11/21	Northland	8
+ON672785	9/11/21	Waikato	68
+ON672786	9/11/21	Waikato	13
+ON672787	9/11/21	Waikato	22
+ON672788	9/11/21	Waikato	19
+ON672789	9/11/21	Waikato	21
+ON672790	9/11/21	Waikato	42
+ON672791	9/11/21	Waikato	17
+ON672792	9/11/21	Waikato	20
+ON672793	9/11/21	Waikato	43
+ON672794	9/11/21	Waikato	31
+ON672795	9/11/21	Waikato	21
+ON672796	9/11/21	Waikato	27
+ON672797	10/11/21	Waitemata	66
+ON672798	10/11/21	Waitemata	34
+ON672799	10/11/21	Waitemata	20
+ON672800	10/11/21	Waitemata	33
+ON672801	10/11/21	Waitemata	13
+ON672802	10/11/21	Waitemata	42
+ON672803	10/11/21	Waitemata	21
+ON672804	10/11/21	Waitemata	21
+ON672805	10/11/21	Waitemata	23
+ON672806	10/11/21	Waitemata	55
+ON672807	10/11/21	Waitemata	56
+ON672808	10/11/21	Waitemata	41
+ON672809	10/11/21	Counties Manukau	10
+ON672810	10/11/21	Waitemata	29
+ON672811	10/11/21	Waitemata	16
+ON672812	10/11/21	Waitemata	44
+ON672813	10/11/21	Waitemata	36
+ON672814	9/11/21	Waitemata	NA
+ON672815	11/11/21	Waitemata	21
+ON672816	11/11/21	Auckland	11
+ON672817	30/10/21	Waitemata	NA
+ON672818	11/11/21	Waitemata	42
+ON672819	11/11/21	Waitemata	40
+ON672820	10/11/21	Waitemata	50
+ON672821	10/11/21	Waitemata	21
+ON672822	10/11/21	Waitemata	34
+ON672823	10/11/21	Waitemata	42
+ON672824	10/11/21	Counties Manukau	23
+ON672825	10/11/21	Northland	38
+ON672826	1/11/21	Northland	55
+ON672827	11/11/21	Northland	22
+ON672828	11/11/21	Northland	33
+ON672829	7/11/21	Northland	40
+ON672830	10/11/21	Northland	51
+ON672831	10/11/21	Northland	52
+ON672832	10/11/21	Northland	15
+ON672833	10/11/21	Waikato	18
+ON672834	10/11/21	Waikato	17
+ON672835	10/11/21	Waikato	52
+ON672836	10/11/21	Waikato	43
+ON672837	10/11/21	Waikato	18
+ON672838	10/11/21	Waikato	7
+ON672839	10/11/21	Waikato	9
+ON672840	11/11/21	Waikato	46
+ON672841	11/11/21	Waikato	42
+ON672842	11/11/21	Waikato	18
+ON672843	10/11/21	Waitemata	15
+ON672844	10/11/21	Waitemata	7
+ON672845	10/11/21	Auckland	32
+ON672846	10/11/21	Waitemata	42
+ON672847	10/11/21	Waitemata	10
+ON672848	10/11/21	Waitemata	28
+ON672849	10/11/21	Waitemata	11
+ON672850	10/11/21	Waitemata	10
+ON672851	10/11/21	Waitemata	24
+ON672852	10/11/21	Waitemata	13
+ON672853	10/11/21	Waitemata	45
+ON672854	10/11/21	Auckland	38
+ON672855	10/11/21	Auckland	52
+ON672856	10/11/21	Waitemata	12
+ON672857	10/11/21	Auckland	21
+ON672858	10/11/21	Waitemata	3
+ON672859	10/11/21	Waitemata	66
+ON672860	10/11/21	Waitemata	13
+ON672861	10/11/21	Waitemata	6
+ON672862	10/11/21	Waitemata	11
+ON672863	10/11/21	Waitemata	56
+ON672864	10/11/21	Waitemata	8
+ON672865	10/11/21	Waitemata	9
+ON672866	10/11/21	Waitemata	55
+ON672867	10/11/21	Waitemata	30
+ON672868	12/11/21	Lakes	22
+ON672869	11/11/21	Auckland	30
+ON672870	12/11/21	Waikato	8
+ON672871	12/11/21	Waikato	10
+ON672872	12/11/21	Waikato	17
+ON672873	12/11/21	Waikato	11
+ON672874	12/11/21	Waikato	6
+ON672875	12/11/21	Waikato	8
+ON672876	12/11/21	Waikato	7
+ON672877	13/11/21	Waikato	19
+ON672878	13/11/21	Waikato	9
+ON672879	13/11/21	Waikato	7
+ON672880	13/11/21	Waikato	14
+ON672881	13/11/21	Waikato	22
+ON672882	13/11/21	Waikato	19
+ON672883	14/11/21	Waikato	13
+ON672884	14/11/21	Waikato	14
+ON672885	14/11/21	Waikato	5
+ON672886	14/11/21	Waikato	3
+ON672887	11/11/21	Waikato	33
+ON672888	11/11/21	Waikato	23
+ON672889	11/11/21	Waikato	23
+ON672890	11/11/21	Waikato	74
+ON672891	11/11/21	Waikato	3
+ON672892	11/11/21	Waikato	20
+ON672893	11/11/21	Waikato	21
+ON672894	11/11/21	Waikato	17
+ON672895	11/11/21	Waikato	11
+ON672896	11/11/21	Waikato	14
+ON672897	11/11/21	Waikato	14
+ON672898	11/11/21	Waikato	13
+ON672899	9/11/21	Waikato	11
+ON672900	11/11/21	Waikato	11
+ON672901	11/11/21	Waikato	33
+ON672902	11/11/21	Waikato	16
+ON672903	12/11/21	Northland	32
+ON672904	13/11/21	Lakes	24
+ON672905	13/11/21	Lakes	28
+ON672906	11/10/21	Counties Manukau	NA
+ON672907	14/11/21	Northland	55
+ON672908	14/11/21	Northland	11
+ON672909	15/11/21	Northland	10
+ON672910	15/11/21	Northland	12
+ON672911	14/11/21	Lakes	16
+ON672912	13/11/21	Lakes	17
+ON672913	14/11/21	Lakes	3
+ON672914	13/11/21	Lakes	23
+ON672915	14/11/21	Counties Manukau	60
+ON672916	15/11/21	Waikato	17
+ON672917	15/11/21	Waikato	19
+ON672918	15/11/21	Waikato	8
+ON672919	15/11/21	Waikato	8
+ON672920	15/11/21	Waikato	24
+ON672921	15/11/21	Waikato	23
+ON672922	15/11/21	Waikato	33
+ON672923	15/11/21	Waikato	20
+ON672924	15/11/21	Waikato	8
+ON672925	15/11/21	Waikato	47
+ON672926	15/11/21	Waikato	25
+ON672927	15/11/21	Waikato	41
+ON672928	15/11/21	Waikato	20
+ON672929	15/11/21	Waikato	22
+ON672930	15/11/21	Waikato	43
+ON672931	15/11/21	Waikato	1
+ON672932	15/11/21	Waikato	37
+ON672933	15/11/21	Waikato	64
+ON672934	15/11/21	Waikato	28
+ON672935	15/11/21	Lakes	32
+ON672936	16/11/21	Waitemata	18
+ON672937	16/11/21	Waitemata	8
+ON672938	16/11/21	Waitemata	43
+ON672939	16/11/21	Waitemata	37
+ON672940	16/11/21	Waitemata	NA
+ON672941	16/11/21	Waitemata	25
+ON672942	16/11/21	Waitemata	47
+ON672943	16/11/21	Waitemata	26
+ON672944	15/11/21	Waitemata	19
+ON672945	16/11/21	Waitemata	24
+ON672946	16/11/21	Counties Manukau	6
+ON672947	12/11/21	Waitemata	4
+ON672948	16/11/21	Waitemata	NA
+ON672949	16/11/21	Waitemata	16
+ON672950	16/11/21	Waitemata	14
+ON672951	16/11/21	Waitemata	23
+ON672952	17/11/21	Waitemata	41
+ON672953	16/11/21	Waitemata	2
+ON672954	17/11/21	Waitemata	60
+ON672955	17/11/21	Waitemata	20
+ON672956	17/11/21	Northland	52
+ON672957	17/11/21	Northland	11
+ON672958	17/11/21	Northland	12
+ON672959	16/11/21	Lakes	45
+ON672960	16/11/21	Lakes	22
+ON672961	16/11/21	Lakes	19
+ON672962	16/11/21	Lakes	54
+ON672963	16/11/21	Lakes	23
+ON672964	16/11/21	Lakes	58
+ON672965	17/11/21	Lakes	16
+ON672966	17/11/21	Waitemata	25
+ON672967	17/11/21	Counties Manukau	7
+ON672968	17/11/21	Waitemata	7
+ON672969	17/11/21	Waitemata	25
+ON672970	17/11/21	Auckland	39
+ON672971	13/11/21	Waitemata	66
+ON672972	17/11/21	Waitemata	45
+ON672973	17/11/21	Waitemata	54
+ON672974	17/11/21	Auckland	45
+ON672975	17/11/21	Waitemata	50
+ON672976	17/11/21	Waitemata	35
+ON672977	17/11/21	Waitemata	37
+ON672978	17/11/21	Waitemata	45
+ON672979	17/11/21	Waitemata	43
+ON672980	17/11/21	Waitemata	33
+ON672981	17/11/21	Waitemata	30
+ON672982	17/11/21	Waitemata	37
+ON672983	17/11/21	Auckland	26
+ON672984	17/11/21	Waitemata	19
+ON672985	17/11/21	Waitemata	11
+ON672986	17/11/21	Waitemata	38
+ON672987	12/11/21	Waitemata	24
+ON672988	18/11/21	Auckland	7
+ON672989	18/11/21	Waitemata	29
+ON672990	18/11/21	Waitemata	48
+ON672991	18/11/21	Waitemata	15
+ON672992	13/11/21	Waikato	23
+ON672993	17/11/21	Waikato	30
+ON672994	17/11/21	Waikato	1
+ON672995	17/11/21	Waikato	23
+ON672996	17/11/21	Waikato	2
+ON672997	17/11/21	Waikato	15
+ON672998	16/11/21	Waikato	40
+ON672999	16/11/21	Waikato	21
+ON673000	16/11/21	Waikato	48
+ON673001	17/11/21	Waikato	34
+ON673002	17/11/21	Waikato	2
+ON673003	17/11/21	Waikato	5
+ON673004	17/11/21	Waikato	1
+ON673005	17/11/21	Waikato	12
+ON673006	17/11/21	Waikato	11
+ON673007	17/11/21	Waikato	11
+ON673008	17/11/21	Waikato	12
+ON673009	17/11/21	Waikato	10
+ON673010	17/11/21	Waikato	10
+ON673011	17/11/21	Waikato	9
+ON673012	17/11/21	Waikato	12
+ON673013	17/11/21	Waikato	5
+ON673014	17/11/21	Waikato	33
+ON673015	17/11/21	Waikato	54
+ON673016	17/11/21	Waikato	65
+ON673017	17/11/21	Waikato	37
+ON673018	17/11/21	Waikato	NA
+ON673019	17/11/21	Waikato	16
+ON673020	17/11/21	Waikato	8
+ON673021	17/11/21	Lakes	30
+ON673022	18/11/21	Waikato	21
+ON673023	17/11/21	Northland	3
+ON673024	18/11/21	Northland	8
+ON673025	18/11/21	Northland	40
+ON673026	18/11/21	Northland	70
+ON673027	17/11/21	Bay of Plenty	62
+ON673028	18/11/21	Bay of Plenty	39
+ON673029	18/11/21	Waikato	24
+ON673030	18/11/21	Waikato	47
+ON673031	18/11/21	Waikato	20
+ON673032	18/11/21	Waikato	33
+ON673033	18/11/21	Waikato	19
+ON673034	18/11/21	Waikato	40
+ON673035	18/11/21	Waikato	63
+ON673036	18/11/21	Waikato	28
+ON673037	18/11/21	Waikato	31
+ON673038	19/11/21	Waikato	12
+ON673039	19/11/21	Waikato	28
+ON673040	19/11/21	Waikato	34
+ON673041	19/11/21	Waikato	3
+ON673042	19/11/21	Waikato	42
+ON673043	19/11/21	Northland	7
+ON673044	19/11/21	Northland	78
+ON673045	18/11/21	Bay of Plenty	55
+ON673046	19/11/21	Bay of Plenty	28
+ON673047	19/11/21	Bay of Plenty	26
+ON673048	19/11/21	Bay of Plenty	37
+ON673049	19/11/21	Waikato	NA
+ON673050	19/11/21	Waikato	36
+ON673051	19/11/21	Waikato	34
+ON673052	19/11/21	Waikato	13
+ON673053	19/11/21	Waikato	32
+ON673054	19/11/21	Northland	37
+ON673055	20/11/21	Northland	1
+ON673056	19/11/21	Lakes	19
+ON673057	19/11/21	Bay of Plenty	27
+ON673058	19/11/21	Bay of Plenty	59
+ON673059	19/11/21	Lakes	25
+ON673060	22/11/21	Lakes	2
+ON673061	19/11/21	Lakes	42
+ON673062	19/11/21	Lakes	52
+ON673063	20/11/21	Bay of Plenty	55
+ON673064	20/11/21	Bay of Plenty	36
+ON673065	21/11/21	Bay of Plenty	30
+ON673066	22/11/21	Bay of Plenty	33
+ON673067	22/11/21	Lakes	22
+ON673068	22/11/21	Lakes	17
+ON673069	23/11/21	Bay of Plenty	7
+ON673070	23/11/21	Bay of Plenty	5
+ON673071	22/11/21	Bay of Plenty	27
+ON673072	23/11/21	Bay of Plenty	49
+ON673073	19/11/21	Counties Manukau	22
+ON673074	22/10/21	Auckland	NA
+ON673075	19/11/21	Auckland	38
+ON673076	19/11/21	Auckland	47
+ON673077	19/11/21	Auckland	27
+ON673078	23/11/21	Northland	38
+ON673079	17/11/21	Northland	7
+ON673080	22/11/21	Northland	28
+ON673081	25/11/21	Northland	9
+ON673082	21/11/21	Bay of Plenty	33
+ON673083	24/11/21	Bay of Plenty	41
+ON673084	23/11/21	Bay of Plenty	34
+ON673085	24/11/21	Bay of Plenty	37
+ON673086	23/11/21	Bay of Plenty	34
+ON673087	23/11/21	Bay of Plenty	17
+ON673088	23/11/21	Bay of Plenty	14
+ON673089	23/11/21	Bay of Plenty	11
+ON673090	24/11/21	Bay of Plenty	4
+ON673091	24/11/21	Bay of Plenty	26
+ON673092	24/11/21	Bay of Plenty	58
+ON673093	24/11/21	Bay of Plenty	36
+ON673094	24/11/21	Bay of Plenty	38
+ON673095	24/11/21	Lakes	21
+ON673096	24/11/21	Bay of Plenty	16
+ON673097	24/11/21	Bay of Plenty	11
+ON673098	25/11/21	Bay of Plenty	34
+ON673099	19/11/21	Bay of Plenty	57
+ON673100	24/11/21	Bay of Plenty	6
+ON673101	25/11/21	Lakes	49
+ON673102	27/11/21	Hawke's Bay	23
+ON673103	29/11/21	Northland	43
+ON673104	27/11/21	Northland	34
+ON673105	30/11/21	Northland	21
+ON673106	11/11/21	Waitemata	58
+ON673107	5/11/21	Waitemata	63
+ON673108	5/11/21	Waitemata	65
+ON673109	29/11/21	Bay of Plenty	58
+ON692907	15/09/21	Counties Manukau	30
+ON692908	30/08/21	Counties Manukau	47
