@@ -7,20 +7,20 @@ Your name (UPI)
 
 ## Instructions for report submission
 
-1. Report Format & Template Usage
+  1. Report Format & Template Usage
 
 Write your report using this template and save it as a PDF file.
 You may use [Overleaf](https://www.overleaf.com), MS Word, or Google Docs, and then export the final report as a PDF.
 The PDF file name must include your name and UPI for identification.
 
-2. Completing the Report
+  2. Completing the Report
 
 Update the author section in the template with your name and UPI in the header.
 Copy all questions and section titles from the template, and provide your answers accordingly.
 Follow all instructions carefully to ensure proper setup and accurate responses from software tools.
 The questions are numbered in Roman numerals (e.g., **Question i:**). Each question carries one point, with an additional bonus point for clarity and a well-structured report.
 
-3. Answering Questions
+  3. Answering Questions
 
 Your responses should be written inside the designated answer blocks.
 Ensure that no answer blocks are left blank, except for the example provided in the template.
@@ -35,13 +35,13 @@ Your answer
 
 **Answer ends**
 
-4. Finalising & Submitting Your Report
+  4. Finalising & Submitting Your Report
 
 Ensure all questions are answered and that your report is in PDF format.
 Verify that your report opens correctly before submission.
 Include all relevant figures, along with necessary log and tree files (e.g., iqtree’s tree file *.treefile and log file *.log).
 
-5. File Compression & Naming (optional)
+  5. File Compression & Naming (optional)
 
 To reduce submission size, compress all your files and sub-folders using the ZIP format only.
 The ZIP file must be named with your name and UPI for easy identification.
