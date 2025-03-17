@@ -23,9 +23,11 @@ or [icytree](https://icytree.org) if you prefer a software with a GUI,
 or [ggtree](https://bioconductor.org/packages/release/bioc/html/ggtree.html) if you prefer R.
 
 
-## Assignment 1
+## Assignments
 
-  coming soon ...
+1. [Assignment 1](Assignment1/README.md)
+
+2. Assignment 2 (not available yet)
 
 
 ## Useful links

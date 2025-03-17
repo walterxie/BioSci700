@@ -118,6 +118,8 @@ mafft --maxiterate 1000 --globalpair sequence.fasta > global.fasta
 To begin, ensure the alignment file is located in your working directory. Then, enter the following R code into the RStudio console. This code will load the necessary R libraries and import the alignment from the FASTA file into R:
 
 ```R
+# install.packages("ape")
+# install.packages("phangorn")
 library(ape)
 library(phangorn)
 
@@ -281,7 +283,7 @@ Once the analysis is complete, please attach the generated tree file (e.g., "cov
 Please visualize the maximum likelihood tree and attach the resulting image below (1 point). 
 
 **Advanced Requirement:**
-As an additional challenge (+1 point), color the branches of the tree according to the sample locations. Write a script to extract the mapping between taxon names and locations included in the taxon names, and use it to color the branches accordingly. If you create such a script, please submit the file with your report.
+As an additional challenge (+1 point), color the tips of the tree according to the sample locations. The file "Delta.txt" provides the mapping between taxon names and samples locations, and use it to color the branches accordingly. 
 
 **Answer starts:**
 
