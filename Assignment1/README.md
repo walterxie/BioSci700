@@ -13,13 +13,15 @@ Write your report using this template and save it as a PDF file.
 You may use [Overleaf](https://www.overleaf.com), MS Word, or Google Docs, and then export the final report as a PDF.
 The PDF file name must include your name and UPI for identification.
 
+{:start="2"}
   2. Completing the Report
 
 Update the author section in the template with your name and UPI in the header.
-Copy all questions and section titles from the template, and provide your answers accordingly.
+Copy all section and subsection titles from the template, along with the questions, and then provide your answers accordingly. Avoid copying the instructions to minimize the number of pages.
 Follow all instructions carefully to ensure proper setup and accurate responses from software tools.
 The questions are numbered in Roman numerals (e.g., **Question i:**). Each question carries one point, with an additional bonus point for clarity and a well-structured report.
 
+{:start="3"}
   3. Answering Questions
 
 Your responses should be written inside the designated answer blocks.
@@ -35,12 +37,14 @@ Your answer
 
 **Answer ends**
 
+{:start="4"}
   4. Finalising & Submitting Your Report
 
 Ensure all questions are answered and that your report is in PDF format.
 Verify that your report opens correctly before submission.
 Include all relevant figures, along with necessary log and tree files (e.g., iqtree’s tree file *.treefile and log file *.log).
 
+{:start="5"}
   5. File Compression & Naming (optional)
 
 To reduce submission size, compress all your files and sub-folders using the ZIP format only.
@@ -59,11 +63,11 @@ In this lab, we will learn downloading and preprocessing data, and explore widel
 
 In this section, we will practice using homologous sequences from different species to reconstruct evolutionary relationships. We will work with mitochondrial DNA from the following five species:
 
-– Homo sapiens (Human) NC_012920.1
-– Pan troglodytes (Chimpanzee) NC_001643.1
-– Canis lupus (Dog) NC_002008.4
-– Felis catus (Cat) NC_001700.1
-– Gallus gallus (Chicken) GU261700.1
+* Homo sapiens (Human) NC_012920.1
+* Pan troglodytes (Chimpanzee) NC_001643.1
+* Canis lupus (Dog) NC_002008.4
+* Felis catus (Cat) NC_001700.1
+* Gallus gallus (Chicken) GU261700.1
 
 ### 1.1 Downloading and preprocssing data 
 
@@ -122,7 +126,7 @@ setwd("~/WorkSpace/BioSci700/Assignment1")
 globSeqs <- read.FASTA(file.path("data", "global.fasta"))
 ```
 
-Next, modify the sequence names to retain only the "Species|Accession" portion, if you did not simplify them previously:
+Next, modify the sequence names to retain only the `Species|Accession` portion, if you did not simplify them previously:
 
 ```R
 # Modify sequence names (keep only "Species|Accession")
@@ -162,6 +166,7 @@ plot(treeUPGMA, use.edge.length=T, no.margin=TRUE)
 edgelabels(round(treeUPGMA$edge.length,4)) 
 ```
 
+{:start="2"}
 2. Neighbour-joining
 
 Next, we will compute the neighbour-joining tree. Since the tree produced is unrooted, we need to specify the "unrooted" argument when plotting:
@@ -182,6 +187,7 @@ Your answer
 **Answer ends**
 
 
+{:start="3"}
 3. Maximun likelihood
 
 Here, we will construct a Maximum Likelihood (ML) phylogenetic tree using IQ-TREE 2. IQ-TREE is a widely used tool for phylogenetic analysis that selects the "best-fit" substitution model and builds the tree accordingly.
