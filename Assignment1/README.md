@@ -288,11 +288,11 @@ Run [IQ-TREE](http://www.iqtree.org/#download) on the dataset to construct the m
 
 Once the analysis is complete, please attach the generated tree file (e.g., "cov100.alg.fa.treefile") and the IQ-TREE log file (e.g., "cov100.alg.fa.log") to your report. For detailed instructions, consult the online documentation and tutorials for IQ-TREE.
 
-**Question i (2 points):** 
+**Question i (1+1 points):** 
 Please visualize the maximum likelihood tree and attach the resulting image below. 
 
 **Advanced Requirement:**
-As an additional challenge (+1 point), color the tips of the tree according to the sample locations. The file "Delta.txt" provides the mapping between taxon names and samples locations, and use it to color the branches accordingly. 
+As an additional challenge (+1 point), color the tips of the tree according to the sample locations. The file "Delta.txt" provides the mapping between taxon names and sample locations, and uses it to color the branches accordingly. 
 
 **Answer starts:**
 
@@ -302,7 +302,7 @@ Your answer
 
 ### 2.2 Identify problems
 
-Considering our goal of discovering the evolutionary history through time, is it sufficient to only provide the phylogenetic tree constructed in the previous subsection?
+Considering our goal of discovering evolutionary history through time, is it sufficient to only provide the phylogenetic tree constructed in the previous subsection?
 
 **Question ii (2 points):** 
 Please identify at least two potential issues that arise from using only the ML tree for temporal signal analysis and list them below:
