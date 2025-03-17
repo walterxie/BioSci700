@@ -1,6 +1,6 @@
 ## Assignment1 : Alignment and Phylogenetic Reconstruction (15 marks)
 
-Due date: 4th April 2025
+Due date: 29th March 2025
 
 Your name (UPI)
 
