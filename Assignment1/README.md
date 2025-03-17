@@ -81,6 +81,13 @@ You can follow the following steps:
 4. Click "Send to"", choose "File", set the format to "FASTA", and click "Create file" to download;
 5. Locate the downloaded file (usually named "sequence.fasta"") and move it to your working directory.
 
+<figure class="image">
+  <a href="./figs/NIH.png">
+    <img src="./figs/NIH.png" alt="Fig 1: downloading sequences" style="width:500px;">
+  </a>
+  <figcaption>Fig 1: downloading sequences</figcaption>
+</figure> 
+
 For preparing the sequence file, open the FASTA file in a text editor and simplify the sequence labels by modifying the lines that start with ">".
 You can use the find option to search for every ">".
 Then, replace the long descriptions (e.g. NC_012920.1 Homo sapiens mitochondrion, complete genome) to a concise format (e.g. Human|NC_012920.1).
@@ -190,7 +197,7 @@ Your answer
 
 
 {:start="3"}
-3. Maximun likelihood
+3. Maximum likelihood
 
 Here, we will construct a Maximum Likelihood (ML) phylogenetic tree using IQ-TREE 2. IQ-TREE is a widely used tool for phylogenetic analysis that selects the "best-fit" substitution model and builds the tree accordingly.
 
@@ -318,9 +325,9 @@ Select "Import Date" to upload the downloaded file "Delta.txt" and replicate the
 
 <figure class="image">
   <a href="./figs/ParseDates.png">
-    <img src="./figs/ParseDates.png" alt="Fig 1: parse date" style="width:500px;">
+    <img src="./figs/ParseDates.png" alt="Fig 2: parse date" style="width:500px;">
   </a>
-  <figcaption>Fig 1: parse date</figcaption>
+  <figcaption>Fig 2: parse date</figcaption>
 </figure> 
 
 
