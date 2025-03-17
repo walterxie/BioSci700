@@ -5,20 +5,29 @@ Due date: 4th April 2025
 Your name (UPI)
 
 
-## Instruction
+## Instructions for report submission
 
-Please write a report using this template and save it into the PDF format. 
-You can either use [Overleaf](https://www.overleaf.com), or MS Word, or Google Doc, and then export the completed report as a PDF file. The PDF file name must contain your name and UPI.
+1. Report Format & Template Usage
 
-In your report, please replace the author into your name in the header above, including UPI insider the bracket.
-For the content of the report, you need to copy all the questions and the section titles from this template, and then fill in your answers accordingly. 
-Please follow the provided instructions carefully to set up the analysis and answer all questions, which are numbered using Roman numerals, such as **Question i:**.
-One point for each question, and one bonus point for **clarity** and producing a well-written report.
+Write your report using this template and save it as a PDF file.
+You may use [Overleaf](https://www.overleaf.com), MS Word, or Google Docs, and then export the final report as a PDF.
+The PDF file name must include your name and UPI for identification.
 
-Your responses to questions should be inside the answer blocks.
-Ensure that no answer blocks are overlooked, with the exception of the example provided below.
-Substitute 'Your answer' with your actual response to each question, limiting your answers to a maximum of 150 words.
-For questions that necessitate a screenshot, please ensure that the image is clear and legible.
+2. Completing the Report
+
+Update the author section in the template with your name and UPI in the header.
+Copy all questions and section titles from the template, and provide your answers accordingly.
+Follow all instructions carefully to ensure proper setup and accurate responses from software tools.
+The questions are numbered in Roman numerals (e.g., **Question i:**). Each question carries one point, with an additional bonus point for clarity and a well-structured report.
+
+3. Answering Questions
+
+Your responses should be written inside the designated answer blocks.
+Ensure that no answer blocks are left blank, except for the example provided in the template.
+Replace Your answer with your actual response, limiting each answer to a maximum of 150 words.
+For questions requiring screenshots, ensure all images are clear and legible.
+
+Example format:
 
 **Answer starts:**
 
@@ -26,44 +35,59 @@ Your answer
 
 **Answer ends**
 
-Ensure you answer all questions and submit your report in the PDF format.
-Before submitting, please verify that your report opens and displays correctly.
-Additionally, it's beneficial to include all relevant figures in your answers, along with the log files and tree files associated with your analysis.
-For example, iqtree's tree file (e.g., `*.treefile`) and log file (e.g., `*.log`).
+4. Finalising & Submitting Your Report
 
-To minimize the size of your submission, consider compressing the files, ensuring to use only the ZIP format for compatibility. Remember to add your name and UPI to the file name, and test if it can be decompressed properly before submission.
+Ensure all questions are answered and that your report is in PDF format.
+Verify that your report opens correctly before submission.
+Include all relevant figures, along with necessary log and tree files (e.g., iqtree’s tree file *.treefile and log file *.log).
 
+5. File Compression & Naming (optional)
 
-## 1. Multiple sequence alignment (MSA) application (4 points)
+To reduce submission size, compress all your files and sub-folders using the ZIP format only.
+The ZIP file must be named with your name and UPI for easy identification.
+Before submitting, ensure that the ZIP file can be extracted properly.
 
-In this section, we will practise how to use homologous sequences from different species to reconstruct evolutionary relationships. We choose mitochondrial DNA from five species:
-
-Homo sapiens (Human): NC_012920.1
-Pan troglodytes (Chimpanzee): NC_001643.1
-Canis lupus (Dog): NC_002008.4
-Felis catus (Cat): NC_001700.1
-Gallus gallus (Chicken): GU261700.1 
+By following these instructions, you will ensure a clear, well-organized, and properly formatted submission.
 
 
-### 1.1 Download data 
+## Project description
 
-Please use the above accession numbers to download the sequences from NIH https://www.ncbi.nlm.nih.gov/nuccore/.
+In this lab, we will learn downloading and preprocessing data, and explore widely used tools for sequence alignment and phylogenetic tree construction. To make the most of your lab time, please ensure that all [required software](https://walterxie.github.io/BioSci700/) is installed beforehand.
+
+
+## 1. Multiple sequence alignment (MSA) application (6 points)
+
+In this section, we will practice using homologous sequences from different species to reconstruct evolutionary relationships. We will work with mitochondrial DNA from the following five species:
+
+– Homo sapiens (Human) NC_012920.1
+– Pan troglodytes (Chimpanzee) NC_001643.1
+– Canis lupus (Dog) NC_002008.4
+– Felis catus (Cat) NC_001700.1
+– Gallus gallus (Chicken) GU261700.1
+
+### 1.1 Downloading and preprocssing data 
+
+Use the provided accession numbers to download the sequences from the NCBI Nucleotide Database (https://www.ncbi.nlm.nih.gov/nuccore/). Follow these steps:
 
 You can follow the following steps: 
-1. open the web page in a browser;
-2. type "NC_012920.1 OR NC_001643.1 OR NC_002008.4 OR NC_001700.1 OR GU261700.1" in the text field;
-3. click "Search" button, and select the top five results;
-4. click "Send to" and choose "File", then change the format to "FASTA", and click the button "Create file".
-5. find the downloaded file mostly named as "sequence.fasta".
 
-Copy the sequences file to your working directory. 
-Open it using any text editor, and then simplify the label by searching for every ">".
-For example, the 1st line, rename it to "Chicken|GU261700.1" (remove the rest texts in the label).
+1. Open the NCBI Nucleotide Database in a web browser;
+2. In the search bar, enter: "NC_012920.1 OR NC_001643.1 OR NC_002008.4 OR NC_001700.1 OR GU261700.1";
+3. Click the "Search" button and select the top five results;
+4. Click "Send to"", choose "File", set the format to "FASTA", and click "Create file" to download;
+5. Locate the downloaded file (usually named "sequence.fasta"") and move it to your working directory.
 
-We will conduct two different alignment method on this dataset and compare the results.
+For preparing the sequence file, open the FASTA file in a text editor and simplify the sequence labels by modifying the lines that start with ">".
+You can use the find option to search for every ">".
+Then, replace the long descriptions (e.g. NC_012920.1 Homo sapiens mitochondrion, complete genome) to a concise format (e.g. Human|NC_012920.1).
 
 
-**Question i:** Do you think we should apply the local or global alignment method for studying the  evolutionary history in species level? Why?
+### 1.2 Pairwise sequence alignment
+
+To begin, we must determine the most appropriate pairwise sequence alignment method for this analysis.
+
+**Question i:** 
+Should we apply the local or global alignment method when studying the evolutionary history at the species level? Why?
 
 **Answer starts:**
 
@@ -72,30 +96,140 @@ Your answer
 **Answer ends**
 
 
-### 1.2 Progressive method
+### 1.3 Progressive multiple sequence alignment (MSA) method
 
-These methods build the alignment step by step, starting from pairwise alignments and progressively adding more sequences.
-Here, we will use the software [MAFFT](https://mafft.cbrc.jp/alignment/software/manual/manual.html) to create the global alignment from the downloaded sequences. 
+Progressive MSA methods build alignments iteratively, starting with pairwise alignments and gradually adding more sequences to the alignment.
 
-Open the terminal, and use the following command line to create the alignment "global.fasta".
+For this analysis, we will use the software [MAFFT](https://mafft.cbrc.jp/alignment/software/manual/manual.html) to perform a global alignment on the downloaded sequences.
+
+To create the alignment file, "global.fasta", open the terminal and run the following command:
 
 ```bash
 mafft --maxiterate 1000 --globalpair sequence.fasta > global.fasta
 ```
 
 
-### 1.3 Tree-based method
+### 1.4 Pairwise distances
 
-These methods use a phylogenetic tree to guide the alignment process, aligning sequences based on their evolutionary relationships.
-Here, we will use another software [PRANK](https://ariloytynoja.github.io/prank-msa/docs/prank_installation.html) to create the tree-based alignment from the downloaded sequences. 
+To begin, ensure the alignment file is located in your working directory. Then, enter the following R code into the RStudio console. This code will load the necessary R libraries and import the alignment from the FASTA file into R:
 
-Open the terminal, first, use the following command line to create the guide tree "global.fasta.treefile" using iqtree. Replace "MY_PATH" to the parent folder path containing iqtree.
+```R
+library(ape)
+library(phangorn)
+
+# change this to your path
+setwd("~/WorkSpace/BioSci700/Assignment1")
+globSeqs <- read.FASTA(file.path("data", "global.fasta"))
+```
+
+Next, modify the sequence names to retain only the "Species|Accession" portion, if you did not simplify them previously:
+
+```R
+# Modify sequence names (keep only "Species|Accession")
+names(globSeqs) <- sub("^([^ ]+\\|[^ ]+).*", "\\1", names(globSeqs))
+globSeqs
+```
+
+Afterward, use the function `dist.ml` to create a distance matrix.
+Pairwise distances are usually calculated based on a model of molecular evolution, which accounts for different rates of mutation at different positions within the sequence.
+
+```R
+dm  <- dist.ml(m)
+dm
+```
+
+**Question ii:** 
+Which evolutionary model is used to compute the distances above? How should we interpret the distance matrix "dm" in the context of species evolution?
+
+**Answer starts:**
+
+Your answer
+
+**Answer ends**
+
+
+### 1.4 Phylogenetic reconstruction
+
+We will practise three algorithms to construct phylogenetic tree:
+
+1. UPGMA
+
+First, we will use the previous distance matrix "dm" to construct the UPGMA tree in R. We can visualize the tree using the "plot" function, and display the branch lengths using "edgelabels":
+
+```R
+treeUPGMA <- upgma(dm)
+plot(treeUPGMA, use.edge.length=T, no.margin=TRUE)
+edgelabels(round(treeUPGMA$edge.length,4)) 
+```
+
+2. Neighbour-joining
+
+Next, we will compute the neighbour-joining tree. Since the tree produced is unrooted, we need to specify the "unrooted" argument when plotting:
+
+```R
+treeNJ <- NJ(dm)
+plot(treeNJ, type="unrooted", use.edge.length=T, no.margin=TRUE)
+#edgelabels(round(treeNJ$edge.length,4))
+```
+
+**Question iii:** 
+What are the key assumptions behind UPGMA and neighbour-joining algorithms? How do these assumptions affect the accuracy of the resulting phylogenetic trees?
+
+**Answer starts:**
+
+Your answer
+
+**Answer ends**
+
+
+3. Maximun likelihood
+
+Here, we will construct a Maximum Likelihood (ML) phylogenetic tree using IQ-TREE 2. IQ-TREE is a widely used tool for phylogenetic analysis that selects the "best-fit" substitution model and builds the tree accordingly.
+
+Use the following command to generate a Maximum Likelihood tree from the aligned sequence file (global.fasta).
+Make sure to replace "MY_PATH" with the actual path to the directory containing iqtree2.
 
 ```bash
 /MY_PATH/bin/iqtree2 -s global.fasta
 ```
 
-Secondly, use the following command line to create the alignment given a guide tree.
+Upon execution, IQ-TREE 2 automatically selects the most suitable DNA substitution model using ModelFinder and then infers the best Maximum Likelihood tree based on that model.
+
+Check the log file generated by IQ-TREE (e.g., global.fasta.log). Identify the "best-fit" substitution model selected.
+
+**Question iv:** 
+What is the "best-fit" substitution model selected for this dataset? What is its log-likelihood?
+Provide a brief but precise description of the selected model and why it might be suitable for this dataset.
+
+**Answer starts:**
+
+Your answer
+
+**Answer ends**
+
+The resulting Maximum Likelihood tree will be saved in the file "global.fasta.treefile".
+Visualize the tree using a suitable tree viewer (e.g., FigTree, IcyTree, or R packages like ggtree).
+Please attach the image with your answer below. Ensure tip labels are clearly visible in the image.
+
+**Question v:** 
+What is the unit of branch lengths in this tree? In addition, describe key observations for evolutionary relationships.
+
+**Answer starts:**
+
+Your answer
+
+**Answer ends**
+
+
+### 1.5 Tree-based alignment method
+
+In the subsequent sections, we will apply two different multiple sequence alignment (MSA) methods to this dataset and compare the resulting alignments.
+
+
+These methods use a phylogenetic tree to guide the alignment process, aligning sequences based on their evolutionary relationships.
+Here, we will use another software [PRANK](https://ariloytynoja.github.io/prank-msa/docs/prank_installation.html) to create the tree-based alignment from the downloaded sequences. 
+
+Open the terminal, first, we will use the pervious result "global.fasta.treefile" as the guide tree,  and use the following command line to create the alignment.
 
 ```bash
 prank -d=sequence.fasta -o=treeb -t=global.fasta.treefile -F -showxml
@@ -104,21 +238,7 @@ prank -d=sequence.fasta -o=treeb -t=global.fasta.treefile -F -showxml
 Quickly read the webpage [PRANK differences](http://wasabiapp.org/software/prank/prank_differences/) or [their publication](https://academic.oup.com/mbe/article/33/4/1126/2579418).
 
 
-**Question ii:** Briefly explain how the tree-based alignment method to provide more accurate alignment compared to other progressive methods.
-
-**Answer starts:**
-
-Your answer
-
-**Answer ends**
-
-
-### 1.4 Compare results
-
-
-
-
-**Question iii:** 
+**Question vi:** Briefly explain how the tree-based alignment method to provide more accurate alignment compared to other progressive methods.
 
 **Answer starts:**
 
@@ -128,7 +248,8 @@ Your answer
 
 
 
-## 2. Maximum likelihood tree (5 points)
+
+## 2. Phylogenetic analysis with temporal data (3 points)
 
 Please download the [alignment](./data/nz_cluster.fasta) of one of largest SARS-CoV-2 clusters in Aotearoa New Zealand ([Geoghegan et al. 2020](https://www.nature.com/articles/s41467-020-20235-8#MOESM3)). The alignment consists of 81 SARS-CoV-2 genome sequences from infected patients, where the label contains the meta data of each sequence, such as the sample location by DHB, lineage, the collection date, etc. We will employ the maximum likelihood method using iqtree to produce a phylogenetic tree, and apply another software, TempEst, to explore the temporal signal.
 
@@ -137,15 +258,13 @@ Please attach the maximum likelihood tree file (e.g., "nz_cluster.treefile") and
 
 For the detail, please read the online documentation and tutorials of iqtree2.
 
-### 2.1 Identify the "best-fit" model
 
-Iqtree2 offers a wide range of DNA substitution models.
-Upon execution, it leverages ModelFinder to identify the optimal model for your data, subsequently building the tree using this model.
+### 2.1 Maximum likelihood tree
 
-<br>
+**Question i:** Please visualize the maximum likelihood tree, and attach the image with your answer below (1 point). 
 
-**Question i:** By referring to the iqtree log file (e.g., "nz_cluster.log"), what was the "best-fit" substitution model? What was its log-likelihood?
-Please provide a brief, yet precise, description of the selected model.
+The advanced requirement is to colour tree branches by sample locations (+1 point). 
+You write a script to extract the mapping file between taxon names and the locations inside the taxon names. Use it to colour branches. Please submit your script file with this report if you create one. 
 
 **Answer starts:**
 
@@ -153,10 +272,12 @@ Your answer
 
 **Answer ends**
 
-### 2.2 Results
+### 2.2 Identify problems
 
-**Question ii:** Please visualize the maximum likelihood tree, and attach the image with your answer below. The branches are preferred to be coloured by sample locations (0.5 point). The tip labels must be visible.
-What are the units of branch length in this maximum likelihood tree?
+
+Root? Branch lengths? Not time tree.
+
+**Question ii:** 
 
 **Answer starts:**
 
@@ -165,7 +286,8 @@ Your answer
 **Answer ends**
 
 
-## 3. Investigate temporal signal (6 points)
+
+## 3. Investigate temporal signal (5 points)
 
 We will now employ [TempEst](http://tree.bio.ed.ac.uk/software/tempest/) to analyse the temporal signal and 'clock-likeness' of the maximum likelihood tree generated by iqtree2.
 TempEst is specially designed for analysing trees that have not been inferred under a molecular-clock assumption to see how valid this assumption may be.

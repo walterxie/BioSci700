@@ -8,6 +8,8 @@ title: "BIOSCI 700: Phylogenetics"
 
 - R and R studio: https://posit.co/download/rstudio-desktop/
 
+- R packages: ape, phangorn.
+
 - MAFFT: https://mafft.cbrc.jp/alignment/software/
 
 - PRANK: http://wasabiapp.org/software/prank/
