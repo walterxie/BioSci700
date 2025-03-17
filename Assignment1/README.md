@@ -61,7 +61,7 @@ In this lab, we will learn downloading and preprocessing data, and explore widel
 
 ## 1. Multiple sequence alignment (MSA) application (6 points)
 
-In this section, we will practice using homologous sequences from different species to reconstruct evolutionary relationships. We will work with mitochondrial DNA from the following five species:
+In this section, we will practice creating a multiple sequence alignment (MSA) using homologous sequences from different species. Specifically, we will work with mitochondrial DNA from the following five species:
 
 * Homo sapiens (Human) NC_012920.1
 * Pan troglodytes (Chimpanzee) NC_001643.1
@@ -69,7 +69,7 @@ In this section, we will practice using homologous sequences from different spec
 * Felis catus (Cat) NC_001700.1
 * Gallus gallus (Chicken) GU261700.1
 
-### 1.1 Downloading and preprocssing data 
+### 1.1 Downloading and preprocessing data 
 
 Use the provided accession numbers to download the sequences from the NCBI Nucleotide Database (https://www.ncbi.nlm.nih.gov/nuccore/). Follow these steps:
 
@@ -91,7 +91,7 @@ Then, replace the long descriptions (e.g. NC_012920.1 Homo sapiens mitochondrion
 To begin, we must determine the most appropriate pairwise sequence alignment method for this analysis.
 
 **Question i:** 
-Should we apply the local or global alignment method when studying the evolutionary history at the species level? Why?
+Should we apply the local or global alignment method when studying evolutionary history at the species level? Why?
 
 **Answer starts:**
 
@@ -125,22 +125,22 @@ library(phangorn)
 
 # change this to your path
 setwd("~/WorkSpace/BioSci700/Assignment1")
-globSeqs <- read.FASTA(file.path("data", "global.fasta"))
+globAlign <- read.FASTA(file.path("data", "global.fasta"))
 ```
 
 Next, modify the sequence names to retain only the `Species|Accession` portion, if you did not simplify them previously:
 
 ```R
 # Modify sequence names (keep only "Species|Accession")
-names(globSeqs) <- sub("^([^ ]+\\|[^ ]+).*", "\\1", names(globSeqs))
-globSeqs
+names(globAlign) <- sub("^([^ ]+\\|[^ ]+).*", "\\1", names(globAlign))
+globAlign
 ```
 
 Afterward, use the function `dist.ml` to create a distance matrix.
 Pairwise distances are usually calculated based on a model of molecular evolution, which accounts for different rates of mutation at different positions within the sequence.
 
 ```R
-dm  <- dist.ml(m)
+dm  <- dist.ml(globAlign)
 dm
 ```
 
