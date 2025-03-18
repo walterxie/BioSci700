@@ -115,7 +115,7 @@ Progressive MSA methods build alignments iteratively, starting with pairwise ali
 
 For this analysis, we will use the software [MAFFT](https://mafft.cbrc.jp/alignment/software/manual/manual.html) to perform a global alignment on the downloaded sequences.
 
-To create the alignment file, "global.fasta", open the terminal and run the following command:
+To create the alignment file, "[global.fasta](./data/global.fasta)", open the terminal and run the following command:
 
 ```bash
 mafft --maxiterate 1000 --globalpair sequence.fasta > global.fasta
