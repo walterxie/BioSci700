@@ -4,7 +4,10 @@
 
 - Java 17 or higher (Install it, only if it is not available in your machine)
 
-- LPhy 1.6.1 https://github.com/LinguaPhylo/linguaPhylo/releases
+- LPhy 1.6.1 https://linguaphylo.github.io/setup/.
+
+**Note:** please follow the installation instructions to install LPhy Studio; otherwise, 
+LPhyBeast may have trouble launching.
 
 - BEAST 2.7.7  http://www.beast2.org
 
