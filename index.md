@@ -4,11 +4,6 @@
 
 - Java 17 or higher (Install it, only if it is not available in your machine)
 
-- LPhy 1.6.1 https://linguaphylo.github.io/setup/.
-
-**Note:** please follow the installation instructions to install LPhy Studio; otherwise, 
-LPhyBeast may have trouble launching.
-
 - BEAST 2.7.7  http://www.beast2.org
 
 - Tracer 1.7.2  https://github.com/beast-dev/tracer/releases
@@ -21,7 +16,7 @@ or [icytree](https://icytree.org) if you prefer a software with a GUI, or
 
 Use [Package Manager](https://www.beast2.org/managing-packages/) to install all required packages:
 
-- lphybeast 1.2.1
+
 
 
 
