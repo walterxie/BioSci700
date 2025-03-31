@@ -199,7 +199,7 @@ Your answer
 
 **Answer ends**
 
-
+{:start="4"} 
 4. Configure the site model
 
 	- Navigate to the "Site Model" tab. 
@@ -226,7 +226,7 @@ Your answer
 
 **Answer ends**
 
-
+{:start="5"} 
 5. Configure the clock model
 
 	- Navigate to the "Clock Model" tab. 
@@ -243,6 +243,7 @@ Your answer
 
 **Answer ends**
 
+{:start="6"} 
 6. Configure priors
 
 	- Navigate to the "Priors" tab. 
@@ -270,6 +271,7 @@ Your answer
 
 **Answer ends**
 
+{:start="7"} 
 7. Adjust the starting value or dimension for "bPopSizes" and "bGroupSizes"
 
 	- Open the Initialization Panel, by going to the "View" menu and select "Show initialization panel". 
@@ -282,6 +284,7 @@ Your answer
 	
 	- Apply the same settings to "bGroupSizes".
 
+{:start="8"} 
 8. Configure MCMC
 
 	- Navigate to the MCMC tab. 
@@ -320,6 +323,7 @@ Your answer
 
 **Answer ends**
 
+{:start="3"} 
 3. Long runs:
 
 Navigate to the BEAUti MCMC tab. If you close it, you can use the "File" menu to "load" the XML.
