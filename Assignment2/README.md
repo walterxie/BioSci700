@@ -44,7 +44,7 @@ Your answer
 
 Ensure all questions are answered and that your report is in PDF format. Verify that your report
 opens correctly before submission. Include all relevant figures, along with necessary log and tree
-files (e.g., BEAST tree file *.trees and log file *.log).
+files, such as BEAST log file *.log, summary tree file *.tree, and tree file *.trees (if not huge).
 
 {:start="5"}
   5. File Compression & Naming (optional)
@@ -309,13 +309,13 @@ Your answer
 Navigate to the BEAUti MCMC tab. If you close it, you can use the "File" menu to "load" the XML.
 Then, modify your MCMC settings to :
 
-		- Set the "Chain Length" to 30000000 (30 million), increase the length if necessary. 
-		
-		- Trace Log ("tracelog") → Set "Log Every" to 10000. 
-		
-		- Tree Log ("treelog") → Set "Log Every" to 10000 (same as tracelog for consistency). 
-		
-		- Screen Log ("screenlog") → Set "Log Every" to 1000000 to reduce on-screen output.
+- Set the "Chain Length" to 30000000 (30 million), increase the length if necessary. 
+
+- Trace Log ("tracelog") → Set "Log Every" to 10000. 
+
+- Tree Log ("treelog") → Set "Log Every" to 10000 (same as tracelog for consistency). 
+
+- Screen Log ("screenlog") → Set "Log Every" to 1000000 to reduce on-screen output.
 
 **Note:** using the same logging frequency for both the trace log and tree log ensures consistency
 in further analyses.
