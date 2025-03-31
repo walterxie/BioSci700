@@ -120,13 +120,13 @@ Your answer
 **Answer ends**
 
 
-### 2. Understanding the model (4 points)
+### 2. Understanding the model (3 points)
 
 Refer to the paper [(Drummond, Rambaut, Shapiro, & Pybus,
 2005)](https://doi.org/10.1093/molbev/msi103) and go through and comprehend the two skyline plots in
 Figure 1.
 
-**Question iii (2 point):** In your own words, briefly and precisely explain the Generalized Skyline Model and its key parameters. (Do not copy from the paper)
+**Question iii (1 point):** In your own words, briefly and precisely explain the Generalized Skyline Model and its key parameters. (Do not copy from the paper)
 
 **Answer starts:**
 
@@ -144,7 +144,7 @@ Your answer
 
 
 
-### 3. Setting up the analysis in BEAUti (6 points)
+### 3. Setting up the analysis in BEAUti (5 points)
 
 Follow these steps to prepare the data for analysis in BEAUti:
 
@@ -261,7 +261,7 @@ Your answer
  <figcaption>Fig 3: Clock Rate prior</figcaption>
 </figure>
 
-**Question viii (2 point):** Why are both Uniform and Normal prior unsuitable for estimating the
+**Question viii (1 point):** Why are both Uniform and Normal prior unsuitable for estimating the
 molecular clock rate? What summary statistics should be used to determine the sampling range of a
 prior? List them for this clock rate prior.
 
@@ -356,7 +356,7 @@ Your answer
 
 
 
-### 5. Analysing the log and generating Skyline plot (2 points)
+### 5. Analysing the log and generating Skyline plot (4 points)
 
 To streamline the lab process, we will now focus on one of your converged runs only. 
 
@@ -382,13 +382,25 @@ Press OK to reconstruct the past population dynamics.
  <figcaption>Fig 4: Skyline plot</figcaption>
 </figure>
 
-**Question xii (2 point):** 
+
+**Question xii (1 point):** 
 
 - Attach the result of Skyline plot. 
 
 - Explain why 2021.918 is used.
 
 - Explain the meaning of the x and y axes.
+
+**Answer starts:**
+
+Your answer
+
+**Answer ends**
+
+
+**Question xiii (2 point):** 
+
+- Explain what is the effective population size (Ne) meaning in Viral Phylogenetics.
 
 - Briefly describe the key events or trends observed in the plot.
 
@@ -431,7 +443,7 @@ The image below shows a screenshot of TreeAnnotator with the necessary settings 
 </figure>
 
 
-**Question xiii (2 point):** 
+**Question xiv (2 point):** 
 What is the Maximum a Posteriori (MAP) tree in Bayesian phylogenetics, 
 and does it always exist within the set of posterior sampled trees? 
 Explain why or why not.
@@ -457,7 +469,7 @@ section, expand it, and use the "Display:" drop-down list to respectively select
 
 You need to attached at least one image but no more than two figures to support your answers in this subsection. 
 
-**Question xiv (2 points):**
+**Question xv (2 points):**
 
 -   What is the estimated age of the most recent common ancestor (MRCA) for all samples, also known as root age, and what is the associated 95% HPD interval for this estimate?
 
@@ -470,7 +482,7 @@ Your answer
 **Answer ends**
 
 
-**Question xv (1 points):**
+**Question xvi (1 points):**
 Convert the mean root age into a specific date in the format (dd/M/yyyy), including the day, month (in English), and year. 
 Provide a detailed explanation of the steps involved in your conversion process.
 
@@ -481,11 +493,12 @@ Your answer
 **Answer ends**
 
 
-### 8. Report (2 points)
+### 8. Limitations (2 points)
 
-**Question xvi (< 150 words):**
-Research the history of the Delta variant outbreak in New Zealand and write a brief report explaining how the virus was likely spread, 
-based on your findings from this phylogenetic analysis.
+**Question xvii (< 150 words):**
+Understanding the limitations of your data and model is crucial for accurately interpreting the analysis results. 
+Please list two key limitations of this analysis setup, and discuss strategies to mitigate their negative impacts..
+
 
 **Answer starts:**
 
