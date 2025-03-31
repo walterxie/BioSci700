@@ -16,15 +16,13 @@ or [icytree](https://icytree.org) if you prefer a software with a GUI, or
 
 Use [Package Manager](https://www.beast2.org/managing-packages/) to install all required packages:
 
-
-
-
+- CCD
 
 ## Assignments
 
 1. [Assignment 1](Assignment1/README.md)
 
-2. Assignment 2 (not available yet)
+2. [Assignment 2]()
 
 
 ## Useful links
