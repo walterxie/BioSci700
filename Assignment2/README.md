@@ -171,7 +171,7 @@ Follow these steps to prepare the data for analysis in BEAUti:
 	- This will extract the dates from the second column of the file and populate the "Date (raw value)" column in the table.
 
 
-**Question v (2 point):** What is the significance of assigning dates to the tips of a phylogenetic tree, 
+**Question v (2 point):** What is the significance of assigning dates to the tips of a phylogenetic tree for this analysis, 
 and how does this transformation affect the interpretation of branch lengths, including the units of length?
 
 **Answer starts:**
