@@ -8,9 +8,12 @@
 
 - Tracer 1.7.2  https://github.com/beast-dev/tracer/releases
 
--   To visualize the tree, you may use [FigTree 1.4.4](http://tree.bio.ed.ac.uk/software/figtree/)
+- To visualize the tree, you may use [FigTree 1.4.4](http://tree.bio.ed.ac.uk/software/figtree/)
 or [icytree](https://icytree.org) if you prefer a software with a GUI, or
 [ggtree](https://bioconductor.org/packages/release/bioc/html/ggtree.html) if you prefer R.
+
+- Beagle (optional): this is a high-performance library that can perform the core calculations at the heart of
+most Bayesian and maximum likelihood phylogenetics packages. https://github.com/beagle-dev/beagle-lib/wiki
 
 ### Required BEAST 2 packages
 

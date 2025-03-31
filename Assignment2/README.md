@@ -158,6 +158,10 @@ Follow these steps to prepare the data for analysis in BEAUti:
 	
 	- To inspect the alignment, double-click on the partition to launch the viewer.
 
+In virus phylogenetic studies, the sampling dates for the virus sequences are typically known. 
+Each viral sample corresponds to a specific date when it was collected.
+These dates naturally provide a temporal direction from the root to the tips, so called "forward time".
+
 2. Configure Tip Dates
 
 	- Go to the Tip Dates tab and check "Use tip dates." 
@@ -169,17 +173,6 @@ Follow these steps to prepare the data for analysis in BEAUti:
 	- Change the file type option to "txt", then click OK. 
 	
 	- This will extract the dates from the second column of the file and populate the "Date (raw value)" column in the table.
-
-
-**Question v (2 point):** What is the significance of assigning dates to the tips of a phylogenetic tree for this analysis, 
-and how does this transformation affect the interpretation of branch lengths, including the units of length?
-
-**Answer starts:**
-
-Your answer
-
-**Answer ends**
-
 
 3. Ensure Proper Date Formatting
 
@@ -195,6 +188,17 @@ The final configuration should match the screenshot provided below:
  </a>
  <figcaption>Fig 1: Tip Dates</figcaption>
 </figure>
+
+
+**Question v (2 point):** What is the significance of assigning dates to the tips of a phylogenetic tree for this analysis, 
+and how does this transformation affect the interpretation of branch lengths, including the units of length?
+
+**Answer starts:**
+
+Your answer
+
+**Answer ends**
+
 
 4. Configure the site model
 
