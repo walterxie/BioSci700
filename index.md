@@ -1,4 +1,4 @@
---- title: "BIOSCI 700: Phylogenetics" ---
+# BIOSCI 700: Phylogenetics
 
 ## Required Software
 

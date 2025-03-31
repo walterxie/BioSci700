@@ -13,7 +13,8 @@ Write your report using this template and save it as a PDF file. You may use
 [Overleaf](https://www.overleaf.com), MS Word, or Google Docs, and then export the final report as a
 PDF. The PDF file name must include your name and UPI for identification.
 
-{:start="2"} 2. Completing the Report
+{:start="2"} 
+  2. Completing the Report
 
 Update the author section in the template with your name and UPI in the header. Copy all section and
 subsection titles from the template, along with the questions, and then provide your answers
@@ -22,7 +23,8 @@ carefully to ensure proper setup and accurate responses from software tools. The
 numbered in Roman numerals (e.g., **Question i:**). Please remove the asterisks and adjust the font
 size to a more suitable one when copying the markdown template.
 
-{:start="3"} 3. Answering Questions
+{:start="3"}
+  3. Answering Questions
 
 Your responses should be written inside the designated answer blocks. Ensure that no answer blocks
 are left blank, except for the example provided in the template. Replace Your answer with your
@@ -37,13 +39,15 @@ Your answer
 
 **Answer ends**
 
-{:start="4"} 4. Finalising & Submitting Your Report
+{:start="4"} 
+  4. Finalising & Submitting Your Report
 
 Ensure all questions are answered and that your report is in PDF format. Verify that your report
 opens correctly before submission. Include all relevant figures, along with necessary log and tree
 files (e.g., BEAST tree file *.trees and log file *.log).
 
-{:start="5"} 5. File Compression & Naming (optional)
+{:start="5"}
+  5. File Compression & Naming (optional)
 
 To reduce submission size, compress all your files and sub-folders using the ZIP format only. The
 ZIP file must be named with your name and UPI for easy identification. Before submitting, ensure
