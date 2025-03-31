@@ -189,8 +189,12 @@ Your answer
 
 The final configuration should match the screenshot provided below:
 
-<figure class="image"> <a href="./figs/TipDate.png"> <img src="./figs/TipDate.png" alt="Fig 1: Tip
-Dates" style="width:500px;"> </a> <figcaption>Fig 1: Tip Dates</figcaption> </figure>
+<figure class="image">
+ <a href="./figs/TipDate.png">
+  <img src="./figs/TipDate.png" alt="Fig 1: Tip Dates" style="width:500px;">
+ </a>
+ <figcaption>Fig 1: Tip Dates</figcaption>
+</figure>
 
 4. Configure the site model
 
@@ -202,8 +206,12 @@ Dates" style="width:500px;"> </a> <figcaption>Fig 1: Tip Dates</figcaption> </fi
 	
 	- Kappa (κ) → Estimate - Stationary distribution frequencies → Estimate
 
-<figure class="image"> <a href="./figs/SiteModel.png"> <img src="./figs/SiteModel.png" alt="Fig 2:
-Site Model" style="width:500px;"> </a> <figcaption>Fig 2: Site Model</figcaption> </figure>
+<figure class="image">
+ <a href="./figs/SiteModel.png">
+  <img src="./figs/SiteModel.png" alt="Fig 2: Site Model" style="width:500px;">
+ </a>
+ <figcaption>Fig 2: Site Model</figcaption>
+</figure>
 
 
 **Question vi (1 point):** What is rate heterogeneity? What are the parameters to model the rate heterogeneity in this panel?
@@ -241,8 +249,12 @@ Your answer
 	
 	- Observe the prior distribution and quantiles in the plot on the right side.
 
-<figure class="image"> <a href="./figs/ClockRate.png"> <img src="./figs/ClockRate.png" alt="Fig 3:
-Clock Rate" style="width:500px;"> </a> <figcaption>Fig 3: Clock Rate prior</figcaption> </figure>
+<figure class="image">
+ <a href="./figs/ClockRate.png">
+  <img src="./figs/ClockRate.png" alt="Fig 3: Clock Rate" style="width:500px;">
+ </a>
+ <figcaption>Fig 3: Clock Rate prior</figcaption>
+</figure>
 
 **Question viii (2 point):** Why are both Uniform and Normal prior unsuitable for estimating the
 molecular clock rate? What summary statistics should be used to determine the sampling range of a
@@ -355,6 +367,13 @@ To ensure accurate date estimates in the analysis, specify the "Age of the young
 In this case, the age is 2021.918.
 Press OK to reconstruct the past population dynamics. 
 
+<figure class="image">
+ <a href="./figs/Skyline.png">
+  <img src="./figs/Skyline.png" alt="Fig 4: Skyline plot" style="width:500px;">
+ </a>
+ <figcaption>Fig 4: Skyline plot</figcaption>
+</figure>
+
 **Question xii (2 point):** 
 
 - Attach the result of Skyline plot. 
@@ -397,10 +416,10 @@ The image below shows a screenshot of TreeAnnotator with the necessary settings 
 "?" will be replaced to the corresponding path. 
 
 <figure class="image"> 
-<a href="./figs/TreeAnnotator.png"> 
-<img src="./figs/TreeAnnotator.png" alt="Fig 4: TreeAnnotator" style="width:500px;"> 
-</a> 
-<figcaption>Fig 3: TreeAnnotator</figcaption> 
+ <a href="./figs/TreeAnnotator.png"> 
+  <img src="./figs/TreeAnnotator.png" alt="Fig 5: TreeAnnotator" style="width:500px;"> 
+ </a> 
+ <figcaption>Fig 5: TreeAnnotator</figcaption> 
 </figure>
 
 
