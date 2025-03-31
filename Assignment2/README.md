@@ -68,13 +68,11 @@ software](https://walterxie.github.io/BioSci700/) in advance.
 
 Objectives:
 
-- Understand how to infer population dynamics from genetic data.
+- Understand how to infer population dynamics from genetic data using a Coalescent Bayesian Skyline.
 
 - Learn how to set up and perform a Skyline analysis effectively.
 
-- Explore the strengths and limitations of Coalescent Bayesian Skyline.
-
-- Learn what is Birth-Death Skyline Model.
+- Practice interpreting the results of a Skyline analysis.
 
 
 ### Data
@@ -280,7 +278,7 @@ Once you have made these changes, save the setup as an XML file (e.g. BS4.xml) b
 the "File" menu.
 
 
-### 4. Run BEAST and checking convergence (4 points)
+### 4. Run BEAST and checking convergence (2 points)
 
 1. Run BEAST:
 
@@ -296,7 +294,7 @@ the "File" menu.
 	
 	- Open another software "Tracer" to assess whether the MCMC run has converged.
 
-**Question ix (2 point):** Please outline the criteria for determining MCMC convergence, and
+**Question ix (1 point):** Please outline the criteria for determining MCMC convergence, and
 evaluate whether this run has converged. If the run has not converged, suggest potential solutions
 to improve the run to meet convergence criteria.
 
@@ -311,7 +309,7 @@ Your answer
 Navigate to the BEAUti MCMC tab. If you close it, you can use the "File" menu to "load" the XML.
 Then, modify your MCMC settings to :
 
-		- Set the "Chain Length" to 30000000 (30 million). 
+		- Set the "Chain Length" to 30000000 (30 million), increase the length if necessary. 
 		
 		- Trace Log ("tracelog") → Set "Log Every" to 10000. 
 		
@@ -326,7 +324,9 @@ Save this to another XML file (e.g. BS4-long.xml), and then run it **twice** wit
 and output files in separate sub-directories to avoid overwriting. Check the convergence of your
 both runs using "Tracer" and run the analysis for longer if needed.
 
-**Question x (2 point):** Please provide the summary statistics for the key parameters in your analysis, and briefly explain their biological significance.
+**Question x (1 point):**
+Provide the screenshot of Tracer to prove both of your runs have converged using the criteria above (Max 2 figures).
+
 
 **Answer starts:**
 
@@ -335,7 +335,44 @@ Your answer
 **Answer ends**
 
 
-### 5. Summarising the posterior trees (2 points)
+
+### 5. Analysing the log and generating Skyline plot (2 points)
+
+To streamline the lab process, we will now focus on one of your converged runs only. 
+
+Open Tracer, 
+
+**Question xi (1 point):** Provide the summary statistics for the key parameters in your analysis, and briefly explain their biological significance.
+
+**Answer starts:**
+
+Your answer
+
+**Answer ends**
+
+Navigate to Analysis → Bayesian Skyline Reconstruction, and open the tree log file.
+To ensure accurate date estimates in the analysis, specify the "Age of the youngest tip."
+In this case, the age is 2021.918.
+Press OK to reconstruct the past population dynamics. 
+
+**Question xii (2 point):** 
+
+- Attach the result of Skyline plot. 
+
+- Explain why 2021.918 is used.
+
+- Explain the meaning of the x and y axes.
+
+- Briefly describe the key events or trends observed in the plot.
+
+**Answer starts:**
+
+Your answer
+
+**Answer ends**
+
+
+### 6. Summarising the posterior trees (2 points)
 
 Because of how peculiar and discrete tree space is, it is a bit harder to summarize and visualize
 the posterior distribution over phylogenetic trees. We will use a special tool for that, 
@@ -367,7 +404,7 @@ The image below shows a screenshot of TreeAnnotator with the necessary settings 
 </figure>
 
 
-**Question xi (2 point):** 
+**Question xiii (2 point):** 
 What is the Maximum a Posteriori (MAP) tree in Bayesian phylogenetics, 
 and does it always exist within the set of posterior sampled trees? 
 Explain why or why not.
@@ -380,7 +417,7 @@ Your answer
 
 
 
-### 6. Visualising the MAP tree (3 points)
+### 7. Visualising the MAP tree (3 points)
 
 Summary trees can be viewed using FigTree and DensiTree, the latter being distributed with BEAST 2. 
 
@@ -393,7 +430,7 @@ section, expand it, and use the "Display:" drop-down list to respectively select
 
 You need to attached at least one image but no more than two figures to support your answers in this subsection. 
 
-**Question xii (2 points):**
+**Question xiv (2 points):**
 
 -   What is the estimated age of the most recent common ancestor (MRCA) for all samples, also known as root age, and what is the associated 95% HPD interval for this estimate?
 
@@ -406,7 +443,7 @@ Your answer
 **Answer ends**
 
 
-**Question xiii (1 points):**
+**Question xv (1 points):**
 Convert the mean root age into a specific date in the format (dd/M/yyyy), including the day, month (in English), and year. 
 Provide a detailed explanation of the steps involved in your conversion process.
 
@@ -417,9 +454,9 @@ Your answer
 **Answer ends**
 
 
-### 7. Report (2 points)
+### 8. Report (2 points)
 
-**Question xiv (< 150 words):**
+**Question xvi (< 150 words):**
 Research the history of the Delta variant outbreak in New Zealand and write a brief report explaining how the virus was likely spread, 
 based on your findings from this phylogenetic analysis.
 
