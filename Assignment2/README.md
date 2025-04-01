@@ -278,11 +278,10 @@ Your answer
 	
 	- Expand the "bPopSizes" settings by clicking the black triangle icon. 
 	
-	- Update the starting "Value" to 10, 
+	- Update the starting "Value" of "bPopSizes" to 10, 
 	
-	- Keep "Dimension" as 4 (default), but adjust for future analyses if needed. 
+	- Change "Dimension" of both "bPopSizes" and "bGroupSizes" to 4, but adjust for future analyses if needed. 
 	
-	- Apply the same settings to "bGroupSizes".
 
 {:start="8"} 
 8. Configure MCMC
