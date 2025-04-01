@@ -334,7 +334,7 @@ Then, modify your MCMC settings to :
 
 - Tree Log ("treelog") → Set "Log Every" to 10000 (same as tracelog for consistency). 
 
-- Screen Log ("screenlog") → Set "Log Every" to 1000000 to reduce on-screen output.
+- Screen Log ("screenlog") → Set "Log Every" to 100000 to reduce on-screen output.
 
 **Note:** using the same logging frequency for both the trace log and tree log ensures consistency
 in further analyses.
