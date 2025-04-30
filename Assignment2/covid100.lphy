@@ -1,0 +1,28 @@
+data {
+  options = {ageDirection="forward", ageRegex="_(\d+-\d+-\d+)$"};
+  D = readFasta(file="data/cov100.fasta", options = options);
+  taxa = D.taxa();
+  L = D.nchar();
+  numGroups = 4;
+  w = taxa.length()-1;
+}
+model {
+  κ ~ LogNormal(meanlog=1.0, sdlog=0.5);
+  π ~ Dirichlet(conc=[2.0,2.0,2.0,2.0]);
+  // relative substitution rates
+  γ ~ LogNormal(meanlog=0.0, sdlog=2.0);
+  r ~ DiscretizeGamma(shape=γ, ncat=4, replicates=L);
+
+  // 7.120447e-05 8.251049e-04 9.561171e-03
+  μ ~ LogNormal(meanlog=-7.1, sdlog=1.25);
+
+  A ~ RandomComposition(k=numGroups, n=w);
+  // 0.1495821   20.0855369 2697.0394795
+  θ1 ~ LogNormal(meanlog=3.0, sdlog=2.5);
+  Θ ~ ExpMarkovChain(firstValue=θ1, n=numGroups);
+  
+  ψ ~ SkylineCoalescent(groupSizes=A, taxa=taxa, theta=Θ);
+
+  D ~ PhyloCTMC(L=L, Q=hky(kappa=κ, freq=π), siteRates=r, mu=μ, tree=ψ);
+}
+
