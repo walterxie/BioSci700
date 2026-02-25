@@ -143,3 +143,41 @@ write.table(nolist, "influenza_HA_CDS_info.tsv", sep = "\t",
 cat("CDS info saved to influenza_HA_CDS_info.tsv\n")
 
 
+###
+# match names 
+###
+
+# 1️⃣ Load DNA sequences
+dna <- readDNAStringSet("influenza_HA_raw.fasta")
+
+# 2️⃣ Load protein sequences
+aa <- readAAStringSet("influenza_HA_proteins.fasta")
+
+# 3️⃣ Extract accession from each sequence name
+# DNA names: ">CY121680.1 Influenza A virus ..."
+# Protein names: ">CY121680|AFM72832.1|A/California/07/2009"
+
+# Extract accession part
+dna_acc <- sapply(strsplit(names(dna), " "), `[`, 1)  # e.g., "CY121680.1"
+dna_acc <- sub("\\..*", "", dna_acc)  # remove version suffix ".1" if needed
+
+aa_acc <- sapply(strsplit(names(aa), "\\|"), `[`, 1)  # e.g., "CY121680"
+
+# 4️⃣ Build a mapping from DNA -> protein names
+name_map <- setNames(names(aa), aa_acc)
+
+# 5️⃣ Replace DNA sequence names using mapping
+new_dna_names <- name_map[dna_acc]
+
+# Check for any unmatched sequences
+if (any(is.na(new_dna_names))) {
+  warning("Some DNA sequences do not match protein accessions!")
+  print(dna_acc[is.na(new_dna_names)])
+}
+
+# 6️⃣ Assign new names
+names(dna) <- new_dna_names
+
+# 7️⃣ Write updated DNA FASTA
+writeXStringSet(dna, "influenza_HA_raw2.fasta")
+
