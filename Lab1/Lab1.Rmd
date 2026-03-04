@@ -1,0 +1,422 @@
+---
+title: "BioSci700 Assignment1"
+author: "Student Name (UPI)"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    df_print: paged
+    code_folding: show
+---
+
+# Assignment1: Alignment and Phylogenetic Reconstruction (25 points)
+
+**Due date:** Mon 27/3/2026 at 23:59
+
+## Lab Introduction and Objectives
+
+Welcome to this comprehensive lab on sequence alignment algorithms and multiple sequence analysis. 
+This lab is designed to give you hands-on experience with both theoretical understanding and practical implementation of alignment algorithms that are fundamental to bioinformatics.
+
+
+1. **File naming:** Save this file with your name and student ID: `Lab1_YourName_UPI.Rmd`
+2. **Code blocks:** Complete the code in the designated areas marked with `### Your code here` and `### Your code finished above`
+3. **Questions:** Answer all questions in the provided text blocks
+4. **Reproducibility:** Ensure all code is executable in R 4.2.x or later for marking
+5. **Documentation:** Comment your code appropriately for marking
+
+
+### Learning Objectives
+
+By the end of this lab, you will be able to:
+
+1. **Understand and implement pairwise alignment algorithms** using both manual implementation and R packages
+2. **Perform global sequence alignment** using the Needleman-Wunsch algorithm
+3. **Conduct multiple sequence alignment (MSA)** using various algorithms and evaluate their performance
+4. **Analyze and interpret alignment results** in biological context
+5. **Compare different alignment methods** and understand their appropriate applications
+
+### Background
+
+Sequence alignment is one of the most fundamental operations in bioinformatics. It allows us to:
+- Identify homologous sequences
+- Predict protein structure and function
+- Study evolutionary relationships
+- Identify conserved regions
+- Detect functional domains
+
+This lab combines theoretical understanding with practical skills using both custom implementations and established R packages like `Biostrings`, `msa`, and `DECIPHER`.
+
+---
+
+
+# Set up 
+
+We will use the following R libraries in this lab. These libraries can be installed using either the `install.packages()` function or `BiocManager::install()`. A complete installation script `setup.R` is available for download. Please update the working directory path to your local directory, which should contain all data files and this lab file.
+
+```{r, setup, include=FALSE}
+library(Biostrings)
+library(tidyverse)
+library(ape)
+library(phangorn)
+library(phytools)
+
+# please replace to your working dir
+knitr::opts_knit$set(root.dir = "~/WorkSpace/BioSci700/Lab1")
+```
+
+
+# Section 1: Pairwise Alignment Algorithms (6 points)
+
+Load two DNA sequences.
+
+```{r demo_sequences}
+# Create example sequences
+seq1 <- DNAString("ACGTTAGCTAGCTACGT")
+seq2 <- DNAString("TTTTTAGCTAGCTACGTAAAAAACCCCC")
+```
+
+Define the substitution matrix. Try to run the command without `baseOnly = TRUE` in a different R session to discover the difference.
+
+```{r demo_substitutionMatrix}
+substitutionMatrix = nucleotideSubstitutionMatrix(match = 2, mismatch = -1, baseOnly = TRUE)
+print(substitutionMatrix)
+```
+
+Needleman-Wunsch algorithm for global alignment.
+
+```{r demo_global_alignment}
+# Perform pairwise global alignment using pairwiseAlignment()
+# Use the following parameters: match = 2, mismatch = -1, gapOpening = -2, gapExtension = -1
+global_align <- pairwiseAlignment(seq1, seq2, 
+                                  type="global", 
+                                  substitutionMatrix = substitutionMatrix,
+                                  gapOpening = -2, 
+                                  gapExtension = -1)
+
+# Display the alignment
+print(global_align)
+
+# Extract alignment details
+align_score <- score(global_align)
+align_seq1 <- alignedPattern(global_align)
+align_seq2 <- alignedSubject(global_align)
+
+cat("\nAlignment Score:", align_score, "\n")
+```
+
+Local alignment.
+
+```{r demo_local_alignment}
+# Perform local alignment using pairwiseAlignment
+local_alig <- pairwiseAlignment(pattern = seq1, subject = seq2,
+                                type = "local",            # Local alignment
+                                substitutionMatrix = substitutionMatrix,
+                                gapOpening = -2,
+                                gapExtension = -1)
+
+# Display the alignment
+print(local_alig)
+
+# Extract alignment details
+align_score <- score(local_alig)
+cat("\nAlignment Score:", align_score, "\n")
+```
+
+**Question 1a (2 point):** 
+What is the __conserved region__ between these two sequences? Identify whether a global or local alignment algorithm is more appropriate for locating this specific segment. Additionally, name widely-used bioinformatics software tool that utilizes this algorithmic approach.  
+
+```
+Your answer here
+```
+
+**Question 1b (2 point):** 
+If we want to introduce gaps within the first few characters for the global alignment from the same two sequences, what the parameter(s) should be changed? Write the code below and show the result:
+
+```{r question_2}
+### Your code here
+
+
+### Your code finished above
+```
+
+
+**Question 1c (2 point):** 
+How is an alignment score used to evaluate the quality of a result? Compare the score from Question 2 with the previous score (labeled demo_global_alignment) and examine the resulting alignments. Explain the reasoning behind why a higher numerical score can sometimes produce a biologically inaccurate or 'worse' result.
+
+_Tip:_ in most biological contexts, substitutions (point mutations) generally occur much more frequently than indels (insertions and deletions).
+
+```
+Your answer here
+```
+
+---
+
+# Section 2: Multiple Sequence Alignment (MSA) Methods (14 points)
+
+This section explores different multiple sequence alignment algorithms and their applications.
+We use a built-in dataset "exampleAA.fasta" from the `msa` package, which contains the unaligned amino acid sequences representing prolyl 4-hydroxylase alpha subunits (often denoted as PH4H_...) from various organisms, including Homo sapiens, Rattus norvegicus, Mus musculus, and others.
+
+
+```{r exampleAA}
+library(msa)
+library(Biostrings)
+
+# Load the built-in example sequences 
+filepath <- system.file("examples", "exampleAA.fasta", package = "msa")
+sequences <- readAAStringSet(filepath)
+
+# Inspect the sequences before aligning
+print(sequences)
+nchar(sequences)   # note the unequal lengths — a realistic challenge for aligners
+```
+
+
+## Exercise 2.1: Basic MSA with Different Algorithms (6 points)
+
+Perform MSA on the unaligned amino acid sequences using three methods and print the results.
+
+```{r msa}
+# Run all three algorithms
+msa_clustalw  <- msa(sequences, method = "ClustalW")
+msa_clustalom <- msa(sequences, method = "ClustalOmega")
+msa_muscle    <- msa(sequences, method = "Muscle")
+
+# Print a summary of each alignment
+#print(msa_clustalw,  show = "complete")
+#print(msa_clustalom, show = "complete")
+#print(msa_muscle,    show = "complete")
+
+# Compare alignment widths (number of columns including gaps)
+cat("ClustalW width    :", msa_clustalw@unmasked@ranges@width[1], "\n")
+cat("ClustalOmega width:", msa_clustalom@unmasked@ranges@width[1], "\n")
+cat("MUSCLE width      :", msa_muscle@unmasked@ranges@width[1], "\n")
+```
+
+Use either R function `msaPrettyPrint()` or [Jalview](https://www.jalview.org) to visualize one of alignments.
+Note: `msaPrettyPrint()` requires a working LaTeX installation. 
+
+```
+# Pretty-print each alignment to PDF for comparison
+msaPrettyPrint(your_alignment,  output = "pdf", askForOverwrite = FALSE,
+               file = "clustalw_aln.pdf",  showNames = "left", showLogo = "top")
+```
+
+**Question 2.1a (2 points):**
+Select one alignment. Locate the primary conserved regions in your alignment and describe the overall pattern. For example, do you observe distinct blocks of high conservation or an even distribution? Are they in the beginning, middle, or end? Discuss which biological features, such as functional domains or active sites, likely account for this pattern.
+
+
+```
+Your answer here
+```
+
+
+**Question 2.1b (2 points):**
+
+Replace the 'my_example.png' file below with a screenshot of the conserved region from your own alignment. 
+The first 50 columns are sufficient, but ensure the taxa names remain visible.
+
+
+```{r image-caption, echo=FALSE, fig.cap="ClustalW alignment", out.width="70%", fig.align="center"}
+#getwd()
+knitr::include_graphics("my_example.png")
+```
+
+
+**Question 2.1c (2 point):**
+
+Review the lecture notes, in your own words, what is the key algorithmic difference between **progressive alignment** and **iterative refinement**? Why might iterative refinement produce a narrower or better-scoring alignment on divergent sequences?
+
+```
+Your answer here
+```
+
+
+
+## Exercise 2.2: MSA Quality Assessment (4 points)
+
+Assess the quality of the three alignments using a quantitative scoring approach.
+
+```{r msaConservationScore}
+# msaConservationScore uses a substitution matrix (BLOSUM62) to score each column.
+# Higher scores indicate more conserved / chemically similar residues in that column.
+cs_clustalw  <- msaConservationScore(msa_clustalw,  substitutionMatrix = BLOSUM62)
+cs_clustalom <- msaConservationScore(msa_clustalom, substitutionMatrix = BLOSUM62)
+cs_muscle    <- msaConservationScore(msa_muscle,    substitutionMatrix = BLOSUM62)
+
+# Helper function to compute gap statistics from an alignment
+calc_gap_stats <- function(aln) {
+  aln_matrix <- as.matrix(aln)
+  n_seq      <- nrow(aln_matrix)
+  n_col      <- ncol(aln_matrix)
+  
+  # Total gaps across entire alignment
+  total_gaps <- sum(aln_matrix == "-")
+  
+  # Percentage of cells that are gaps
+  gap_pct <- round(total_gaps / (n_seq * n_col) * 100, 2)
+  
+  # Number of columns containing at least one gap
+  cols_with_gap <- sum(apply(aln_matrix, 2, function(col) any(col == "-")))
+  
+  # Number of fully conserved columns (no gaps, all same residue)
+  fully_conserved <- sum(apply(aln_matrix, 2, function(col) {
+    length(unique(col)) == 1 && col[1] != "-"
+  }))
+  
+  data.frame(
+    Total_Gaps       = total_gaps,
+    Gap_Pct          = gap_pct,
+    Cols_With_Gap    = cols_with_gap,
+    Fully_Conserved  = fully_conserved
+  )
+}
+
+gap_clustalw  <- calc_gap_stats(msa_clustalw)
+gap_clustalom <- calc_gap_stats(msa_clustalom)
+gap_muscle    <- calc_gap_stats(msa_muscle)
+
+summary_scores <- data.frame(
+  Method          = c("ClustalW", "ClustalOmega", "MUSCLE"),
+  Width           = c(length(cs_clustalw),       length(cs_clustalom),       length(cs_muscle)),
+  Total_Score     = c(sum(cs_clustalw),           sum(cs_clustalom),           sum(cs_muscle)),
+  Mean_Score      = round(c(mean(cs_clustalw),    mean(cs_clustalom),          mean(cs_muscle)), 3),
+  Total_Gaps      = c(gap_clustalw$Total_Gaps,    gap_clustalom$Total_Gaps,    gap_muscle$Total_Gaps),
+  Gap_Pct         = c(gap_clustalw$Gap_Pct,       gap_clustalom$Gap_Pct,       gap_muscle$Gap_Pct),
+  Cols_With_Gap   = c(gap_clustalw$Cols_With_Gap, gap_clustalom$Cols_With_Gap, gap_muscle$Cols_With_Gap),
+  Fully_Conserved = c(gap_clustalw$Fully_Conserved, gap_clustalom$Fully_Conserved, gap_muscle$Fully_Conserved)
+)
+
+print(summary_scores)
+```
+
+
+
+**Question 2.2a (2 point):**
+Read the R code and document to briefly describe each of 7 assessments printed for 3 alignments. 
+
+```
+Your answer here
+```
+
+**Question 2.1b (2 point):**
+Identify which alignment is the 'best', and report the assessment(s) that you used for this decision.
+
+```
+Your answer here
+```
+
+
+## Exercise 2.3: Effect of Gap Penalties on Alignment (4 points)
+
+The previous exercises used default parameters. In this exercise you will directly
+manipulate **gap opening** and **gap extension** penalties in ClustalW to observe how
+they change the alignment — illustrating the mechanism that all progressive aligners use
+to control gap placement.
+
+> **Note:** ClustalOmega does not expose custom gap penalties in the `msa` interface
+> (it ignores `gapOpening` / `gapExtension` and issues a warning). This is itself an
+> important practical point: not all algorithms give you the same level of control.
+
+```{r msa_gaps}
+# Default ClustalW gap penalties (opening = 10, extension = 0.2)
+msa_default <- msa(sequences, method = "ClustalW")
+
+# Permissive: low opening penalty encourages many short gaps
+msa_permissive <- msa(sequences, method = "ClustalW",
+                      gapOpening = 3, gapExtension = 0.1)
+
+# Strict: high opening penalty discourages gaps, forces mismatches instead
+msa_strict <- msa(sequences, method = "ClustalW",
+                  gapOpening = 20, gapExtension = 2)
+
+# Compare widths and conservation scores
+gap_results <- data.frame(
+  Setting      = c("Default (10 / 0.2)", "Permissive (3 / 0.1)", "Strict (20 / 2.0)"),
+  Width        = c(
+    length(msaConservationScore(msa_default,    BLOSUM62)),
+    length(msaConservationScore(msa_permissive, BLOSUM62)),
+    length(msaConservationScore(msa_strict,     BLOSUM62))
+  ),
+  Mean_Score   = round(c(
+    mean(msaConservationScore(msa_default,    BLOSUM62)),
+    mean(msaConservationScore(msa_permissive, BLOSUM62)),
+    mean(msaConservationScore(msa_strict,     BLOSUM62))
+  ), 3)
+)
+print(gap_results)
+```
+
+Based on your results table, answer the following:
+
+**Question 2.3a (2 points):**
+Which gap penalty setting produces the widest alignment, and which the narrowest?
+Explain in one or two sentences why lower gap opening penalties lead to wider alignments.
+
+```
+Your answer here
+```
+
+**Question 2.3b (2 points):**
+Does the strict setting always produce a higher mean conservation score than the permissive setting? Why might forcing fewer gaps sometimes hurt rather than help conservation scores in a divergent protein family?
+
+```
+Your answer here
+```
+
+
+---
+
+# Section 3: Phylogenetic analysis (5 points)
+
+
+
+---
+
+## Lab Summary and Submission
+
+### Key Learning Points
+
+In this lab, you have:
+1. Implemented and compared pairwise alignment algorithms
+2. Used multiple sequence alignment methods with different algorithms
+3. Assessed alignment quality and conservation patterns
+4. Analyzed the impact of alignment choice on downstream analyses
+
+### Submission Checklist
+
+- [ ] All code blocks are completed and executable
+- [ ] All questions are answered with thoughtful responses
+- [ ] Plots and outputs are clearly visible
+- [ ] File is renamed appropriately with your name and student ID
+- [ ] Document knits to HTML without errors
+
+### Grading Rubric
+
+**Section 1 (8 points):**
+- Exercise 1.1: 2 points (correct implementation and interpretation)
+- Exercise 1.2: 3 points (algorithm implementation and comparison)
+- Exercise 1.3: 3 points (parameter analysis and biological insight)
+
+**Section 2 (9 points):**
+- Exercise 2.1: 4 points (multiple MSA implementations)
+- Exercise 2.2: 3 points (quality assessment and interpretation)
+- Exercise 2.3: 2 points (DECIPHER comparison)
+
+**Section 3 (8 points):**
+- Exercise 3.1: 3 points (conservation analysis)
+- Exercise 3.2: 3 points (phylogenetic analysis)
+- Exercise 3.3: 2 points (practical recommendations)
+
+**Total: 25 points**
+
+### Additional Notes
+
+- Partial credit will be awarded for incomplete but conceptually correct approaches
+- Code style and documentation contribute to the overall grade
+- Biological interpretation and critical thinking are highly valued
+
+---
+
+*Submit both the .Rmd file and the knitted .html file through the course management system.*
