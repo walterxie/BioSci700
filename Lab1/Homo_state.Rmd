@@ -1,3 +1,11 @@
+---
+title: "Step by step"
+output:
+  html_document:
+    code_folding: hide
+---
+
+
 ## Function: `get_homology_statements()`
 
 This function extracts the set of **homology statements** implied by a multiple
@@ -192,8 +200,7 @@ cat("Duplicates removed              :",
 #   col 3: S1 is gap    → skip
 #   col 4: both present → "S1|3|S2|3"
 
-hs <- get_homology_statements(aln)
-hs
+print(statements_unique)
 ```
 
 
