@@ -8,55 +8,46 @@ output:
     toc_float: true
     df_print: paged
     code_folding: show
+    highlight: tango       # colour the R code
 ---
 
 # Assignment1: Alignment and Phylogenetic Reconstruction (25 points)
 
-**Due date:** Mon 27/3/2026 at 23:59
+**Due date:** Mon 2/4/2026 at 23:59
 
 ## Lab Introduction and Objectives
 
-Welcome to this comprehensive lab on sequence alignment algorithms and multiple sequence analysis. 
-This lab is designed to give you hands-on experience with both theoretical understanding and practical implementation of alignment algorithms that are fundamental to bioinformatics.
-
+Welcome to this lab on sequence alignment and phylogenetic reconstruction. You will gain hands-on experience with the core computational methods used in molecular evolution — from pairwise alignment and multiple sequence alignment (MSA) to phylogenetic tree building and evolutionary rate estimation. Each section combines guided implementation with open-ended interpretation, so that you develop both practical coding skills and the biological reasoning needed to critically evaluate your results.
+Please follow the submission instructions below before starting:
 
 1. **File naming:** Save this file with your name and student ID: `Lab1_YourName_UPI.Rmd`
 2. **Code blocks:** Complete the code in the designated areas marked with `### Your code here` and `### Your code finished above`
 3. **Questions:** Answer all questions in the provided text blocks
-4. **Reproducibility:** Ensure all code is executable in R 4.2.x or later for marking
-5. **Documentation:** Comment your code appropriately for marking
+4. **Reproducibility:** Ensure all code runs in R 4.2.x or later without errors before submission
+5. **Documentation:** Comment your code clearly so that your reasoning is visible to the marker
 
 
-### Learning Objectives
+## Learning Objectives
 
 By the end of this lab, you will be able to:
 
-1. **Understand and implement pairwise alignment algorithms** using both manual implementation and R packages
-2. **Perform global sequence alignment** using the Needleman-Wunsch algorithm
-3. **Conduct multiple sequence alignment (MSA)** using various algorithms and evaluate their performance
-4. **Analyze and interpret alignment results** in biological context
-5. **Compare different alignment methods** and understand their appropriate applications
+1. Perform and interpret pairwise sequence alignment using global and local algorithms
+2. Run multiple sequence alignment using ClustalW, ClustalOmega, MUSCLE, and MAFFT, and evaluate the results quantitatively
+3. Quantify alignment disagreement using homology statement sets and symmetric difference
+4. Construct and compare phylogenetic trees using UPGMA, neighbour-joining, and maximum parsimony
+5. Estimate evolutionary rates from pairwise genetic distances using linear regression
 
-### Background
-
-Sequence alignment is one of the most fundamental operations in bioinformatics. It allows us to:
-- Identify homologous sequences
-- Predict protein structure and function
-- Study evolutionary relationships
-- Identify conserved regions
-- Detect functional domains
-
-This lab combines theoretical understanding with practical skills using both custom implementations and established R packages like `Biostrings`, `msa`, and `DECIPHER`.
 
 ---
 
 
 # Set up 
 
-We will use the following R libraries in this lab. These libraries can be installed using either the `install.packages()` function or `BiocManager::install()`. A complete installation script `setup.R` is available for download. Please update the working directory path to your local directory, which should contain all data files and this lab file.
+We will use the following R libraries in this lab. These libraries can be installed using either the `install.packages()` function or `BiocManager::install()`. A complete installation script [Setup.R](https://raw.githubusercontent.com/walterxie/BioSci700/refs/heads/main/Lab1/Setup.R) is available for download. Please update the working directory path to your local directory, which should contain all data files and this lab file.
 
 ```{r, setup, include=FALSE}
 library(Biostrings)
+library(msa)
 library(tidyverse)
 library(ape)
 library(phangorn)
@@ -67,7 +58,7 @@ knitr::opts_knit$set(root.dir = "~/WorkSpace/BioSci700/Lab1")
 ```
 
 
-# Section 1: Pairwise Alignment Algorithms (6 points)
+# Section 1: pairwise alignment algorithms (5 points)
 
 Load two DNA sequences.
 
@@ -131,10 +122,10 @@ What is the __conserved region__ between these two sequences? Identify whether a
 Your answer here
 ```
 
-**Question 1b (2 point):** 
+**Question 1b (1 point):** 
 If we want to introduce gaps within the first few characters for the global alignment from the same two sequences, what the parameter(s) should be changed? Write the code below and show the result:
 
-```{r question_2}
+```{r question_gaps}
 ### Your code here
 
 
@@ -153,7 +144,7 @@ Your answer here
 
 ---
 
-# Section 2: Multiple Sequence Alignment (MSA) Methods (14 points)
+# Section 2: multiple sequence alignment (MSA) methods (12 points)
 
 This section explores different multiple sequence alignment algorithms and their applications.
 We use a built-in dataset "exampleAA.fasta" from the `msa` package, which contains the unaligned amino acid sequences representing prolyl 4-hydroxylase alpha subunits (often denoted as PH4H_...) from various organisms, including Homo sapiens, Rattus norvegicus, Mus musculus, and others.
@@ -173,7 +164,7 @@ nchar(sequences)   # note the unequal lengths — a realistic challenge for alig
 ```
 
 
-## Exercise 2.1: Basic MSA with Different Algorithms (6 points)
+## Exercise 2.1: basic MSA with different algorithms (4 points)
 
 Perform MSA on the unaligned amino acid sequences using three methods and print the results.
 
@@ -182,17 +173,38 @@ Perform MSA on the unaligned amino acid sequences using three methods and print 
 msa_clustalw  <- msa(sequences, method = "ClustalW")
 msa_clustalom <- msa(sequences, method = "ClustalOmega")
 msa_muscle    <- msa(sequences, method = "Muscle")
+```
 
+Install MAFFT from https://mafft.cbrc.jp/alignment/software/, and then use the following command line to create the alignment file, named as "exampleAA_mafft.fasta".
+
+```bash
+mafft --auto --out exampleAA_mafft.fasta exampleAA.fasta
+```
+
+After the software finishes, use the following R code to load the alignment.
+
+```{r mafft}
+fileAA_mafft <- file.path(getwd(), "exampleAA_mafft.fasta")
+mafftAA <- readAAStringSet(fileAA_mafft)
+msa_mafft <- as(AAMultipleAlignment(as.character(mafftAA)), "MsaAAMultipleAlignment")
+```
+
+Check your alignments.
+
+```{r msa_len}
 # Print a summary of each alignment
 #print(msa_clustalw,  show = "complete")
 #print(msa_clustalom, show = "complete")
 #print(msa_muscle,    show = "complete")
+#print(msa_mafft,    show = "complete")
 
 # Compare alignment widths (number of columns including gaps)
 cat("ClustalW width    :", msa_clustalw@unmasked@ranges@width[1], "\n")
 cat("ClustalOmega width:", msa_clustalom@unmasked@ranges@width[1], "\n")
 cat("MUSCLE width      :", msa_muscle@unmasked@ranges@width[1], "\n")
+cat("MAFFT width      :", msa_mafft@unmasked@ranges@width[1], "\n")
 ```
+
 
 Use either R function `msaPrettyPrint()` or [Jalview](https://www.jalview.org) to visualize one of alignments.
 Note: `msaPrettyPrint()` requires a working LaTeX installation. 
@@ -214,7 +226,8 @@ Your answer here
 
 **Question 2.1b (2 points):**
 
-Replace the 'my_example.png' file below with a screenshot of the conserved region from your own alignment. 
+- Attach either the exported image from Jalview or PDF generated by `msaPrettyPrint()` of the whole alignment.
+- Replace the 'my_example.png' file below with a screenshot of the conserved region from your own alignment. 
 The first 50 columns are sufficient, but ensure the taxa names remain visible.
 
 
@@ -224,46 +237,83 @@ knitr::include_graphics("my_example.png")
 ```
 
 
-**Question 2.1c (2 point):**
 
-Review the lecture notes, in your own words, what is the key algorithmic difference between **progressive alignment** and **iterative refinement**? Why might iterative refinement produce a narrower or better-scoring alignment on divergent sequences?
+## Exercise 2.2: MSA quality assessment (5 points)
+
+Assess the quality of the three alignments using a quantitative scoring approach implemented by `msaConservationScore`.
+It computes a sum-of-pairs (SP) score for each alignment column. For each column, it takes every pairwise combination of amino acids, looks up their score in the substitution matrix (e.g. BLOSUM62), and sums them all up:
+
+```math
+column score = Σ BLOSUM62(residue_i, residue_j)  for all pairs i < j
+```
+
+For example, if a column contains `[A, A, A, V]` across 4 sequences, it computes all 6 pairs: `A-A, A-A, A-V, A-A, A-V, A-V`, by looking each pair up in BLOSUM62 and summing the scores. A column where all sequences share the same amino acid scores high, but a column full of different amino acids or gaps scores low or negative.
+
+
+```{r msaConservationScore}
+data(BLOSUM62)
+#print(BLOSUM62)
+
+# msaConservationScore uses a substitution matrix (BLOSUM62) to score each column.
+# Higher scores indicate more conserved / chemically similar residues in that column.
+cs_clustalw  <- msaConservationScore(msa_clustalw,  substitutionMatrix = BLOSUM62)
+cs_clustalom <- msaConservationScore(msa_clustalom, substitutionMatrix = BLOSUM62)
+cs_muscle    <- msaConservationScore(msa_muscle,    substitutionMatrix = BLOSUM62)
+cs_mafft     <- msaConservationScore(msa_mafft,     substitutionMatrix = BLOSUM62)
+
+summary_scores <- data.frame(
+  Method = c("ClustalW", "ClustalOmega", "MUSCLE", "MAFFT"),
+  Width  = c(length(cs_clustalw), length(cs_clustalom), length(cs_muscle), length(cs_mafft)),
+  Total_Score = c(sum(cs_clustalw), sum(cs_clustalom), sum(cs_muscle), sum(cs_mafft)),
+  Mean_Score= round(c(mean(cs_clustalw), mean(cs_clustalom), mean(cs_muscle), mean(cs_mafft)), 3)
+)
+
+print(summary_scores)
+```
+
+**Question 2.2a (2 point):**
+
+- Classify the four alignment methods above as either _progressive alignment_ or _iterative refinement_, and then  explain which of the two algorithm types would most likely produce a better-scoring alignment.
+- Among "Width", "Total_Score", and "Mean_Score", identify which is the most reasonable measure for comparing alignment quality across methods.
 
 ```
 Your answer here
 ```
 
 
+You also can compute gap statistics to assess the alignments.
 
-## Exercise 2.2: MSA Quality Assessment (4 points)
+**Question 2.2b (2 point):**
+Please complete the code below to compute four gap statistics for the alignment.
+Each statistic is described in the comment above its corresponding line.
 
-Assess the quality of the three alignments using a quantitative scoring approach.
-
-```{r msaConservationScore}
-# msaConservationScore uses a substitution matrix (BLOSUM62) to score each column.
-# Higher scores indicate more conserved / chemically similar residues in that column.
-cs_clustalw  <- msaConservationScore(msa_clustalw,  substitutionMatrix = BLOSUM62)
-cs_clustalom <- msaConservationScore(msa_clustalom, substitutionMatrix = BLOSUM62)
-cs_muscle    <- msaConservationScore(msa_muscle,    substitutionMatrix = BLOSUM62)
-
+```{r gap_statistics}
 # Helper function to compute gap statistics from an alignment
 calc_gap_stats <- function(aln) {
   aln_matrix <- as.matrix(aln)
   n_seq      <- nrow(aln_matrix)
   n_col      <- ncol(aln_matrix)
   
+  ###### 
+  # Please complete the code below to compute four gap statistics for the alignment.
+  # Each statistic is described in the comment above its corresponding line.
+  ###### 
+  
+  ### your code here
+  
   # Total gaps across entire alignment
-  total_gaps <- sum(aln_matrix == "-")
+  total_gaps <- NA
   
   # Percentage of cells that are gaps
-  gap_pct <- round(total_gaps / (n_seq * n_col) * 100, 2)
+  gap_pct <- NA
   
   # Number of columns containing at least one gap
-  cols_with_gap <- sum(apply(aln_matrix, 2, function(col) any(col == "-")))
+  cols_with_gap <- NA
   
   # Number of fully conserved columns (no gaps, all same residue)
-  fully_conserved <- sum(apply(aln_matrix, 2, function(col) {
-    length(unique(col)) == 1 && col[1] != "-"
-  }))
+  fully_conserved <- NA
+  
+  ### your code finished above
   
   data.frame(
     Total_Gaps       = total_gaps,
@@ -276,146 +326,427 @@ calc_gap_stats <- function(aln) {
 gap_clustalw  <- calc_gap_stats(msa_clustalw)
 gap_clustalom <- calc_gap_stats(msa_clustalom)
 gap_muscle    <- calc_gap_stats(msa_muscle)
+gap_mafft    <- calc_gap_stats(msa_mafft)
 
 summary_scores <- data.frame(
-  Method          = c("ClustalW", "ClustalOmega", "MUSCLE"),
-  Width           = c(length(cs_clustalw),       length(cs_clustalom),       length(cs_muscle)),
-  Total_Score     = c(sum(cs_clustalw),           sum(cs_clustalom),           sum(cs_muscle)),
-  Mean_Score      = round(c(mean(cs_clustalw),    mean(cs_clustalom),          mean(cs_muscle)), 3),
-  Total_Gaps      = c(gap_clustalw$Total_Gaps,    gap_clustalom$Total_Gaps,    gap_muscle$Total_Gaps),
-  Gap_Pct         = c(gap_clustalw$Gap_Pct,       gap_clustalom$Gap_Pct,       gap_muscle$Gap_Pct),
-  Cols_With_Gap   = c(gap_clustalw$Cols_With_Gap, gap_clustalom$Cols_With_Gap, gap_muscle$Cols_With_Gap),
-  Fully_Conserved = c(gap_clustalw$Fully_Conserved, gap_clustalom$Fully_Conserved, gap_muscle$Fully_Conserved)
+  Method = c("ClustalW", "ClustalOmega", "MUSCLE", "MAFFT"),
+  Total_Gaps = c(gap_clustalw$Total_Gaps, gap_clustalom$Total_Gaps, gap_muscle$Total_Gaps, gap_mafft$Total_Gaps),
+  Gap_Pct = c(gap_clustalw$Gap_Pct, gap_clustalom$Gap_Pct, gap_muscle$Gap_Pct, gap_mafft$Gap_Pct),
+  Cols_With_Gap = c(gap_clustalw$Cols_With_Gap, gap_clustalom$Cols_With_Gap, gap_muscle$Cols_With_Gap, gap_mafft$Cols_With_Gap),
+  Fully_Conserved = c(gap_clustalw$Fully_Conserved, gap_clustalom$Fully_Conserved, gap_muscle$Fully_Conserved, gap_mafft$Fully_Conserved)
 )
 
 print(summary_scores)
 ```
 
-
-
-**Question 2.2a (2 point):**
-Read the R code and document to briefly describe each of 7 assessments printed for 3 alignments. 
-
-```
-Your answer here
-```
-
-**Question 2.1b (2 point):**
-Identify which alignment is the 'best', and report the assessment(s) that you used for this decision.
+**Question 2.2c (1 point):**
+- Considering all assessment metrics, identify which alignment method performs the best, and justify your decision by reporting the specific assessment results on which it is based.
 
 ```
 Your answer here
 ```
 
 
-## Exercise 2.3: Effect of Gap Penalties on Alignment (4 points)
+## Exercise 2.3: symmetric difference of homology statement sets (4 points)
 
-The previous exercises used default parameters. In this exercise you will directly
-manipulate **gap opening** and **gap extension** penalties in ClustalW to observe how
-they change the alignment — illustrating the mechanism that all progressive aligners use
-to control gap placement.
+Each multiple sequence alignment makes a set of implicit evolutionary claims: every aligned column asserts that a specific position in one sequence is homologous to a specific position in another. Two alignments that produce different gap placements therefore disagree on which positions are evolutionarily equivalent, even if they look superficially similar. To quantify this disagreement, we use the `get_homology_statements()` function to extract the full set of homology pairs from each alignment, and `homology_sym_diff()` to measure how much any two alignments differ.
 
-> **Note:** ClustalOmega does not expose custom gap penalties in the `msa` interface
-> (it ignores `gapOpening` / `gapExtension` and issues a warning). This is itself an
-> important practical point: not all algorithms give you the same level of control.
+**Question 2.3a (2 point):**
 
-```{r msa_gaps}
-# Default ClustalW gap penalties (opening = 10, extension = 0.2)
-msa_default <- msa(sequences, method = "ClustalW")
+Complete the code below.
 
-# Permissive: low opening penalty encourages many short gaps
-msa_permissive <- msa(sequences, method = "ClustalW",
-                      gapOpening = 3, gapExtension = 0.1)
+```{r homology_statements}
+library(msa)
+library(Biostrings)
 
-# Strict: high opening penalty discourages gaps, forces mismatches instead
-msa_strict <- msa(sequences, method = "ClustalW",
-                  gapOpening = 20, gapExtension = 2)
+# ── Core function: extract homology statements from one MSA ──────────────────
+# A homology statement is a triplet: (seqA_name, posA_ungapped, posB_ungapped)
+# meaning "position posA in seqA is homologous to position posB in seqB"
+# because they appear in the same alignment column.
 
-# Compare widths and conservation scores
-gap_results <- data.frame(
-  Setting      = c("Default (10 / 0.2)", "Permissive (3 / 0.1)", "Strict (20 / 2.0)"),
-  Width        = c(
-    length(msaConservationScore(msa_default,    BLOSUM62)),
-    length(msaConservationScore(msa_permissive, BLOSUM62)),
-    length(msaConservationScore(msa_strict,     BLOSUM62))
-  ),
-  Mean_Score   = round(c(
-    mean(msaConservationScore(msa_default,    BLOSUM62)),
-    mean(msaConservationScore(msa_permissive, BLOSUM62)),
-    mean(msaConservationScore(msa_strict,     BLOSUM62))
-  ), 3)
-)
-print(gap_results)
+get_homology_statements <- function(aln) {
+  # Note: taxa order could be diff in MSA, this will affect the result. 
+  # Convert to AAStringSet (or DNAStringSet)
+  sorted_set <- as(aln, "AAStringSet")
+  # Sort the strings
+  sorted_set <- sorted_set[order(names(sorted_set))]
+  
+  aln_matrix <- as.matrix(sorted_set)
+  n_seq      <- nrow(aln_matrix)
+  n_col      <- ncol(aln_matrix)
+  seq_names  <- rownames(aln_matrix)
+  
+  ### your code here
+  
+  # ...
+  
+  ### your code finished above
+}
 ```
 
-Based on your results table, answer the following:
+Test your code. `eval=FALSE` tells knitr to display the code block in the knitted document but skip executing it entirely, so the incomplete `get_homology_statements()` function will not cause an error during knitting. Once the student completes the implementation they can remove `eval=FALSE` to run the test.
 
-**Question 2.3a (2 points):**
-Which gap penalty setting produces the widest alignment, and which the narrowest?
-Explain in one or two sentences why lower gap opening penalties lead to wider alignments.
+```{r homology_statements_test, echo=FALSE, eval=FALSE}
+library(testthat)
+test_that("get_homology_statements returns the exact expected statement set", {
+
+  # 3 sequences × 10 columns
+  #
+  # Col:   1    2    3    4    5    6    7    8    9   10
+  # SeqA:  A    C    D    E    -    F    G    H    I    K   <- internal gap col 5
+  # SeqC:  -    -    -    -    -    F    G    H    I    K   <- leading gap block cols 1-5
+  # SeqE:  A    C    -    E    -    F    G    -    -    -   <- scattered + trailing gaps
+  #
+  # Scenario per column:
+  # col 1,2,4  : gap in SeqC only          -> 1 pair emits (SeqA/SeqE)
+  # col 3      : gap in SeqC + SeqE        -> 0 pairs emit (SeqA alone)
+  # col 5      : all three sequences gap   -> 0 pairs emit
+  # col 6,7    : no gaps                   -> all 3 pairs emit
+  # col 8,9,10 : gap in SeqE only          -> 1 pair emits (SeqA/SeqC)
+
+  test_aln <- as(
+    AAMultipleAlignment(c(
+      SeqA = "ACDE-FGHIK",
+      SeqC = "-----FGHIK",
+      SeqE = "AC-E-FG---"
+    )), "MsaAAMultipleAlignment"
+  )
+
+  expected <- c(
+    # col 1: SeqC gap → SeqA/SeqE only
+    "SeqA|1|SeqE|1",
+    # col 2: SeqC gap → SeqA/SeqE only
+    "SeqA|2|SeqE|2",
+    # col 3: SeqC + SeqE gap → nothing emitted
+    # col 4: SeqC gap → SeqA/SeqE only (note: SeqE ungapped pos = 3)
+    "SeqA|4|SeqE|3",
+    # col 5: all gap → nothing emitted
+    # col 6: no gaps → all 3 pairs
+    "SeqA|5|SeqC|1", "SeqA|5|SeqE|4", "SeqC|1|SeqE|4",
+    # col 7: no gaps → all 3 pairs
+    "SeqA|6|SeqC|2", "SeqA|6|SeqE|5", "SeqC|2|SeqE|5",
+    # col 8: SeqE trailing gap → SeqA/SeqC only
+    "SeqA|7|SeqC|3",
+    # col 9: SeqE trailing gap → SeqA/SeqC only
+    "SeqA|8|SeqC|4",
+    # col 10: SeqE trailing gap → SeqA/SeqC only
+    "SeqA|9|SeqC|5"
+  )
+
+  result <- get_homology_statements(test_aln)
+
+  expect_setequal(result, expected)
+})
+```
+
+
+```{r homology_sym_diff}
+# ── Symmetric difference between two homology statement sets ────────────────
+homology_sym_diff <- function(stmts_A, stmts_B) {
+  
+  set_A   <- as.character(stmts_A)
+  set_B   <- as.character(stmts_B)
+  
+  only_A  <- setdiff(set_A, set_B)   # in A but not B (false positives of B)
+  only_B  <- setdiff(set_B, set_A)   # in B but not A (false positives of A)
+  shared  <- intersect(set_A, set_B) # homology statements both agree on
+  
+  list(
+    n_A          = length(set_A),
+    n_B          = length(set_B),
+    n_shared     = length(shared),
+    n_only_A     = length(only_A),   # SP-FP from B's perspective
+    n_only_B     = length(only_B),   # SP-FN from B's perspective
+    sym_diff     = length(only_A) + length(only_B),
+    jaccard_dist = 1 - length(shared) /
+      (length(set_A) + length(set_B) - length(shared))
+  )
+}
+```
+
+
+**Question 2.3b (1 point):**
+Your task is to understand the outputs of these two functions and build a summary table/data frame to compare the results of four alignments generated by four different MSA methods above.
+The code need to print this summary table, where the rows are the methods and the columns are the statistics created from two functions.
+In addition, you need to answer which two MSA method produce the most similar alignments for this dataset. 
+
+
+```{r homology_statements_results}
+# ── Extract homology statements for all three alignments ────────────────────
+cat("Extracting homology statements (this may take a moment)...\n")
+  
+  ### your code here
+  
+  # ...
+  
+  ### your code finished above
+  
+#print(results)
+```
+
 
 ```
 Your answer here
 ```
 
-**Question 2.3b (2 points):**
-Does the strict setting always produce a higher mean conservation score than the permissive setting? Why might forcing fewer gaps sometimes hurt rather than help conservation scores in a divergent protein family?
+---
+
+# Section 3: phylogenetic analysis - part 1 (4 points)
+
+```{r, setup2, include=FALSE}
+library(tidyverse)
+library(ape)
+library(Biostrings)
+library(phangorn)
+library(phytools)
+```
+
+
+Secondly, we will use the libraries “phangorn” and “phytools” to create and plot trees. 
+Please note you need to use [Dingue virus data](./Dengue4.env.nex) to make the following analysis.
+
+```{r Dengue4}
+sq = read.nexus.data("Dengue4.env.nex")
+# convert the list of vectors into DNAbin object
+# so phangorn functions can take it as the input
+dnaBin <- sq %>% lapply(.,paste0,collapse="") %>% 
+  unlist %>% DNAStringSet %>% as.DNAbin 
+```
+
+## Exercise 3.1: pairwise genetic distances
+
+```{r dist.ml}
+dm  <- dist.ml(dnaBin)
+# only first 6 taxa
+print(as.matrix(dm)[1:6, 1:6])
+```
+
+**Question 3a (1 point):**
+- What is the unit of pairwise distances return by `dist.ml`? 
+- The El Salvador sequences appear twice — D4ElSal83 and D4ElSal94, collected 11 years apart. Show the process and result to calculate the approximate evolutionary rate (substitutions per site per year) between these two sequences using their pairwise distance and their collection year difference. 
 
 ```
-Your answer here
+Your answer
+```
+
+## Exercise 3.2: UPGMA
+
+Now, we will compute the distance matrix d and produce the UPGMA tree. 
+Use `plot` function to draw the tree, and use `edgelabels` to show branch lengths.
+
+```{r}
+dm  <- dist.ml(dnaBin)
+
+treeUPGMA <- upgma(dm)
+plot(treeUPGMA, use.edge.length=T, no.margin=TRUE)
+edgelabels(round(treeUPGMA$edge.length,4)) 
+```
+
+
+## Exercise 3.3: neighbour-joining
+
+Then compute the neighbour-joining tree. As it produces unrooted trees, 
+you need to add the “unrooted” argument to the `plot` function.
+
+```{r}
+treeNJ <- NJ(dm)
+plot(treeNJ, type="unrooted", use.edge.length=T, no.margin=TRUE)
+#edgelabels(round(treeNJ$edge.length,4))
+```
+You can print the tree as the Newick format:
+
+```{r newick}
+cat(write.tree(treeNJ))
+```
+
+
+**Question 3b (2 points):** 
+a. Identify the taxon with a negative branch length and record its name and branch length value below. 
+b. What does a negative branch length mean biologically and computationally? 
+c. How should it be handled before using the tree for downstream analysis?
+
+```
+Your answer
+```
+
+## Exercise 3.4:  Parsimony
+
+Print the parsimony scores.
+
+```{r}
+parsimony(c(treeUPGMA, treeNJ), as.phyDat(dnaBin))
+```
+
+Which tree should be used as a starting tree?
+
+We then use the UPGMA tree as a starting tree, and perform nearest-neighbor interchanges (NNI) to find the maximum parsimony tree.
+
+```{r}
+treePars <- optim.parsimony(treeUPGMA, as.phyDat(dnaBin), rearrangements = "NNI")
+plot(treePars, type="unrooted", use.edge.length=T, no.margin=TRUE)
+```
+
+
+## Exercise 3.5: Robinson-Foulds (RF) distance
+
+The Robinson-Foulds (RF) distance is used to compare the topology of two phylogenetic trees by counting the number of splits (bipartitions) present in one tree but not the other. You can use `RF.dist` function in `phangorn` to compute this.
+
+**Question 3c (1 point):**
+
+```{r something_wrong}
+RF.dist(treeUPGMA, treeNJ)
+
+RF.dist(treeUPGMA, treePars)
+
+RF.dist(treeNJ, treePars)
+```
+
+The code above runs in R without any error messages, but some of it contains conceptual mistakes. Identify at least one mistake and explain why it is incorrect.
+
+```
+Your answer
+```
+
+# Section 4: regression-based evolutionary rate estimation (4 points + 1 bonus)
+
+## Background
+
+The evolutionary rate is one of the most important parameters for biologist. One early heuristic approach to estimate it is use all pairwise distances simultaneously by fitting a linear regression of genetic distance against collection year difference. Under a strict molecular clock assumption, this relationship should be linear.
+
+## Task
+
+Using the distance matrix `dm` from Section 3 and the year-parsing code provided below, write an R script that performs a regression-based molecular clock estimation. You can either use the following three steps as a guide or completely write your own. 
+
+## Implementation and interpretation (4 points)
+
+Parse collection years from sequence names.
+Each sequence name encodes a 2-digit year suffix (e.g. D4Thai78 = 1978). Use the provided `parse_year()` function to convert all sequence names into 4-digit collection years.
+
+```{r}
+# ── Parse year from sequence names ───────────────────────────────────────────
+# Assumes 2-digit year suffix e.g. "D4Thai78" → 1978
+parse_year <- function(name) {
+  yr2 <- as.integer(substr(name, nchar(name) - 1, nchar(name)))
+  ifelse(yr2 > 24, 1900 + yr2, 2000 + yr2)
+}
+
+seq_names <- labels(dm)
+years     <- setNames(sapply(seq_names, parse_year), seq_names)
+cat("Parsed years:\n")
+print(years)
+```
+
+__Step 1__ — Build a tidy data frame of all unique pairwise comparisons.
+
+Construct a data frame with one row per unique sequence pair containing 4 columns: the columns "Seq_A" and "Seq_B" for the pair of sequence names, "Distance" (the pairwise distance from `dm`) and "Time_Diff" (the absolute difference in collection year between the two sequences). 
+
+You could convert both matrices to long format and join, and then include only the lower triangle of the distance matrix to avoid counting each pair twice. The recommended data frame could look like:
+
+```
+Number of unique pairs: 136 
+      Seq_A     Seq_B    Distance Time_Diff
+1 D4Brazi82 D4ElSal83 0.002022928         1
+2 D4Brazi82 D4ElSal94 0.011536079        12
+3 D4ElSal83 D4ElSal94 0.010852552        11
+```
+
+__Step 2__ — Fit a linear regression and report the three key statistics.
+
+Fit a linear model using a formula syntax to model "Distance" as a function of "Time_Diff".
+Report "slope", "intercept", and "R-squared".
+
+
+```{r}
+# ── Build year difference matrix and convert both matrices to long format ─────
+# Tip: outer() creates an n×n matrix of all pairwise absolute year differences
+# as.data.frame(as.table(as.matrix())) converts a matrix to Var1, Var2, Freq columns
+
+# ── Convert both matrices to long format and join ────────────────────────────
+
+# ── Fit linear regression ─────────────────────────────────────────────────────
+
+  ### your code here
+  
+  # ...
+  
+  ### your code finished above
+
+```
+
+__Step 3__ — Interpret the result.
+
+**Question 4a (1 point):** 
+Based on the regression output, discuss the biological meaning of each statistic.
+
+```
+Your answer
+```
+
+
+## Visualization (Bonus 1 point)
+
+Plot all pairwise comparisons as a scatter plot with the regression line overlaid using ggplot2. Your plot must include:
+
+- Points with transparency
+- A regression line with a 95% confidence interval ribbon
+- Axis labels and a descriptive title
+- An on-plot annotation showing the intercept, rate, and R²
+
+
+```{r}
+# ── Build annotation label ───────────────────────────────────────────────────
+
+# ── ggplot ────────────────────────────────────────────────────────────────────
+
+  ### your code here
+  
+  # ...
+  
+  ### your code finished above
+
+#print(p)
+
+# ── Save to PNG ───────────────────────────────────────────────────────────────
+#ggsave( filename = "evolutionary_rate.png", plot = p, width = 8, height = 6 )
 ```
 
 
 ---
 
-# Section 3: Phylogenetic analysis (5 points)
+## Submission Checklist
 
-
-
----
-
-## Lab Summary and Submission
-
-### Key Learning Points
-
-In this lab, you have:
-1. Implemented and compared pairwise alignment algorithms
-2. Used multiple sequence alignment methods with different algorithms
-3. Assessed alignment quality and conservation patterns
-4. Analyzed the impact of alignment choice on downstream analyses
-
-### Submission Checklist
-
-- [ ] All code blocks are completed and executable
-- [ ] All questions are answered with thoughtful responses
-- [ ] Plots and outputs are clearly visible
-- [ ] File is renamed appropriately with your name and student ID
-- [ ] Document knits to HTML without errors
+- File is renamed with your name and student ID: Lab1_YourName_UPI.Rmd
+- All code blocks are completed and run without errors
+- All questions are answered with clear and thoughtful responses
+- All plots and printed outputs are visible in the knitted document
+- The document knits to HTML without errors
+- All figures and .Rmd are included
 
 ### Grading Rubric
 
-**Section 1 (8 points):**
-- Exercise 1.1: 2 points (correct implementation and interpretation)
-- Exercise 1.2: 3 points (algorithm implementation and comparison)
-- Exercise 1.3: 3 points (parameter analysis and biological insight)
-
-**Section 2 (9 points):**
-- Exercise 2.1: 4 points (multiple MSA implementations)
-- Exercise 2.2: 3 points (quality assessment and interpretation)
-- Exercise 2.3: 2 points (DECIPHER comparison)
-
-**Section 3 (8 points):**
-- Exercise 3.1: 3 points (conservation analysis)
-- Exercise 3.2: 3 points (phylogenetic analysis)
-- Exercise 3.3: 2 points (practical recommendations)
-
-**Total: 25 points**
-
-### Additional Notes
-
-- Partial credit will be awarded for incomplete but conceptually correct approaches
-- Code style and documentation contribute to the overall grade
-- Biological interpretation and critical thinking are highly valued
+| Section | Component | Points |
+|---|---|---|
+| **Section 1** | Question 1a — conserved region and algorithm identification | 2 |
+| | Question 1b — code to introduce gaps | 1 |
+| | Question 1c — score interpretation and biological reasoning | 2 |
+| **Section 1 total** | | **5** |
+| **Section 2** | Question 2.1a — visualisation and conserved region description | 2 |
+| | Question 2.1b — alignment screenshot | 2 |
+| | Question 2.2a — algorithm classification and best metric | 2 |
+| | Question 2.2b — gap statistics implementation | 2 |
+| | Question 2.2c — best alignment method with justification | 1 |
+| | Question 2.3a — `get_homology_statements()` implementation | 2 |
+| | Question 2.3b — summary table and most similar method pair | 1 |
+| **Section 2 total** | | **12** |
+| **Section 3** | Question 3a — distance units and manual rate calculation | 1 |
+| | Question 3b — negative branch length identification and handling | 2 |
+| | Question 3c — RF distance conceptual mistake | 1 |
+| **Section 3 total** | | **4** |
+| **Section 4** | Steps 1–2 — tidy data frame and regression implementation | 3 |
+| | Question 4a — biological interpretation of regression statistics | 1 |
+| | Bonus — ggplot2 visualisation with annotation | 1 |
+| **Section 4 total** | | **4 + 1 bonus** |
+| **Grand total** | | **25 + 1 bonus** |
 
 ---
 
