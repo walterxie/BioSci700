@@ -10,6 +10,8 @@
 
 - [MAFFT](https://mafft.cbrc.jp/alignment/software/) 
 
+- [Jalview](https://www.jalview.org)
+
 Required R packages:
 
 - Download and run a installation script 
