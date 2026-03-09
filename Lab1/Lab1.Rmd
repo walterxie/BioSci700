@@ -22,7 +22,10 @@ Please follow the submission instructions below before starting:
 
 1. **File naming:** Save this file with your name and student ID: `Lab1_YourName_UPI.Rmd`
 2. **Code blocks:** Complete the code in the designated areas marked with `### Your code here` and `### Your code finished above`
-3. **Questions:** Answer all questions in the provided text blocks
+3. **Questions:** Answer all questions in the provided text blocks marked with 
+```
+Your answer here
+```
 4. **Reproducibility:** Ensure all code runs in R 4.2.x or later without errors before submission
 5. **Documentation:** Comment your code clearly so that your reasoning is visible to the marker
 
