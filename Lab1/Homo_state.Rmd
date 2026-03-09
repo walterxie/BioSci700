@@ -1,0 +1,201 @@
+## Function: `get_homology_statements()`
+
+This function extracts the set of **homology statements** implied by a multiple
+sequence alignment. Each statement encodes that a specific residue position in
+one sequence is evolutionarily equivalent to a specific position in another,
+because they co-occur in the same alignment column.
+
+---
+
+## Setup
+
+Before running the exercises, ensure the following packages are loaded and the
+helper alignment object is ready. This small two-sequence alignment is used
+throughout the worked examples to illustrate how `get_homology_statements()`
+maps alignment columns to ungapped residue positions.
+```{r setup}
+library(msa)
+library(Biostrings)
+library(testthat)
+
+# Two sequences × 4 columns
+#
+# Col:  1    2    3    4
+# S1:   A    C    -    E     <- gap at col 3
+# S2:   A    -    D    E     <- gap at col 2
+#
+# Ungapped position mapping:
+#   S1: col 1 → pos 1 (A),  col 2 → pos 2 (C),  col 3 → NA,     col 4 → pos 3 (E)
+#   S2: col 1 → pos 1 (A),  col 2 → NA,          col 3 → pos 2 (D), col 4 → pos 3 (E)
+#
+# Homology statements emitted:
+#   col 1: both present → "S1|1|S2|1"
+#   col 2: S2 is gap    → skip
+#   col 3: S1 is gap    → skip
+#   col 4: both present → "S1|3|S2|3"
+
+aln <- as(
+  AAMultipleAlignment(c(S1 = "AC-E", S2 = "A-DE")),
+  "MsaAAMultipleAlignment"
+)
+```
+
+
+### Step 1: Sort sequences by name
+  
+  Taxa order can differ between alignments produced by different algorithms.
+Sorting alphabetically by name guarantees that the same sequence pair always
+generates the same statement string, regardless of which aligner was used.
+```{r step1-sort}
+# Convert alignment to AAStringSet and sort sequences alphabetically by name
+sorted_set <- as(aln, "AAStringSet")
+sorted_set <- sorted_set[order(names(sorted_set))]
+
+# Inspect the sorted sequence names
+sorted_set
+```
+
+**Q1.** Why would leaving sequences in their original (unsorted) order cause
+two alignments of the same sequences to produce non-comparable homology
+statement sets?
+  
+---
+  
+### Step 2: Convert to a character matrix
+  
+  A matrix representation gives direct access to any residue by row (sequence)
+and column (alignment position), which is required for the column-by-column
+scan in later steps.
+```{r step2-matrix}
+# Convert sorted alignment to a plain character matrix
+aln_matrix <- as.matrix(sorted_set)
+n_seq      <- nrow(aln_matrix)
+n_col      <- ncol(aln_matrix)
+seq_names  <- rownames(aln_matrix)
+
+cat("Sequences :", n_seq, "\n")
+cat("Columns   :", n_col, "\n")
+cat("Names     :", paste(seq_names, collapse = ", "), "\n")
+```
+
+**Q2.** What does each row and each column of `aln_matrix` represent?
+  What character is used to represent a gap?
+  
+---
+  
+### Step 3: Map alignment columns to ungapped positions
+  
+  For each sequence, build a lookup vector that translates an alignment column
+index into the corresponding ungapped residue position. Gap characters (`-`)
+are assigned `NA` because they do not represent a real residue.
+```{r step3-ungapped}
+# For each sequence, map column index → ungapped residue position (NA for gaps)
+col_to_ungapped <- lapply(seq_len(n_seq), function(i) {
+  residue_positions <- rep(NA_integer_, n_col)
+  ungapped_pos      <- 0L
+  for (col in seq_len(n_col)) {
+    if (aln_matrix[i, col] != "-") {
+      ungapped_pos <- ungapped_pos + 1L
+      residue_positions[col] <- ungapped_pos
+    }
+  }
+  residue_positions
+})
+names(col_to_ungapped) <- seq_names
+
+# Inspect the mapping for the first sequence (first 20 columns)
+cat("Column-to-ungapped mapping for", seq_names[1], "(first 20 cols):\n")
+print(col_to_ungapped[[seq_names[1]]][1:20])
+```
+
+**Q3.** For a sequence `"AC-DE"`, what would `col_to_ungapped` contain
+at column 3? At column 4? Explain why.
+
+---
+  
+### Step 4: Generate all sequence pairs
+  
+  For *n* sequences there are *n(n−1)/2* unique pairs. Each pair will be
+inspected at every alignment column in the next step.
+```{r step4-pairs}
+# Enumerate all unique sequence pairs
+seq_pairs <- combn(seq_names, 2, simplify = FALSE)
+
+cat("Number of sequence pairs:", length(seq_pairs), "\n")
+cat("Expected (n*(n-1)/2)    :", n_seq * (n_seq - 1) / 2, "\n")
+```
+
+**Q4.** For 4 sequences, how many unique pairs are there?
+  Verify your answer matches the output above.
+
+---
+  
+### Step 5: Emit homology statements column by column
+  
+  For every alignment column and every sequence pair, a homology statement is
+emitted only when **both** sequences have a real residue at that column.
+If either has a gap, no homology is claimed and the pair is skipped.
+Each statement is stored as `"seqA|posA|seqB|posB"`.
+```{r step5-emit}
+# Emit a homology statement for each column where both sequences have a residue
+statements <- character(0)
+
+for (col in seq_len(n_col)) {
+  for (pair in seq_pairs) {
+    seqA <- pair[1]
+    seqB <- pair[2]
+    posA <- col_to_ungapped[[seqA]][col]
+    posB <- col_to_ungapped[[seqB]][col]
+    
+    if (!is.na(posA) && !is.na(posB)) {
+      stmt <- paste(seqA, posA, seqB, posB, sep = "|")
+      statements <- c(statements, stmt)
+    }
+  }
+}
+
+cat("Raw statements generated:", length(statements), "\n")
+cat("First 6 statements:\n")
+print(head(statements, 6))
+```
+
+**Q5.** What does the statement `"SeqA|3|SeqB|5"` mean biologically?
+  Why is a statement **not** emitted when one sequence has a gap at a column?
+  
+---
+  
+### Step 6: Return the unique statement set
+  
+  Identical alignment columns would produce duplicate statements for the same
+position pair. Applying `unique()` ensures the result is a true set, which
+is required for the set-theoretic operations in `homology_sym_diff()`.
+```{r step6-unique}
+# Remove duplicates to obtain the final homology statement set
+statements_unique <- unique(statements)
+
+cat("Statements before deduplication:", length(statements),        "\n")
+cat("Statements after  deduplication:", length(statements_unique), "\n")
+cat("Duplicates removed              :", 
+    length(statements) - length(statements_unique), "\n")
+```
+
+**Q6.** Under what alignment condition would duplicates appear?
+  Why does `homology_sym_diff()` require the input to be a unique set?
+  
+---
+
+
+```{r test}
+# Homology statements emitted:
+#   col 1: both present → "S1|1|S2|1"
+#   col 2: S2 is gap    → skip
+#   col 3: S1 is gap    → skip
+#   col 4: both present → "S1|3|S2|3"
+
+hs <- get_homology_statements(aln)
+hs
+```
+
+
+
+
