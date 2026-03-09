@@ -1,12 +1,13 @@
 ### Download sequences
-### @Copyright ChatGPT :-)
+### @Copyright ChatGPT and Claude :-)
 
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-
-BiocManager::install("genbankr")
-BiocManager::install("Biostrings")
-install.packages("rentrez")   # if not installed
+###
+#if (!requireNamespace("BiocManager", quietly = TRUE))
+#  install.packages("BiocManager")
+#BiocManager::install("genbankr")
+#BiocManager::install("Biostrings")
+#install.packages("rentrez")   # if not installed
+###
 
 library(rentrez)
 
@@ -16,7 +17,7 @@ setwd("~/WorkSpace/BioSci700/Lab1")
 # download DNA
 ###
 
-metadata <- read.delim("influenza_HA_20_metadata.tsv", stringsAsFactors = FALSE)
+metadata <- read.delim("influenza_H3N2_HA.tsv", stringsAsFactors = FALSE)
 accessions <- metadata$accession
 
 # Fetch FASTA sequences from NCBI
@@ -34,12 +35,12 @@ writeLines(fasta_sequences, "influenza_HA_raw.fasta")
 # translate DNA
 ###
 
-library(Biostrings)
+#library(Biostrings)
 
-dna <- readDNAStringSet("influenza_HA_raw.fasta")
-aa  <- translate(dna)
+#dna <- readDNAStringSet("influenza_HA_raw.fasta")
+#aa  <- translate(dna)
 
-writeXStringSet(aa, "influenza_HA_translated.fasta")
+#writeXStringSet(aa, "influenza_HA_translated.fasta")
 
 
 ###

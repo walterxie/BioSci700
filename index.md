@@ -1,31 +1,27 @@
 # BIOSCI 700: Phylogenetics
 
-## Required Software
+## Assignment 1
 
-- Java 17 or higher (Install it, only if it is not available in your machine)
+[Assignment 1](Lab1/Lab1.html) and [Assignment 1 Notebook](Lab1/Lab1.Rmd)
 
-- BEAST 2.7.7  http://www.beast2.org
+### Required Software
 
-- Tracer 1.7.2  https://github.com/beast-dev/tracer/releases
+- [R >4.2.x](https://cran.r-project.org) and [R studio](https://posit.co/download/rstudio-desktop/);
 
-- To visualize the tree, you may use [FigTree 1.4.4](http://tree.bio.ed.ac.uk/software/figtree/)
-or [icytree](https://icytree.org) if you prefer a software with a GUI, or
-[ggtree](https://bioconductor.org/packages/release/bioc/html/ggtree.html) if you prefer R.
+- [MAFFT](https://mafft.cbrc.jp/alignment/software/) 
 
-- Beagle (optional): this is a high-performance library that can perform the core calculations at the heart of
-most Bayesian and maximum likelihood phylogenetics packages. https://github.com/beagle-dev/beagle-lib/wiki
+Required R packages:
 
-### Required BEAST 2 packages
+- Download and run a installation script 
+[Setup.R](https://raw.githubusercontent.com/walterxie/BioSci700/refs/heads/main/Lab1/Setup.R)
+to install the required R packages.
+Use `library()` to check if the installation is successful.
 
-Use [Package Manager](https://www.beast2.org/managing-packages/) to install all required packages:
+### Required data
 
-- CCD
+- [exampleAA.fasta](Lab1/exampleAA.fasta)
 
-## Assignments
-
-1. [Assignment 1](Assignment1/README.md)
-
-2. [Assignment 2](Assignment2/README.md)
+- [Dengue4.env.nex](Lab1/Dengue4.env.nex)
 
 
 ## Useful links
