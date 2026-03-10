@@ -35,6 +35,9 @@ Use `library()` to check if the installation is successful.
 - [R tutorial for vectorisation](https://sahirbhatnagar.com/biosR/vectorization-apply-and-for-loops.html), 
 and [apply(), lapply(), sapply(), and tapply() in R](https://www.geeksforgeeks.org/r-language/apply-lapply-sapply-and-tapply-in-r/)
 
+- [R tidyverse - data transformation](https://r4ds.hadley.nz/data-transform.html) 
+and [R tidyverse - data tidying](https://r4ds.hadley.nz/data-tidy.html)
+
 - [R tutorial joins](https://r4ds.hadley.nz/joins.html#sec-mutating-joins)
 
 - [R ggplot2](https://ggplot2.tidyverse.org/articles/ggplot2.html)
