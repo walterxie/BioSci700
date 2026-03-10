@@ -137,7 +137,7 @@ If we want to introduce gaps within the first few characters for the global alig
 
 
 **Question 1c (2 point):** 
-How is an alignment score used to evaluate the quality of a result? Compare the score from Question 2 with the previous score (labeled demo_global_alignment) and examine the resulting alignments. Explain the reasoning behind why a higher numerical score can sometimes produce a biologically inaccurate or 'worse' result.
+How is an alignment score used to evaluate the quality of a result? Compare the score from Question 1b with the previous score (labeled demo_global_alignment) and examine the resulting alignments. Explain the reasoning behind why a higher numerical score can sometimes produce a biologically inaccurate or 'worse' result.
 
 _Tip:_ in most biological contexts, substitutions (point mutations) generally occur much more frequently than indels (insertions and deletions).
 
