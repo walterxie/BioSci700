@@ -2926,7 +2926,7 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">BioSci700 Assignment1</h1>
 <h4 class="author">Student Name (UPI)</h4>
-<h4 class="date">10 March, 2026</h4>
+<h4 class="date">11 March, 2026</h4>
 
 </div>
 
@@ -3292,32 +3292,31 @@ of homology pairs from each alignment, and
 differ.</p>
 <p><strong>Question 2e (2 point):</strong></p>
 <p>Complete the code below.</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a><span class="fu">library</span>(msa)</span>
-<span id="cb44-2"><a href="#cb44-2" tabindex="-1"></a><span class="fu">library</span>(Biostrings)</span>
-<span id="cb44-3"><a href="#cb44-3" tabindex="-1"></a></span>
-<span id="cb44-4"><a href="#cb44-4" tabindex="-1"></a><span class="co"># ── Core function: extract homology statements from one MSA ──────────────────</span></span>
-<span id="cb44-5"><a href="#cb44-5" tabindex="-1"></a><span class="co"># A homology statement is a triplet: (seqA_name, posA_ungapped, posB_ungapped)</span></span>
-<span id="cb44-6"><a href="#cb44-6" tabindex="-1"></a><span class="co"># meaning &quot;position posA in seqA is homologous to position posB in seqB&quot;</span></span>
-<span id="cb44-7"><a href="#cb44-7" tabindex="-1"></a><span class="co"># because they appear in the same alignment column.</span></span>
-<span id="cb44-8"><a href="#cb44-8" tabindex="-1"></a></span>
-<span id="cb44-9"><a href="#cb44-9" tabindex="-1"></a>get_homology_statements <span class="ot">&lt;-</span> <span class="cf">function</span>(aln) {</span>
-<span id="cb44-10"><a href="#cb44-10" tabindex="-1"></a>  <span class="co"># Note: taxa order could be diff in MSA, this will affect the result. </span></span>
-<span id="cb44-11"><a href="#cb44-11" tabindex="-1"></a>  <span class="co"># Convert to AAStringSet (or DNAStringSet)</span></span>
-<span id="cb44-12"><a href="#cb44-12" tabindex="-1"></a>  sorted_set <span class="ot">&lt;-</span> <span class="fu">as</span>(aln, <span class="st">&quot;AAStringSet&quot;</span>)</span>
-<span id="cb44-13"><a href="#cb44-13" tabindex="-1"></a>  <span class="co"># Sort the strings</span></span>
-<span id="cb44-14"><a href="#cb44-14" tabindex="-1"></a>  sorted_set <span class="ot">&lt;-</span> sorted_set[<span class="fu">order</span>(<span class="fu">names</span>(sorted_set))]</span>
-<span id="cb44-15"><a href="#cb44-15" tabindex="-1"></a>  </span>
-<span id="cb44-16"><a href="#cb44-16" tabindex="-1"></a>  aln_matrix <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(sorted_set)</span>
-<span id="cb44-17"><a href="#cb44-17" tabindex="-1"></a>  n_seq      <span class="ot">&lt;-</span> <span class="fu">nrow</span>(aln_matrix)</span>
-<span id="cb44-18"><a href="#cb44-18" tabindex="-1"></a>  n_col      <span class="ot">&lt;-</span> <span class="fu">ncol</span>(aln_matrix)</span>
-<span id="cb44-19"><a href="#cb44-19" tabindex="-1"></a>  seq_names  <span class="ot">&lt;-</span> <span class="fu">rownames</span>(aln_matrix)</span>
-<span id="cb44-20"><a href="#cb44-20" tabindex="-1"></a>  </span>
-<span id="cb44-21"><a href="#cb44-21" tabindex="-1"></a>  <span class="do">### your code here</span></span>
-<span id="cb44-22"><a href="#cb44-22" tabindex="-1"></a>  </span>
-<span id="cb44-23"><a href="#cb44-23" tabindex="-1"></a>  <span class="co"># ...</span></span>
-<span id="cb44-24"><a href="#cb44-24" tabindex="-1"></a>  </span>
-<span id="cb44-25"><a href="#cb44-25" tabindex="-1"></a>  <span class="do">### your code finished above</span></span>
-<span id="cb44-26"><a href="#cb44-26" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a><span class="co"># ── Core function: extract homology statements from one MSA ──────────────────</span></span>
+<span id="cb44-2"><a href="#cb44-2" tabindex="-1"></a><span class="co"># This function extracts the set of homology statements implied by a multiple sequence alignment. </span></span>
+<span id="cb44-3"><a href="#cb44-3" tabindex="-1"></a><span class="co"># Each statement encodes that a specific residue position in one sequence is evolutionarily </span></span>
+<span id="cb44-4"><a href="#cb44-4" tabindex="-1"></a><span class="co"># equivalent to a specific position in another, because they co-occur in the same alignment column.</span></span>
+<span id="cb44-5"><a href="#cb44-5" tabindex="-1"></a></span>
+<span id="cb44-6"><a href="#cb44-6" tabindex="-1"></a>get_homology_statements <span class="ot">&lt;-</span> <span class="cf">function</span>(aln) {</span>
+<span id="cb44-7"><a href="#cb44-7" tabindex="-1"></a>  <span class="co"># Note: taxa order could be diff in MSA, this will affect the result. </span></span>
+<span id="cb44-8"><a href="#cb44-8" tabindex="-1"></a>  <span class="co"># Convert to AAStringSet (or DNAStringSet)</span></span>
+<span id="cb44-9"><a href="#cb44-9" tabindex="-1"></a>  <span class="co"># Sort the strings</span></span>
+<span id="cb44-10"><a href="#cb44-10" tabindex="-1"></a>  </span>
+<span id="cb44-11"><a href="#cb44-11" tabindex="-1"></a>  <span class="co"># Create a function col_to_ungapped to map alignment columns to ungapped positions </span></span>
+<span id="cb44-12"><a href="#cb44-12" tabindex="-1"></a>  <span class="co"># For each sequence, build a vector mapping column index → ungapped position</span></span>
+<span id="cb44-13"><a href="#cb44-13" tabindex="-1"></a>  <span class="co"># Gaps (-) are assigned NA (no ungapped position)</span></span>
+<span id="cb44-14"><a href="#cb44-14" tabindex="-1"></a>  </span>
+<span id="cb44-15"><a href="#cb44-15" tabindex="-1"></a>  <span class="co"># Then, for each column, for each pair of sequences (A, B),</span></span>
+<span id="cb44-16"><a href="#cb44-16" tabindex="-1"></a>  <span class="co"># if both have a residue (not a gap), emit the homology statement:</span></span>
+<span id="cb44-17"><a href="#cb44-17" tabindex="-1"></a>  <span class="co"># &quot;seqA:posA ~ seqB:posB&quot;</span></span>
+<span id="cb44-18"><a href="#cb44-18" tabindex="-1"></a>  <span class="co"># Store as a character set for fast symmetric difference later</span></span>
+<span id="cb44-19"><a href="#cb44-19" tabindex="-1"></a>  </span>
+<span id="cb44-20"><a href="#cb44-20" tabindex="-1"></a>  <span class="do">### your code here</span></span>
+<span id="cb44-21"><a href="#cb44-21" tabindex="-1"></a>  </span>
+<span id="cb44-22"><a href="#cb44-22" tabindex="-1"></a>  <span class="co"># ...</span></span>
+<span id="cb44-23"><a href="#cb44-23" tabindex="-1"></a>  </span>
+<span id="cb44-24"><a href="#cb44-24" tabindex="-1"></a>  <span class="do">### your code finished above</span></span>
+<span id="cb44-25"><a href="#cb44-25" tabindex="-1"></a>}</span></code></pre></div>
 <p>Test your code. <code>eval=FALSE</code> tells knitr to display the
 code block in the knitted document but skip executing it entirely, so
 the incomplete <code>get_homology_statements()</code> function will not
@@ -3524,8 +3523,10 @@ each pair twice. The recommended data frame could look like:</p>
 <ul>
 <li><code>outer()</code> can be used to create an n×n matrix of all
 pairwise absolute year differences.</li>
-<li><code>as.data.frame(as.table(as.matrix()))</code> converts a matrix
-to a data frame.</li>
+<li>While <code>pivot_longer()</code> is the modern standard and a more
+general tool for converting to long format, <code>as.table()</code> is a
+classic Base R trick specifically for matrices. Both are perfectly
+acceptable.</li>
 <li><code>rename()</code> in the <code>dplyr</code> package (already
 inlcuded in <code>tidyverse</code>) can be used to rename the column
 names of a data frame.</li>

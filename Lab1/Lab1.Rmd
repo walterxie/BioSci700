@@ -352,25 +352,24 @@ Each multiple sequence alignment makes a set of implicit evolutionary claims: ev
 Complete the code below.
 
 ```{r homology_statements}
-library(msa)
-library(Biostrings)
-
 # ── Core function: extract homology statements from one MSA ──────────────────
-# A homology statement is a triplet: (seqA_name, posA_ungapped, posB_ungapped)
-# meaning "position posA in seqA is homologous to position posB in seqB"
-# because they appear in the same alignment column.
+# This function extracts the set of homology statements implied by a multiple sequence alignment. 
+# Each statement encodes that a specific residue position in one sequence is evolutionarily 
+# equivalent to a specific position in another, because they co-occur in the same alignment column.
 
 get_homology_statements <- function(aln) {
   # Note: taxa order could be diff in MSA, this will affect the result. 
   # Convert to AAStringSet (or DNAStringSet)
-  sorted_set <- as(aln, "AAStringSet")
   # Sort the strings
-  sorted_set <- sorted_set[order(names(sorted_set))]
   
-  aln_matrix <- as.matrix(sorted_set)
-  n_seq      <- nrow(aln_matrix)
-  n_col      <- ncol(aln_matrix)
-  seq_names  <- rownames(aln_matrix)
+  # Create a function col_to_ungapped to map alignment columns to ungapped positions 
+  # For each sequence, build a vector mapping column index → ungapped position
+  # Gaps (-) are assigned NA (no ungapped position)
+  
+  # Then, for each column, for each pair of sequences (A, B),
+  # if both have a residue (not a gap), emit the homology statement:
+  # "seqA:posA ~ seqB:posB"
+  # Store as a character set for fast symmetric difference later
   
   ### your code here
   
@@ -642,7 +641,7 @@ Number of unique pairs: 136
 Tips: 
 
 - `outer()` can be used to create an n×n matrix of all pairwise absolute year differences.
-- `as.data.frame(as.table(as.matrix()))` converts a matrix to a data frame. 
+- While `pivot_longer()` is the modern standard and a more general tool for converting to long format, `as.table()` is a classic Base R trick specifically for matrices. Both are perfectly acceptable.
 - `rename()` in the `dplyr` package (already inlcuded in `tidyverse`) can be used to rename the column names of a data frame. 
 
 

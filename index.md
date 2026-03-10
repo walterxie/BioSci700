@@ -28,8 +28,16 @@ Use `library()` to check if the installation is successful.
 
 ## Useful links
 
-- [R examples](RExamples.html) or [R tutorial](https://www.w3schools.com/r/), and [R tutorial for
-vectorisation](https://sahirbhatnagar.com/biosR/vectorization-apply-and-for-loops.html)
+- [R examples](RExamples.html) or [R tutorial](https://www.w3schools.com/r/)
+
+- [R full tutorial](https://www.geeksforgeeks.org/r-language/r-tutorial/) 
+
+- [R tutorial for vectorisation](https://sahirbhatnagar.com/biosR/vectorization-apply-and-for-loops.html), 
+and [apply(), lapply(), sapply(), and tapply() in R](https://www.geeksforgeeks.org/r-language/apply-lapply-sapply-and-tapply-in-r/)
+
+- [R tutorial joins](https://r4ds.hadley.nz/joins.html#sec-mutating-joins)
+
+- [R ggplot2](https://ggplot2.tidyverse.org/articles/ggplot2.html)
 
 - [Math in R markdown](https://rmd4sci.njtierney.com/math)
 

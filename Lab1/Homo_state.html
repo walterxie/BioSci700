@@ -457,41 +457,10 @@ loaded and the helper alignment object is ready. This small two-sequence
 alignment is used throughout the worked examples to illustrate how
 <code>get_homology_statements()</code> maps alignment columns to
 ungapped residue positions.</p>
-<pre class="r"><code>library(msa)</code></pre>
-<pre><code>## Loading required package: Biostrings</code></pre>
-<pre><code>## Loading required package: BiocGenerics</code></pre>
-<pre><code>## 
-## Attaching package: &#39;BiocGenerics&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     IQR, mad, sd, var, xtabs</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     anyDuplicated, aperm, append, as.data.frame, basename, cbind,
-##     colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
-##     get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
-##     match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
-##     Position, rank, rbind, Reduce, rownames, sapply, setdiff, sort,
-##     table, tapply, union, unique, unsplit, which.max, which.min</code></pre>
-<pre><code>## Loading required package: S4Vectors</code></pre>
-<pre><code>## Loading required package: stats4</code></pre>
-<pre><code>## 
-## Attaching package: &#39;S4Vectors&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     expand.grid, I, unname</code></pre>
-<pre><code>## Loading required package: IRanges</code></pre>
-<pre><code>## Loading required package: XVector</code></pre>
-<pre><code>## Loading required package: GenomeInfoDb</code></pre>
-<pre><code>## 
-## Attaching package: &#39;Biostrings&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:base&#39;:
-## 
-##     strsplit</code></pre>
-<pre class="r"><code>library(Biostrings)
-library(testthat)</code></pre>
-<pre><code>## Warning: package &#39;testthat&#39; was built under R version 4.2.3</code></pre>
-<pre class="r"><code># Two sequences × 4 columns
+<pre class="r fold-show"><code>library(msa)
+library(Biostrings)
+
+# Two sequences × 4 columns
 #
 # Col:  1    2    3    4
 # S1:   A    C    -    E     &lt;- gap at col 3
@@ -517,6 +486,8 @@ aln &lt;- as(
 algorithms. Sorting alphabetically by name guarantees that the same
 sequence pair always generates the same statement string, regardless of
 which aligner was used.</p>
+<p>Tips: use the functions <code>order</code> and
+<code>names</code>.</p>
 <pre class="r"><code># Convert alignment to AAStringSet and sort sequences alphabetically by name
 sorted_set &lt;- as(aln, &quot;AAStringSet&quot;)
 sorted_set &lt;- sorted_set[order(names(sorted_set))]
@@ -560,6 +531,8 @@ gap?</p>
 column index into the corresponding ungapped residue position. Gap
 characters (<code>-</code>) are assigned <code>NA</code> because they do
 not represent a real residue.</p>
+<p>Tips: use the functions <code>lapply</code> and
+<code>names</code>.</p>
 <pre class="r"><code># For each sequence, map column index → ungapped residue position (NA for gaps)
 col_to_ungapped &lt;- lapply(seq_len(n_seq), function(i) {
   residue_positions &lt;- rep(NA_integer_, n_col)
@@ -587,8 +560,9 @@ why.</p>
 <div id="step-4-generate-all-sequence-pairs" class="section level3">
 <h3>Step 4: Generate all sequence pairs</h3>
 <p>For <em>n</em> sequences there are <em>n(n−1)/2</em> unique pairs.
-Each pair will be inspected at every alignment column in the next
-step.</p>
+Each pair will be inspected at every alignment column in the next step.
+Apply the function <code>combn</code> to find all combinations of the
+elements.</p>
 <pre class="r"><code># Enumerate all unique sequence pairs
 seq_pairs &lt;- combn(seq_names, 2, simplify = FALSE)
 

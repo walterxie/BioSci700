@@ -21,10 +21,9 @@ Before running the exercises, ensure the following packages are loaded and the
 helper alignment object is ready. This small two-sequence alignment is used
 throughout the worked examples to illustrate how `get_homology_statements()`
 maps alignment columns to ungapped residue positions.
-```{r setup}
+```{r setup, class.source="fold-show", message=FALSE, warning=FALSE}
 library(msa)
 library(Biostrings)
-library(testthat)
 
 # Two sequences × 4 columns
 #
@@ -54,6 +53,9 @@ aln <- as(
   Taxa order can differ between alignments produced by different algorithms.
 Sorting alphabetically by name guarantees that the same sequence pair always
 generates the same statement string, regardless of which aligner was used.
+
+Tips: use the functions `order` and `names`.
+
 ```{r step1-sort}
 # Convert alignment to AAStringSet and sort sequences alphabetically by name
 sorted_set <- as(aln, "AAStringSet")
@@ -74,6 +76,7 @@ statement sets?
   A matrix representation gives direct access to any residue by row (sequence)
 and column (alignment position), which is required for the column-by-column
 scan in later steps.
+
 ```{r step2-matrix}
 # Convert sorted alignment to a plain character matrix
 aln_matrix <- as.matrix(sorted_set)
@@ -96,6 +99,9 @@ cat("Names     :", paste(seq_names, collapse = ", "), "\n")
   For each sequence, build a lookup vector that translates an alignment column
 index into the corresponding ungapped residue position. Gap characters (`-`)
 are assigned `NA` because they do not represent a real residue.
+
+Tips: use the functions `lapply` and `names`.
+
 ```{r step3-ungapped}
 # For each sequence, map column index → ungapped residue position (NA for gaps)
 col_to_ungapped <- lapply(seq_len(n_seq), function(i) {
@@ -124,7 +130,9 @@ at column 3? At column 4? Explain why.
 ### Step 4: Generate all sequence pairs
   
   For *n* sequences there are *n(n−1)/2* unique pairs. Each pair will be
-inspected at every alignment column in the next step.
+inspected at every alignment column in the next step. 
+Apply the function `combn` to find all combinations of the elements.
+
 ```{r step4-pairs}
 # Enumerate all unique sequence pairs
 seq_pairs <- combn(seq_names, 2, simplify = FALSE)
@@ -144,6 +152,7 @@ cat("Expected (n*(n-1)/2)    :", n_seq * (n_seq - 1) / 2, "\n")
 emitted only when **both** sequences have a real residue at that column.
 If either has a gap, no homology is claimed and the pair is skipped.
 Each statement is stored as `"seqA|posA|seqB|posB"`.
+
 ```{r step5-emit}
 # Emit a homology statement for each column where both sequences have a residue
 statements <- character(0)
@@ -177,6 +186,7 @@ print(head(statements, 6))
   Identical alignment columns would produce duplicate statements for the same
 position pair. Applying `unique()` ensures the result is a true set, which
 is required for the set-theoretic operations in `homology_sym_diff()`.
+
 ```{r step6-unique}
 # Remove duplicates to obtain the final homology statement set
 statements_unique <- unique(statements)
