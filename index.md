@@ -2,7 +2,7 @@
 
 ## Assignment 1
 
-[Assignment 1](Lab1/Lab1.html) and [Assignment 1 Notebook]()
+[Assignment 1](Lab1/Lab1.html) and [Assignment 1 Notebook](Lab1/Lab1.Rmd)
 
 ### Required Software
 
