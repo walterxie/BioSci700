@@ -119,7 +119,7 @@ cat("\nAlignment Score:", align_score, "\n")
 ```
 
 **Question 1a (2 point):** 
-What is the __conserved region__ between these two sequences? Identify whether a global or local alignment algorithm is more appropriate for locating this specific segment. Additionally, name widely-used bioinformatics software tool that utilizes this algorithmic approach.  
+What is the __conserved region__ between these two sequences? Identify whether a global or local alignment algorithm is more appropriate for locating this specific segment. Additionally, name one widely-used bioinformatics software tool that utilizes this algorithmic approach.  
 
 ```
 Your answer here
