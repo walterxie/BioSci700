@@ -25,6 +25,9 @@ Use `library()` to check if the installation is successful.
 
 - [Dengue4.env.nex](Lab1/Dengue4.env.nex)
 
+### Homo state
+
+- [Homo_state](Lab1/Homo_state.html)
 
 ## Useful links
 
