@@ -45,6 +45,8 @@ Coming soon ...
 
 - [FigTree](https://github.com/rambaut/figtree/releases) or [IcyTree](https://icytree.org)
 
+- TempEst, Tracer and FigTree requires Java 1.8 or higher. 
+
 - [Beagle (optional)](https://github.com/beagle-dev/beagle-lib/wiki)
 
 
