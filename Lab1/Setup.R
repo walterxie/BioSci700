@@ -32,6 +32,7 @@ cat("----------------------------------------------\n")
 
 # Bioconductor packages for sequence analysis
 BiocManager::install(c("Biostrings", "msa"))
+BiocManager::install("pwalgin")
 
 cat("\n")
 

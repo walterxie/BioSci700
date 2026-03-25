@@ -570,7 +570,7 @@ Which tree should be used as a starting tree?
 We then use the UPGMA tree as a starting tree, and perform nearest-neighbor interchanges (NNI) to find the maximum parsimony tree.
 
 ```{r}
-treePars <- optim.parsimony(treeUPGMA, as.phyDat(dnaBin), rearrangements = "NNI")
+treePars <- optim.parsimony(treeNJ, as.phyDat(dnaBin), rearrangements = "NNI")
 plot(treePars, type="unrooted")
 ```
 
