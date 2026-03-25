@@ -29,6 +29,25 @@ Use `library()` to check if the installation is successful.
 
 - [Homo_state](Lab1/Homo_state.html)
 
+## Assignment 2
+
+Coming soon ...
+
+### Required Software
+
+- [IQ-Tree >3.x](https://iqtree.github.io)
+
+- [TempEst](https://tree.bio.ed.ac.uk/software/tempest/)
+
+- [BEAST >2.7.7](https://www.beast2.org) and [CCD package (install from Package Manager)](https://www.beast2.org/managing-packages/)
+
+- [Tracer >1.7.x](https://github.com/beast-dev/tracer/releases)
+
+- [FigTree](https://github.com/rambaut/figtree/releases) or [IcyTree](https://icytree.org)
+
+- [Beagle (optional)](https://github.com/beagle-dev/beagle-lib/wiki)
+
+
 ## Useful links
 
 - [R examples](RExamples.html) or [R tutorial](https://www.w3schools.com/r/)
