@@ -31,7 +31,9 @@ Use `library()` to check if the installation is successful.
 
 ## Assignment 2
 
-Coming soon ...
+- Read [Epidemic Dynamics Revealed in Dengue Evolution](https://doi.org/10.1093/molbev/msp285)
+
+Assignment 2 coming soon ...
 
 ### Required Software
 
