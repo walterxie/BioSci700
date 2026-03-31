@@ -33,7 +33,11 @@ Use `library()` to check if the installation is successful.
 
 - Read [Epidemic Dynamics Revealed in Dengue Evolution](https://doi.org/10.1093/molbev/msp285)
 
-Assignment 2 coming soon ...
+- [Assignment 2](Lab2/Lab2.html) and [Assignment 2 answer template (coming soon)]()
+
+### Data
+
+- [Dengue4.nex](Lab2/Dengue4.nex)
 
 ### Required Software
 
