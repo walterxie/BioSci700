@@ -33,7 +33,7 @@ Use `library()` to check if the installation is successful.
 
 - Read [Epidemic Dynamics Revealed in Dengue Evolution](https://doi.org/10.1093/molbev/msp285)
 
-- [Assignment 2](Lab2/Lab2.html) and [Assignment 2 answer template](Lab2_YOUR_NAME_UPI.md).
+- [Assignment 2](Lab2/Lab2.html) and [Assignment 2 answer template](Lab2/Lab2_YOUR_NAME_UPI.md).
 
 Use the provided `Lab2_YOUR_NAME_UPI.md` as a template — it contains all section headings and question blocks. You may use any editor (e.g. Word, Google Docs, or R studio) to complete it. Do not copy the full contents of this lab instruction; only fill in your answers and insert required figures in the designated blocks. Name your final report file using your name and student ID: `Lab2_YourName_UPI`. Submit as either a **PDF** or **HTML** file.
 
