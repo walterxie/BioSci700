@@ -1,6 +1,6 @@
-# BioSci700 Lab 2: Molecular Clock and Bayesian Phylodynamics
+# BioSci700 Lab 2: Phylogenetic inference
 
-**Phylogenetic analysis of Dengue virus serotype 4 (DENV-4)**
+**Temporal Signal, Molecular Clocks, and Population Dynamics in Dengue Virus (DENV-4)**
 
 **Author:** Your Name (UPI)
 
