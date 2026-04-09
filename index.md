@@ -29,6 +29,10 @@ Use `library()` to check if the installation is successful.
 
 - [Homo_state](Lab1/Homo_state.html)
 
+<br>
+---
+<br>
+
 ## Assignment 2
 
 - Read [Epidemic Dynamics Revealed in Dengue Evolution](https://doi.org/10.1093/molbev/msp285)
@@ -36,6 +40,19 @@ Use `library()` to check if the installation is successful.
 - [Assignment 2](Lab2/Lab2.html) and [Assignment 2 answer template](Lab2/Lab2_YOUR_NAME_UPI.md).
 
 Use the provided `Lab2_YOUR_NAME_UPI.md` as a template — it contains all section headings and question blocks. You may use any editor (e.g. Word, Google Docs, or R studio) to complete it. Do not copy the full contents of this lab instruction; only fill in your answers and insert required figures in the designated blocks. Name your final report file using your name and student ID: `Lab2_YourName_UPI`. Submit as either a **PDF** or **HTML** file.
+
+Please attach the following log or tree files (filenames may vary) with the PDF report together in your submission:
+
+- IQ-Tree log files, especially, **Dengue4.nex.treefile, Dengue4.nex.log, Dengue4.nex.iqtree.**
+
+- BEAST 2 XML and log files, especially, **Dengue4.xml, Dengue4.log, Dengue4.MAP.tree.**
+
+**Note:** IQ-Tree log files must be named differently from BEAST 2 log files, as specified in your IQ-Tree command line or BEAUti panel.
+
+Please **do not** submit any software tools. 
+
+The last question has a 300-word limit, with an extra 100 words allowed for the bonus section.
+
 
 ### Data
 
@@ -57,6 +74,9 @@ Use the provided `Lab2_YOUR_NAME_UPI.md` as a template — it contains all secti
 
 - [Beagle (optional)](https://github.com/beagle-dev/beagle-lib/wiki)
 
+<br>
+---
+<br>
 
 ## Useful links
 
