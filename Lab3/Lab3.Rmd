@@ -1,0 +1,288 @@
+---
+title: "BioSci700 Lab 3: Bayesian Inference of Species Trees from Multilocus Data"
+subtitle: "Estimating species trees using StarBeast3"
+author: "Your Name (UPI)"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+    df_print: paged
+    theme: flatly
+    highlight: tango
+---
+
+```{css, echo=FALSE}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 6px 12px;
+}
+```
+
+# Lab Introduction and Objectives {-}
+
+Welcome to Lab 3 on Bayesian inference of species trees from multilocus data. Although concatenating gene alignments is widely used, it generates a misleading average across loci (Degnan and Rosenberg 2006) and can produce poorly estimated species trees (Kubatko 2007). The multispecies coalescent (MSC) overcomes these limitations by explicitly modelling gene trees as embedded within a shared species tree, jointly inferring species tree topology, divergence times, and effective population sizes in a Bayesian framework (Heled and Drummond 2010). You will use StarBeast3 (Douglas et al. 2022), an adaptive parallelised BEAST 2 package that delivers up to one-and-a-half orders of magnitude speed improvement over StarBeast1 and 2, to analyse a real dataset.
+
+**Total marks: 25.**
+Marks are allocated as follows: Section 1 (4 pts), Section 2 (6 pts), Section 3 (5 pts), Section 4 (5 pts), Section 5 (3 pts), and 2 pts for overall presentation quality and writing clarity.
+
+Please read the following submission instructions carefully before starting:
+
+1. **Report:** Use the provided `Lab3_YOUR_NAME_UPI.md` as a template — it contains all section headings and question blocks. You may use any editor (e.g. Word, Google Docs, or R studio) to complete it. Do not copy the full contents of this lab instruction; only fill in your answers and insert required figures in the designated blocks. Name your final report file using your name and student ID: `Lab3_YourName_UPI`. Submit as either a **PDF** or **HTML** file.
+2. **Questions:** Answer all questions in the provided text blocks marked with the following. Each answer must be **no more than 100 words**.
+```
+Your answer here
+```
+3. **Zip:** Submit all files related to this assignment — in particular, log files and tree files — for marking purposes. The recommended practice is to keep all files in a single working directory and compress it into a zip file for submission.
+
+**Due date : 8th May 2026, Friday**
+
+## Objectives {-}
+
+Go through StarBeast3 tutorial https://taming-the-beast.org/tutorials/StarBeast3-Tutorial/ using the Canid dataset `data.zip` available to download from left side of webpage, and answer the following questions from section 1 to 4. 
+
+Recommended reading:
+
+- StarBeast1 https://doi.org/10.1093/molbev/msp274
+- StarBeast3 https://doi.org/10.1093/sysbio/syac010
+
+Optional reading:
+
+- StarBeast2 https://doi.org/10.1093/molbev/msx126
+- Dataset https://www.nature.com/articles/nature04338
+- UglyTrees https://doi.org/10.1093/bioinformatics/btaa679
+
+---
+
+# Section 1: Alignment Data Summary (4 points) {-}
+
+Launch **BEAUti** using the StarBeast3 template (*File > Template > StarBeast3*), then import all loci as it is instructed by the tutorial.
+
+**Question 1.1 (1 pt)**
+
+After importing all loci and assigning samples to species, report:
+
+- The number of loci;
+- The number of taxa;
+- The number of species listed in the **Taxon Set** tab;
+- A table of alignment lengths of each loci.
+
+```
+Your answer here
+```
+
+---
+
+
+Read the **1.4 Gene Ploidy** subsection, 
+
+**Question 1.2 (1 pt)**
+
+- Explain what heterogametic and homogametic sexes are, using **both** the XY system (e.g., mammals) and the ZW system (e.g., birds, reptiles) as examples.
+
+```
+Your answer here
+```
+
+---
+
+**Question 1.3 (2 pts)**
+
+- How many biologically distinct ploidy values are relevant for **diploid** populations in the `Gene Ploidy` panel?
+- Explain what type of loci each ploidy value would be assigned to, and write a simple equation to demonstrate it.
+
+```
+Your answer here
+```
+
+---
+
+# Section 2: Models (4 points) {-}
+
+Configure the full StarBeast3 analysis in BEAUti following the steps in the tutorial.
+
+---
+
+**Question 2.1 (2 pts)**
+
+StarBeast3 uses separate clock models for gene trees and the species tree.
+
+- The species-tree clock rate was fixed at 0.001 in BEAUti. What does this value represent comparing to gene clock rates under the StarBeast3 model? And what the unit it implies?
+- Report the fastest and slowest gene clock rates (posterior mean and 95% HPD) from your BEAST results.
+- Assess the degree of rate variation across loci and propose a biological explanation for this level of heterogeneity.
+
+```
+Your answer here
+```
+
+---
+
+**Question 2.2 (1 pt)**
+
+The species tree prior is set to the Birth-Death model, and the gene trees prior is set to coalescent model.
+
+- Name the parameters of both model respectively as they appear in BEAUti `Priors` panel, and report the prior distribution assigned to each parameter.
+
+```
+Your answer here
+```
+
+---
+
+**Question 2.3 (1 pt)**
+
+The Yule model is a special case of the Birth-Death model where the extinction rate is zero.
+
+- Under what biological circumstances would the Yule model be preferred over Birth-Death for a species-tree prior?
+- Is the Yule model a reasonable choice for this Canid dataset? Justify your answer.          
+
+```
+Your answer here
+```
+
+---
+
+# Section 3: MCMC Diagnostics (5 points) {-}
+
+Run your XML file using BEAST 2. Once complete, open the trace log in **Tracer**, set a burn-in of 10%, and inspect ESS values and trace plots for all parameters.
+
+---
+
+**Question 3.1 (2 pts)**
+
+Insert a screenshot of the Tracer ESS summary panel. Did all parameters reach the recommended threshold of ESS > 200? If not, identify which parameters fell below this threshold and propose two concrete steps to improve mixing.
+
+```
+Your answer here
+```
+
+---
+
+**Question 3.2 (2 pts)**
+
+Report the posterior mean and 95% HPD interval for:
+
+- The species-tree clock rate
+- The root height (tMRCA)
+
+Briefly interpret what each estimate implies in the context of this dataset.
+
+```
+Your answer here
+```
+
+---
+
+**Question 3.3 (1 pt)**
+
+You ran a single BEAST 2 chain. Describe how you would use a second independent chain to verify that both chains have converged to the same posterior distribution.
+
+```
+Your answer here
+```
+
+---
+
+# Section 4: Gene Trees and Incomplete Lineage Sorting (5 points) {-}
+
+Open the posterior tree log in **UglyTrees** to explore species trees alongside embedded gene trees. Navigate through a sample of posterior trees to observe how individual gene tree topologies relate to the inferred species tree.
+
+---
+
+**Question 4.1 (2 pts)**
+
+Insert a screenshot from UglyTrees showing the species tree with at least two gene trees overlaid. Describe at least one instance of incomplete lineage sorting (ILS) you can observe, identifying the gene(s) and species involved.
+
+```
+Your answer here
+```
+
+---
+
+**Question 4.2 (3 pts)**
+
+Choose one gene whose topology conflicts with the species tree topology.
+
+- Insert a figure clearly illustrating this topological conflict.
+- Explain why ILS — rather than horizontal gene transfer or sequencing error — is the most plausible explanation for this discordance under the multispecies coalescent framework.
+- Describe how StarBeast3 accounts for this discordance when inferring the species tree.
+
+```
+Your answer here
+```
+
+---
+
+# Section 5: Species Tree Summary and Interpretation (3 points) {-}
+
+Use **TreeAnnotator** to summarise the posterior tree distribution. Set the burn-in to 10% and select **MAP (CCD0)** as the target tree type. Visualise the resulting summary tree in **IcyTree**, enabling node height credible intervals and posterior clade support annotations.
+
+---
+
+**Question 5.1 (1 pt)**
+
+Insert a figure of the annotated summary species tree from IcyTree, with node heights and posterior clade support values visible.
+
+```
+Your answer here
+```
+
+---
+
+**Question 5.2 (2 pts)**
+
+- Identify the two most recently diverged species pairs and report their estimated divergence times with 95% HPD intervals.
+- What does the overall species tree topology reveal about evolutionary relationships in this group?
+
+```
+Your answer here
+```
+
+---
+
+# Submission Checklist {-}
+
+Before submitting, confirm each item below:
+
+- File is renamed with your name and student ID: `Lab3_YourName_UPI`
+- All questions are answered with clear and thoughtful responses
+- All required screenshots and figures are embedded in the document
+- All required output files listed below are included in the submission
+
+**Required output files:**
+
+> **Note:** The table below lists software output files only. Screenshots and figures required by individual questions should be embedded directly in your report document and are not listed here.
+
+| File | Section |
+|------|---------|
+| `[DataName].xml` | 2 |
+| `[DataName].log` (BEAST trace log) | 3 |
+| `[DataName].trees` (BEAST tree log) | 3, 4 |
+| Summary species tree (`[DataName].map.tree`) | 5 |
+
+## Grading Rubric {-}
+
+| Section | Component | Points |
+|---------|-----------|--------|
+| **Section 1** | Question 1.1 — alignment structure: screenshot, taxa count, length range | 2 |
+| | Question 1.2 — gene ploidy and biological meaning | 2 |
+| **Section 1 total** | | **4** |
+| **Section 2** | Question 2.1 — multilocus rationale and ILS | 2 |
+| | Question 2.2 — HKY model and kappa | 2 |
+| | Question 2.3 — birth-death prior and extinction fraction | 2 |
+| **Section 2 total** | | **6** |
+| **Section 3** | Question 3.1 — ESS screenshot and convergence assessment | 2 |
+| | Question 3.2 — posterior estimates for clock rate and tMRCA | 2 |
+| | Question 3.3 — replicate chain strategy | 1 |
+| **Section 3 total** | | **5** |
+| **Section 4** | Question 4.1 — UglyTrees screenshot and ILS description | 2 |
+| | Question 4.2 — gene-species tree conflict analysis | 3 |
+| **Section 4 total** | | **5** |
+| **Section 5** | Question 5.1 — annotated summary species tree figure | 1 |
+| | Question 5.2 — divergence times and topology interpretation | 2 |
+| **Section 5 total** | | **3** |
+| **Presentation** | Overall writing clarity, figure quality, and document formatting | 2 |
+| **Grand total** | | **25** |
