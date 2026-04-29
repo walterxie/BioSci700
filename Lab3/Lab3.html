@@ -2775,23 +2775,22 @@ will use StarBeast3 (Douglas et al. 2022), an adaptive parallelised
 BEAST 2 package that delivers up to one-and-a-half orders of magnitude
 speed improvement over StarBeast1 and 2, to analyse a real dataset.</p>
 <p><strong>Total marks: 25.</strong> Marks are allocated as follows:
-Section 1 (4 pts), Section 2 (4 pts), Section 3 (5 pts), Section 4 (10
+Section 1 (3 pts), Section 2 (3 pts), Section 3 (7 pts), Section 4 (10
 pts), and 2 pts for overall presentation quality and writing
 clarity.</p>
 <p>Please read the following submission instructions carefully before
 starting:</p>
 <ol style="list-style-type: decimal">
-<li><strong>Report:</strong> Use the provided
-<code>Lab3_YOUR_NAME_UPI.md</code> as a template — it contains all
-section headings and question blocks. You may use any editor (e.g. Word,
-Google Docs, or R studio) to complete it. Do not copy the full contents
-of this lab instruction; only fill in your answers and insert required
-figures in the designated blocks. Name your final report file using your
-name and student ID: <code>Lab3_YourName_UPI</code>. Submit as either a
-<strong>PDF</strong> or <strong>HTML</strong> file.</li>
-<li><strong>Questions:</strong> Answer all questions in the provided
-text blocks marked with the following. Each answer must be <strong>no
-more than 100 words</strong>.</li>
+<li><p><strong>Report:</strong> Use the provided
+<code>Lab3_YOUR_NAME_UPI.md</code> as a template — only copy all
+contents from section 1 to 4 to any editor (e.g. Word, Google Docs, or
+RStudio) and fill in your answers and insert required figures in the
+designated answer blocks. Name your final report file using your name
+and student ID: <code>Lab3_YourName_UPI</code>. Submit the report as
+either a <strong>PDF</strong> or <strong>HTML</strong> file.</p></li>
+<li><p><strong>Questions:</strong> Answer all questions in the provided
+text blocks marked with the following. It shouldn’t take more than 150
+words to adequately answer each question.</p></li>
 </ol>
 <pre><code>Your answer here</code></pre>
 <ol start="3" style="list-style-type: decimal">
@@ -2821,8 +2820,8 @@ Section 1 to 4.</p>
 <hr />
 </div>
 </div>
-<div id="section-1-alignment-data-summary-4-points" class="section level1 unnumbered">
-<h1 class="unnumbered">Section 1: Alignment Data Summary (4 points)</h1>
+<div id="section-1-alignment-data-summary-3-points" class="section level1 unnumbered">
+<h1 class="unnumbered">Section 1: Alignment Data Summary (3 points)</h1>
 <p>Launch <strong>BEAUti</strong> using the StarBeast3 template
 (<em>File &gt; Template &gt; StarBeast3</em>), then import all loci as
 instructed by the tutorial.</p>
@@ -2838,16 +2837,9 @@ tab;</li>
 </ul>
 <pre><code>Your answer here</code></pre>
 <hr />
-<p>Read the <strong>1.4 Gene Ploidy</strong> subsection.</p>
-<p><strong>Question 1.2 (1 pt)</strong></p>
-<ul>
-<li>Explain what heterogametic and homogametic sexes are, using
-<strong>both</strong> the XY system (e.g., mammals) and the ZW system
-(e.g., birds, reptiles) as examples.</li>
-</ul>
-<pre><code>Your answer here</code></pre>
-<hr />
-<p><strong>Question 1.3 (2 pts)</strong></p>
+<p>Read the <strong>1.4 Gene Ploidy</strong> subsection of the tutorial
+before answering the following question.</p>
+<p><strong>Question 1.2 (2 pts)</strong></p>
 <ul>
 <li>How many biologically distinct ploidy values are relevant for
 <strong>diploid</strong> populations in the <code>Gene Ploidy</code>
@@ -2858,28 +2850,23 @@ and write a simple equation to demonstrate it.</li>
 <pre><code>Your answer here</code></pre>
 <hr />
 </div>
-<div id="section-2-models-4-points" class="section level1 unnumbered">
-<h1 class="unnumbered">Section 2: Models (4 points)</h1>
+<div id="section-2-models-3-points" class="section level1 unnumbered">
+<h1 class="unnumbered">Section 2: Models (3 points)</h1>
 <p>Configure the full StarBeast3 analysis in BEAUti following the steps
 in the tutorial.</p>
 <hr />
-<p><strong>Question 2.1 (2 pts)</strong></p>
-<p>StarBeast3 uses separate clock models for gene trees and the species
-tree.</p>
-<ul>
-<li>The species-tree clock rate was fixed at 0.001 in BEAUti. Explain
-what this value represents in the StarBeast3 model and what unit it
-implies.</li>
-<li>In the <code>Species Clock Model</code> panel, there is an option to
+<p><strong>Question 2.1 (1 pt)</strong></p>
+<p>All trees are assumed to be binary rooted time trees in
+StarBeast.</p>
+<p>In the <code>Species Clock Model</code> panel, there is an option to
 estimate clock rate without calibrations. Does this go against the
 principle of rate and time non-identifiability? Explain your
-reasoning.</li>
-</ul>
+reasoning.</p>
 <pre><code>Your answer here</code></pre>
 <hr />
 <p><strong>Question 2.2 (1 pt)</strong></p>
 <p>The species tree prior is set to the Birth-Death model, and the gene
-trees prior is set to the coalescent model.</p>
+tree prior is set to the coalescent model.</p>
 <ul>
 <li>Name the parameters of both models respectively as they appear in
 BEAUti <code>Priors</code> panel, and report the prior distribution
@@ -2899,8 +2886,8 @@ Justify your answer.</li>
 <pre><code>Your answer here</code></pre>
 <hr />
 </div>
-<div id="section-3-result-summary-and-interpretation-5-points" class="section level1 unnumbered">
-<h1 class="unnumbered">Section 3: Result Summary and Interpretation (5
+<div id="section-3-result-summary-and-interpretation-7-points" class="section level1 unnumbered">
+<h1 class="unnumbered">Section 3: Result Summary and Interpretation (7
 points)</h1>
 <p>Run your XML file using BEAST 2 as instructed by the tutorial. Once
 complete, open the trace log in <strong>Tracer</strong>, keep the
@@ -2921,23 +2908,32 @@ parameter, and explain how this plot supports your conclusion.</li>
 <p><strong>Question 3.2 (2 pts)</strong></p>
 <p>Report the posterior mean and 95% HPD interval for:</p>
 <ul>
-<li><p>Report the fastest and slowest gene clock rates (posterior mean
-and 95% HPD) from your BEAST results.</p></li>
-<li><p>Convert the posterior mean to the <strong>absolute</strong> clock
-rate, and show the simple calculation. Include units when reporting the
-absolute clock rate.</p></li>
-<li><p>Assess the degree of rate variation across loci and propose a
-biological explanation for this level of heterogeneity.</p></li>
-<li><p>The net diversification rate and extinction fraction.</p></li>
-<li><p>The mean effective population size <code>popMean</code>.</p></li>
+<li>The fastest and slowest gene clock rates (with gene name) from your
+BEAST results.</li>
+<li>The net diversification rate and extinction fraction.</li>
+<li>The mean effective population size <code>popMean</code>.</li>
 </ul>
 <p>Briefly interpret what each estimate implies in the context of this
 dataset.</p>
 <pre><code>Your answer here</code></pre>
+<p><strong>Question 3.3 (1 pt)</strong></p>
+<p>Assess the degree of rate variation across loci and propose a
+biological explanation for this level of heterogeneity.</p>
+<pre><code>Your answer here</code></pre>
+<p><strong>Question 3.4 (1 pt)</strong></p>
+<p>The clock model assumption of StarBeast3 is that every gene may
+evolve under its own clock rate that is relative to the overall species
+tree clock rate.</p>
+<ul>
+<li>Convert the posterior mean of the fastest and slowest gene clock
+rates into the <strong>absolute</strong> clock rate, and show the simple
+calculation. Include units when reporting the absolute clock rate.</li>
+</ul>
+<pre><code>Your answer here</code></pre>
 <hr />
 <p>Use <strong>TreeAnnotator</strong> to summarise the posterior species
 tree distribution using <strong>MAP (CCD0)</strong>.</p>
-<p><strong>Question 3.3 (2 pts)</strong></p>
+<p><strong>Question 3.5 (2 pts)</strong></p>
 <ul>
 <li>Report the posterior mean and 95% HPD interval for the species-tree
 height.</li>
@@ -2970,7 +2966,7 @@ tree topology.</p>
 .svg file.</li>
 <li>Insert SVG image.</li>
 <li>Explain what parameters or properties are illustrated in that figure
-in the context of this dataset (refer to the Figure 1 in the StarBeast3
+in the context of this dataset (refer to Figure 1 in the StarBeast3
 paper).</li>
 </ul>
 <pre><code>Your answer here</code></pre>
@@ -2989,7 +2985,7 @@ species tree.</li>
 <hr />
 <p><strong>Question 4.3 (4 pts)</strong></p>
 <ul>
-<li>Use the gene trees and species tree in Question 4.1 as the example,
+<li>Use the gene trees and species tree in Question 4.1 as an example,
 and argue why incomplete lineage sorting (ILS) is the most plausible
 explanation for the discordance you identified, rather than horizontal
 gene transfer.</li>
@@ -3018,32 +3014,13 @@ submission</li>
 only. Screenshots and figures required by individual questions should be
 embedded directly in your report document and are not listed here.</p>
 </blockquote>
-<table>
-<thead>
-<tr>
-<th>File</th>
-<th>Section</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>[DataName].xml</code></td>
-<td>2</td>
-</tr>
-<tr>
-<td><code>[DataName].log</code> (BEAST trace log)</td>
-<td>3</td>
-</tr>
-<tr>
-<td><code>[DataName].trees</code> (BEAST tree log)</td>
-<td>3, 4</td>
-</tr>
-<tr>
-<td>Summary species tree (<code>[DataName].map.tree</code>)</td>
-<td>5</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li><code>canid.xml</code></li>
+<li><code>canid_strict_clock.log</code> (BEAST trace log)</li>
+<li><code>canid_strict_clock.species.tree</code> (summarized species
+tree log)</li>
+<li><code>*.tree</code> (selected summarized gene tree log)</li>
+</ul>
 <div id="grading-rubric" class="section level2 unnumbered">
 <h2 class="unnumbered">Grading Rubric</h2>
 <table>
@@ -3064,7 +3041,7 @@ embedded directly in your report document and are not listed here.</p>
 <td><strong>Section 1</strong></td>
 <td>Question 1.1 — alignment structure: screenshot, taxa count, length
 range</td>
-<td>2</td>
+<td>1</td>
 </tr>
 <tr>
 <td></td>
@@ -3074,77 +3051,79 @@ range</td>
 <tr>
 <td><strong>Section 1 total</strong></td>
 <td></td>
-<td><strong>4</strong></td>
+<td><strong>3</strong></td>
 </tr>
 <tr>
 <td><strong>Section 2</strong></td>
-<td>Question 2.1 — multilocus rationale and ILS</td>
-<td>2</td>
+<td>Question 2.1 — rate and time non-identifiability</td>
+<td>1</td>
 </tr>
 <tr>
 <td></td>
-<td>Question 2.2 — HKY model and kappa</td>
-<td>2</td>
+<td>Question 2.2 — Birth-Death and coalescent model parameters</td>
+<td>1</td>
 </tr>
 <tr>
 <td></td>
-<td>Question 2.3 — birth-death prior and extinction fraction</td>
-<td>2</td>
+<td>Question 2.3 — Yule vs Birth-Death justification</td>
+<td>1</td>
 </tr>
 <tr>
 <td><strong>Section 2 total</strong></td>
 <td></td>
-<td><strong>6</strong></td>
+<td><strong>3</strong></td>
 </tr>
 <tr>
 <td><strong>Section 3</strong></td>
 <td>Question 3.1 — ESS screenshot and convergence assessment</td>
-<td>2</td>
-</tr>
-<tr>
-<td></td>
-<td>Question 3.2 — posterior estimates for clock rate and tMRCA</td>
-<td>2</td>
-</tr>
-<tr>
-<td></td>
-<td>Question 3.3 — replicate chain strategy</td>
 <td>1</td>
+</tr>
+<tr>
+<td></td>
+<td>Question 3.2 — posterior estimates for clock rates, diversification,
+and popMean</td>
+<td>2</td>
+</tr>
+<tr>
+<td></td>
+<td>Question 3.3 — rate variation across loci</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td>Question 3.4 — absolute clock rate conversion</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td>Question 3.5 — annotated summary species tree figure and
+interpretation</td>
+<td>2</td>
 </tr>
 <tr>
 <td><strong>Section 3 total</strong></td>
 <td></td>
-<td><strong>5</strong></td>
+<td><strong>7</strong></td>
 </tr>
 <tr>
 <td><strong>Section 4</strong></td>
 <td>Question 4.1 — UglyTrees screenshot and ILS description</td>
-<td>2</td>
+<td>3</td>
 </tr>
 <tr>
 <td></td>
-<td>Question 4.2 — gene-species tree conflict analysis</td>
+<td>Question 4.2 — annotated gene tree and topological conflict</td>
 <td>3</td>
+</tr>
+<tr>
+<td></td>
+<td>Question 4.3 — ILS vs HGT argument and MSC model explanation</td>
+<td>4</td>
 </tr>
 <tr>
 <td><strong>Section 4 total</strong></td>
 <td></td>
-<td><strong>5</strong></td>
-</tr>
-<tr>
-<td><strong>Section 5</strong></td>
-<td>Question 5.1 — annotated summary species tree figure</td>
-<td>1</td>
-</tr>
-<tr>
-<td></td>
-<td>Question 5.2 — divergence times and topology interpretation</td>
-<td>2</td>
-</tr>
-<tr>
-<td><strong>Section 5 total</strong></td>
-<td></td>
-<td><strong>3</strong></td>
+<td><strong>10</strong></td>
 </tr>
 <tr>
 <td><strong>Presentation</strong></td>
