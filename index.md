@@ -4,7 +4,7 @@
 
 - Read [StarBeast3 tutorial](https://taming-the-beast.org/tutorials/StarBeast3-Tutorial)
 
-- [Assignment 3 answer template](Lab3/Lab3.Rmd).
+- [Assignment 3 answer template](Lab3/Lab3.Rmd) and [HTML view](https://walterxie.github.io/BioSci700/Lab3/Lab3).
 
 ### Required Software
 
