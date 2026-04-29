@@ -31,7 +31,7 @@ Marks are allocated as follows: Section 1 (3 pts), Section 2 (3 pts), Section 3 
 
 Please read the following submission instructions carefully before starting:
 
-1. **Report:** Use the provided `Lab3_YOUR_NAME_UPI.md` as a template — only copy all contents from section 1 to 4 to any editor (e.g. Word, Google Docs, or RStudio) and fill in your answers and insert required figures in the designated answer blocks. Name your final report file using your name and student ID: `Lab3_YourName_UPI`. Submit the report as either a **PDF** or **HTML** file.
+1. **Report:** Use the provided `Lab3.Rmd` as a template — only copy all contents from section 1 to 4 to any editor (e.g. Word, Google Docs, or RStudio) and fill in your answers and insert required figures in the designated answer blocks. Name your final report file using your name and student ID: `Lab3_YourName_UPI`. Submit the report as either a **PDF** or **HTML** file.
 
 2. **Questions:** Answer all questions in the provided text blocks marked with the following. It shouldn't take more than 150 words to adequately answer each question.
 

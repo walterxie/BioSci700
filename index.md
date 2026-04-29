@@ -1,33 +1,24 @@
 # BIOSCI 700: Phylogenetics
 
-## Assignment 1
+## Assignment 3
 
-[Assignment 1](Lab1/Lab1.html) and [Assignment 1 Notebook](Lab1/Lab1.Rmd)
+- Read [StarBeast3 tutorial](https://taming-the-beast.org/tutorials/StarBeast3-Tutorial)
+
+- [Assignment 3 answer template](Lab3/Lab3.Rmd).
 
 ### Required Software
 
-- [R >4.2.x](https://cran.r-project.org) and [R studio](https://posit.co/download/rstudio-desktop/);
+- [BEAST >2.7.7](https://www.beast2.org) 
 
-- [MAFFT](https://mafft.cbrc.jp/alignment/software/) 
+- [CCD and starbeast3 package (install from Package Manager)](https://www.beast2.org/managing-packages/)
 
-- [Jalview](https://www.jalview.org)
+- [Tracer >1.7.x](https://github.com/beast-dev/tracer/releases)
 
-Required R packages:
+- [FigTree](https://github.com/rambaut/figtree/releases) or [IcyTree](https://icytree.org)
 
-- Download and run a installation script 
-[Setup.R](https://raw.githubusercontent.com/walterxie/BioSci700/refs/heads/main/Lab1/Setup.R)
-to install the required R packages.
-Use `library()` to check if the installation is successful.
+- [UglyTrees](https://uglytrees.nz)
 
-### Required data
-
-- [exampleAA.fasta](Lab1/exampleAA.fasta)
-
-- [Dengue4.env.nex](Lab1/Dengue4.env.nex)
-
-### Homo state
-
-- [Homo_state](Lab1/Homo_state.html)
+- [Beagle (optional)](https://github.com/beagle-dev/beagle-lib/wiki)
 
 <br>
 ---
@@ -77,6 +68,40 @@ The last question has a 300-word limit, with an extra 100 words allowed for the 
 <br>
 ---
 <br>
+
+## Assignment 1
+
+[Assignment 1](Lab1/Lab1.html) and [Assignment 1 Notebook](Lab1/Lab1.Rmd)
+
+### Required Software
+
+- [R >4.2.x](https://cran.r-project.org) and [R studio](https://posit.co/download/rstudio-desktop/);
+
+- [MAFFT](https://mafft.cbrc.jp/alignment/software/) 
+
+- [Jalview](https://www.jalview.org)
+
+Required R packages:
+
+- Download and run a installation script 
+[Setup.R](https://raw.githubusercontent.com/walterxie/BioSci700/refs/heads/main/Lab1/Setup.R)
+to install the required R packages.
+Use `library()` to check if the installation is successful.
+
+### Required data
+
+- [exampleAA.fasta](Lab1/exampleAA.fasta)
+
+- [Dengue4.env.nex](Lab1/Dengue4.env.nex)
+
+### Homo state
+
+- [Homo_state](Lab1/Homo_state.html)
+
+<br>
+---
+<br>
+
 
 ## Useful links
 
