@@ -1,5 +1,25 @@
 # BIOSCI 700: Phylogenetics
 
+## Assignment 4
+
+Read **Chapter 8 — Traits and Comparative Methods** of the course textbook [Decoding Genomes](https://decodinggenomes.org) where PDF is available. Understand the following concepts:
+
+- null hypothesis H₀
+- contingency table
+- Fisher's test
+- odds ratio, and true odds ratio
+
+[Assignment 4](Lab4/Lab4.html) and [Assignment 4 Notebook](Lab4/Lab4.Rmd)
+
+
+### Required R package
+
+- ape
+- geiger
+- phytools
+- tidyverse
+
+
 ## Assignment 3
 
 - Read [StarBeast3 tutorial](https://taming-the-beast.org/tutorials/StarBeast3-Tutorial)

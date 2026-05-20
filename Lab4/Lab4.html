@@ -2927,7 +2927,7 @@ border-radius: 0px;
 <h1 class="title toc-ignore">BioSci700 Assignment4: Trait Evolution and
 Phylogenetic Comparative Methods</h1>
 <h4 class="author">Student Name (UPI)</h4>
-<h4 class="date">19 May, 2026</h4>
+<h4 class="date">20 May, 2026</h4>
 
 </div>
 
@@ -2948,10 +2948,10 @@ contingency tables and Fisher’s exact test, first assuming independence
 and then reflecting on the role of phylogeny. You will then apply
 phylogenetically independent contrasts (PICs) to continuous traits to
 correct for shared ancestry when performing regression. In the final two
-sections, you will fit and compare models of continuous and discrete
-trait evolution to Darwin’s finch data using the <code>geiger</code>
-package, and reconstruct ancestral character states on the
-phylogeny.</p>
+sections, you will fit and compare models of continuous trait evolution
+using the <code>geiger</code> package, and model discrete trait
+evolution using the Mk model and stochastic character mapping with the
+<code>phytools</code> package.</p>
 <p>Please follow the submission instructions below before starting:</p>
 <ol style="list-style-type: decimal">
 <li><strong>File naming:</strong> Save this file with your name and
@@ -2982,8 +2982,9 @@ conclusions</li>
 shared ancestry in regression</li>
 <li>Fit and compare Brownian Motion, Ornstein-Uhlenbeck, Early Burst,
 and Pagel’s lambda models of continuous trait evolution using AIC</li>
-<li>Fit models of discrete trait evolution and perform ancestral state
-reconstruction</li>
+<li>Fit the Mk model of discrete trait evolution and apply stochastic
+character mapping to reconstruct character histories with full
+uncertainty quantification</li>
 </ol>
 </div>
 <div id="marking" class="section level2">
@@ -3014,8 +3015,8 @@ reconstruction</li>
 <td>8</td>
 </tr>
 <tr>
-<td>Section 4: Discrete Trait Evolution and Ancestral State
-Reconstruction</td>
+<td>Section 4: Discrete Character Evolution — Mk Model and Stochastic
+Character Mapping</td>
 <td>4</td>
 </tr>
 <tr>
@@ -3049,11 +3050,13 @@ Genomes</em></a>. Understand the following concepts:</p>
 <li>null hypothesis H₀</li>
 <li>contingency table</li>
 <li>Fisher’s test</li>
+<li>odds ratio, and true odds ratio</li>
 </ul>
 </div>
 <div id="install-required-r-packages" class="section level3">
 <h3>Install required R packages</h3>
-<p>Install the following R packages: “ape”, “geiger”, “tidyverse”.</p>
+<p>Install the following R packages: “ape”, “geiger”, “phytools”,
+“tidyverse”.</p>
 <hr />
 </div>
 </div>
@@ -3063,11 +3066,12 @@ Genomes</em></a>. Understand the following concepts:</p>
 <p>We will use the following R libraries in this lab.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">library</span>(ape)</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">library</span>(geiger)</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">700</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="co"># please replace to your working dir</span></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>knitr<span class="sc">::</span>opts_knit<span class="sc">$</span><span class="fu">set</span>(<span class="at">root.dir =</span> <span class="st">&quot;~/WorkSpace/BioSci700/Lab4&quot;</span>)</span></code></pre></div>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="fu">library</span>(phytools)</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">700</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="co"># please replace to your working dir</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>knitr<span class="sc">::</span>opts_knit<span class="sc">$</span><span class="fu">set</span>(<span class="at">root.dir =</span> <span class="st">&quot;~/WorkSpace/BioSci700/Lab4&quot;</span>)</span></code></pre></div>
 <hr />
 </div>
 <div id="section-1-contingency-table-and-fishers-exact-test-3-points" class="section level1">
@@ -3184,6 +3188,40 @@ in a couple of sentences.</li>
 </ol>
 <pre><code>Your answer here</code></pre>
 </div>
+<div id="understanding-the-fisher.test-output" class="section level3">
+<h3>Understanding the <code>fisher.test()</code> output</h3>
+<p><code>fisher.test()</code> reports: <em>“alternative hypothesis: true
+odds ratio is not equal to 1”</em>. Two concepts here are worth
+unpacking.</p>
+<p><strong>Odds ratio.</strong> The odds ratio (OR) measures the
+strength of association between two binary variables. An OR of 1 means
+the traits are independent; OR &gt; 1 means positive association; OR
+&lt; 1 means negative association. In a 2×2 table, the sample OR is the
+cross-product of the diagonal cells: (n₁₁ × n₂₂) / (n₁₂ × n₂₁).</p>
+<p><strong>“True” odds ratio.</strong> The word <em>true</em>
+distinguishes the <strong>population parameter</strong> from the
+<strong>sample statistic</strong>. The sample OR is computed from the
+observed data; the true OR is the underlying association that exists in
+the population from which the data were drawn. Fisher’s exact test uses
+the sample data to ask: <em>if the true population OR were exactly 1
+(complete independence), how probable is it to observe a table as
+extreme as this one?</em> That probability is the p-value — the test is
+performed on the sample, but the hypothesis is about the population.</p>
+<p><strong>Anatomy of the R output.</strong></p>
+<ol style="list-style-type: decimal">
+<li><strong>The Hypothesis (Population/True):</strong>
+<code>alternative hypothesis: true odds ratio is not equal to 1</code> —
+states H₀ (OR = 1, no association in the population) and H₁ (OR ≠
+1).</li>
+<li><strong>The Confidence Interval (Population/True):</strong>
+<code>95 percent confidence interval</code> — a range of plausible
+values for the true population OR consistent with the data.</li>
+<li><strong>The Sample Estimate (Sample):</strong>
+<code>sample estimates: odds ratio</code> — the OR calculated directly
+from the observed cell counts; an estimate of the true OR, not the
+quantity being tested.</li>
+</ol>
+</div>
 </div>
 <div id="phylogenetic-independence-and-its-consequences" class="section level2">
 <h2>1.2 Phylogenetic independence and its consequences</h2>
@@ -3241,6 +3279,34 @@ branch} \mid H_0) = \frac{\binom{1}{1}\binom{13}{0}}{\binom{14}{1}}
 \approx 0.0714\]</span></p>
 <p>Since p = 0.0714 &gt; 0.05, we <strong>fail to reject</strong> H₀ — a
 completely different conclusion from Section 1.1.</p>
+<p>Reproduce the branch-based result in R:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># Reproduce Table 8.2: counts of co-occurring trait changes per branch</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>ct_branch <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>  <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">13</span>),</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>  <span class="at">nrow =</span> <span class="dv">2</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>  <span class="at">dimnames =</span> <span class="fu">list</span>(</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>    <span class="at">feather_changed =</span> <span class="fu">c</span>(<span class="st">&quot;yes&quot;</span>, <span class="st">&quot;no&quot;</span>),</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>    <span class="at">eye_changed     =</span> <span class="fu">c</span>(<span class="st">&quot;yes&quot;</span>, <span class="st">&quot;no&quot;</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>  )</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>)</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="fu">print</span>(ct_branch)</span></code></pre></div>
+<pre><code>##                eye_changed
+## feather_changed yes no
+##             yes   1  0
+##             no    0 13</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co"># One-sided test matching Equation 8.2 (p ≈ 0.0714)</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="fu">fisher.test</span>(ct_branch, <span class="at">alternative =</span> <span class="st">&quot;greater&quot;</span>)</span></code></pre></div>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  ct_branch
+## p-value = 0.07143
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  0.6841923       Inf
+## sample estimates:
+## odds ratio 
+##        Inf</code></pre>
 <p><strong>Q2 (1 point):</strong> In 2–3 sentences, explain why treating
 species as independent observations violates the assumptions of Fisher’s
 exact test, and what the change in p-value from Equation 8.1 (p ≈
@@ -3269,20 +3335,24 @@ relationship. A standard linear model assumes all observations are
 independent, but closely related species inherit similar trait values
 from a common ancestor — they are not independent data points.</p>
 <p>Consider a simple example: the Geospiza tree has a deep split between
-large ground finches (large body, deep beak, long wing) and small
-tree/warbler finches (small body, shallow beak, short wing). A
-cross-species regression of beak depth on wing length sees two tight
+large ground finches (deep beak, long culmen, long wing) and small
+tree/warbler finches (shallow beak, short culmen, short wing). A
+cross-species regression of beak depth on culmen length sees two tight
 clusters and returns a strong positive slope with a small p-value. But
-this “correlation” is really just one ancient clade split counted 13
-times. The effective sample size is far smaller than 13, so standard
-errors are underestimated and p-values are too optimistic.</p>
+this “correlation” is largely driven by a single deep clade split — one
+evolutionary event echoed across all 13 tips. The effective sample size
+is far smaller than 13, so standard errors are underestimated and
+p-values are too optimistic.</p>
 </div>
 <div id="how-pics-fix-the-problem" class="section level3">
 <h3>How PICs fix the problem</h3>
 <p><strong>Phylogenetically independent contrasts (PICs)</strong>,
 introduced by Felsenstein (1985), transform tip values into
 <strong>differences at internal nodes</strong> that are statistically
-independent of each other under Brownian Motion evolution.</p>
+independent of each other under <strong>Brownian Motion</strong> (BM)
+evolution — a model in which trait variance accumulates in proportion to
+elapsed time, like an undirected random walk with no preferred
+direction.</p>
 <p>At each internal node <em>k</em> with daughter lineages <em>i</em>
 and <em>j</em>, the standardised contrast is:</p>
 <p><span class="math display">\[C_k = \frac{x_i - x_j}{\sqrt{v_i +
@@ -3325,23 +3395,23 @@ morphological measurements for 13 Galápagos finch species on a dated
 phylogeny: wing length (<code>wingL</code>), tarsus length
 (<code>tarsusL</code>), culmen length (<code>culmenL</code>), beak width
 (<code>beakW</code>), and beak depth (<code>beakD</code>).</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">data</span>(geospiza)</span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="co"># Match tree tips to data rows (drops &#39;olivacea&#39; which lacks trait data)</span></span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>geo <span class="ot">&lt;-</span> <span class="fu">treedata</span>(geospiza<span class="sc">$</span>phy, geospiza<span class="sc">$</span>dat, <span class="at">warnings =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>tree <span class="ot">&lt;-</span> geo<span class="sc">$</span>phy</span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>traits <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(geo<span class="sc">$</span>data)</span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a></span>
-<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Tips in tree:&quot;</span>, <span class="fu">length</span>(tree<span class="sc">$</span>tip.label), <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">data</span>(geospiza)</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="co"># Match tree tips to data rows (drops &#39;olivacea&#39; which lacks trait data)</span></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a>geo <span class="ot">&lt;-</span> <span class="fu">treedata</span>(geospiza<span class="sc">$</span>phy, geospiza<span class="sc">$</span>dat, <span class="at">warnings =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a>tree <span class="ot">&lt;-</span> geo<span class="sc">$</span>phy</span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a>traits <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(geo<span class="sc">$</span>data)</span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Tips in tree:&quot;</span>, <span class="fu">length</span>(tree<span class="sc">$</span>tip.label), <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
 <pre><code>## Tips in tree: 13</code></pre>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Traits available:&quot;</span>, <span class="fu">colnames</span>(traits), <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Traits available:&quot;</span>, <span class="fu">colnames</span>(traits), <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
 <pre><code>## Traits available: wingL tarsusL culmenL beakD gonysW</code></pre>
 <p><strong>Q3 (1 point):</strong> Plot the phylogenetic tree with tip
 labels and print a summary table of the five traits (use
 <code>summary()</code>).</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="do">### Your code here</span></span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="do">### Your code here</span></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
 <p>Which species has the largest and smallest <code>beakD</code>, and
 what are the values? Which has the largest and smallest
 <code>culmenL</code>, and what are the values? Does the same species
@@ -3360,9 +3430,9 @@ points with species labels, overlay the regression line, and report
 <p><em>Hint:</em> Use <code>data = traits</code> inside <code>lm</code>.
 Print a summary of regression. For species labels on the plot, use
 <code>text()</code> or <code>geom_text()</code> if using ggplot2.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="do">### Your code here</span></span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="do">### Your code here</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
 <p>Does culmen length appear to predict beak depth significantly? Do any
 species appear to be influential points, and how might they affect the
 slope estimate?</p>
@@ -3380,17 +3450,23 @@ violate that assumption. Print a summary of the regression and plot the
 result with dashed reference lines using
 <code>abline(h = 0, v = 0, lty = 2)</code> — these mark nodes where
 neither trait changed.</p>
+<p><em>Note:</em> <code>summary()</code> will report an R² value. For a
+no-intercept model (fitted with <code>- 1</code>), R internally computes
+R² as <code>1 − SS_res / sum(y²)</code> rather than the usual
+<code>1 − SS_res / SS_centered</code>, which inflates the value — so
+this R² is not comparable to the one in Q4. You will explain this in
+Q6.</p>
 <p><em>Hint:</em> <code>pic()</code> requires a named numeric vector
 (provided as scaffolding) and returns <em>n</em> − 1 branch-length
 standardised contrasts — one per internal node. Call <code>pic()</code>
 on each named vector, then fit the no-intercept model described
 above.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>culmen_vec <span class="ot">&lt;-</span> <span class="fu">setNames</span>(traits<span class="sc">$</span>culmenL, <span class="fu">rownames</span>(traits))</span>
-<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>beakD_vec  <span class="ot">&lt;-</span> <span class="fu">setNames</span>(traits<span class="sc">$</span>beakD,   <span class="fu">rownames</span>(traits))</span>
-<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a><span class="do">### Your code here</span></span>
-<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a></span>
-<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>culmen_vec <span class="ot">&lt;-</span> <span class="fu">setNames</span>(traits<span class="sc">$</span>culmenL, <span class="fu">rownames</span>(traits))</span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a>beakD_vec  <span class="ot">&lt;-</span> <span class="fu">setNames</span>(traits<span class="sc">$</span>beakD,   <span class="fu">rownames</span>(traits))</span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a><span class="do">### Your code here</span></span>
+<span id="cb20-5"><a href="#cb20-5" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
 <p>Report the slope and p-value of the PIC regression, and explain
 biologically what the result tells you about the relationship between
 culmen length and beak depth after accounting for shared evolutionary
@@ -3415,9 +3491,9 @@ The PIC workflow is identical to Q5 — reuse <code>beakD_vec</code> and
 <li><strong>(1 point)</strong> Implement R code, and correctly compute
 and fill in slope and p-value for all four rows.</li>
 </ul>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="do">### Your code here</span></span>
-<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="do">### Your code here</span></span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
 <p>Fill in the table with your results (round to 3 decimal places):</p>
 <table>
 <thead>
@@ -3475,9 +3551,13 @@ non-independence of species data.</li>
 points)</h1>
 <div id="background-3" class="section level2">
 <h2>Background</h2>
-<p>The <code>geiger</code> package implements maximum likelihood fitting
-of several standard models for how a continuous trait evolves along a
-phylogeny. The four most commonly compared models are:</p>
+<p>Different traits do not evolve the same way, and assuming a single
+model without testing alternatives can lead to wrong conclusions about
+adaptation, selection, and evolutionary rates. Maximum likelihood
+fitting lets us evaluate several competing models on the same data and
+identify which the data best support, penalised for complexity. The
+<code>geiger</code> package implements this for four standard
+models:</p>
 <table>
 <colgroup>
 <col width="20%" />
@@ -3536,11 +3616,11 @@ The OU model may print a warning
 <code>Parameter estimates appear at bounds: alpha</code>. This means the
 optimiser could not find an interior maximum — the OU fit is effectively
 degenerating to BM. Report it in your table and discuss it in Q9.</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>beakD_vec <span class="ot">&lt;-</span> <span class="fu">setNames</span>(traits<span class="sc">$</span>beakD, <span class="fu">rownames</span>(traits))  <span class="co"># repeated from Section 2 for standalone use</span></span>
-<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a><span class="do">### Your code here</span></span>
-<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a></span>
-<span id="cb20-5"><a href="#cb20-5" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>beakD_vec <span class="ot">&lt;-</span> <span class="fu">setNames</span>(traits<span class="sc">$</span>beakD, <span class="fu">rownames</span>(traits))  <span class="co"># repeated from Section 2 for standalone use</span></span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a><span class="do">### Your code here</span></span>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="#cb24-5" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
 <p>In your written answer, briefly state what <code>k</code> represents
 and why it matters for the AIC calculation.</p>
 <pre><code>Your answer here (table of lnL, k, AIC for each model)</code></pre>
@@ -3550,13 +3630,13 @@ and why it matters for the AIC calculation.</p>
 <p><strong>Q8 (3 points):</strong> Collect the four AIC values into a
 named vector and pass them to <code>geiger::aicw()</code> to obtain AIC
 weights. For example,</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a>aic_vals <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">BM =</span> fit_bm<span class="sc">$</span>opt<span class="sc">$</span>aic, <span class="at">OU =</span> fit_ou<span class="sc">$</span>opt<span class="sc">$</span>aic, <span class="at">EB =</span> fit_eb<span class="sc">$</span>opt<span class="sc">$</span>aic, <span class="at">lambda =</span> fit_lambda<span class="sc">$</span>opt<span class="sc">$</span>aic)</span>
-<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a><span class="fu">aicw</span>(aic_vals)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a>aic_vals <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">BM =</span> fit_bm<span class="sc">$</span>opt<span class="sc">$</span>aic, <span class="at">OU =</span> fit_ou<span class="sc">$</span>opt<span class="sc">$</span>aic, <span class="at">EB =</span> fit_eb<span class="sc">$</span>opt<span class="sc">$</span>aic, <span class="at">lambda =</span> fit_lambda<span class="sc">$</span>opt<span class="sc">$</span>aic)</span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a><span class="fu">aicw</span>(aic_vals)</span></code></pre></div>
 <p>In the end, display the full comparison table (AIC, ΔAIC,
 weight).</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="do">### Your code here</span></span>
-<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="do">### Your code here</span></span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
 <p>Which model has the strongest support? Is the winning model’s AIC
 weight &gt; 0.9, indicating clear support, or is evidence spread across
 models? (As a guide: weight &gt; 0.95 indicates near-decisive support;
@@ -3575,10 +3655,10 @@ OU → <code>fit$opt$alpha</code>, <code>fit$opt$sigsq</code>; EB →
 <code>fit$opt$a</code>, <code>fit$opt$sigsq</code>; lambda →
 <code>fit$opt$lambda</code>, <code>fit$opt$sigsq</code>. All models also
 return <code>fit$opt$z0</code> (root state estimate).</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="do">### Your code here</span></span>
-<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a><span class="co"># Print the opt list of the best model:</span></span>
-<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a></span>
-<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="do">### Your code here</span></span>
+<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a><span class="co"># Print the opt list of the best model:</span></span>
+<span id="cb29-3"><a href="#cb29-3" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
 <ul>
 <li><strong>(1 point)</strong> Identify the key diagnostic parameter of
 the winning model (λ for lambda, α for OU, <code>a</code> for EB, σ² for
@@ -3593,28 +3673,45 @@ group?</li>
 <hr />
 </div>
 </div>
-<div id="section-4-discrete-trait-evolution-and-ancestral-state-reconstruction-4-points" class="section level1">
-<h1>Section 4: Discrete Trait Evolution and Ancestral State
-Reconstruction (4 points)</h1>
+<div id="section-4-discrete-character-evolution-the-mk-model-and-stochastic-character-mapping-4-points" class="section level1">
+<h1>Section 4: Discrete Character Evolution — The Mk Model and
+Stochastic Character Mapping (4 points)</h1>
 <div id="background-4" class="section level2">
 <h2>Background</h2>
-<p>Just as Section 3 applied AIC model comparison to continuous trait
-evolution, this section applies the same framework to discrete traits —
-and adds one further tool: reconstructing the most likely ancestral
-states at internal nodes of the phylogeny.</p>
-<p><code>geiger</code> fits models of discrete (categorical) trait
-evolution using <code>fitDiscrete()</code>. Two common models are:</p>
-<ul>
-<li><strong>ER (Equal Rates):</strong> all transition rates between
-states are equal — one free parameter q.</li>
-<li><strong>ARD (All Rates Different):</strong> each transition rate is
-estimated separately — for a binary trait this gives two parameters: q₀₁
-and q₁₀.</li>
-</ul>
-<p>We can then reconstruct the most likely ancestral states at internal
-nodes using <code>ape::ace()</code> (ancestral character estimation),
-which returns marginal likelihood probabilities for each state at each
-node.</p>
+<div id="the-mk-model" class="section level3">
+<h3>The Mk model</h3>
+<p>Discrete traits evolve through transitions between states rather than
+continuous drift. The <strong>Mk model</strong> (Markov k-state model;
+Lewis 2001) is the standard framework: it treats transitions among k
+discrete states as a continuous-time Markov process governed by an
+instantaneous rate matrix <strong>Q</strong>, where each off-diagonal
+element q_ij is the rate of transitioning from state i to state j per
+unit branch length. For a binary trait (deep / shallow), the Q matrix
+takes the form:</p>
+<p><span class="math display">\[Q = \begin{pmatrix} -q_{ds} &amp; q_{ds}
+\\ q_{sd} &amp; -q_{sd} \end{pmatrix}\]</span></p>
+<p>Two common special cases are <strong>ER (Equal Rates)</strong>, where
+q_ds = q_sd = q (one free parameter), and <strong>ARD (All Rates
+Different)</strong>, where q_ds and q_sd are estimated separately (two
+free parameters). <code>phytools::fitMk()</code> fits the Mk model by
+maximum likelihood and returns the full estimated Q matrix, making it
+possible to inspect not only which model fits better but how fast and in
+which direction transitions occur.</p>
+</div>
+<div id="stochastic-character-mapping" class="section level3">
+<h3>Stochastic character mapping</h3>
+<p>A limitation of deterministic ancestral state reconstruction (such as
+<code>ace()</code>) is that it returns a single point estimate of the
+most likely state at each node, hiding the true uncertainty in character
+history. <strong>Stochastic character mapping</strong> (Huelsenbeck et
+al. 2003) addresses this by sampling many complete character histories
+from the posterior — each history specifies not just node states but the
+exact timing of every transition along every branch. Averaging across N
+sampled histories gives node probabilities that properly account for
+this uncertainty. <code>phytools::make.simmap()</code> generates N
+stochastic maps; <code>summary()</code> extracts node probabilities
+averaged across all of them.</p>
+</div>
 </div>
 <div id="create-a-binary-trait" class="section level2">
 <h2>4.1 Create a binary trait</h2>
@@ -3622,13 +3719,13 @@ node.</p>
 median) or a “shallow” beak (beakD &lt; median), representing the broad
 ecological split between seed-crushing ground finches and insect-probing
 warbler finches.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a>median_beakD <span class="ot">&lt;-</span> <span class="fu">median</span>(traits<span class="sc">$</span>beakD)</span>
-<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a>beak_type <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(traits<span class="sc">$</span>beakD <span class="sc">&gt;=</span> median_beakD, <span class="st">&quot;deep&quot;</span>, <span class="st">&quot;shallow&quot;</span>)</span>
-<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a>beak_type <span class="ot">&lt;-</span> <span class="fu">setNames</span>(beak_type, <span class="fu">rownames</span>(traits))</span>
-<span id="cb27-4"><a href="#cb27-4" tabindex="-1"></a></span>
-<span id="cb27-5"><a href="#cb27-5" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Median beakD:&quot;</span>, <span class="fu">round</span>(median_beakD, <span class="dv">3</span>), <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a>median_beakD <span class="ot">&lt;-</span> <span class="fu">median</span>(traits<span class="sc">$</span>beakD)</span>
+<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a>beak_type <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(traits<span class="sc">$</span>beakD <span class="sc">&gt;=</span> median_beakD, <span class="st">&quot;deep&quot;</span>, <span class="st">&quot;shallow&quot;</span>)</span>
+<span id="cb31-3"><a href="#cb31-3" tabindex="-1"></a>beak_type <span class="ot">&lt;-</span> <span class="fu">setNames</span>(beak_type, <span class="fu">rownames</span>(traits))</span>
+<span id="cb31-4"><a href="#cb31-4" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Median beakD:&quot;</span>, <span class="fu">round</span>(median_beakD, <span class="dv">3</span>), <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
 <pre><code>## Median beakD: 2.073</code></pre>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="fu">print</span>(beak_type)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="fu">print</span>(beak_type)</span></code></pre></div>
 <pre><code>## magnirostris  conirostris   difficilis     scandens       fortis   fuliginosa 
 ##       &quot;deep&quot;       &quot;deep&quot;    &quot;shallow&quot;       &quot;deep&quot;       &quot;deep&quot;    &quot;shallow&quot; 
 ##      pallida        fusca     parvulus       pauper Pinaroloxias   Platyspiza 
@@ -3636,42 +3733,54 @@ warbler finches.</p>
 ##   psittacula 
 ##       &quot;deep&quot;</code></pre>
 </div>
-<div id="fit-discrete-evolutionary-models" class="section level2">
-<h2>4.2 Fit discrete evolutionary models</h2>
-<p><strong>Q10 (2 points):</strong> Fit the ER and ARD models to
-<code>beak_type</code> using <code>geiger::fitDiscrete()</code>. Compare
-their AIC values. Which transition model is better supported? Report the
-estimated rate(s) and discuss whether the forward and reverse transition
-rates differ substantially under ARD. If the estimated transition rate
-is very large (&gt;&gt; 1 per unit branch length), discuss what this
-might mean for the reliability of the model fit and the suitability of
-this binary trait.</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a>fit_er  <span class="ot">&lt;-</span> <span class="fu">fitDiscrete</span>(tree, beak_type, <span class="at">model =</span> <span class="st">&quot;ER&quot;</span>)</span>
-<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a>fit_ard <span class="ot">&lt;-</span> <span class="fu">fitDiscrete</span>(tree, beak_type, <span class="at">model =</span> <span class="st">&quot;ARD&quot;</span>)</span>
-<span id="cb31-3"><a href="#cb31-3" tabindex="-1"></a></span>
-<span id="cb31-4"><a href="#cb31-4" tabindex="-1"></a><span class="do">### Your code here</span></span>
-<span id="cb31-5"><a href="#cb31-5" tabindex="-1"></a><span class="co"># Compare AIC values and print rate parameters</span></span>
-<span id="cb31-6"><a href="#cb31-6" tabindex="-1"></a></span>
-<span id="cb31-7"><a href="#cb31-7" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
+<div id="fit-the-mk-model" class="section level2">
+<h2>4.2 Fit the Mk model</h2>
+<p><strong>Q10 (2 points):</strong> Fit the ER and ARD Mk models to
+<code>beak_type</code> using <code>phytools::fitMk()</code>. Print the
+estimated Q matrix for each model using <code>print()</code>, and
+compare their AIC values using <code>AIC()</code>.</p>
+<p><em>Hint:</em> <code>fitMk()</code> takes the same <code>tree</code>
+and named character vector <code>beak_type</code> used throughout this
+lab, and a <code>model</code> argument of <code>&quot;ER&quot;</code> or
+<code>&quot;ARD&quot;</code>.</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a><span class="do">### Your code here</span></span>
+<span id="cb35-2"><a href="#cb35-2" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
+<p>Which model is better supported? Do the forward (deep → shallow) and
+reverse (shallow → deep) rates differ substantially under ARD? If the
+estimated rates are very large (&gt;&gt; 1 per unit branch length),
+discuss what this implies for the reliability of the model fit and the
+suitability of this binary trait.</p>
 <pre><code>Your answer here</code></pre>
 </div>
-<div id="ancestral-state-reconstruction" class="section level2">
-<h2>4.3 Ancestral state reconstruction</h2>
-<p><strong>Q11 (2 points):</strong> Use <code>ape::ace()</code> with
-<code>type = &quot;discrete&quot;</code> and the better-supported model from Q10
-to reconstruct the ancestral beak type at each internal node. For
-example, use <code>model = &quot;ER&quot;</code> if it is the winning model.</p>
-<p>Plot the phylogeny using <code>plot.phylo()</code> and overlay pie
-charts at internal nodes with <code>nodelabels()</code> to show the
-probability of each state (deep = one colour, shallow = another). Use
-<code>anc$lik.anc</code> as the <code>pie</code> argument in
-<code>nodelabels()</code>.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="do">### Your code here</span></span>
-<span id="cb33-2"><a href="#cb33-2" tabindex="-1"></a></span>
-<span id="cb33-3"><a href="#cb33-3" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
-<p>What probability does the reconstruction assign to each state at the
-root? Is the reconstruction confident, and if not, why might that
-be?</p>
+<div id="stochastic-character-mapping-1" class="section level2">
+<h2>4.3 Stochastic character mapping</h2>
+<p><strong>Q11 (2 points):</strong> Use
+<code>phytools::make.simmap()</code> with the better-supported model
+from Q10 to generate 100 stochastic character maps of
+<code>beak_type</code> on the tree (<code>nsim = 100</code>,
+<code>Q = &quot;empirical&quot;</code>). Summarise the maps with
+<code>summary()</code> and extract the averaged node probabilities from
+the <code>$ace</code> element of the summary object. Plot one
+representative map with <code>phytools::plotSimmap()</code> and overlay
+pie charts at internal nodes showing the averaged node
+probabilities.</p>
+<p><em>Hint:</em> Use <code>set.seed(700)</code> before
+<code>make.simmap()</code> for reproducibility.
+<code>plotSimmap()</code> takes a <code>colors</code> argument (named
+vector of state colours) — use <code>title()</code> separately to add a
+plot title. Pass <code>piecol</code> to <code>nodelabels()</code> in the
+same order as the column names of the summary <code>$ace</code>
+matrix.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">700</span>)</span>
+<span id="cb37-2"><a href="#cb37-2" tabindex="-1"></a></span>
+<span id="cb37-3"><a href="#cb37-3" tabindex="-1"></a><span class="do">### Your code here</span></span>
+<span id="cb37-4"><a href="#cb37-4" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="#cb37-5" tabindex="-1"></a><span class="do">### Your code finished above</span></span></code></pre></div>
+<p>What probability does the stochastic mapping assign to each state at
+the root, averaged across the 100 simulations? Is the reconstruction
+confident? Explain why stochastic character mapping is more informative
+than a single-history reconstruction from <code>ace()</code>.</p>
 <pre><code>Your answer here</code></pre>
 <hr />
 </div>
