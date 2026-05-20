@@ -2,7 +2,9 @@
 
 ## Assignment 4
 
-Read **Chapter 8 — Traits and Comparative Methods** of the course textbook [Decoding Genomes](https://decodinggenomes.org) where PDF is available. Understand the following concepts:
+Read **Chapter 8 — Traits and Comparative Methods** of the course textbook [Decoding Genomes](https://decodinggenomes.org) where PDF is available. 
+
+Understand the following concepts before the lab:
 
 - null hypothesis H₀
 - contingency table

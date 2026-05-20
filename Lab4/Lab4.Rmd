@@ -11,15 +11,35 @@ output:
     highlight: tango       # colour the R code
 ---
 
+<style>
+table {
+  border-collapse: collapse;
+  margin: 1.8em 0;
+  width: auto;
+}
+
+table th,
+table td {
+  border: 1px solid #bbb;
+  padding: 8px 16px;
+  text-align: left;
+}
+
+table thead th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+</style>
+
 # Assignment4: Trait Evolution and Phylogenetic Comparative Methods (25 points)
 
 **Due date:** Mon 5/6/2026 at 23:59
 
 ## Lab Introduction and Objectives
 
-Welcome to this lab on phylogenetic comparative methods. Building on Chapter 8 of the textbook [*Decoding Genomes*](https://decodinggenomes.org), you will investigate how phenotypic traits evolve across species — and why accounting for shared evolutionary history is essential for drawing valid biological conclusions.
+This lab covers phylogenetic comparative methods, building on Chapter 8 of the textbook [*Decoding Genomes*](https://decodinggenomes.org). The central question is how phenotypic traits evolve across species and why shared evolutionary history must be accounted for when drawing biological conclusions.
 
-You will begin by testing associations between discrete traits using contingency tables and Fisher's exact test, first assuming independence and then reflecting on the role of phylogeny. You will then apply phylogenetically independent contrasts (PICs) to continuous traits to correct for shared ancestry when performing regression. In the final two sections, you will fit and compare models of continuous trait evolution using the `geiger` package, and model discrete trait evolution using the Mk model and stochastic character mapping with the `phytools` package.
+The four sections progress from testing discrete-trait associations with Fisher's exact test (first assuming independence, then accounting for phylogeny), to applying phylogenetically independent contrasts (PICs) for continuous traits, to fitting and comparing models of continuous trait evolution with `geiger`, and finally to modelling discrete character evolution with the Mk model and stochastic character mapping in `phytools`.
 
 Please follow the submission instructions below before starting:
 
@@ -56,7 +76,7 @@ This assignment is worth **25 points** in total:
 | Section 4: Discrete Character Evolution — Mk Model and Stochastic Character Mapping | 4 |
 | **Code quality and written answers** | **2** |
 
-**Code quality and written answers (2 points):** One point is awarded for clean, readable code: consistent indentation inside code blocks, meaningful variable names (avoid single-letter throwaway names), no stray `print()` calls or debugging output left in, each code block doing one logical thing, and the document knitting end-to-end without manual intervention. The second point is awarded for the quality of your written answers: responses should be in clear, well-structured English sentences, directly address what is asked, and be concise without being vague. Avoid bullet-point fragments where a coherent paragraph is expected, and proofread for grammar and spelling before submitting.
+**Code quality and written answers (2 points):** One point is awarded for clean, readable code, and the second point is awarded for the quality of your written answers.
 
 
 ---
@@ -111,11 +131,11 @@ knitr::opts_knit$set(root.dir = "~/WorkSpace/BioSci700/Lab4")
 
 When studying whether two discrete traits are associated across species, a natural starting point is to count how often each combination of trait states occurs and to test whether the pattern deviates from what we would expect by chance. A **contingency table** summarises these counts, and **Fisher's exact test** computes the exact probability of observing the data under a null hypothesis H₀. For this example, the textbook states H₀ as: *having yellow eyes is equally likely among green- and blue-feathered species.*
 
-The [textbook](https://decodinggenomes.org) (Section 8.1.1) illustrates this with eight bird species whose eye colour (yellow or red) and feather colour (green or blue) are recorded. Four species have yellow eyes and green feathers; four have red eyes and blue feathers — a perfectly correlated pattern. The textbook computes the p-value using the hypergeometric distribution, where Z is the number of species with both yellow eyes and green feathers (Equation 8.1):
+The [textbook](https://decodinggenomes.org) (Section 8.1.1) illustrates this with eight bird species whose eye colour (yellow or red) and feather colour (green or blue) are recorded. Four species have yellow eyes and green feathers; four have red eyes and blue feathers, a perfectly correlated pattern. The textbook computes the p-value using the hypergeometric distribution, where Z is the number of species with both yellow eyes and green feathers (Equation 8.1):
 
 $$P(Z = 0 \mid H_0) = \frac{\binom{4}{4}\binom{4}{0}}{\binom{8}{4}} \approx 0.0143$$
 
-Here Z = 0 means no species have yellow eyes and *blue* feathers — that is, all four yellow-eyed species have green feathers, which is the observed and most extreme possible outcome. We will reproduce this analysis using R below.
+Here Z = 0 means no species have yellow eyes and *blue* feathers. That is, all four yellow-eyed species have green feathers, which is the observed and most extreme possible outcome. We will reproduce this analysis using R below.
 
 The eight species and their discrete characters are:
 
@@ -158,7 +178,7 @@ Print both p-values clearly labelled.
 In your written answer:
 
 1. State whether H₀ is rejected at α = 0.05 for each test.
-2. The textbook (Equation 8.1) reports p ≈ 0.0143 — identify which of your two p-values matches this, and explain why the two p-values differ in a couple of sentences.
+2. The textbook (Equation 8.1) reports p ≈ 0.0143. Identify which of your two p-values matches this, and explain why the two p-values differ in a couple of sentences.
 
 ```
 Your answer here
@@ -167,24 +187,24 @@ Your answer here
 
 ### Understanding the `fisher.test()` output
 
-`fisher.test()` reports: *"alternative hypothesis: true odds ratio is not equal to 1"*. Two concepts here are worth unpacking.
+`fisher.test()` reports: *"alternative hypothesis: true odds ratio is not equal to 1"*. Two terms in the output need definition.
 
 **Odds ratio.** The odds ratio (OR) measures the strength of association between two binary variables. An OR of 1 means the traits are independent; OR > 1 means positive association; OR < 1 means negative association. In a 2×2 table, the sample OR is the cross-product of the diagonal cells: (n₁₁ × n₂₂) / (n₁₂ × n₂₁).
 
-**"True" odds ratio.** The word *true* distinguishes the **population parameter** from the **sample statistic**. The sample OR is computed from the observed data; the true OR is the underlying association that exists in the population from which the data were drawn. Fisher's exact test uses the sample data to ask: *if the true population OR were exactly 1 (complete independence), how probable is it to observe a table as extreme as this one?* That probability is the p-value — the test is performed on the sample, but the hypothesis is about the population.
+**"True" odds ratio.** The word *true* distinguishes the **population parameter** from the **sample statistic**. The sample OR is computed from the observed data; the true OR is the underlying association that exists in the population from which the data were drawn. Fisher's exact test uses the sample data to ask: *if the true population OR were exactly 1 (complete independence), how probable is it to observe a table as extreme as this one?* That probability is the p-value. The test is performed on the sample, but the hypothesis is about the population.
 
 **Anatomy of the R output.**
 
-1. **The Hypothesis (Population/True):** `alternative hypothesis: true odds ratio is not equal to 1` — states H₀ (OR = 1, no association in the population) and H₁ (OR ≠ 1).
-2. **The Confidence Interval (Population/True):** `95 percent confidence interval` — a range of plausible values for the true population OR consistent with the data.
-3. **The Sample Estimate (Sample):** `sample estimates: odds ratio` — the OR calculated directly from the observed cell counts; an estimate of the true OR, not the quantity being tested.
+1. **The Hypothesis (Population/True):** `alternative hypothesis: true odds ratio is not equal to 1`, stating H₀ (OR = 1, no association in the population) and H₁ (OR ≠ 1).
+2. **The Confidence Interval (Population/True):** `95 percent confidence interval`, a range of plausible values for the true population OR consistent with the data.
+3. **The Sample Estimate (Sample):** `sample estimates: odds ratio`, the OR calculated directly from the observed cell counts; an estimate of the true OR, not the quantity being tested.
 
 
 ## 1.2 Phylogenetic independence and its consequences
 
 ### Background
 
-The analysis in Section 1.1 treats each species as an independent observation. But related species share a common ancestor and therefore inherit similar traits — they are **not** independent. The apparent correlation between eye and feather colour may simply reflect a single shared evolutionary event rather than a genuine biological association.
+The analysis in Section 1.1 treats each species as an independent observation. But related species share a common ancestor and therefore inherit similar traits, and they are **not** independent. The apparent correlation between eye and feather colour may simply reflect a single shared evolutionary event rather than a genuine biological association.
 
 The [textbook](https://decodinggenomes.org) (Section 8.1.2) addresses this by shifting the unit of analysis from **species tips** to **branches**: instead of asking how many species have yellow eyes and green feathers, we ask how many branches show a co-occurring change in both traits. This gives a new contingency table (Table 8.2):
 
@@ -198,7 +218,7 @@ The new H₀ is: *the number of branches with a change in both feather and eye c
 
 $$P(\text{both traits change on the same branch} \mid H_0) = \frac{\binom{1}{1}\binom{13}{0}}{\binom{14}{1}} \approx 0.0714$$
 
-Since p = 0.0714 > 0.05, we **fail to reject** H₀ — a completely different conclusion from Section 1.1.
+Since p = 0.0714 > 0.05, we **fail to reject** H₀, a completely different conclusion from Section 1.1.
 
 Reproduce the branch-based result in R:
 
@@ -236,13 +256,13 @@ The non-independence of species data and the need for phylogenetic correction we
 
 ### Why cross-species regression fails for species data
 
-When two continuous traits appear correlated across species, the association may be partly or entirely explained by **shared evolutionary history** rather than a genuine biological relationship. A standard linear model assumes all observations are independent, but closely related species inherit similar trait values from a common ancestor — they are not independent data points.
+When two continuous traits appear correlated across species, the association may be partly or entirely explained by **shared evolutionary history** rather than a genuine biological relationship. A standard linear model assumes all observations are independent, but closely related species inherit similar trait values from a common ancestor, and they are not independent data points.
 
-Consider a simple example: the Geospiza tree has a deep split between large ground finches (deep beak, long culmen, long wing) and small tree/warbler finches (shallow beak, short culmen, short wing). A cross-species regression of beak depth on culmen length sees two tight clusters and returns a strong positive slope with a small p-value. But this "correlation" is largely driven by a single deep clade split — one evolutionary event echoed across all 13 tips. The effective sample size is far smaller than 13, so standard errors are underestimated and p-values are too optimistic.
+Consider a simple example: the Geospiza tree has a deep split between large ground finches (deep beak, long culmen, long wing) and small tree/warbler finches (shallow beak, short culmen, short wing). A cross-species regression of beak depth on culmen length sees two tight clusters and returns a strong positive slope with a small p-value. But this "correlation" is largely driven by a single deep clade split, one evolutionary event echoed across all 13 tips. The effective sample size is far smaller than 13, so standard errors are underestimated and p-values are too optimistic.
 
 ### How PICs fix the problem
 
-**Phylogenetically independent contrasts (PICs)**, introduced by Felsenstein (1985), transform tip values into **differences at internal nodes** that are statistically independent of each other under **Brownian Motion** (BM) evolution — a model in which trait variance accumulates in proportion to elapsed time, like an undirected random walk with no preferred direction.
+**Phylogenetically independent contrasts (PICs)**, introduced by Felsenstein (1985), transform tip values into **differences at internal nodes** that are statistically independent of each other under **Brownian Motion** (BM) evolution, a model in which trait variance accumulates in proportion to elapsed time, like an undirected random walk with no preferred direction.
 
 At each internal node *k* with daughter lineages *i* and *j*, the standardised contrast is:
 
@@ -251,16 +271,16 @@ $$C_k = \frac{x_i - x_j}{\sqrt{v_i + v_j}}$$
 where:
 
 - $x_i$, $x_j$: the trait values (e.g. beak depth) of daughter lineages *i* and *j*
-- $v_i$, $v_j$: the branch lengths leading to *i* and *j* — longer branches allow more evolutionary change, so a larger raw difference is expected and needs to be down-weighted
-- $C_k$: the contrast at node *k* — the trait difference between the two daughters, scaled by the expected evolutionary change given their branch lengths
+- $v_i$, $v_j$: the branch lengths leading to *i* and *j*. Longer branches allow more evolutionary change, so a larger raw difference is expected and needs to be down-weighted
+- $C_k$: the contrast at node *k*, the trait difference between the two daughters, scaled by the expected evolutionary change given their branch lengths
 
 With *n* tip species the tree has *n* − 1 internal nodes, yielding *n* − 1 independent contrasts.
 
-Instead of asking "do species with long culmens also have deep beaks?", PICs ask "when a lineage evolved a longer culmen than its sister lineage, did it also evolve a deeper beak?" — repeated at every node. This reframing removes the shared-ancestry problem entirely.
+Instead of asking "do species with long culmens also have deep beaks?", PICs ask "when a lineage evolved a longer culmen than its sister lineage, did it also evolve a deeper beak?", repeated at every node. This reframing removes the shared-ancestry problem entirely.
 
 ### Why regression through the origin is required
 
-Under Brownian Motion, contrasts have **expected value zero** — there is no directional prediction for which daughter evolves higher. Fitting a regression with an intercept would allow the model to absorb a spurious mean-shift in the contrasts, wasting a degree of freedom and violating the BM assumption. The `- 1` in `lm(pic_y ~ pic_x - 1)` enforces the biologically correct constraint.
+Under Brownian Motion, contrasts have **expected value zero**, with no directional prediction for which daughter evolves higher. Fitting a regression with an intercept would allow the model to absorb a spurious mean-shift in the contrasts, wasting a degree of freedom and violating the BM assumption. The `- 1` in `lm(pic_y ~ pic_x - 1)` enforces the biologically correct constraint.
 
 
 ## 2.1 Load and explore the Geospiza data
@@ -317,11 +337,11 @@ Your answer here
 
 ## 2.3 Phylogenetically independent contrasts
 
-**Q5 (2 points):** Compute PICs for both `culmenL` and `beakD` using `ape::pic()`, then regress the contrasts through the **origin** — that is, fit a no-intercept model (`lm(pic_beakD ~ pic_culmen - 1)`), because under Brownian Motion the expected contrast is zero and allowing an intercept would violate that assumption. Print a summary of the regression and plot the result with dashed reference lines using `abline(h = 0, v = 0, lty = 2)` — these mark nodes where neither trait changed.
+**Q5 (2 points):** Compute PICs for both `culmenL` and `beakD` using `ape::pic()`, then regress the contrasts through the **origin**, that is, fit a no-intercept model (`lm(pic_beakD ~ pic_culmen - 1)`), because under Brownian Motion the expected contrast is zero and allowing an intercept would violate that assumption. Print a summary of the regression and plot the result with dashed reference lines using `abline(h = 0, v = 0, lty = 2)`, which mark nodes where neither trait changed.
 
-*Note:* `summary()` will report an R² value. For a no-intercept model (fitted with `- 1`), R internally computes R² as `1 − SS_res / sum(y²)` rather than the usual `1 − SS_res / SS_centered`, which inflates the value — so this R² is not comparable to the one in Q4. You will explain this in Q6.
+*Note:* `summary()` will report an R² value. For a no-intercept model (fitted with `- 1`), R internally computes R² as `1 − SS_res / sum(y²)` rather than the usual `1 − SS_res / SS_centered`, which inflates the value, so this R² is not comparable to the one in Q4. You will explain this in Q6.
 
-*Hint:* `pic()` requires a named numeric vector (provided as scaffolding) and returns *n* − 1 branch-length standardised contrasts — one per internal node. Call `pic()` on each named vector, then fit the no-intercept model described above.
+*Hint:* `pic()` requires a named numeric vector (provided as scaffolding) and returns *n* − 1 branch-length standardised contrasts, one per internal node. Call `pic()` on each named vector, then fit the no-intercept model described above.
 
 ```{r q5-pic-regression}
 culmen_vec <- setNames(traits$culmenL, rownames(traits))
@@ -343,9 +363,9 @@ Your answer here
 
 **Q6 (3 points):** Extend your analysis to a second trait pair. Run both the cross-species `lm()` and PIC regression for `beakD ~ wingL` and fill in the comparison table below.
 
-*Note on R²:* Do **not** include R² in your comparison. The PIC regression is fitted through the origin, so R's `summary()` computes R² relative to zero rather than relative to the mean — this makes it numerically incomparable to the cross-species R². Use slope and p-value instead.
+*Note on R²:* Do **not** include R² in your comparison. The PIC regression is fitted through the origin, so R's `summary()` computes R² relative to zero rather than relative to the mean, making it numerically incomparable to the cross-species R². Use slope and p-value instead.
 
-*Hint:* `wingL` is a column in `traits`. The PIC workflow is identical to Q5 — reuse `beakD_vec` and `pic_beakD`, and add a `wingL` vector.
+*Hint:* `wingL` is a column in `traits`. The PIC workflow is identical to Q5. Reuse `beakD_vec` and `pic_beakD`, and add a `wingL` vector.
 
 
 - **(1 point)** Implement R code, and correctly compute and fill in slope and p-value for all four rows.
@@ -384,10 +404,10 @@ Different traits do not evolve the same way, and assuming a single model without
 
 | Model | Description | Key parameter |
 |-------|-------------|---------------|
-| **BM** | Brownian Motion — trait drifts randomly with no directional force | σ² (rate) |
-| **OU** | Ornstein-Uhlenbeck — trait is pulled towards an optimum θ by strength α | α (pull strength), σ², θ |
-| **EB** | Early Burst — rate decelerates exponentially over time | `a` (rate-change parameter; `a` < 0 = deceleration) |
-| **lambda** | Pagel's λ — scales internal branch lengths to test phylogenetic signal | λ (0 = no signal, 1 = pure BM) |
+| **BM** | Brownian Motion, in which trait drifts randomly with no directional force | σ² (rate) |
+| **OU** | Ornstein-Uhlenbeck, where trait is pulled towards an optimum θ by strength α | α (pull strength), σ², θ |
+| **EB** | Early Burst, where rate decelerates exponentially over time | `a` (rate-change parameter; `a` < 0 = deceleration) |
+| **lambda** | Pagel's λ, which scales internal branch lengths to test phylogenetic signal | λ (0 = no signal, 1 = pure BM) |
 
 We use AIC to compare non-nested models: the model with the lowest AIC is preferred, and a difference ΔAIC > 2 indicates meaningful support for the better model (Section 7.3 of the [textbook](https://decodinggenomes.org)).
 
@@ -395,7 +415,7 @@ We use AIC to compare non-nested models: the model with the lowest AIC is prefer
 ## 3.1 Fit the four models to beak depth
 
 **Q7 (3 points):** Using `geiger::fitContinuous()`, fit all four models (BM, OU, EB, lambda) to the `beakD` trait from the Geospiza dataset. For example `fit_bm <- fitContinuous(tree, beakD_vec, model = "BM")`. For each model, print the log-likelihood, number of parameters (`k`), and AIC. (Use `fit$opt$lnL`, `fit$opt$k`, and `fit$opt$aic`.)
-*Note:* The OU model may print a warning `Parameter estimates appear at bounds: alpha`. This means the optimiser could not find an interior maximum — the OU fit is effectively degenerating to BM. Report it in your table and discuss it in Q9.
+*Note:* The OU model may print a warning `Parameter estimates appear at bounds: alpha`. This means the optimiser could not find an interior maximum, so the OU fit is effectively degenerating to BM. Report it in your table and discuss it in Q9.
 
 ```{r q7-fit-models}
 beakD_vec <- setNames(traits$beakD, rownames(traits))  # repeated from Section 2 for standalone use
@@ -476,7 +496,7 @@ Two common special cases are **ER (Equal Rates)**, where q_ds = q_sd = q (one fr
 
 ### Stochastic character mapping
 
-A limitation of deterministic ancestral state reconstruction (such as `ace()`) is that it returns a single point estimate of the most likely state at each node, hiding the true uncertainty in character history. **Stochastic character mapping** (Huelsenbeck et al. 2003) addresses this by sampling many complete character histories from the posterior — each history specifies not just node states but the exact timing of every transition along every branch. Averaging across N sampled histories gives node probabilities that properly account for this uncertainty. `phytools::make.simmap()` generates N stochastic maps; `summary()` extracts node probabilities averaged across all of them.
+A limitation of deterministic ancestral state reconstruction (such as `ace()`) is that it returns a single point estimate of the most likely state at each node, hiding the true uncertainty in character history. **Stochastic character mapping** (Huelsenbeck et al. 2003) addresses this by sampling many complete character histories from the posterior, where each history specifies not just node states but the exact timing of every transition along every branch. Averaging across N sampled histories gives node probabilities that properly account for this uncertainty. `phytools::make.simmap()` generates N stochastic maps; `summary()` extracts node probabilities averaged across all of them.
 
 
 ## 4.1 Create a binary trait
@@ -516,7 +536,7 @@ Your answer here
 
 **Q11 (2 points):** Use `phytools::make.simmap()` with the better-supported model from Q10 to generate 100 stochastic character maps of `beak_type` on the tree (`nsim = 100`, `Q = "empirical"`). Summarise the maps with `summary()` and extract the averaged node probabilities from the `$ace` element of the summary object. Plot one representative map with `phytools::plotSimmap()` and overlay pie charts at internal nodes showing the averaged node probabilities.
 
-*Hint:* Use `set.seed(700)` before `make.simmap()` for reproducibility. `plotSimmap()` takes a `colors` argument (named vector of state colours) — use `title()` separately to add a plot title. Pass `piecol` to `nodelabels()` in the same order as the column names of the summary `$ace` matrix.
+*Hint:* Use `set.seed(700)` before `make.simmap()` for reproducibility. `plotSimmap()` takes a `colors` argument (named vector of state colours). Use `title()` separately to add a plot title. Pass `piecol` to `nodelabels()` in the same order as the column names of the summary `$ace` matrix.
 
 ```{r q11-simmap, fig.width=8, fig.height=6}
 set.seed(700)

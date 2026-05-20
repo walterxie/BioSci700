@@ -2932,26 +2932,41 @@ Phylogenetic Comparative Methods</h1>
 </div>
 
 
+<style>
+table {
+border-collapse: collapse;
+margin: 1.8em 0;
+width: auto;
+}
+table th,
+table td {
+border: 1px solid #bbb;
+padding: 8px 16px;
+text-align: left;
+}
+table thead th {
+background-color: #f0f0f0;
+font-weight: bold;
+}
+</style>
 <div id="assignment4-trait-evolution-and-phylogenetic-comparative-methods-25-points" class="section level1">
 <h1>Assignment4: Trait Evolution and Phylogenetic Comparative Methods
 (25 points)</h1>
 <p><strong>Due date:</strong> Mon 5/6/2026 at 23:59</p>
 <div id="lab-introduction-and-objectives" class="section level2">
 <h2>Lab Introduction and Objectives</h2>
-<p>Welcome to this lab on phylogenetic comparative methods. Building on
-Chapter 8 of the textbook <a href="https://decodinggenomes.org"><em>Decoding Genomes</em></a>, you
-will investigate how phenotypic traits evolve across species — and why
-accounting for shared evolutionary history is essential for drawing
-valid biological conclusions.</p>
-<p>You will begin by testing associations between discrete traits using
-contingency tables and Fisher’s exact test, first assuming independence
-and then reflecting on the role of phylogeny. You will then apply
-phylogenetically independent contrasts (PICs) to continuous traits to
-correct for shared ancestry when performing regression. In the final two
-sections, you will fit and compare models of continuous trait evolution
-using the <code>geiger</code> package, and model discrete trait
-evolution using the Mk model and stochastic character mapping with the
-<code>phytools</code> package.</p>
+<p>This lab covers phylogenetic comparative methods, building on Chapter
+8 of the textbook <a href="https://decodinggenomes.org"><em>Decoding
+Genomes</em></a>. The central question is how phenotypic traits evolve
+across species and why shared evolutionary history must be accounted for
+when drawing biological conclusions.</p>
+<p>The four sections progress from testing discrete-trait associations
+with Fisher’s exact test (first assuming independence, then accounting
+for phylogeny), to applying phylogenetically independent contrasts
+(PICs) for continuous traits, to fitting and comparing models of
+continuous trait evolution with <code>geiger</code>, and finally to
+modelling discrete character evolution with the Mk model and stochastic
+character mapping in <code>phytools</code>.</p>
 <p>Please follow the submission instructions below before starting:</p>
 <ol style="list-style-type: decimal">
 <li><strong>File naming:</strong> Save this file with your name and
@@ -3026,16 +3041,8 @@ Character Mapping</td>
 </tbody>
 </table>
 <p><strong>Code quality and written answers (2 points):</strong> One
-point is awarded for clean, readable code: consistent indentation inside
-code blocks, meaningful variable names (avoid single-letter throwaway
-names), no stray <code>print()</code> calls or debugging output left in,
-each code block doing one logical thing, and the document knitting
-end-to-end without manual intervention. The second point is awarded for
-the quality of your written answers: responses should be in clear,
-well-structured English sentences, directly address what is asked, and
-be concise without being vague. Avoid bullet-point fragments where a
-coherent paragraph is expected, and proofread for grammar and spelling
-before submitting.</p>
+point is awarded for clean, readable code, and the second point is
+awarded for the quality of your written answers.</p>
 <hr />
 </div>
 <div id="lab-preparation" class="section level2">
@@ -3093,14 +3100,14 @@ species.</em></p>
 8.1.1) illustrates this with eight bird species whose eye colour (yellow
 or red) and feather colour (green or blue) are recorded. Four species
 have yellow eyes and green feathers; four have red eyes and blue
-feathers — a perfectly correlated pattern. The textbook computes the
+feathers, a perfectly correlated pattern. The textbook computes the
 p-value using the hypergeometric distribution, where Z is the number of
 species with both yellow eyes and green feathers (Equation 8.1):</p>
 <p><span class="math display">\[P(Z = 0 \mid H_0) =
 \frac{\binom{4}{4}\binom{4}{0}}{\binom{8}{4}} \approx
 0.0143\]</span></p>
 <p>Here Z = 0 means no species have yellow eyes and <em>blue</em>
-feathers — that is, all four yellow-eyed species have green feathers,
+feathers. That is, all four yellow-eyed species have green feathers,
 which is the observed and most extreme possible outcome. We will
 reproduce this analysis using R below.</p>
 <p>The eight species and their discrete characters are:</p>
@@ -3182,7 +3189,7 @@ observed (i.e., more co-occurrence than expected under H₀).</li>
 <p>In your written answer:</p>
 <ol style="list-style-type: decimal">
 <li>State whether H₀ is rejected at α = 0.05 for each test.</li>
-<li>The textbook (Equation 8.1) reports p ≈ 0.0143 — identify which of
+<li>The textbook (Equation 8.1) reports p ≈ 0.0143. Identify which of
 your two p-values matches this, and explain why the two p-values differ
 in a couple of sentences.</li>
 </ol>
@@ -3191,8 +3198,8 @@ in a couple of sentences.</li>
 <div id="understanding-the-fisher.test-output" class="section level3">
 <h3>Understanding the <code>fisher.test()</code> output</h3>
 <p><code>fisher.test()</code> reports: <em>“alternative hypothesis: true
-odds ratio is not equal to 1”</em>. Two concepts here are worth
-unpacking.</p>
+odds ratio is not equal to 1”</em>. Two terms in the output need
+definition.</p>
 <p><strong>Odds ratio.</strong> The odds ratio (OR) measures the
 strength of association between two binary variables. An OR of 1 means
 the traits are independent; OR &gt; 1 means positive association; OR
@@ -3205,19 +3212,19 @@ observed data; the true OR is the underlying association that exists in
 the population from which the data were drawn. Fisher’s exact test uses
 the sample data to ask: <em>if the true population OR were exactly 1
 (complete independence), how probable is it to observe a table as
-extreme as this one?</em> That probability is the p-value — the test is
+extreme as this one?</em> That probability is the p-value. The test is
 performed on the sample, but the hypothesis is about the population.</p>
 <p><strong>Anatomy of the R output.</strong></p>
 <ol style="list-style-type: decimal">
 <li><strong>The Hypothesis (Population/True):</strong>
-<code>alternative hypothesis: true odds ratio is not equal to 1</code> —
-states H₀ (OR = 1, no association in the population) and H₁ (OR ≠
+<code>alternative hypothesis: true odds ratio is not equal to 1</code>,
+stating H₀ (OR = 1, no association in the population) and H₁ (OR ≠
 1).</li>
 <li><strong>The Confidence Interval (Population/True):</strong>
-<code>95 percent confidence interval</code> — a range of plausible
-values for the true population OR consistent with the data.</li>
+<code>95 percent confidence interval</code>, a range of plausible values
+for the true population OR consistent with the data.</li>
 <li><strong>The Sample Estimate (Sample):</strong>
-<code>sample estimates: odds ratio</code> — the OR calculated directly
+<code>sample estimates: odds ratio</code>, the OR calculated directly
 from the observed cell counts; an estimate of the true OR, not the
 quantity being tested.</li>
 </ol>
@@ -3229,10 +3236,10 @@ quantity being tested.</li>
 <h3>Background</h3>
 <p>The analysis in Section 1.1 treats each species as an independent
 observation. But related species share a common ancestor and therefore
-inherit similar traits — they are <strong>not</strong> independent. The
-apparent correlation between eye and feather colour may simply reflect a
-single shared evolutionary event rather than a genuine biological
-association.</p>
+inherit similar traits, and they are <strong>not</strong> independent.
+The apparent correlation between eye and feather colour may simply
+reflect a single shared evolutionary event rather than a genuine
+biological association.</p>
 <p>The <a href="https://decodinggenomes.org">textbook</a> (Section
 8.1.2) addresses this by shifting the unit of analysis from
 <strong>species tips</strong> to <strong>branches</strong>: instead of
@@ -3277,7 +3284,7 @@ independently). Applying Fisher’s exact test to this branch-based table
 <p><span class="math display">\[P(\text{both traits change on the same
 branch} \mid H_0) = \frac{\binom{1}{1}\binom{13}{0}}{\binom{14}{1}}
 \approx 0.0714\]</span></p>
-<p>Since p = 0.0714 &gt; 0.05, we <strong>fail to reject</strong> H₀ — a
+<p>Since p = 0.0714 &gt; 0.05, we <strong>fail to reject</strong> H₀, a
 completely different conclusion from Section 1.1.</p>
 <p>Reproduce the branch-based result in R:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># Reproduce Table 8.2: counts of co-occurring trait changes per branch</span></span>
@@ -3333,13 +3340,13 @@ association may be partly or entirely explained by <strong>shared
 evolutionary history</strong> rather than a genuine biological
 relationship. A standard linear model assumes all observations are
 independent, but closely related species inherit similar trait values
-from a common ancestor — they are not independent data points.</p>
+from a common ancestor, and they are not independent data points.</p>
 <p>Consider a simple example: the Geospiza tree has a deep split between
 large ground finches (deep beak, long culmen, long wing) and small
 tree/warbler finches (shallow beak, short culmen, short wing). A
 cross-species regression of beak depth on culmen length sees two tight
 clusters and returns a strong positive slope with a small p-value. But
-this “correlation” is largely driven by a single deep clade split — one
+this “correlation” is largely driven by a single deep clade split, one
 evolutionary event echoed across all 13 tips. The effective sample size
 is far smaller than 13, so standard errors are underestimated and
 p-values are too optimistic.</p>
@@ -3350,7 +3357,7 @@ p-values are too optimistic.</p>
 introduced by Felsenstein (1985), transform tip values into
 <strong>differences at internal nodes</strong> that are statistically
 independent of each other under <strong>Brownian Motion</strong> (BM)
-evolution — a model in which trait variance accumulates in proportion to
+evolution, a model in which trait variance accumulates in proportion to
 elapsed time, like an undirected random walk with no preferred
 direction.</p>
 <p>At each internal node <em>k</em> with daughter lineages <em>i</em>
@@ -3362,27 +3369,27 @@ v_j}}\]</span></p>
 <li><span class="math inline">\(x_i\)</span>, <span class="math inline">\(x_j\)</span>: the trait values (e.g. beak depth)
 of daughter lineages <em>i</em> and <em>j</em></li>
 <li><span class="math inline">\(v_i\)</span>, <span class="math inline">\(v_j\)</span>: the branch lengths leading to
-<em>i</em> and <em>j</em> — longer branches allow more evolutionary
+<em>i</em> and <em>j</em>. Longer branches allow more evolutionary
 change, so a larger raw difference is expected and needs to be
 down-weighted</li>
 <li><span class="math inline">\(C_k\)</span>: the contrast at node
-<em>k</em> — the trait difference between the two daughters, scaled by
+<em>k</em>, the trait difference between the two daughters, scaled by
 the expected evolutionary change given their branch lengths</li>
 </ul>
 <p>With <em>n</em> tip species the tree has <em>n</em> − 1 internal
 nodes, yielding <em>n</em> − 1 independent contrasts.</p>
 <p>Instead of asking “do species with long culmens also have deep
 beaks?”, PICs ask “when a lineage evolved a longer culmen than its
-sister lineage, did it also evolve a deeper beak?” — repeated at every
+sister lineage, did it also evolve a deeper beak?”, repeated at every
 node. This reframing removes the shared-ancestry problem entirely.</p>
 </div>
 <div id="why-regression-through-the-origin-is-required" class="section level3">
 <h3>Why regression through the origin is required</h3>
 <p>Under Brownian Motion, contrasts have <strong>expected value
-zero</strong> — there is no directional prediction for which daughter
-evolves higher. Fitting a regression with an intercept would allow the
-model to absorb a spurious mean-shift in the contrasts, wasting a degree
-of freedom and violating the BM assumption. The <code>- 1</code> in
+zero</strong>, with no directional prediction for which daughter evolves
+higher. Fitting a regression with an intercept would allow the model to
+absorb a spurious mean-shift in the contrasts, wasting a degree of
+freedom and violating the BM assumption. The <code>- 1</code> in
 <code>lm(pic_y ~ pic_x - 1)</code> enforces the biologically correct
 constraint.</p>
 </div>
@@ -3443,22 +3450,21 @@ slope estimate?</p>
 <p><strong>Q5 (2 points):</strong> Compute PICs for both
 <code>culmenL</code> and <code>beakD</code> using
 <code>ape::pic()</code>, then regress the contrasts through the
-<strong>origin</strong> — that is, fit a no-intercept model
+<strong>origin</strong>, that is, fit a no-intercept model
 (<code>lm(pic_beakD ~ pic_culmen - 1)</code>), because under Brownian
 Motion the expected contrast is zero and allowing an intercept would
 violate that assumption. Print a summary of the regression and plot the
 result with dashed reference lines using
-<code>abline(h = 0, v = 0, lty = 2)</code> — these mark nodes where
+<code>abline(h = 0, v = 0, lty = 2)</code>, which mark nodes where
 neither trait changed.</p>
 <p><em>Note:</em> <code>summary()</code> will report an R² value. For a
 no-intercept model (fitted with <code>- 1</code>), R internally computes
 R² as <code>1 − SS_res / sum(y²)</code> rather than the usual
-<code>1 − SS_res / SS_centered</code>, which inflates the value — so
-this R² is not comparable to the one in Q4. You will explain this in
-Q6.</p>
+<code>1 − SS_res / SS_centered</code>, which inflates the value, so this
+R² is not comparable to the one in Q4. You will explain this in Q6.</p>
 <p><em>Hint:</em> <code>pic()</code> requires a named numeric vector
 (provided as scaffolding) and returns <em>n</em> − 1 branch-length
-standardised contrasts — one per internal node. Call <code>pic()</code>
+standardised contrasts, one per internal node. Call <code>pic()</code>
 on each named vector, then fit the no-intercept model described
 above.</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>culmen_vec <span class="ot">&lt;-</span> <span class="fu">setNames</span>(traits<span class="sc">$</span>culmenL, <span class="fu">rownames</span>(traits))</span>
@@ -3482,10 +3488,10 @@ table below.</p>
 <p><em>Note on R²:</em> Do <strong>not</strong> include R² in your
 comparison. The PIC regression is fitted through the origin, so R’s
 <code>summary()</code> computes R² relative to zero rather than relative
-to the mean — this makes it numerically incomparable to the
-cross-species R². Use slope and p-value instead.</p>
+to the mean, making it numerically incomparable to the cross-species R².
+Use slope and p-value instead.</p>
 <p><em>Hint:</em> <code>wingL</code> is a column in <code>traits</code>.
-The PIC workflow is identical to Q5 — reuse <code>beakD_vec</code> and
+The PIC workflow is identical to Q5. Reuse <code>beakD_vec</code> and
 <code>pic_beakD</code>, and add a <code>wingL</code> vector.</p>
 <ul>
 <li><strong>(1 point)</strong> Implement R code, and correctly compute
@@ -3574,25 +3580,25 @@ models:</p>
 <tbody>
 <tr>
 <td><strong>BM</strong></td>
-<td>Brownian Motion — trait drifts randomly with no directional
+<td>Brownian Motion, in which trait drifts randomly with no directional
 force</td>
 <td>σ² (rate)</td>
 </tr>
 <tr>
 <td><strong>OU</strong></td>
-<td>Ornstein-Uhlenbeck — trait is pulled towards an optimum θ by
+<td>Ornstein-Uhlenbeck, where trait is pulled towards an optimum θ by
 strength α</td>
 <td>α (pull strength), σ², θ</td>
 </tr>
 <tr>
 <td><strong>EB</strong></td>
-<td>Early Burst — rate decelerates exponentially over time</td>
+<td>Early Burst, where rate decelerates exponentially over time</td>
 <td><code>a</code> (rate-change parameter; <code>a</code> &lt; 0 =
 deceleration)</td>
 </tr>
 <tr>
 <td><strong>lambda</strong></td>
-<td>Pagel’s λ — scales internal branch lengths to test phylogenetic
+<td>Pagel’s λ, which scales internal branch lengths to test phylogenetic
 signal</td>
 <td>λ (0 = no signal, 1 = pure BM)</td>
 </tr>
@@ -3614,8 +3620,9 @@ For each model, print the log-likelihood, number of parameters
 <code>fit$opt$k</code>, and <code>fit$opt$aic</code>.) <em>Note:</em>
 The OU model may print a warning
 <code>Parameter estimates appear at bounds: alpha</code>. This means the
-optimiser could not find an interior maximum — the OU fit is effectively
-degenerating to BM. Report it in your table and discuss it in Q9.</p>
+optimiser could not find an interior maximum, so the OU fit is
+effectively degenerating to BM. Report it in your table and discuss it
+in Q9.</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>beakD_vec <span class="ot">&lt;-</span> <span class="fu">setNames</span>(traits<span class="sc">$</span>beakD, <span class="fu">rownames</span>(traits))  <span class="co"># repeated from Section 2 for standalone use</span></span>
 <span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a></span>
 <span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a><span class="do">### Your code here</span></span>
@@ -3705,12 +3712,12 @@ which direction transitions occur.</p>
 most likely state at each node, hiding the true uncertainty in character
 history. <strong>Stochastic character mapping</strong> (Huelsenbeck et
 al. 2003) addresses this by sampling many complete character histories
-from the posterior — each history specifies not just node states but the
-exact timing of every transition along every branch. Averaging across N
-sampled histories gives node probabilities that properly account for
-this uncertainty. <code>phytools::make.simmap()</code> generates N
-stochastic maps; <code>summary()</code> extracts node probabilities
-averaged across all of them.</p>
+from the posterior, where each history specifies not just node states
+but the exact timing of every transition along every branch. Averaging
+across N sampled histories gives node probabilities that properly
+account for this uncertainty. <code>phytools::make.simmap()</code>
+generates N stochastic maps; <code>summary()</code> extracts node
+probabilities averaged across all of them.</p>
 </div>
 </div>
 <div id="create-a-binary-trait" class="section level2">
@@ -3768,7 +3775,7 @@ probabilities.</p>
 <p><em>Hint:</em> Use <code>set.seed(700)</code> before
 <code>make.simmap()</code> for reproducibility.
 <code>plotSimmap()</code> takes a <code>colors</code> argument (named
-vector of state colours) — use <code>title()</code> separately to add a
+vector of state colours). Use <code>title()</code> separately to add a
 plot title. Pass <code>piecol</code> to <code>nodelabels()</code> in the
 same order as the column names of the summary <code>$ace</code>
 matrix.</p>
